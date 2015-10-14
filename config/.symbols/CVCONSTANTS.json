@@ -1,0 +1,104 @@
+{
+    "constructors": [],
+    "externalReferences": [],
+    "id": "01pZ0000000PwjTIAS",
+    "innerClasses": [],
+    "interfaces": [],
+    "key": "01pZ0000000PwjTIAS",
+    "methods": [],
+    "name": "CVCONSTANTS",
+    "namespace": null,
+    "parentClass": "",
+    "properties": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 29,
+                "line": 15
+            },
+            "modifiers": [
+                "static",
+                "public",
+                "final"
+            ],
+            "name": "DDR_PERIOD_MONTH_END",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 29,
+                "line": 16
+            },
+            "modifiers": [
+                "static",
+                "public",
+                "final"
+            ],
+            "name": "DDR_PERIOD_QUARTER_END",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 29,
+                "line": 17
+            },
+            "modifiers": [
+                "static",
+                "public",
+                "final"
+            ],
+            "name": "DDR_PERIOD_QUARTER_START",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 29,
+                "line": 20
+            },
+            "modifiers": [
+                "static",
+                "public",
+                "final"
+            ],
+            "name": "C_RT_AGREEMENT",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 32,
+                "line": 21
+            },
+            "modifiers": [
+                "static",
+                "public",
+                "final"
+            ],
+            "name": "C_RT_AMENDMENT",
+            "references": [],
+            "type": "String"
+        }
+    ],
+    "tableDeclaration": {
+        "annotations": [],
+        "location": {
+            "column": 27,
+            "line": 13
+        },
+        "modifiers": [
+            "public",
+            "with sharing"
+        ],
+        "name": "CVCONSTANTS",
+        "references": [],
+        "type": "CVCONSTANTS"
+    },
+    "variables": []
+}

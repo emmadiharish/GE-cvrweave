@@ -13,6 +13,10 @@
 public with sharing class CVCONSTANTS {
 	// Due Date Rule related
 	public static final String DDR_PERIOD_MONTH_END = 'Month end';
-	public static final String DDR_PERIOD_QUARTER_END = 'Month end';
-	public static final String DDR_PERIOD_QUARTER_START = 'Month start';
+	public static final String DDR_PERIOD_QUARTER_END = 'Quarter end';
+	public static final String DDR_PERIOD_QUARTER_START = 'Quarter start';
+
+	// Contract Related
+	public static final String C_RT_AGREEMENT = 'Agreement';
+    public static final String C_RT_AMENDMENT = 'Amendment';
 }

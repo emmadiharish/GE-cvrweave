@@ -1,0 +1,627 @@
+{
+    "constructors": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 12,
+                "line": 28
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "CVContractTriggerHandler",
+            "parameters": [],
+            "references": [],
+            "type": null
+        }
+    ],
+    "externalReferences": [],
+    "id": "01pZ0000000Pwh3IAC",
+    "innerClasses": [],
+    "interfaces": [
+        "CVITrigger"
+    ],
+    "key": "01pZ0000000Pwh3IAC",
+    "methods": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 17,
+                "line": 33
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "bulkBefore",
+            "parameters": [],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 17,
+                "line": 48
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "bulkAfter",
+            "parameters": [],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 17,
+                "line": 64
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "beforeInsert",
+            "parameters": [
+                {
+                    "name": "sobj",
+                    "type": "SObject"
+                }
+            ],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 17,
+                "line": 72
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "beforeUpdate",
+            "parameters": [
+                {
+                    "name": "oldSobj",
+                    "type": "SObject"
+                },
+                {
+                    "name": "sobj",
+                    "type": "SObject"
+                }
+            ],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 81
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "sharedBefore",
+            "parameters": [
+                {
+                    "name": "c",
+                    "type": "Contract"
+                },
+                {
+                    "name": "cOld",
+                    "type": "Contract"
+                }
+            ],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 17,
+                "line": 93
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "beforeDelete",
+            "parameters": [
+                {
+                    "name": "sobj",
+                    "type": "SObject"
+                }
+            ],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 17,
+                "line": 100
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "afterInsert",
+            "parameters": [
+                {
+                    "name": "sobj",
+                    "type": "SObject"
+                }
+            ],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 17,
+                "line": 110
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "afterUpdate",
+            "parameters": [
+                {
+                    "name": "oldSobj",
+                    "type": "SObject"
+                },
+                {
+                    "name": "sobj",
+                    "type": "SObject"
+                }
+            ],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 17,
+                "line": 123
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "afterDelete",
+            "parameters": [
+                {
+                    "name": "sobj",
+                    "type": "SObject"
+                }
+            ],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 17,
+                "line": 130
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "afterUndelete",
+            "parameters": [
+                {
+                    "name": "sobj",
+                    "type": "SObject"
+                }
+            ],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 17,
+                "line": 138
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "andFinally",
+            "parameters": [],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        }
+    ],
+    "name": "CVContractTriggerHandler",
+    "namespace": null,
+    "parentClass": "",
+    "properties": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 36,
+                "line": 19
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "cGw",
+            "references": [],
+            "type": "CVContractGateway"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 50,
+                "line": 20
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "rpttobedeletedList",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 47,
+                "line": 21
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "srtobedeletedList",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 50,
+                "line": 22
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "rpttobeinsertedList",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 47,
+                "line": 23
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "srtobeinsertedList",
+            "references": [],
+            "type": "LIST"
+        }
+    ],
+    "tableDeclaration": {
+        "annotations": [],
+        "location": {
+            "column": 30,
+            "line": 14
+        },
+        "modifiers": [
+            "public",
+            "without sharing"
+        ],
+        "name": "CVContractTriggerHandler",
+        "references": [],
+        "type": "CVContractTriggerHandler"
+    },
+    "variables": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 27,
+                "line": 34
+            },
+            "modifiers": [],
+            "name": "OldMap",
+            "references": [],
+            "type": "Map"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 37
+            },
+            "modifiers": [],
+            "name": "c",
+            "references": [],
+            "type": "SObject"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 27,
+                "line": 49
+            },
+            "modifiers": [],
+            "name": "OldMap",
+            "references": [],
+            "type": "Map"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 52
+            },
+            "modifiers": [],
+            "name": "c",
+            "references": [],
+            "type": "SObject"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 38,
+                "line": 64
+            },
+            "modifiers": [],
+            "name": "sobj",
+            "references": [],
+            "type": "SObject"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 65
+            },
+            "modifiers": [],
+            "name": "c",
+            "references": [],
+            "type": "Contract"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 38,
+                "line": 72
+            },
+            "modifiers": [],
+            "name": "oldSobj",
+            "references": [],
+            "type": "SObject"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 55,
+                "line": 72
+            },
+            "modifiers": [],
+            "name": "sobj",
+            "references": [],
+            "type": "SObject"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 73
+            },
+            "modifiers": [],
+            "name": "c",
+            "references": [],
+            "type": "Contract"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 74
+            },
+            "modifiers": [],
+            "name": "cOld",
+            "references": [],
+            "type": "Contract"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 40,
+                "line": 81
+            },
+            "modifiers": [],
+            "name": "c",
+            "references": [],
+            "type": "Contract"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 52,
+                "line": 81
+            },
+            "modifiers": [],
+            "name": "cOld",
+            "references": [],
+            "type": "Contract"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 27,
+                "line": 82
+            },
+            "modifiers": [],
+            "name": "cW",
+            "references": [],
+            "type": "CVContractWrapper"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 38,
+                "line": 93
+            },
+            "modifiers": [],
+            "name": "sobj",
+            "references": [],
+            "type": "SObject"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 94
+            },
+            "modifiers": [],
+            "name": "c",
+            "references": [],
+            "type": "Contract"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 37,
+                "line": 100
+            },
+            "modifiers": [],
+            "name": "sobj",
+            "references": [],
+            "type": "SObject"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 101
+            },
+            "modifiers": [],
+            "name": "c",
+            "references": [],
+            "type": "Contract"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 29,
+                "line": 102
+            },
+            "modifiers": [],
+            "name": "cW",
+            "references": [],
+            "type": "CVContractWrapper"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 37,
+                "line": 110
+            },
+            "modifiers": [],
+            "name": "oldSobj",
+            "references": [],
+            "type": "SObject"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 54,
+                "line": 110
+            },
+            "modifiers": [],
+            "name": "sobj",
+            "references": [],
+            "type": "SObject"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 111
+            },
+            "modifiers": [],
+            "name": "c",
+            "references": [],
+            "type": "Contract"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 112
+            },
+            "modifiers": [],
+            "name": "cOld",
+            "references": [],
+            "type": "Contract"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 27,
+                "line": 113
+            },
+            "modifiers": [],
+            "name": "cW",
+            "references": [],
+            "type": "CVContractWrapper"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 37,
+                "line": 123
+            },
+            "modifiers": [],
+            "name": "sobj",
+            "references": [],
+            "type": "SObject"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 124
+            },
+            "modifiers": [],
+            "name": "c",
+            "references": [],
+            "type": "Contract"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 39,
+                "line": 130
+            },
+            "modifiers": [],
+            "name": "sobj",
+            "references": [],
+            "type": "SObject"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 131
+            },
+            "modifiers": [],
+            "name": "c",
+            "references": [],
+            "type": "Contract"
+        }
+    ]
+}

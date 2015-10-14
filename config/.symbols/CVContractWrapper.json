@@ -1,0 +1,766 @@
+{
+    "constructors": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 12,
+                "line": 26
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "CVContractWrapper",
+            "parameters": [
+                {
+                    "name": "a",
+                    "type": "Contract"
+                }
+            ],
+            "references": [],
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 12,
+                "line": 31
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "CVContractWrapper",
+            "parameters": [
+                {
+                    "name": "c",
+                    "type": "Contract"
+                },
+                {
+                    "name": "cOld",
+                    "type": "Contract"
+                }
+            ],
+            "references": [],
+            "type": null
+        }
+    ],
+    "externalReferences": [],
+    "id": "01pZ0000000PwgyIAC",
+    "innerClasses": [],
+    "interfaces": [],
+    "key": "01pZ0000000PwgyIAC",
+    "methods": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 39
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "debug",
+            "parameters": [],
+            "references": [],
+            "returnType": "String",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 17,
+                "line": 46
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "derive",
+            "parameters": [
+                {
+                    "name": "cGW",
+                    "type": "CVContractGateway"
+                }
+            ],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 17,
+                "line": 88
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "validate",
+            "parameters": [
+                {
+                    "name": "cGW",
+                    "type": "CVContractGateway"
+                }
+            ],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 21,
+                "line": 99
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "validationsEnabled",
+            "parameters": [],
+            "references": [],
+            "returnType": "Boolean",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 49,
+                "line": 106
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "addtorpttobedeletedList",
+            "parameters": [
+                {
+                    "name": "cGW",
+                    "type": "CVContractGateway"
+                },
+                {
+                    "name": "rpttobedeletedListtodate",
+                    "type": "LIST"
+                }
+            ],
+            "references": [],
+            "returnType": "LIST",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 46,
+                "line": 126
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "addtosrtobedeletedList",
+            "parameters": [
+                {
+                    "name": "cGW",
+                    "type": "CVContractGateway"
+                },
+                {
+                    "name": "srtobedeletedListtodate",
+                    "type": "LIST"
+                }
+            ],
+            "references": [],
+            "returnType": "LIST",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 49,
+                "line": 146
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "addtorpttobeinsertedList",
+            "parameters": [
+                {
+                    "name": "cGw",
+                    "type": "CVContractGateway"
+                },
+                {
+                    "name": "rpttobeinsertedListtodate",
+                    "type": "LIST"
+                }
+            ],
+            "references": [],
+            "returnType": "LIST",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 46,
+                "line": 193
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "addtosrtobeinsertedList",
+            "parameters": [
+                {
+                    "name": "cGW",
+                    "type": "CVContractGateway"
+                },
+                {
+                    "name": "srtobeinsertedListtodate",
+                    "type": "LIST"
+                }
+            ],
+            "references": [],
+            "returnType": "LIST",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 238
+            },
+            "modifiers": [
+                "private",
+                "static"
+            ],
+            "name": "calculateDuedate",
+            "parameters": [
+                {
+                    "name": "ddr",
+                    "type": "CV_Due_Date_Rule__c"
+                },
+                {
+                    "name": "periodDate",
+                    "type": "Date"
+                }
+            ],
+            "references": [],
+            "returnType": "Date",
+            "type": null
+        }
+    ],
+    "name": "CVContractWrapper",
+    "namespace": null,
+    "parentClass": "",
+    "properties": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 32,
+                "line": 18
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "c",
+            "references": [],
+            "type": "Contract"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 32,
+                "line": 19
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "cOld",
+            "references": [],
+            "type": "Contract"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 32,
+                "line": 20
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "isValid",
+            "references": [],
+            "type": "Boolean"
+        }
+    ],
+    "tableDeclaration": {
+        "annotations": [],
+        "location": {
+            "column": 30,
+            "line": 14
+        },
+        "modifiers": [
+            "public",
+            "without sharing"
+        ],
+        "name": "CVContractWrapper",
+        "references": [],
+        "type": "CVContractWrapper"
+    },
+    "variables": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 40,
+                "line": 26
+            },
+            "modifiers": [],
+            "name": "a",
+            "references": [],
+            "type": "Contract"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 39,
+                "line": 31
+            },
+            "modifiers": [],
+            "name": "c",
+            "references": [],
+            "type": "Contract"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 51,
+                "line": 31
+            },
+            "modifiers": [],
+            "name": "cOld",
+            "references": [],
+            "type": "Contract"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 42,
+                "line": 46
+            },
+            "modifiers": [],
+            "name": "cGW",
+            "references": [],
+            "type": "CVContractGateway"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 52,
+                "line": 55
+            },
+            "modifiers": [],
+            "name": "rpt",
+            "references": [],
+            "type": "CV_Royalty_Payment_Tracking__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 49,
+                "line": 71
+            },
+            "modifiers": [],
+            "name": "srt",
+            "references": [],
+            "type": "CV_Sales_Report_Tracking__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 44,
+                "line": 88
+            },
+            "modifiers": [],
+            "name": "cGW",
+            "references": [],
+            "type": "CVContractGateway"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 91,
+                "line": 106
+            },
+            "modifiers": [],
+            "name": "cGW",
+            "references": [],
+            "type": "CVContractGateway"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 133,
+                "line": 106
+            },
+            "modifiers": [],
+            "name": "rpttobedeletedListtodate",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 46,
+                "line": 109
+            },
+            "modifiers": [],
+            "name": "res",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 87,
+                "line": 126
+            },
+            "modifiers": [],
+            "name": "cGW",
+            "references": [],
+            "type": "CVContractGateway"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 126,
+                "line": 126
+            },
+            "modifiers": [],
+            "name": "srtobedeletedListtodate",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 43,
+                "line": 129
+            },
+            "modifiers": [],
+            "name": "res",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 92,
+                "line": 146
+            },
+            "modifiers": [],
+            "name": "cGw",
+            "references": [],
+            "type": "CVContractGateway"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 134,
+                "line": 146
+            },
+            "modifiers": [],
+            "name": "rpttobeinsertedListtodate",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 46,
+                "line": 149
+            },
+            "modifiers": [],
+            "name": "res",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 159
+            },
+            "modifiers": [],
+            "name": "startDate",
+            "references": [],
+            "type": "Date"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 160
+            },
+            "modifiers": [],
+            "name": "endDate",
+            "references": [],
+            "type": "Date"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 33,
+                "line": 161
+            },
+            "modifiers": [],
+            "name": "ddr",
+            "references": [],
+            "type": "CV_Due_Date_Rule__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 169
+            },
+            "modifiers": [],
+            "name": "periodStartDate",
+            "references": [],
+            "type": "Date"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 22,
+                "line": 172
+            },
+            "modifiers": [],
+            "name": "periodEndDate",
+            "references": [],
+            "type": "Date"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 48,
+                "line": 173
+            },
+            "modifiers": [],
+            "name": "rpt",
+            "references": [],
+            "type": "CV_Royalty_Payment_Tracking__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 88,
+                "line": 193
+            },
+            "modifiers": [],
+            "name": "cGW",
+            "references": [],
+            "type": "CVContractGateway"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 127,
+                "line": 193
+            },
+            "modifiers": [],
+            "name": "srtobeinsertedListtodate",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 43,
+                "line": 196
+            },
+            "modifiers": [],
+            "name": "res",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 206
+            },
+            "modifiers": [],
+            "name": "startDate",
+            "references": [],
+            "type": "Date"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 207
+            },
+            "modifiers": [],
+            "name": "endDate",
+            "references": [],
+            "type": "Date"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 33,
+                "line": 208
+            },
+            "modifiers": [],
+            "name": "ddr",
+            "references": [],
+            "type": "CV_Due_Date_Rule__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 216
+            },
+            "modifiers": [],
+            "name": "periodStartDate",
+            "references": [],
+            "type": "Date"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 22,
+                "line": 219
+            },
+            "modifiers": [],
+            "name": "periodEndDate",
+            "references": [],
+            "type": "Date"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 45,
+                "line": 220
+            },
+            "modifiers": [],
+            "name": "rpt",
+            "references": [],
+            "type": "CV_Sales_Report_Tracking__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 62,
+                "line": 238
+            },
+            "modifiers": [],
+            "name": "ddr",
+            "references": [],
+            "type": "CV_Due_Date_Rule__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 72,
+                "line": 238
+            },
+            "modifiers": [],
+            "name": "periodDate",
+            "references": [],
+            "type": "Date"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 14,
+                "line": 245
+            },
+            "modifiers": [],
+            "name": "res",
+            "references": [],
+            "type": "Date"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 247
+            },
+            "modifiers": [],
+            "name": "daysstr",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 248
+            },
+            "modifiers": [],
+            "name": "period",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 252
+            },
+            "modifiers": [],
+            "name": "daysint",
+            "references": [],
+            "type": "Integer"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 30,
+                "line": 266
+            },
+            "modifiers": [],
+            "name": "customDatesList",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 269
+            },
+            "modifiers": [],
+            "name": "periodDateMonth",
+            "references": [],
+            "type": "Integer"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 28,
+                "line": 271
+            },
+            "modifiers": [],
+            "name": "ddate",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 29,
+                "line": 273
+            },
+            "modifiers": [],
+            "name": "ddateMonth",
+            "references": [],
+            "type": "Integer"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 32,
+                "line": 277
+            },
+            "modifiers": [],
+            "name": "nextduedate",
+            "references": [],
+            "type": "String"
+        }
+    ]
+}

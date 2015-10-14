@@ -66,10 +66,11 @@ public without sharing class CVContractGateway{
             if(Trigger.isAfter)
             {
                 Contract cOld = this.cIdtocOldMap.get(c.Id);
-                if(c.StartDate != cOld.StartDate
-                    || c.EndDate != cOld.EndDate
-                    || c.Royalty_Payment_Due_Date_Rule__c != cOld.Royalty_Payment_Due_Date_Rule__c
-                    || c.Sales_Report_Due_Date_Rule__c != cOld.Sales_Report_Due_Date_Rule__c)
+                if(c.RecordTypeId == CVMetaUtils.getRecordTypeId(Contract.sObjectType, CVCONSTANTS.C_RT_AGREEMENT)
+                    && (c.StartDate != cOld.StartDate
+                        || c.EndDate != cOld.EndDate
+                        || c.Royalty_Payment_Due_Date_Rule__c != cOld.Royalty_Payment_Due_Date_Rule__c
+                        || c.Sales_Report_Due_Date_Rule__c != cOld.Sales_Report_Due_Date_Rule__c))
                     cIdSet.add(c.id);
             }
             else
@@ -105,9 +106,11 @@ public without sharing class CVContractGateway{
         // query when startDate, endDate or due date rules are changed so be aware while accessing.
         for (Contract c : this.cList) 
         {
-            Contract cOld = this.cIdtocOldMap.get(c.Id);
-            if(cOld == null
-                ||( c.StartDate != cOld.StartDate
+            if(c.RecordTypeId == CVMetaUtils.getRecordTypeId(Contract.sObjectType, CVCONSTANTS.C_RT_AGREEMENT))
+            {    
+                Contract cOld = this.cIdtocOldMap.get(c.Id);
+                if(cOld == null
+                    ||( c.StartDate != cOld.StartDate
                         || c.EndDate != cOld.EndDate
                         || c.Royalty_Payment_Due_Date_Rule__c != cOld.Royalty_Payment_Due_Date_Rule__c
                         || c.Sales_Report_Due_Date_Rule__c != cOld.Sales_Report_Due_Date_Rule__c))
@@ -116,7 +119,8 @@ public without sharing class CVContractGateway{
                         ddrIdSet.add(c.Royalty_Payment_Due_Date_Rule__c);
                     if(c.Sales_Report_Due_Date_Rule__c != null)
                         ddrIdSet.add(c.Sales_Report_Due_Date_Rule__c);
-                } 
+                }
+            }
         }
 
         if(!ddrIdSet.isEmpty())

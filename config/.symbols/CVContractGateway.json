@@ -1,0 +1,262 @@
+{
+    "constructors": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 12,
+                "line": 25
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "CVContractGateway",
+            "parameters": [
+                {
+                    "name": "cList",
+                    "type": "LIST"
+                },
+                {
+                    "name": "cIdtocOldMap",
+                    "type": "Map"
+                }
+            ],
+            "references": [],
+            "type": null
+        }
+    ],
+    "externalReferences": [],
+    "id": "01pZ0000000PwgtIAC",
+    "innerClasses": [],
+    "interfaces": [],
+    "key": "01pZ0000000PwgtIAC",
+    "methods": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 17,
+                "line": 33
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "initialize",
+            "parameters": [],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 31,
+                "line": 60
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "buildcIdToCWRelRecsMap",
+            "parameters": [],
+            "references": [],
+            "returnType": "Map",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 42,
+                "line": 97
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "buildddrIdtoddrMap",
+            "parameters": [],
+            "references": [],
+            "returnType": "Map",
+            "type": null
+        }
+    ],
+    "name": "CVContractGateway",
+    "namespace": null,
+    "parentClass": "",
+    "properties": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 28,
+                "line": 16
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "cList",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 31,
+                "line": 17
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "cIdtocOldMap",
+            "references": [],
+            "type": "Map"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 30,
+                "line": 19
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "cIdToCWRelRecsMap",
+            "references": [],
+            "type": "Map"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 41,
+                "line": 20
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "ddrIdtoddrMap",
+            "references": [],
+            "type": "Map"
+        }
+    ],
+    "tableDeclaration": {
+        "annotations": [],
+        "location": {
+            "column": 30,
+            "line": 14
+        },
+        "modifiers": [
+            "public",
+            "without sharing"
+        ],
+        "name": "CVContractGateway",
+        "references": [],
+        "type": "CVContractGateway"
+    },
+    "variables": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 45,
+                "line": 25
+            },
+            "modifiers": [],
+            "name": "cList",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 70,
+                "line": 25
+            },
+            "modifiers": [],
+            "name": "cIdtocOldMap",
+            "references": [],
+            "type": "Map"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 62
+            },
+            "modifiers": [],
+            "name": "cIdSet",
+            "references": [],
+            "type": "Set"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 28,
+                "line": 63
+            },
+            "modifiers": [],
+            "name": "res",
+            "references": [],
+            "type": "Map"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 23,
+                "line": 64
+            },
+            "modifiers": [],
+            "name": "c",
+            "references": [],
+            "type": "Contract"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 26,
+                "line": 68
+            },
+            "modifiers": [],
+            "name": "cOld",
+            "references": [],
+            "type": "Contract"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 39,
+                "line": 100
+            },
+            "modifiers": [],
+            "name": "ddrIdSet",
+            "references": [],
+            "type": "Set"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 39,
+                "line": 101
+            },
+            "modifiers": [],
+            "name": "res",
+            "references": [],
+            "type": "Map"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 23,
+                "line": 107
+            },
+            "modifiers": [],
+            "name": "c",
+            "references": [],
+            "type": "Contract"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 26,
+                "line": 111
+            },
+            "modifiers": [],
+            "name": "cOld",
+            "references": [],
+            "type": "Contract"
+        }
+    ]
+}

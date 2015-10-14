@@ -107,7 +107,8 @@ public without sharing class CVContractWrapper{
         System.debug('***ENTERING addtorpttobedeletedList ' + debug());
         
         List<CV_Royalty_Payment_Tracking__c> res = rpttobedeletedListtodate;
-        if((this.c.StartDate != this.cOld.StartDate
+        if(this.c.RecordTypeId == CVMetaUtils.getRecordTypeId(Contract.sObjectType, CVCONSTANTS.C_RT_AGREEMENT)
+            && (this.c.StartDate != this.cOld.StartDate
                 || this.c.EndDate != this.cOld.EndDate
                 || this.c.Royalty_Payment_Due_Date_Rule__c != this.cOld.Royalty_Payment_Due_Date_Rule__c)
             && cGW.cIdToCWRelRecsMap.containsKey(this.c.Id))
@@ -126,7 +127,8 @@ public without sharing class CVContractWrapper{
         System.debug('***ENTERING addtosrtobedeletedList ' + debug());
         
         List<CV_Sales_Report_Tracking__c> res = srtobedeletedListtodate;
-        if((this.c.StartDate != this.cOld.StartDate
+        if(this.c.RecordTypeId == CVMetaUtils.getRecordTypeId(Contract.sObjectType, CVCONSTANTS.C_RT_AGREEMENT)
+            && (this.c.StartDate != this.cOld.StartDate
                 || this.c.EndDate != this.cOld.EndDate
                 || this.c.Sales_Report_Due_Date_Rule__c != this.cOld.Sales_Report_Due_Date_Rule__c)
             && cGW.cIdToCWRelRecsMap.containsKey(this.c.Id))
@@ -146,12 +148,13 @@ public without sharing class CVContractWrapper{
         
         List<CV_Royalty_Payment_Tracking__c> res = rpttobeinsertedListtodate;
         // use "cOld == null" to differenciate insert and update.
-        if((this.cOld == null
+        if(this.c.RecordTypeId == CVMetaUtils.getRecordTypeId(Contract.sObjectType, CVCONSTANTS.C_RT_AGREEMENT)
+            && String.isNotBlank(this.c.Royalty_Payment_Due_Date_Rule__c)
+            && cGW.ddrIdtoddrMap.containsKey(this.c.Royalty_Payment_Due_Date_Rule__c)
+            && (this.cOld == null
                 || this.c.StartDate != this.cOld.StartDate
                 || this.c.EndDate != this.cOld.EndDate
-                || this.c.Royalty_Payment_Due_Date_Rule__c != this.cOld.Royalty_Payment_Due_Date_Rule__c)
-            && String.isNotBlank(this.c.Royalty_Payment_Due_Date_Rule__c)
-            && cGW.ddrIdtoddrMap.containsKey(this.c.Royalty_Payment_Due_Date_Rule__c))
+                || this.c.Royalty_Payment_Due_Date_Rule__c != this.cOld.Royalty_Payment_Due_Date_Rule__c))
         {
             Date startDate = this.c.StartDate;
             Date endDate = this.c.EndDate;
@@ -192,12 +195,13 @@ public without sharing class CVContractWrapper{
         
         List<CV_Sales_Report_Tracking__c> res = srtobeinsertedListtodate;
         // use "cOld == null" to differenciate insert and update.
-        if((this.cOld == null
+        if(this.c.RecordTypeId == CVMetaUtils.getRecordTypeId(Contract.sObjectType, CVCONSTANTS.C_RT_AGREEMENT)
+            && String.isNotBlank(this.c.Sales_Report_Due_Date_Rule__c)
+            && cGW.ddrIdtoddrMap.containsKey(this.c.Sales_Report_Due_Date_Rule__c)
+            && (this.cOld == null
                 || this.c.StartDate != this.cOld.StartDate
                 || this.c.EndDate != this.cOld.EndDate
-                || this.c.Sales_Report_Due_Date_Rule__c != this.cOld.Sales_Report_Due_Date_Rule__c)
-            && String.isNotBlank(this.c.Sales_Report_Due_Date_Rule__c)
-            && cGW.ddrIdtoddrMap.containsKey(this.c.Sales_Report_Due_Date_Rule__c))
+                || this.c.Sales_Report_Due_Date_Rule__c != this.cOld.Sales_Report_Due_Date_Rule__c))
         {
             Date startDate = this.c.StartDate;
             Date endDate = this.c.EndDate;

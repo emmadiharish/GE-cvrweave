@@ -136,7 +136,8 @@ public without sharing class CVContractTriggerHandler implements CVITrigger {
     // andFinally: This method is called once all records have been processed by the trigger. Use this method to accomplish any final operations such as creation or updates of other records.
     // -------------------------------   
     public void andFinally() {
-        CVFlowControl.setRunContractTriggerHandler(false);        // turn off triggers on Agreement
+        // disable for now because we want the trigger to run once again after schedules are created.
+        // CVFlowControl.setRunContractTriggerHandler(false);        // turn off triggers on Contract
         
         System.debug('Deleting royalty payments count: '+this.rpttobedeletedList.size());
         // delete Royalty payment trackings.
