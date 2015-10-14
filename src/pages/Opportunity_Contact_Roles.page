@@ -1,0 +1,64 @@
+<apex:page standardController="Opportunity" tabStyle="Opportunity" extensions="OppContactRoleController">
+ <script language="javascript">
+        function confirmDelete(){
+            if(confirm('Are you sure?'))
+                return true;
+            return false;
+        }
+    </script>
+<style>
+.fewerMore { display: none;}
+</style>
+<apex:form >
+<apex:detail relatedList="true" inlineEdit="true" showChatter="true">
+<apex:pageblock id="OppContactRoleList" title="Internal Contacts">
+            <apex:pageBlockButtons id="IntNew" location="top">
+                <apex:commandButton action="{!newContactRole}" value="New"/>
+            </apex:pageBlockButtons>
+   <apex:pageBlockTable value="{!oppContactRoleInt}" var="o" rendered="{!NOT(ISNULL(oppContactRoleInt))}" >
+        <apex:column headerValue="Action" styleClass="actionColumn">
+        <apex:commandLink value="Edit" action="{!newContactRole}" styleClass="actionLink"/> |&nbsp;
+        <apex:commandLink value="Del" styleClass="actionLink" action="{!deleteContactRole}" onClick="return confirmDelete()"> 
+            <apex:param name="delID" value="{!o.roleId}" assignTo="{!delContactRole}"/> 
+        </apex:commandLink>
+        </apex:column>
+        <apex:column headerValue="Primary">
+            <apex:inputCheckbox value="{!o.isPrimary}" disabled="true"/>
+        </apex:column>
+        <apex:column headerValue="Contact Name">
+        <apex:outputLink value="/{!o.contactId}">{!o.Name}</apex:outputLink>
+        </apex:column>
+        <apex:column headerValue="Role" value="{!o.role}"/>
+        <apex:column headerValue="Email" value="{!o.Email}"/>
+        <apex:column headerValue="Phone" value="{!o.Phone}"/>
+        <apex:column headerValue="Type"  value="{!o.accountType}"/>
+   </apex:pageBlockTable>
+   <apex:outputLabel value="No records to display" rendered="{!(ISNULL(oppContactRoleInt))}" styleClass="noRowsHeader"></apex:outputLabel>
+ </apex:pageblock>
+ <apex:pageblock id="OppContactRoleListExt" title="End Customer Contacts">
+             <apex:pageBlockButtons id="ExtNew" location="top">
+                <apex:commandButton action="{!newContactRole}" value="New"/>
+            </apex:pageBlockButtons>
+   <apex:pageBlockTable value="{!oppContactRoleExt}" var="o" rendered="{!NOT(ISNULL(oppContactRoleExt))}">
+        <apex:column headerValue="Action" styleClass="actionColumn">
+        <apex:commandLink value="Edit" action="{!newContactRole}" styleClass="actionLink"/> |&nbsp;
+        <apex:commandLink value="Del" styleClass="actionLink" action="{!deleteContactRole}" onClick="return confirmDelete()"> 
+            <apex:param name="delID" value="{!o.roleId}" assignTo="{!delContactRole}"/> 
+        </apex:commandLink>
+        </apex:column>
+        <apex:column headerValue="Primary">
+            <apex:inputCheckbox value="{!o.isPrimary}" disabled="true"/>
+        </apex:column>
+        <apex:column headerValue="Contact Name">
+        <apex:outputLink value="/{!o.contactId}">{!o.Name}</apex:outputLink>
+        </apex:column>
+        <apex:column headerValue="Role" value="{!o.role}"/>
+        <apex:column headerValue="Email" value="{!o.Email}"/>
+        <apex:column headerValue="Phone" value="{!o.Phone}"/>
+        <apex:column headerValue="Type" value="{!o.accountType}"/>
+   </apex:pageBlockTable>
+   <apex:outputLabel value="No records to display" rendered="{!(ISNULL(oppContactRoleExt))}" styleClass="noRowsHeader"></apex:outputLabel>
+ </apex:pageblock>
+ </apex:detail>
+</apex:form>
+</apex:page>

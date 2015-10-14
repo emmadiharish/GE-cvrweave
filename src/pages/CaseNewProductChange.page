@@ -1,0 +1,140 @@
+<!--
+*************************************************************************************
+* Name - CaseNewProductChange
+* Description - This visualforce page does the following:
+* - Creates new New Product Case
+* Modification Log :
+*************************************************************************************
+* Developer     Date        Description
+*************************************************************************************
+* Zoran Zunko   05/26/2015  Created
+*************************************************************************************
+-->
+<apex:page showHeader="true"
+           sidebar="true"
+           standardController="Case"
+           docType="html-5.0"
+           title="New Product Change"
+           extensions="CaseNewProductChangeControllerExt"
+           tabStyle="Case">
+    <apex:includeScript value="{!URLFOR($Resource.CVXlsxJquery_js)}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.cvBootstrap, 'css/bootstrap-namespaced.min.css')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.cvBootstrap, 'js/bootstrap.min.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.cvBootstrap, 'js/cv_dialog.js')}"/>
+    <style>
+        .custPopup {
+        background-color: white;
+        border-width: 2px;
+        border-style: solid;
+        z-index: 99;
+        left: 50%;
+        padding:10px;
+        position: absolute;
+        /* These are the 3 css properties you will need to change so the popup
+        displays in the center of the screen. First set the width. Then set
+        margin-left to negative half of what the width is. You can add
+        the height property for a fixed size pop up if you want.*/
+        width: 600px;
+        margin-left: -250px;
+        margin-top: 60px;
+        }
+        .popupBackground {
+        background-color:black;
+        opacity: 0.20;
+        filter: alpha(opacity = 20);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 98;
+        }
+        .mandatory-input {
+        border-left: 3px solid #c00;
+        }
+    </style>
+    <apex:sectionHeader title="{! uLicenseeUser.Contact.Account.Name }"
+                        subtitle="New Product Change"/>
+    <apex:form id="submit_form"
+               enctype="multipart/form-data"
+               html-novalidate="novalidate">
+        <apex:outputPanel layout="block"
+                          id="message_div">
+            <apex:pageMessages />
+        </apex:outputPanel>
+        <apex:actionStatus id="status-loading"
+                           onstart="waitingDialog.show('Please wait...', {dialogSize: 'sm', progressType: 'info'});"
+                           onstop="waitingDialog.hide();"/>
+        <apex:pageBlock title="Details"
+                        id="main_block"
+                        mode="edit">
+            <apex:actionRegion >
+                <apex:outputPanel id="tstpopup"
+                                  layout="none">
+                    <apex:outputPanel styleClass="popupBackground"
+                                      layout="block"
+                                      rendered="{! displayPopUp }"/>
+                    <apex:outputPanel styleClass="custPopup"
+                                      layout="block"
+                                      rendered="{! displayPopUp }">
+                        <apex:pageBlock title="Search SKU"
+                                        mode="edit">
+                            <apex:pageBlockButtons location="bottom">
+                                <apex:commandButton value="Select"
+                                                    action="{! assignSKU }"
+                                                    reRender="main_block"
+                                                    status="status-loading"/>
+                                <apex:commandButton value="Cancel"
+                                                    immediate="true"
+                                                    action="{! selectSKUCancel }"
+                                                    reRender="main_block"
+                                                    status="status-loading"/>
+                            </apex:pageBlockButtons>
+                            <apex:pageBlockSection title="Search for a SKU code"
+                                                   collapsible="false"
+                                                   columns="1">
+                                <apex:pageBlockSectionItem >
+                                    <apex:outputLabel for="sku"
+                                                      value="SKU"/>
+                                    <apex:inputText size="70"
+                                                    id="sku_search_number"
+                                                    value="{! skuSearchValue }"
+                                                    list="{! sLicenseeSKUListString }"/>
+                                </apex:pageBlockSectionItem>
+                            </apex:pageBlockSection>
+                        </apex:pageBlock>
+                    </apex:outputPanel>
+                </apex:outputPanel>
+            </apex:actionRegion>
+            <apex:pageBlockButtons location="top">
+                <apex:commandButton value="Save and Submit"
+                                    action="{! save }"/>
+            </apex:pageBlockButtons>
+            <apex:actionRegion >
+
+                <apex:outputPanel layout="none"
+                                  id="case_details">
+                    <c:CVCaseCreationSectionComponent pageControllerAttr="{! thisInstance }"
+                                                      reRender="main_block"
+                                                      sectionName="Case Details"/>
+                </apex:outputPanel>
+            </apex:actionRegion>
+            <apex:pageBlockSection title="Attachments"
+                                   columns="2"
+                                   collapsible="false">
+                <apex:repeat value="{!attCaseAttachmentsListDisp}"
+                             var="att">
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="File"/>
+                        <apex:inputFile value="{!att.body}"
+                                        filename="{!att.name}"/>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="Description"/>
+                        <apex:inputText value="{!att.Description}"/>
+                    </apex:pageBlockSectionItem>
+                </apex:repeat>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

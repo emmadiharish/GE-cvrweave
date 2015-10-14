@@ -1,0 +1,1360 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"pli",
+				"plItemId"
+			],
+			[
+				"z",
+				"zLocations"
+			],
+			[
+				"laf",
+				"lafield"
+			],
+			[
+				"out",
+				"apex:outputPanel"
+			],
+			[
+				"pric",
+				"priceListItems"
+			],
+			[
+				"PriceMatri",
+				"priceMatrixEntries"
+			],
+			[
+				"p",
+				"priceMatrices"
+			],
+			[
+				"Pricing",
+				"PricingMatrixSearchResult"
+			],
+			[
+				"pare",
+				"parentComponentId"
+			],
+			[
+				"int",
+				"intValue"
+			],
+			[
+				"custom",
+				"customFields"
+			],
+			[
+				"isN",
+				"PUBLIC isNotBlank(String str) 	Boolean"
+			],
+			[
+				"opti",
+				"optionLine"
+			],
+			[
+				"selec",
+				"selectedProdId"
+			],
+			[
+				"component",
+				"componentIdstobeDeleted"
+			],
+			[
+				"remote",
+				"remoteActions"
+			],
+			[
+				"c",
+				"PUBLIC ConstraintRuleActionResult()"
+			],
+			[
+				"line",
+				"lineNumber_tbd"
+			],
+			[
+				"conf",
+				"configRequestId"
+			],
+			[
+				"pro",
+				"productId"
+			],
+			[
+				"cart",
+				"cartId"
+			],
+			[
+				"APTPSProd",
+				"APTPS_ProductAttributeValueSelector	[Custom Apex Class]"
+			],
+			[
+				"Base",
+				"Base64CharCodes"
+			],
+			[
+				"to",
+				"toNumber"
+			],
+			[
+				"cha",
+				"charCodeAt"
+			],
+			[
+				"va",
+				"validFor"
+			],
+			[
+				"serialize",
+				"PUBLIC serializePretty(Object o) 	String"
+			],
+			[
+				"incl",
+				"apex:includeScript"
+			],
+			[
+				"pr",
+				"GLOBAL proposalNotes	LIST"
+			],
+			[
+				"in",
+				"info_return"
+			],
+			[
+				"get",
+				"PUBLIC getMessage() 	String"
+			],
+			[
+				"pa",
+				"pattr"
+			],
+			[
+				"icl",
+				"apex:includeScript"
+			],
+			[
+				"prod",
+				"productIds"
+			],
+			[
+				"fie",
+				"field"
+			],
+			[
+				"field",
+				"fieldName"
+			],
+			[
+				"con",
+				"containsKey"
+			],
+			[
+				"is",
+				"isEmpty"
+			],
+			[
+				"ser",
+				"Service"
+			],
+			[
+				"ge",
+				"getlineItem"
+			],
+			[
+				"sta",
+				"standardController	(String)"
+			],
+			[
+				"le",
+				"left"
+			],
+			[
+				"res",
+				"result"
+			],
+			[
+				"APTPS_",
+				"APTPS_CPQ	[Custom Apex Class]"
+			],
+			[
+				"fi",
+				"fieldLabel"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"butt",
+				"bs3-button:info	bs3-button-info"
+			],
+			[
+				"bs3-tab",
+				"bs3-table:responsive	bs3-table-responsive"
+			],
+			[
+				"table",
+				"tbalert	Bootstrap default alert"
+			],
+			[
+				"option",
+				"optionC"
+			],
+			[
+				"defe",
+				"deferred"
+			],
+			[
+				"act",
+				"apex:actionFunction"
+			],
+			[
+				"se",
+				"Services"
+			],
+			[
+				"locat",
+				"locationDataService"
+			],
+			[
+				"me",
+				"messages"
+			],
+			[
+				"loca",
+				"locationId"
+			],
+			[
+				"has",
+				"hash"
+			],
+			[
+				"ng-cl",
+				"ng-click	AngularJS"
+			],
+			[
+				"inc",
+				"apex:includeScript"
+			],
+			[
+				"product",
+				"productAttributeDataService"
+			],
+			[
+				"optionGroup",
+				"optionGroupDataService"
+			],
+			[
+				"AP",
+				"APTPS_CustomAttributePageController_RA"
+			],
+			[
+				"lin",
+				"lineItem"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 101.0,
+		"last_filter": "upgrade",
+		"selected_items":
+		[
+			[
+				"upgrade",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"packagecontrol settin",
+				"Preferences: Package Control Settings – User"
+			],
+			[
+				"crea",
+				"MavensMate: Create Resource Bundle..."
+			],
+			[
+				"depl",
+				"MavensMate: Deploy Resource Bundle..."
+			],
+			[
+				"creat",
+				"MavensMate: Create Resource Bundle..."
+			],
+			[
+				"htm",
+				"Set Syntax: HTML"
+			],
+			[
+				"create",
+				"MavensMate: Create Resource Bundle..."
+			],
+			[
+				"deplo",
+				"MavensMate: Deploy Resource Bundle..."
+			],
+			[
+				"deploy",
+				"MavensMate: Deploy Resource Bundle..."
+			],
+			[
+				"java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"de",
+				"MavensMate: Deploy Resource Bundle..."
+			],
+			[
+				"dep",
+				"MavensMate: Deploy Resource Bundle..."
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: re",
+				"Package Control: Remove Channel"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"creatr",
+				"MavensMate: Create Resource Bundle..."
+			],
+			[
+				"",
+				"About"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"apex",
+				"Set Syntax: Apex"
+			],
+			[
+				"crear",
+				"MavensMate: Create Resource Bundle..."
+			],
+			[
+				"sets",
+				"Set Syntax: Apex"
+			],
+			[
+				"bund",
+				"MavensMate: Deploy Resource Bundle..."
+			],
+			[
+				"mavens mate:crea",
+				"MavensMate: Create Resource Bundle..."
+			],
+			[
+				"mavens mate:",
+				"MavensMate: Create Resource Bundle..."
+			],
+			[
+				"mavens mate:de",
+				"MavensMate: Deploy Resource Bundle..."
+			],
+			[
+				"mavens",
+				"MavensMate: Deploy Resource Bundle..."
+			],
+			[
+				"mavnes mate: de",
+				"MavensMate: Deploy Resource Bundle..."
+			],
+			[
+				"maens ma",
+				"MavensMate: Create Resource Bundle..."
+			],
+			[
+				"mavens mate: crea",
+				"MavensMate: Create Resource Bundle..."
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"salesf",
+				"Salesforce Reference"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 725.0
+	},
+	"console":
+	{
+		"height": 232.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave"
+	],
+	"file_history":
+	[
+		"/C/Users/hemmadi/Workspace/GE",
+		"/C/Users/hemmadi/Workspace/GE/src/classes/CVException.cls",
+		"/C/Users/hemmadi/AppData/Roaming/Sublime Text 3/Packages/User/Package Control.sublime-settings",
+		"/C/Users/hemmadi/Workspace/GE/src/classes/CVWorkflowManager.cls",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 4.0/src/staticresources/APTPS_CAPResourceBundle_H.resource",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 4.0/src/classes/APTPS_PriceMatrixHelper.cls",
+		"/C/Users/hemmadi/Desktop/APTPS_CAPResourceBundle_Flow/ProductAttributes/OptionAttributesController.js",
+		"/C/Users/hemmadi/Desktop/APTPS_CAPResourceBundle_Flow/ProductAttributes/ProductAttributeConfigDataService.js",
+		"/C/Users/hemmadi/Desktop/APTPS_CAPResourceBundle_Flow/ServiceLocation/LocationDataService.js",
+		"/C/Users/hemmadi/Desktop/APTPS_CAPResourceBundle_Flow/ServiceLocation/LocationController.js",
+		"/C/Users/hemmadi/Desktop/APTPS_CAPResourceBundle_Flow/ProductAttributes/BundleAttributesController.js",
+		"/C/Users/hemmadi/Desktop/APTPS_CAPResourceBundle_Flow/ProductAttributes/ProductAttributeValueDataService.js",
+		"/C/Users/hemmadi/Desktop/APTPS_CAPResourceBundle_Flow/ProductAttributes/PAVObjConfigService.js",
+		"/C/Users/hemmadi/Desktop/APTPS_CAPResourceBundle_Flow/ServiceLocation/SelectLocationController.js",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 4.0/src/classes/APTPS_ProductAttributeConfigController.cls",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 4.0/src/classes/APTPS_LocationAvailabilitySelector.cls",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 4.0/src/classes/APTPS_ServiceLocationSelecotor.cls",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 4.0/resource-bundles/APTPS_CAPResourceBundle_H.resource/Templates/ProductAttributesView.html",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 4.0/resource-bundles/APTPS_CAPResourceBundle_H.resource/Templates/BundleAttributesView.html",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 4.0/src/pages/APTPS_CAP_MS.page",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 4.0/resource-bundles/APTPS_CAPResourceBundle_H.resource/Templates/OptionAttributesView.html",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 4.0/resource-bundles/APTPS_CAPResourceBundle_H.resource/Templates/PageBodyView.html",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 4.0/src/classes/APTPS_CPQ.cls",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 4.0/resource-bundles/APTPS_CAPResourceBundle_H.resource/CSS/APTPS_CAPCustomCSS.css",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 4.0/resource-bundles/APTPS_CAPResourceBundle_H.resource/Templates/MessagesView.html",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 4.0/src/classes/APTPS_CAP_MS_H.cls",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 4.0/src/pages/APTPS_CAP_MS_Flow.page",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 4.0/src/pages/APTPS_CAP_MS_Test.page",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 4.0/src/classes/APTPS_quoteAPI.cls",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 4.0/resource-bundles/APTPS_CAPResourceBundle_H.resource/Templates/OptionGroupView.html",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 4.0/resource-bundles/APTPS_CAPResourceBundle_H.resource/Templates/PageBodyView",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 4.0/resource-bundles/APTPS_CAPResourceBundle_H.resource/Templates/OptionGroupHierarchyView.html",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 4.0/src/pages/APTPSGuidedSelling.page",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 4.0/src/classes/APTPS_SFDCFlowController.cls",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 4.0/resource-bundles/APTPS_CAPResourceBundle_H.resource/Templates/OptionsGroupHierarchyView.html",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 4.0/resource-bundles/APTPS_CAPResourceBundle_H.resource/Templates/ValidateView.html",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 4.0/resource-bundles/APTPS_CAPResourceBundle_H.resource/Templates/OptionAttributesView",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 4.0/resource-bundles/APTPS_CAPResourceBundle_H.resource/Templates/OptionsGroupView.html",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 4.0/resource-bundles/APTPS_CAPResourceBundle_H.resource/Templates/SelectedServiceLocationView.html",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 4.0/src/classes/APTPS_CONSTANTS.cls",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 4.0/src/classes/APTPS_PricingMatrixController.cls",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 4.0/src/classes/APTPS_MetaUtils.cls",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 4.0/resource-bundles/APTPS_CAPResourceBundle_H.resource/Templates/PricingMatrixView.html",
+		"/C/Users/hemmadi/Desktop/APTPS_CAPResourceBundle_Flow/Templates/PricingMatrixView.html",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 4.0/src/classes/APTPS_Pricing_Model.cls",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 4.0/resource-bundles/APTPS_CAPResourceBundle_H.resource/Templates/PageFooterView.html",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 4.0/resource-bundles/APTPS_CAPResourceBundle_H.resource/Templates/ServiceLocationsView.html",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 4.0/src/classes/APTPS_PAVObjConfigController.cls",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 4.0/resource-bundles/APTPS_CAPResourceBundle_Flow.resource/ProductAttributes/BundleAttributesController.js",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 4.0/resource-bundles/APTPS_CAPResourceBundle_Flow.resource/ProductAttributes/OptionAttributesController.js",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 4.0/resource-bundles/APTPS_CAPResourceBundle_Flow.resource/ProductAttributes/PAVObjConfigService.js",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 4.0/src/staticresources/APTPS_CAPResourceBundle_Flow.resource",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 4.0/src/classes/APTPS_CAP_RA.cls",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 4.0/src/classes/APTPS_UtilityFns.cls",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 4.0/src/classes/APTPS_MiniCartController.cls",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 4.0/src/pages/APTPS_CAP_MS_D.page",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 4.0/src/classes/APTPS_Exception.cls",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 4.0/src/classes/APTPS_ProductAttributeValueController.cls",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 4.0/src/classes/APTPS_ProductAttributeValueSelector.cls",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 4.0/src/classes/APTPS_OptionGroupController.cls",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 4.0/src/pages/Connections_Search.page",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 4.0/src/classes/APTPS_StringUtils.cls",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 4.0/src/classes/APTPS_CustomAttributeUtil.cls",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 4.0/src/classes/APTPS_LineItemSelector.cls",
+		"/C/Users/hemmadi/Google Drive/Job/APTTUS/CPQ_Debug.txt",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/classes/APTPS_CustomAttributeUtil.cls",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/classes/APTPS_UtilityFns.cls",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/classes/APTPS_CAP_MS_H.cls",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/classes/APTPS_CAP_MS.cls",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/classes/APTPS_CustomAttributeController_ms_ang.cls",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/classes/APTPS_CAP_RA_D.cls",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/classes/APTPS_LineItemSelector.cls",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/staticresources/APTPS_CAPResourceBundle_Flow.resource",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/classes/APTPS_OptionGroupController.cls",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/classes/APTPS_CPQ.cls",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/classes/APTPS_ServiceLocationSelecotor.cls",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/classes/APTPS_LocationAvailabilitySelector.cls",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/classes/APTPS_CAP_RA.cls",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/resource-bundles/APTPS_CAPResourceBundle_Flow.resource/ServiceLocation/LocationController.js",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/resource-bundles/APTPS_CAPResourceBundle_Flow.resource/ProductAttributes/PAVObjConfigService.js",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/classes/APTPS_ServiceLocationTriggerHandler.cls",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/classes/APTPS_ProductAttributeConfigController.cls",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/resource-bundles/APTPS_CAPResourceBundle_Flow.resource/MiniCart/MiniCartDataService.js",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/classes/APTPS_ProductAttributeValueController.cls",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/pages/APTPS_CAP_MS.page",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/pages/APTPS_CAP_MS_Flow.page",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/resource-bundles/APTPS_CAPResourceBundle_Flow.resource/Templates/OptionsGroupView.html",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/resource-bundles/APTPS_CAPResourceBundle_H.resource/Templates/OptionsGroupView.html",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/resource-bundles/APTPS_CAPResourceBundle_Flow.resource/Controllers/BaseController.js",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/resource-bundles/APTPS_CAPResourceBundle_Flow.resource/OptionGroup/OptionGroupDataService.js",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/resource-bundles/APTPS_CAPResourceBundle_Flow.resource/ProductAttributes/ProductAttributeValueDataService.js",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/resource-bundles/APTPS_CAPResourceBundle_Flow.resource/ProductAttributes/ProductAttributeConfigCache.js",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/resource-bundles/APTPS_CAPResourceBundle_Flow.resource/ProductAttributes/ProductAttributeValueCache.js",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/resource-bundles/APTPS_CAPResourceBundle_Flow.resource/ProductAttributes/ProductAttributeConfigDataService.js",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/resource-bundles/APTPS_CAPResourceBundle_Flow.resource/ProductAttributes/BundleAttributesController.js",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/resource-bundles/APTPS_CAPResourceBundle_Flow.resource/ProductAttributes/._BundleAttributesController.js",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/classes/APTPS_ProductAttributeValueSelector.cls",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/classes/APTPS_quoteAPI.cls",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/classes/APTPS_PAVObjConfigController.cls",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/resource-bundles/APTPS_CAPResourceBundle_H.resource/Templates/MessagesView.html",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/resource-bundles/APTPS_CAPResourceBundle_H.resource/Templates/MiniCartView.html",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/resource-bundles/APTPS_CAPResourceBundle_H.resource/Templates/PageHeaderView.html",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/resource-bundles/APTPS_CAPResourceBundle_H.resource/Templates/ProductAttributesView.html",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/classes/APTPS_Attribute_Model.cls",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/classes/APTPS_StringUtils.cls",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/classes/APTPS_ProductSelector.cls",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/resource-bundles/APTPS_CAPResourceBundle_H.resource/CSS/bootstrap.3.1.1.min.css",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/resource-bundles/APTPS_CAPResourceBundle_H.resource/CSS/APTPS_CAPCustomCSS.css",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/resource-bundles/APTPS_CAPResourceBundle_ms_ang.resource/Controllers/baseController.js",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/resource-bundles/APTPS_CAPResourceBundle_ms_ang.resource/Services/pricingMatrixDataService.js",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/resource-bundles/APTPS_CAPResourceBundle_ms_ang.resource/Controllers/pricingMatrixController.js",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/classes/APTPS_CustomAttributePageController_RA.cls",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/staticresources/APTPS_CAPResourceBundle_ms_ang.resource",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/classes/APTPS_OptionGroupSelector.cls",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/classes/APTPS_MiniCartController.cls",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/components/APTPS_MiniCart.component",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/classes/APTPS_ProductAttributeConfigSelector.cls",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/classes/APTPS_PAVObjConfigSelector.cls",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/classes/APTPS_PricingMatrixController.cls",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/components/APTPS_PricingMatrix.component",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/classes/APTPS_MetaUtils.cls",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/classes/APTPS_CustomAttributePageController_RA_D.cls",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/classes/APTPS_ProductAttributeSelector.cls",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/classes/APTPS_CPQNew.cls",
+		"/C/Users/hemmadi/Desktop/ctl/PAVConfigService_temp.js",
+		"/C/Users/hemmadi/Desktop/PAVConfigService_temp.js",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/staticresources/PAVConfigService.resource",
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/pages/APTPS_Customattributepage_multisite_D.page"
+	],
+	"find":
+	{
+		"height": 36.0
+	},
+	"find_in_files":
+	{
+		"height": 132.0,
+		"where_history":
+		[
+			"",
+			"C:\\Users\\hemmadi\\Workspace\\CenturyLink INT2 3.0\\resource-bundles\\APTPS_CAPResourceBundle_H.resource",
+			"",
+			"C:\\Users\\hemmadi\\Workspace\\CenturyLink INT2 3.0\\resource-bundles\\APTPS_CAPResourceBundle_H.resource",
+			"C:\\Users\\hemmadi\\Workspace\\CenturyLink INT2 3.0\\,C:\\Users\\hemmadi\\Workspace\\CenturyLink INT2 3.0\\resource-bundles\\APTPS_CAPResourceBundle_H.resource",
+			"C:\\Users\\hemmadi\\Workspace\\CenturyLink INT2 3.0\\",
+			"C:\\Users\\hemmadi\\Workspace\\CenturyLink INT2 3.0\\resource-bundles\\APTPS_CAPResourceBundle.resource",
+			"C:\\Users\\hemmadi\\Workspace\\CenturyLink INT2 3.0\\resource-bundles\\APTPS_CAPResourceBundle.resource\\Images",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"siva gunda",
+			"harish",
+			"Anydatatype_msg",
+			"plinpavId",
+			"plInpavId",
+			"plinpavIdtopmEntryIdMap",
+			"selectedSRId",
+			"selectedSR",
+			"allZServiceLocs",
+			"alllocations",
+			"eLinePAVAttributes",
+			"getLocationZ",
+			"allZServiceLocs",
+			"getlocItems",
+			"allZServiceLocs",
+			"selectedSRId",
+			"getLocationZ",
+			"$scope",
+			"zLoc",
+			"getLocationZ",
+			"depattributes",
+			"$scope",
+			"ProductAttributeConfigDataService",
+			"getLocationsCheck",
+			"getselectedlpa",
+			"getselectedlpaId",
+			"zLoc",
+			"getloc",
+			"getlocIt",
+			"getlocItems",
+			"allZServiceLocs",
+			"LocationDataService",
+			"locItems",
+			"getLocationsCheck",
+			"z",
+			"locatio",
+			"locationz",
+			"z",
+			"getLocationZ",
+			"selectByServiceLocationwBundle",
+			"productAttributeValues",
+			"messages",
+			"pagemessage",
+			"Apttus_Config2__IconId__c",
+			"baseConfig",
+			"#8ead1a",
+			"background-color",
+			"backgroun-color",
+			"backg",
+			"#8ead1a",
+			"}\n",
+			"#8ead1a",
+			"#00853f",
+			"class=",
+			".navbar {\n            list-style-type: none;\n            margin: 0;\n            padding:",
+			"styleshee",
+			"optionGroupanchortags",
+			"padding-bo",
+			"padding",
+			"Apttus_Config2__Icon__c",
+			"newLocationURL",
+			"bundleProdName",
+			"primary",
+			"location",
+			"service",
+			"primaryLineNumber",
+			"lineNumber",
+			"bundleProdId",
+			"bundleProdName",
+			"approv",
+			"bunleLineNumber",
+			"Apttus_Config2__LineNumber__c",
+			"proposalNotes",
+			"note",
+			"selectOptionProduct",
+			"selectProductrenderoptionproductattributes",
+			"renderoptionproductattributes",
+			"gotosection",
+			"changeQuantity",
+			"imag",
+			"rendercurrentproductoptiongroups",
+			"ProductDataService",
+			"opportunityId",
+			"getbundleServiceLocation",
+			"ng-incl",
+			"ng-controller",
+			"controller",
+			"con",
+			"BundleAttributesController",
+			"bundleattr",
+			"BundleAttributesController",
+			"OptionAttributesController",
+			"OptionGroupHierarchyController",
+			"issele",
+			"bundles",
+			"hideFlowSection",
+			"search",
+			"hideFlowSection",
+			"HasBundleProducts",
+			"bundles =",
+			"bundles",
+			"HasBundleProducts",
+			"retur bundles",
+			"guidedProducts",
+			"boots",
+			"googleap",
+			"fonts.googleap",
+			"fonts.googleapis.co",
+			"cartpageres",
+			"href=",
+			"href",
+			"bundleproducts",
+			"BundleInfo",
+			"isSelected",
+			"BundleInfo",
+			"bundleProducts",
+			"BundleProducts",
+			"bundles",
+			"isSelected",
+			"Anydatatype_msg",
+			"isselec",
+			"BundleProducts",
+			"isSelected",
+			"Anydatatype_msg",
+			"bundles",
+			"getbundles",
+			"bundles =",
+			"add to"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"attrCtrl.productAttributeValues",
+			"dimension",
+			": ",
+			" =",
+			", ",
+			"APTPS_CPQNew.",
+			"<apex:includeScript value=\"{!URLFOR($Resource.APTPS_CAPResourceBundle_D_New, '",
+			"",
+			"productIdtolocationavailabilitiesMap",
+			"<apex:includeScript value=",
+			"QuoteDataService",
+			"MessageService",
+			"QuoteDataService",
+			"ProductAttributeConfigDataService",
+			"ProductAttributeConfigCache",
+			"OptionGroupDataService",
+			"OptionGroupCache",
+			"OptionGroupDataService",
+			"pricingattributevalue"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 36.0
+	},
+	"input":
+	{
+		"height": 46.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.MavensMate-OutputPanel":
+	{
+		"height": 178.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "GE cvrweave.sublime-project",
+	"replace":
+	{
+		"height": 68.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"cvex",
+				"src\\classes\\CVException.cls"
+			],
+			[
+				"cv",
+				"src\\classes\\CVWorkflowManager.cls"
+			],
+			[
+				"aptps_resource_h",
+				"src\\staticresources\\APTPS_CAPResourceBundle_H.resource"
+			],
+			[
+				"aptps_price",
+				"src\\classes\\APTPS_PriceMatrixHelper.cls"
+			],
+			[
+				"aptps_locationavailabilityselector",
+				"src\\classes\\APTPS_LocationAvailabilitySelector.cls"
+			],
+			[
+				"aptps_configco",
+				"src\\classes\\APTPS_ProductAttributeConfigController.cls"
+			],
+			[
+				"productattributesview",
+				"resource-bundles\\APTPS_CAPResourceBundle_H.resource\\Templates\\ProductAttributesView.html"
+			],
+			[
+				"optionattributesview",
+				"resource-bundles\\APTPS_CAPResourceBundle_H.resource\\Templates\\OptionAttributesView.html"
+			],
+			[
+				"aptps_cpq",
+				"src\\classes\\APTPS_CPQ.cls"
+			],
+			[
+				"_h.cls",
+				"src\\classes\\APTPS_CAP_MS_H.cls"
+			],
+			[
+				"cap_flo",
+				"src\\pages\\APTPS_CAP_MS_Flow.page"
+			],
+			[
+				"aptps_cap_ms",
+				"src\\pages\\APTPS_CAP_MS.page"
+			],
+			[
+				"flow.pa",
+				"src\\pages\\APTPS_CAP_MS_Flow.page"
+			],
+			[
+				"cap_ms.",
+				"src\\pages\\APTPS_CAP_MS.page"
+			],
+			[
+				"_h.cl",
+				"src\\classes\\APTPS_CAP_MS_H.cls"
+			],
+			[
+				"ms_h",
+				"src\\classes\\APTPS_CAP_MS_H.cls"
+			],
+			[
+				"ms.pa",
+				"src\\pages\\APTPS_CAP_MS.page"
+			],
+			[
+				"quoteap",
+				"src\\classes\\APTPS_quoteAPI.cls"
+			],
+			[
+				"_flow",
+				"src\\pages\\APTPS_CAP_MS_Flow.page"
+			],
+			[
+				"_flow.p",
+				"src\\pages\\APTPS_CAP_MS_Flow.page"
+			],
+			[
+				"aptps_cap_ms_f",
+				"src\\pages\\APTPS_CAP_MS_Flow.page"
+			],
+			[
+				"aptpsguidedselling",
+				"src\\pages\\APTPSGuidedSelling.page"
+			],
+			[
+				"aptps_sfdcflowcontroller",
+				"src\\classes\\APTPS_SFDCFlowController.cls"
+			],
+			[
+				"_ms_flow",
+				"src\\pages\\APTPS_CAP_MS_Flow.page"
+			],
+			[
+				"resource_h",
+				"src\\staticresources\\APTPS_CAPResourceBundle_H.resource"
+			],
+			[
+				"aptps_cap_ms.pa",
+				"src\\pages\\APTPS_CAP_MS.page"
+			],
+			[
+				"aptpscpq",
+				"src\\classes\\APTPS_CPQ.cls"
+			],
+			[
+				"aptps",
+				"src\\classes\\APTPS_CONSTANTS.cls"
+			],
+			[
+				"pricingma",
+				"src\\classes\\APTPS_PricingMatrixController.cls"
+			],
+			[
+				"cap_ms.pa",
+				"src\\pages\\APTPS_CAP_MS.page"
+			],
+			[
+				"aptps_cap_ms_fl",
+				"src\\pages\\APTPS_CAP_MS_Flow.page"
+			],
+			[
+				"pricing_mode",
+				"src\\classes\\APTPS_Pricing_Model.cls"
+			],
+			[
+				"cap_ms",
+				"src\\pages\\APTPS_CAP_MS.page"
+			],
+			[
+				"aptps_cap_f",
+				"src\\pages\\APTPS_CAP_MS_Flow.page"
+			],
+			[
+				"aptps_pricingma",
+				"src\\classes\\APTPS_PricingMatrixController.cls"
+			],
+			[
+				"_flow.pa",
+				"src\\pages\\APTPS_CAP_MS_Flow.page"
+			],
+			[
+				"productattri",
+				"src\\classes\\APTPS_ProductAttributeConfigController.cls"
+			],
+			[
+				"productattrcontroller.",
+				"src\\classes\\APTPS_ProductAttributeConfigController.cls"
+			],
+			[
+				"pavcon",
+				"src\\classes\\APTPS_PAVObjConfigController.cls"
+			],
+			[
+				"productattr",
+				"src\\classes\\APTPS_ProductAttributeConfigController.cls"
+			],
+			[
+				"flow",
+				"src\\staticresources\\APTPS_CAPResourceBundle_Flow.resource"
+			],
+			[
+				"resour_h",
+				"src\\staticresources\\APTPS_CAPResourceBundle_H.resource"
+			],
+			[
+				"pricingm",
+				"src\\classes\\APTPS_PricingMatrixController.cls"
+			],
+			[
+				"aptps_pricin",
+				"src\\classes\\APTPS_Pricing_Model.cls"
+			],
+			[
+				"aptps_utilityfns",
+				"src\\classes\\APTPS_UtilityFns.cls"
+			],
+			[
+				"aptps_minicartcontroller",
+				"src\\classes\\APTPS_MiniCartController.cls"
+			],
+			[
+				"_ra.cls",
+				"src\\classes\\APTPS_CAP_RA.cls"
+			],
+			[
+				"aptps_pricing_model",
+				"src\\classes\\APTPS_Pricing_Model.cls"
+			],
+			[
+				"_pricingma",
+				"src\\classes\\APTPS_PricingMatrixController.cls"
+			],
+			[
+				"aptps_cap_ms_d",
+				"src\\pages\\APTPS_CAP_MS_D.page"
+			],
+			[
+				"aptps_cap_ms_flow",
+				"src\\pages\\APTPS_CAP_MS_Flow.page"
+			],
+			[
+				"quoteapi",
+				"src\\classes\\APTPS_quoteAPI.cls"
+			],
+			[
+				"aptps_productattributevaluecontroller",
+				"src\\classes\\APTPS_ProductAttributeValueController.cls"
+			],
+			[
+				"aptps_productattributeconfigcontroller",
+				"src\\classes\\APTPS_ProductAttributeConfigController.cls"
+			],
+			[
+				"aptps_pavobjconfigcontroller",
+				"src\\classes\\APTPS_PAVObjConfigController.cls"
+			],
+			[
+				"aptps_optiongroupcontroller",
+				"src\\classes\\APTPS_OptionGroupController.cls"
+			],
+			[
+				"aptps_pricingmatrixcontroller",
+				"src\\classes\\APTPS_PricingMatrixController.cls"
+			],
+			[
+				"aptps_controller.cls",
+				"src\\classes\\APTPS_PAVObjConfigController.cls"
+			],
+			[
+				"aptps_controller",
+				"src\\classes\\APTPS_OptionGroupController.cls"
+			],
+			[
+				"constant",
+				"src\\classes\\APTPS_CONSTANTS.cls"
+			],
+			[
+				"cons",
+				"src\\pages\\Connections_Search.page"
+			],
+			[
+				"aptps_m",
+				"src\\classes\\APTPS_MetaUtils.cls"
+			],
+			[
+				"aptps_uti",
+				"src\\classes\\APTPS_UtilityFns.cls"
+			],
+			[
+				"aptpscap_ms_flo",
+				"src\\pages\\APTPS_CAP_MS_Flow.page"
+			],
+			[
+				"aptps_meta",
+				"src\\classes\\APTPS_MetaUtils.cls"
+			],
+			[
+				"pricingmate",
+				"src\\classes\\APTPS_PricingMatrixController.cls"
+			],
+			[
+				"aptps_cap_",
+				"src\\pages\\APTPS_CAP_MS.page"
+			],
+			[
+				"pricingmatr",
+				"src\\classes\\APTPS_PricingMatrixController.cls"
+			],
+			[
+				"pricingmode",
+				"src\\classes\\APTPS_Pricing_Model.cls"
+			],
+			[
+				"aptps_metautils",
+				"src\\classes\\APTPS_MetaUtils.cls"
+			],
+			[
+				"aptps_q",
+				"src\\classes\\APTPS_quoteAPI.cls"
+			],
+			[
+				"aptps_lineitemselector",
+				"src\\classes\\APTPS_LineItemSelector.cls"
+			],
+			[
+				"customa",
+				"src\\classes\\APTPS_CustomAttributeUtil.cls"
+			],
+			[
+				"aptps_optiong",
+				"src\\classes\\APTPS_OptionGroupController.cls"
+			],
+			[
+				"aptps_ra",
+				"src\\classes\\APTPS_CAP_RA.cls"
+			],
+			[
+				"aptps_opti",
+				"src\\classes\\APTPS_OptionGroupController.cls"
+			],
+			[
+				"_flowres",
+				"src\\staticresources\\APTPS_CAPResourceBundle_Flow.resource"
+			],
+			[
+				"custom",
+				"src\\classes\\APTPS_CustomAttributeUtil.cls"
+			],
+			[
+				"aptps_optiongroupcon",
+				"src\\classes\\APTPS_OptionGroupController.cls"
+			],
+			[
+				"aptps_servicelocationselecotor",
+				"src\\classes\\APTPS_ServiceLocationSelecotor.cls"
+			],
+			[
+				"_ra.cl",
+				"src\\classes\\APTPS_CAP_RA.cls"
+			],
+			[
+				"aptps_location",
+				"src\\classes\\APTPS_LocationAvailabilitySelector.cls"
+			],
+			[
+				"locationcon",
+				"resource-bundles\\APTPS_CAPResourceBundle_Flow.resource\\ServiceLocation\\LocationController.js"
+			],
+			[
+				"aptps_flowre",
+				"src\\staticresources\\APTPS_CAPResourceBundle_Flow.resource"
+			],
+			[
+				"customattributeutil",
+				"src\\classes\\APTPS_CustomAttributeUtil.cls"
+			],
+			[
+				"aptps_cap_ms_h",
+				"src\\classes\\APTPS_CAP_MS_H.cls"
+			],
+			[
+				"customuti",
+				"src\\classes\\APTPS_CustomAttributeUtil.cls"
+			],
+			[
+				"aptps_cust",
+				"src\\classes\\APTPS_CustomAttributeUtil.cls"
+			],
+			[
+				"minica",
+				"resource-bundles\\APTPS_CAPResourceBundle_Flow.resource\\MiniCart\\MiniCartDataService.js"
+			],
+			[
+				"aptps_productatt",
+				"src\\classes\\APTPS_ProductAttributeConfigController.cls"
+			],
+			[
+				"aptps_productattr",
+				"src\\classes\\APTPS_ProductAttributeValueController.cls"
+			],
+			[
+				"aptps_custom",
+				"src\\classes\\APTPS_CustomAttributeUtil.cls"
+			],
+			[
+				"aptps_flow.pa",
+				"src\\pages\\APTPS_CAP_MS_Flow.page"
+			],
+			[
+				"aptps_capres",
+				"src\\staticresources\\APTPS_CAPResourceBundle_Flow.resource"
+			],
+			[
+				"aptps_line",
+				"src\\classes\\APTPS_LineItemSelector.cls"
+			],
+			[
+				"aptps_customattributeutil",
+				"src\\classes\\APTPS_CustomAttributeUtil.cls"
+			],
+			[
+				"aptps_ra.c",
+				"src\\classes\\APTPS_CAP_RA.cls"
+			],
+			[
+				"cap_ms_h",
+				"src\\classes\\APTPS_CAP_MS_H.cls"
+			],
+			[
+				"aptps_cap_ms.cl",
+				"src\\classes\\APTPS_CAP_MS.cls"
+			],
+			[
+				"aptps_cap_fl",
+				"src\\pages\\APTPS_CAP_MS_Flow.page"
+			],
+			[
+				"aptps_attribute_model",
+				"src\\classes\\APTPS_Attribute_Model.cls"
+			],
+			[
+				"aptps_str",
+				"src\\classes\\APTPS_StringUtils.cls"
+			],
+			[
+				"aptps_produc",
+				"src\\classes\\APTPS_ProductSelector.cls"
+			],
+			[
+				"aptps_ra.",
+				"src\\classes\\APTPS_CAP_RA.cls"
+			],
+			[
+				"aptps_cap",
+				"src\\pages\\APTPS_CAP_MS.page"
+			],
+			[
+				"aptps_cap_ra",
+				"src\\classes\\APTPS_CAP_RA.cls"
+			],
+			[
+				"_ra",
+				"src\\classes\\APTPS_CustomAttributePageController_RA.cls"
+			],
+			[
+				"baseco",
+				"resource-bundles\\APTPS_CAPResourceBundle_ms_ang.resource\\Controllers\\baseController.js"
+			],
+			[
+				"aptps_cus",
+				"src\\classes\\APTPS_CustomAttributePageController_RA.cls"
+			],
+			[
+				"aptps_mini",
+				"src\\components\\APTPS_MiniCart.component"
+			],
+			[
+				"aptps_minica",
+				"src\\classes\\APTPS_MiniCartController.cls"
+			],
+			[
+				"aptps_productattributevalueselector",
+				"src\\classes\\APTPS_ProductAttributeValueSelector.cls"
+			],
+			[
+				"aptps_productattributeconfigselector",
+				"src\\classes\\APTPS_ProductAttributeConfigSelector.cls"
+			],
+			[
+				"aptps_pavobjconfigselector",
+				"src\\classes\\APTPS_PAVObjConfigSelector.cls"
+			],
+			[
+				"aptps_optiongroupselector",
+				"src\\classes\\APTPS_OptionGroupSelector.cls"
+			],
+			[
+				"aptps_pricingmatr",
+				"src\\classes\\APTPS_PricingMatrixController.cls"
+			],
+			[
+				"aptps_ra.cl",
+				"src\\classes\\APTPS_CustomAttributePageController_RA.cls"
+			],
+			[
+				"aptps_st",
+				"src\\classes\\APTPS_StringUtils.cls"
+			],
+			[
+				"aptps_me",
+				"src\\classes\\APTPS_MetaUtils.cls"
+			],
+			[
+				"aptps_pricing",
+				"src\\classes\\APTPS_PricingMatrixController.cls"
+			],
+			[
+				"utili",
+				"src\\classes\\APTPS_UtilityFns.cls"
+			],
+			[
+				"stringu",
+				"src\\classes\\APTPS_StringUtils.cls"
+			],
+			[
+				"pavco",
+				"src\\staticresources\\PAVConfigService.resource"
+			],
+			[
+				"producta",
+				"resource-bundles\\APTPS_CAPResourceBundle_H.resource\\Templates\\ProductAttributesView.html"
+			],
+			[
+				"_ra.c",
+				"src\\classes\\APTPS_CAP_RA.cls"
+			],
+			[
+				"aptps_cap_ms.cls",
+				"src\\classes\\APTPS_CAP_MS.cls"
+			],
+			[
+				"aptps_customat_ra.cl",
+				"src\\classes\\APTPS_CustomAttributePageController_RA.cls"
+			],
+			[
+				"aptps_co",
+				"src\\classes\\APTPS_CONSTANTS.cls"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 385.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

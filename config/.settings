@@ -1,0 +1,16 @@
+{
+    "projectName": "GE cvrweave",
+    "username": "sankar.vj7@gmail.com.ge.cvrweave",
+    "id": "0de182b0-7293-11e5-996f-693c6eeb27e4",
+    "namespace": "",
+    "environment": "sandbox",
+    "loginUrl": "https://test.salesforce.com/",
+    "workspace": "C:\\Users\\hemmadi\\Workspace\\GitHub",
+    "subscription": [
+        "ApexClass",
+        "ApexComponent",
+        "ApexPage",
+        "ApexTrigger",
+        "StaticResource"
+    ]
+}

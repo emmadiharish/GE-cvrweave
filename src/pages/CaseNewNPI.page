@@ -1,0 +1,76 @@
+<!--
+*************************************************************************************
+* Name - CaseNewNPI
+* Description - This visualforce page does the following:
+* - Creates new NPI Case
+* Modification Log :
+*************************************************************************************
+* Developer     Date        Description
+*************************************************************************************
+* Zoran Zunko 08/25/2015 Created.
+* *************************************************************************************
+-->
+<apex:page showHeader="true"
+           sidebar="true"
+           standardController="Case"
+           title="New Product Initiation"
+           extensions="CaseNewNPIControllerExt"
+           tabStyle="Case">
+    <apex:includeScript value="{!URLFOR($Resource.CVXlsxJquery_js)}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.cvBootstrap, 'css/bootstrap-namespaced.min.css')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.cvBootstrap, 'js/bootstrap.min.js')}"/>
+    <style>
+        .mandatory-input {
+        border-left: 3px solid #c00;
+        }
+    </style>
+    <apex:includeScript value="{!URLFOR($Resource.cvBootstrap, 'js/cv_dialog.js')}"/>
+    <apex:sectionHeader title="{! uLicenseeUser.Contact.Account.Name }"
+                        subtitle="New NPI"/>
+    <apex:form id="submit_form"
+               enctype="multipart/form-data"
+               html-novalidate="novalidate">
+        <apex:outputPanel layout="block"
+                          id="message_div">
+            <apex:pageMessages />
+        </apex:outputPanel>
+        <apex:actionStatus id="status-loading"
+                           onstart="waitingDialog.show('Please wait...', {dialogSize: 'sm', progressType: 'info'});"
+                           onstop="waitingDialog.hide();"/>
+        <apex:pageBlock title="Details"
+                        id="main_block"
+                        mode="edit">
+            <apex:pageBlockButtons location="top">
+                <apex:commandButton value="Save and Submit"
+                                    action="{! save }"/>
+            </apex:pageBlockButtons>
+            <apex:actionRegion >
+                <apex:outputPanel layout="none"
+                                  id="case_details">
+                    <apex:repeat var="sectionName"
+                                 value="{! sectionOrderList }">
+                        <c:CVCaseCreationSectionComponent pageControllerAttr="{! thisInstance }"
+                                                          reRender="main_block"
+                                                          sectionName="{! sectionName }"/>
+                    </apex:repeat>
+                </apex:outputPanel>
+            </apex:actionRegion>
+            <apex:pageBlockSection title="Attachments"
+                                   columns="2"
+                                   collapsible="false">
+                <apex:repeat value="{!attCaseAttachmentsListDisp}"
+                             var="att">
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="File"/>
+                        <apex:inputFile value="{!att.body}"
+                                        filename="{!att.name}"/>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="Description"/>
+                        <apex:inputText value="{!att.Description}"/>
+                    </apex:pageBlockSectionItem>
+                </apex:repeat>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

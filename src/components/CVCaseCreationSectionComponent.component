@@ -1,0 +1,223 @@
+<!--
+*************************************************************************************
+* Name - CVCaseCreationSectionComponent
+* Description - This visualforce component does the following:
+* - Displays the input fields for a single section on a CV Workflow Case creation pages
+* - must be nested within a form tag
+* Modification Log :
+*************************************************************************************
+* Developer     Date        Description
+*************************************************************************************
+* Zoran Zunko   10/07/2015  Created
+*************************************************************************************
+-->
+<apex:component id="CVCaseCreationSectionComponent"
+                layout="none"
+                allowDML="true"
+                controller="CVCaseCreationSectionComponentCtrl"
+        >
+    <apex:attribute name="pageControllerAttr"
+                    type="CaseNewWFControllerExtBase"
+                    assignTo="{! pageController }"
+                    required="true"
+                    description="The controller for the page."/>
+    <apex:attribute name="reRender"
+                    type="String"
+                    required="false"
+                    description="The html id of the area to rerender located on the page which contains the component"/>
+    <apex:attribute name="sectionName"
+                    type="String"
+                    required="true"
+                    description="The title of the displayed section and a key to the fieldset map containing the section - fieldset parameters"/>
+    <apex:pageBlockSection title="{! sectionName }"
+                           collapsible="false"
+                           columns="1">
+        <!-- apex:actionFunction name="reload" status="status-loading" reRender="main_block" action="{! pageController.selectSKU }"/ -->
+        <!-- apex:facet name="header">
+            <span class="pbSubExtra">
+                <span class="requiredLegend">
+                    <span class="requiredExampleOuter">
+                        <span class="requiredExample">&nbsp;</span>
+                    </span>
+                    <span class="requiredText">= Required Information</span>
+                </span>
+            </span>
+            <h3>Case Details</h3>
+        </apex:facet -->
+        <apex:repeat value="{! sectionFieldSetMap[sectionName] }"
+                     var="cFieldSet">
+            <apex:repeat value="{! cFieldSet.fields }"
+                         var="cField">
+                <apex:pageBlockSectionItem rendered="{! cField.FieldPath != 'CV_Agreement_No_Name__c' && cField.FieldPath != 'Product_Category__c' && cField.FieldPath != 'CV_Product_Sub_Cat_1__c' && cField.FieldPath != 'CV_Product_Sub_Cat_2__c' && cField.FieldPath != 'SKU_Number__c' && cField.FieldPath != 'Change_Type__c' && cField.FieldPath != 'CV_Product_Categories__c' && cField.FieldPath != 'SKU_Number__c' && cField.FieldPath != 'Brand_Approval_Type__c' && cField.FieldPath != 'Amendment_Change_Type__c' && cField.FieldPath != 'Request_Type__c'  && cField.FieldPath != 'AccountId' && cField.FieldPath != 'ContactId' && cField.FieldPath != 'CV_Targeted_Retailers__c' && cField.FieldPath != 'CV_Factory_Location_Country__c'}">
+                    <apex:outputLabel value="{! cField.Label }"/>
+                    <apex:inputField value="{! cNewCase[cField] }"
+                                     required="false"
+                                     styleClass="{! IF(cField.Required, 'mandatory-input', '' ) }"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem rendered="{! cField.FieldPath = 'Product_Category__c' }">
+                    <apex:outputLabel value="{! cField.Label }"/>
+                    <apex:selectList value="{! cNewCase[cField] }"
+                                     required="false"
+                                     styleClass="{! IF(cField.Required, 'mandatory-input', '' ) }"
+                                     multiselect="false"
+                                     size="1">
+                        <apex:selectOptions value="{! pageController.categoriesOptions }"/>
+                        <apex:actionSupport event="onchange"
+                                            reRender="{! reRender }"
+                                            status="status-loading"
+                                            action="{! pageController.categorySelected }"/>
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem rendered="{! cField.FieldPath = 'CV_Product_Sub_Cat_1__c' }">
+                    <apex:outputLabel value="{! cField.Label }"/>
+                    <apex:selectList value="{! cNewCase[cField] }"
+                                     required="false"
+                                     styleClass="{! IF(cField.Required, 'mandatory-input', '' ) }"
+                                     multiselect="false"
+                                     size="1">
+                        <apex:selectOptions value="{! pageController.subCat1Options }"/>
+                        <apex:actionSupport event="onchange"
+                                            reRender="{! reRender }"
+                                            status="status-loading"/>
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem rendered="{! cField.FieldPath = 'CV_Product_Sub_Cat_2__c' }">
+                    <apex:outputLabel value="{! cField.Label }"/>
+                    <apex:selectList value="{! cNewCase[cField] }"
+                                     required="false"
+                                     styleClass="{! IF(pageController.subCat2Options.size > 0, 'mandatory-input', '' ) }"
+                                     multiselect="false"
+                                     size="1">
+                        <apex:selectOptions value="{! pageController.subCat2Options }"/>
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem rendered="{! AND(cField.FieldPath = 'CV_Agreement_No_Name__c', NOT(pageController.singleAgreement)) }">
+                    <apex:outputLabel value="{! cField.Label }"/>
+                    <apex:selectList value="{! cNewCase[cField] }"
+                                     required="false"
+                                     styleClass="{! IF(cField.Required, 'mandatory-input', '' ) }"
+                                     multiselect="false"
+                                     size="1">
+                        <apex:selectOptions value="{! pageController.licenseeContracts }"/>
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem rendered="{! cField.FieldPath = 'SKU_Number__c' }">
+                    <apex:outputLabel value="{! cField.Label }"/>
+                    <apex:outputPanel layout="none">
+                        <apex:inputField value="{! cNewCase[cField] }"
+                                         required="false"
+                                         styleClass="{! IF(cField.Required, 'mandatory-input', '' ) }"/>
+                        <apex:commandLink value="Search SKU"
+                                          style="margin-left: 5px;"
+                                          action="{! pageController.selectSKU }"
+                                          reRender="{! reRender }"
+                                          status="status-loading"/>
+                    </apex:outputPanel>
+                        <!-- apex:commandLink value="Search SKU"
+                                          style="margin-left: 5px;"
+                                          onClick="reload(); return false;"/>
+                    </apex:outputPanel -->
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem rendered="{! cField.FieldPath = 'Change_Type__c' }">
+                    <apex:outputLabel value="{! cField.Label }"/>
+                    <apex:inputField value="{! cNewCase[cField] }"
+                                     required="false"
+                                     styleClass="{! IF(cField.Required, 'mandatory-input', '' ) }">
+                        <apex:actionSupport event="onchange"
+                                            reRender="{! reRender }"
+                                            status="status-loading"/>
+                    </apex:inputField>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem rendered="{! cField.FieldPath = 'CV_Product_Categories__c' }">
+                    <apex:outputLabel value="{! cField.Label }"/>
+                    <apex:selectList value="{! cNewCase[cField] }"
+                                     required="false"
+                                     styleClass="{! IF(cField.Required, 'mandatory-input', '' ) }"
+                                     multiselect="true"
+                                     size="5">
+                        <apex:selectOptions value="{! pageController.categories }"/>
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem rendered="{! AND(cField.FieldPath = 'CV_Agreement_No_Name__c', pageController.singleAgreement) }">
+                    <apex:outputLabel value="{! cField.Label }"/>
+                    <apex:outputText value="{! pageController.singleAgreementName }"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem rendered="{! cField.FieldPath = 'Brand_Approval_Type__c' }">
+                    <apex:outputLabel value="{! cField.Label }"/>
+                    <apex:inputField value="{! cNewCase[cField] }"
+                                     required="false"
+                                     styleClass="{! IF(cField.Required, 'mandatory-input', '' ) }">
+                        <apex:actionSupport event="onchange"
+                                            reRender="{! reRender }"
+                                            status="status-loading"/>
+                    </apex:inputField>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem rendered="{! cField.FieldPath = 'Request_Type__c' }">
+                    <apex:outputLabel value="{! cField.Label }"/>
+                    <apex:inputField value="{! cNewCase[cField] }"
+                                     required="false"
+                                     styleClass="{! IF(cField.Required, 'mandatory-input', '' ) }">
+                        <apex:actionSupport event="onchange"
+                                            reRender="{! reRender }"
+                                            status="status-loading"/>
+                    </apex:inputField>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem rendered="{! cField.FieldPath = 'Amendment_Change_Type__c' }">
+                    <apex:outputLabel value="{! cField.Label }"/>
+                    <apex:inputField value="{! cNewCase[cField] }"
+                                     required="false"
+                                     styleClass="{! IF(cField.Required, 'mandatory-input', '' ) }">
+                        <apex:actionSupport event="onchange"
+                                            reRender="{! reRender }"
+                                            status="status-loading"/>
+                    </apex:inputField>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem rendered="{! cField.FieldPath = 'AccountId' }">
+                    <apex:outputLabel value="Account"/>
+                    <apex:selectList value="{! cNewCase[cField] }"
+                                     required="false"
+                                     styleClass="{! IF(cField.Required, 'mandatory-input', '' ) }"
+                                     multiselect="false"
+                                     size="1"
+                                     disabled="{! pageController.licenseeAccounts.size = 0 }">
+                        <apex:selectOptions value="{! pageController.licenseeAccounts }"/>
+                        <apex:actionSupport event="onchange"
+                                            reRender="{! reRender }"
+                                            status="status-loading"/>
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem rendered="{! cField.FieldPath = 'ContactId' }">
+                    <apex:outputLabel value="Contact"/>
+                    <apex:selectList value="{! cNewCase[cField] }"
+                                     required="false"
+                                     styleClass="{! IF(cField.Required, 'mandatory-input', '' ) }"
+                                     multiselect="false"
+                                     size="1"
+                                     disabled="{! pageController.licenseeAccounts.size = 0 }">
+                        <apex:selectOptions value="{! pageController.licenseeContacts }"/>
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem rendered="{! cField.FieldPath = 'CV_Targeted_Retailers__c' }">
+                    <apex:outputLabel value="{! cField.Label }"/>
+                    <apex:inputField value="{! cNewCase[cField] }"
+                                     required="false"
+                                     styleClass="{! IF(cField.Required, 'mandatory-input', '' ) }">
+                        <apex:actionSupport event="onchange"
+                                            reRender="{! reRender }"
+                                            status="status-loading"/>
+                    </apex:inputField>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem rendered="{! cField.FieldPath = 'CV_Factory_Location_Country__c'}">
+                    <apex:outputLabel value="{! cField.Label }"/>
+                    <apex:selectList value="{! cNewCase[cField] }"
+                                     required="false"
+                                     styleClass="{! IF(cField.Required, 'mandatory-input', '' ) }"
+                                     multiselect="false"
+                                     size="1">
+                        <apex:selectOptions value="{! pageController.countries }"/>
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>
+            </apex:repeat>
+        </apex:repeat>
+    </apex:pageBlockSection>
+</apex:component>

@@ -1,0 +1,39 @@
+<!--
+*************************************************************************************
+* Name - CaseCVWorkflowGatekeeper
+* Description - This visualforce page does the following:
+* - enables the inclusion of additinal workflow roles in a CV Workflow process
+* Modification Log :
+*************************************************************************************
+* Developer     Date        Description
+*************************************************************************************
+* Zoran Zunko   06/09/2015  Created
+*************************************************************************************
+-->
+<apex:page showHeader="true"
+    sidebar="true"
+    standardController="Case"
+    docType="html-5.0"
+    title="{! Case.RecordType.Name } Gatekeeper"
+    extensions="CaseCVWorkflowGatekeeperExtController"
+    action="{! init }"
+    tabStyle="Case">
+    <apex:sectionHeader title="Gatekeeper" subtitle="{! Case.Subject }" />
+    <apex:form id="submit_form">
+        <apex:outputPanel layout="block" id="message_div">
+            <apex:pageMessages />
+        </apex:outputPanel>
+        <apex:pageBlock title="Workflow role selection" mode="maindetail" id="main_block">
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Enter Workflow Process" action="{! save }" rendered="{! IsSaveEnabled }"/>
+                <apex:commandButton value="Cancel" action="{! cancel }"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockTable value="{! cvwrwRoleList }" var="cvwrwRole">
+                <apex:column headerValue="Select">
+                    <apex:inputCheckbox disabled="{! cvwrwRole.readonly }" value="{! cvwrwRole.participating }"/>
+                </apex:column>
+                <apex:column value="{! cvwrwRole.wfRole }" headerValue="Workflow Role"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

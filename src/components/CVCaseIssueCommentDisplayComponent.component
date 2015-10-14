@@ -1,0 +1,172 @@
+<!--
+*************************************************************************************
+* Name - CVCaseIssueCommentDisplayComponent
+* Description - This visualforce component does the following:
+* - Displays all the issues and their comments for a given case.
+* - display of the fields is controlled by field sets defined on CV_Case_Issue_Comment__c
+* - must be nested within a form tag
+* Modification Log :
+*************************************************************************************
+* Developer     Date        Description
+*************************************************************************************
+* Zoran Zunko   05/04/2015  Created
+*************************************************************************************
+-->
+<apex:component layout="none"
+    allowDML="true"
+    controller="CVCaseIssueCommentDisplayController">
+
+    <apex:attribute name="pageControllerAttr"
+      type="CaseWorkflowExtensionControllerBase"
+      assignTo="{!pageController}"
+      required="true"
+      description="The controller for the page." />
+    <apex:attribute name="reRender"
+      type="String"
+      required="true"
+      description="The html id of the area to rerender located on the page which contains the component"/>
+    <apex:includeScript value="{!URLFOR($Resource.CVXlsxJquery_js)}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.cvBootstrap, 'css/bootstrap-namespaced.min.css')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.cvBootstrap, 'js/bootstrap.min.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.cvBootstrap, 'js/cv_dialog.js')}"/>
+    <style>
+        h3.facet{
+            margin-right: 20px;
+        }
+        .custPopup {
+            background-color: white;
+            border-width: 2px;
+            border-style: solid;
+            z-index: 99;
+            left: 50%;
+            padding:10px;
+            position: absolute;
+            /* These are the 3 css properties you will need to change so the popup
+            displays in the center of the screen. First set the width. Then set
+            margin-left to negative half of what the width is. You can add
+            the height property for a fixed size pop up if you want.*/
+            width: 500px;
+            margin-left: -250px;
+            margin-top: 60px;
+        }
+        .popupBackground {
+            background-color:black;
+            opacity: 0.20;
+            filter: alpha(opacity = 20);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 98;
+        }
+    </style>
+    <apex:actionStatus id="status-loading" onstart="waitingDialog.show('Please wait...', {dialogSize: 'sm', progressType: 'info'});" onstop="waitingDialog.hide();"/>
+    <apex:pageBlock title="Messages" mode="maindetail" id="issuesBlock">
+        <apex:pageBlockButtons location="top" rendered="{! !pageControllerAttr.IsLicensee  }">
+            <apex:commandButton value="New Issue" reRender="tstpopup" action="{! addIssue }" status="status-loading"/>
+        </apex:pageBlockButtons>
+        <apex:actionRegion >
+            <apex:outputPanel id="tstpopup" layout="none">
+                <apex:outputPanel styleClass="popupBackground" layout="block" rendered="{! displayPopUp }"/>
+                <apex:outputPanel styleClass="custPopup" layout="block" rendered="{! displayPopUp }">
+                    <apex:pageBlock title="New Issue" mode="edit" rendered="{! cvcicNewCommentIssueId = null}">
+                        <apex:pageBlockButtons location="bottom">
+                            <apex:commandButton value="Save" reRender="{! reRender }" action="{! saveIssue }" status="status-loading"/>
+                            <apex:commandButton value="Cancel" immediate="true" action="{! cancel }" reRender="tstpopup, {! reRender }" status="status-loading"/>
+                        </apex:pageBlockButtons>
+                        <apex:pageBlockSection title="Enter Issue Message" collapsible="false" columns="1">
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel for="issue-message" value="Message"/>
+                                <apex:inputField id="issue-message" value="{! cvcicNewIssue.Message__c }" required="true"/>
+                            </apex:pageBlockSectionItem>
+                            <apex:pageBlockSectionItem rendered="{! pageController.allowsReShippingOfSamples }">
+                                <apex:outputLabel for="issue-new-samples" value="New Samples Required?"/>
+                                <apex:inputField id="issue-new-samples" value="{! cvcicNewIssue.New_Samples_Required__c }" required="true"/>
+                            </apex:pageBlockSectionItem>
+                        </apex:pageBlockSection>
+                    </apex:pageBlock>
+                    <apex:pageBlock title="New Comment" mode="edit" rendered="{! cvcicNewCommentIssueId != null}">
+                        <apex:pageBlockButtons location="bottom">
+                            <apex:commandButton value="Save" reRender="{! reRender }" action="{! saveComment }" status="status-loading"/>
+                            <apex:commandButton value="Cancel" immediate="true" action="{! cancel }" reRender="tstpopup, {! reRender }" status="status-loading"/>
+                        </apex:pageBlockButtons>
+                        <apex:pageBlockSection title="Enter Comment" collapsible="false" columns="1">
+                            <apex:pageBlockSectionItem >
+                                    <apex:outputLabel for="comment-message" value="Message"/>
+                                    <apex:inputField id="comment-message" value="{! cvcicNewComment.Message__c }" required="true"/>
+                                </apex:pageBlockSectionItem>
+                        </apex:pageBlockSection>
+                    </apex:pageBlock>
+                </apex:outputPanel>
+            </apex:outputPanel>
+        </apex:actionRegion>
+        <apex:repeat value="{! pageControllerAttr.cvcicIssesList }" var="issue">
+            <apex:pageBlockSection columns="1">
+                <apex:facet name="header">
+                    <apex:outputPanel layout="none">
+                            <apex:repeat value="{! $ObjectType.CV_Case_Issue_Comment__c.FieldSets.Issue_List_Facet_Display }" var="cvcicField">
+                                <h3 class="facet">
+                                    <apex:outputLabel value="{! cvcicField.Label }"/>:
+                                    &nbsp;
+                                    <apex:outputField value="{! issue[cvcicField] }"/>
+                                </h3>
+                            </apex:repeat>
+                            <apex:outputPanel layout="none" rendered="{! AND(!issue.Resolved__c, !pageControllerAttr.IsLicensee) && (issue.GE_Created_By__c = pageControllerAttr.currentUserWorkflowRole) }">
+                                <h3 class="facet">
+                                    <apex:commandLink value="Mark resolved" action="{! markedResolved }" reRender="{! reRender }" status="status-loading">
+                                        <apex:param name="cvcicMarkResolvedIssueId"
+                                            value="{! issue.Id }"
+                                            assignTo="{!cvcicMarkResolvedIssueId}"/>
+                                    </apex:commandLink>
+                                </h3>
+                            </apex:outputPanel>
+                    </apex:outputPanel>
+                </apex:facet>
+                <apex:pageBlockSectionItem rendered="{! !pageControllerAttr.IsLicensee  }">
+                    <apex:outputLabel value="{! $ObjectType.CV_Case_Issue_Comment__c.Fields.GE_Created_By__c.Label }"/>
+                    <apex:outputField value="{! issue.GE_Created_By__c }"/>
+                </apex:pageBlockSectionItem>
+                <apex:repeat value="{! $ObjectType.CV_Case_Issue_Comment__c.FieldSets.Issue_List_Display }" var="cvcicField">
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="{! cvcicField.Label }"/>
+                        <apex:outputField value="{! issue[cvcicField] }"/>
+                    </apex:pageBlockSectionItem>
+                </apex:repeat>
+                <apex:outputPanel layout="block" style="padding-left:100px">
+                    <apex:repeat value="{! issue.Comments__r }" var="comment">
+                        <apex:pageBlockSection columns="1">
+                            <apex:facet name="header">
+                                <apex:outputPanel layout="none">
+                                        <apex:repeat value="{! $ObjectType.CV_Case_Issue_Comment__c.FieldSets.Comment_List_Facet_Display }" var="cvcicField">
+                                            <h3 class="facet">
+                                                <apex:outputLabel value="{! cvcicField.Label }"/>:&nbsp;
+                                                <apex:outputField value="{! comment[cvcicField] }"/>
+                                            </h3>
+                                        </apex:repeat>
+                                </apex:outputPanel>
+                            </apex:facet>
+                            <apex:pageBlockSectionItem rendered="{! pageControllerAttr.roleLicensee != pageControllerAttr.currentUserWorkflowRole  }">
+                                <apex:outputLabel value="{! $ObjectType.CV_Case_Issue_Comment__c.Fields.GE_Created_By__c.Label }"/>
+                                <apex:outputField value="{! comment.GE_Created_By__c }"/>
+                            </apex:pageBlockSectionItem>
+                            <apex:repeat value="{! $ObjectType.CV_Case_Issue_Comment__c.FieldSets.Comment_List_Display }" var="cvcicField">
+                                <apex:pageBlockSectionItem >
+                                    <apex:outputLabel value="{! cvcicField.Label }"/>
+                                    <apex:outputField value="{! comment[cvcicField] }"/>
+                                </apex:pageBlockSectionItem>
+                            </apex:repeat>
+                        </apex:pageBlockSection>
+                    </apex:repeat>
+                </apex:outputPanel>
+                    <apex:pageBlockSectionItem >
+                        <apex:commandLink value="Add Comment" action="{! addComment }" reRender="tstpopup" rendered="{! !issue.Resolved__c && ((pageControllerAttr.IsLicensee) || (issue.GE_Created_By__c = pageControllerAttr.currentUserWorkflowRole))  }" status="status-loading">
+                            <apex:param name="cvcicNewCommentIssueId"
+                                        value="{! issue.Id }"
+                                        assignTo="{!cvcicNewCommentIssueId}"/>
+                        </apex:commandLink>
+                    </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+        </apex:repeat>
+    </apex:pageBlock>
+</apex:component>

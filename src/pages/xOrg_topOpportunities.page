@@ -1,0 +1,30 @@
+<apex:page standardController="Account">
+
+<html>
+    <head>
+        <script type="text/javascript">
+        var resourceURL = '{!URLFOR($Resource.xOrg_Resources)}/';
+        </script>
+        <script type="text/javascript" src="{!URLFOR($Resource.xOrg_Resources,'cross-org-collaboration.js')}"></script>
+    </head>
+    <body>
+        <div id="table-wrapper">
+            <div id="table-container"></div>
+        </div>
+        <script type="text/javascript">
+                document.ready = function() {
+                    xOrg.initialize({
+                        baseURLForInstance: 'https://na11.salesforce.com',
+                        page:               'xOrg_topOpportunities',
+                        SSO:                {!$User.Federation_ID__c},
+                        orgID:              '00DN00000003edp',
+                        accID:              '001N0000007hmZ3',
+                        rows:               3,
+                        environment: 'stage'
+                    });
+
+                };
+        </script>
+    </body>
+</html> 
+</apex:page>

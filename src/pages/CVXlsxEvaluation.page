@@ -1,0 +1,28 @@
+<!-- 
+/******************************************************************************************************************************
+* Name - CVXlsxEvaluation
+* Description
+* Evaluation of js-xlsx
+* ---------------------------------------------------------------------------
+* Developer Date Description
+* ---------------------------------------------------------------------------
+* Uwe Heim 2015-08-04 Created.
+******************************************************************************************************************************/
+-->
+
+<apex:page controller="CVXlsxEvaluationCtrl" >
+	<!-- base package -->
+	    <script src="/soap/ajax/32.0/connection.js"></script>
+	    <script src="/soap/ajax/32.0/apex.js"></script>
+		<apex:includeScript value="{!URLFOR($Resource.elfJquery_js)}"/>
+		<apex:includeScript value="{!URLFOR($Resource.elfXlsx_core_min_js)}"/>
+
+
+		<div style="height:200px; border: silver dashed 3px; border-radius: 10px; text-align: center; vertical-align: middle;">
+			<span style="vertical-align: middle;">Drop Here</span>
+		</div>
+
+
+	<!--<script lang="javascript" src="dist/xlsx.core.min.js"></script>-->
+	test <br/>
+</apex:page>

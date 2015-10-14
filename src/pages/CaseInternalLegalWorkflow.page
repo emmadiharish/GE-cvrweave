@@ -1,0 +1,34 @@
+<!--
+*************************************************************************************
+* Name - CaseInternalLegalWorkflow
+* Description - This visualforce page does the following:
+* - Provides interface for Internal Legal workflow.
+* Modification Log :
+*************************************************************************************
+* Developer     Date        Description
+*************************************************************************************
+* Zoran Zunko   07/01/2015  Created
+*************************************************************************************
+-->
+<apex:page showHeader="true"
+    sidebar="true"
+    standardController="Case"
+    title="Internal Legal Workflow"
+    extensions="CaseInternalLegalWorkflowCtrlExt"
+    tabStyle="Case">
+    <apex:form id="main_form">
+        <apex:outputPanel id="messages">
+            <apex:pageMessages />
+        </apex:outputPanel>
+        <apex:pageBlock title="{! Case.RecordType.Name } Case Workflow" mode="edit" id="main_block">
+            <apex:pageBlockButtons id="buttons" location="both">
+                <apex:commandButton value="Re-Submit" action="{! reSubmit }" rendered="{! licenseeButtonsVisible  }"/>
+                <c:CVCaseActionsComponent pageControllerAttr="{! thisInstance }" reRender="main_form"/>
+            </apex:pageBlockButtons>
+            <apex:detail showChatter="false" subject="{! Case.Id }" relatedList="false" inlineEdit="false">
+            </apex:detail>
+        </apex:pageBlock>
+        <c:CVCaseIssueCommentDisplayComponent pageControllerAttr="{! thisInstance }" reRender="main_form"/>
+    </apex:form>
+    <apex:relatedList list="CombinedAttachments" pageSize="7" />
+</apex:page>

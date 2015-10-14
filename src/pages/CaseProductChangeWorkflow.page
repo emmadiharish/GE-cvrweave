@@ -1,0 +1,107 @@
+<!--
+*************************************************************************************
+* Name - CaseProductChangeWorkflow
+* Description - This visualforce page does the following:
+* - Provides interface for Product/Brand Change workflow.
+* Modification Log :
+*************************************************************************************
+* Developer     Date        Description
+*************************************************************************************
+* Zoran Zunko   05/29/2015  Created
+*************************************************************************************
+*extensions="String"
+-->
+<apex:page showHeader="true"
+    sidebar="true"
+    standardController="Case"
+    title="Brand/Product Change Workflow"
+    extensions="CaseProductChangeWorkflowCtrlExt"
+    tabStyle="Case">
+    <apex:includeScript value="{!URLFOR($Resource.CVXlsxJquery_js)}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.cvBootstrap, 'css/bootstrap-namespaced.min.css')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.cvBootstrap, 'js/bootstrap.min.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.cvBootstrap, 'js/cv_dialog.js')}"/>
+    <apex:form id="main_form">
+        <apex:outputPanel id="messages">
+            <apex:pageMessages />
+        </apex:outputPanel>
+        <apex:actionStatus id="status-loading"
+            onstart="waitingDialog.show('Please wait...', {dialogSize: 'sm', progressType: 'info'});"
+            onstop="waitingDialog.hide();"/>
+        <apex:pageBlock title="{! Case.RecordType.Name } Case Workflow"
+            mode="edit"
+            id="main_block">
+            <apex:pageBlockButtons id="buttons" location="both">
+                <apex:commandButton value="Re-Submit"
+                    action="{! reSubmit }"
+                    status="status-loading"
+                    rendered="{! licenseeButtonsVisible  }"/>
+                <apex:commandButton value="Add Shipping Info"
+                    action="{! addshippingInfoLicensee }"
+                    status="status-loading"
+                    rendered="{! shippingButtonsVisible  }"/>
+                <c:CVCaseActionsComponent pageControllerAttr="{! thisInstance }"
+                    reRender="main_form"/>
+            </apex:pageBlockButtons>
+            <apex:actionRegion >
+                <apex:outputPanel id="tstpopup"
+                    layout="none">
+                    <apex:outputPanel styleClass="popupBackground"
+                        layout="block"
+                        rendered="{! showShippingPopoupLicensee }"/>
+                    <apex:outputPanel styleClass="custPopup"
+                        layout="block"
+                        rendered="{! showShippingPopoupLicensee }">
+                        <apex:pageBlock title="Add product sample shiping information" mode="edit">
+                            <apex:pageBlockButtons location="bottom">
+                                <apex:commandButton value="Save"
+                                    action="{! saveShippingInfoLicensee }"
+                                    status="status-loading"
+                                    reRender="main_form"/>
+                                <apex:commandButton value="Cancel"
+                                    immediate="true"
+                                    status="status-loading"
+                                    action="{! cancelshippingInfoLicensee }"
+                                    reRender="main_form"/>
+                            </apex:pageBlockButtons>
+                            <apex:pageBlockSection title="Shipping data" collapsible="false" columns="1">
+                                <apex:repeat value="{! $ObjectType.Product_Sample_Shipping_Info__c.FieldSets.ShippingDataEntry }"
+                                    var="sField">
+                                    <apex:pageBlockSectionItem >
+                                        <apex:outputLabel value="{! sField.Label }"/>
+                                        <apex:inputField value="{! shippingInfoLicensee[sField] }" required="{ !sField.Required }"/>
+                                    </apex:pageBlockSectionItem>
+                                </apex:repeat>
+                            </apex:pageBlockSection>
+                        </apex:pageBlock>
+                    </apex:outputPanel>
+                </apex:outputPanel>
+            </apex:actionRegion>
+             <apex:actionRegion >
+                <apex:outputPanel id="confirmPopup" layout="none">
+                    <apex:outputPanel styleClass="popupBackground" layout="block" rendered="{! showShippingPopoupWfRole }"/>
+                    <apex:outputPanel styleClass="custPopup" layout="block" rendered="{! showShippingPopoupWfRole }">
+                        <apex:pageBlock title="Confirm product sample reception" mode="edit">
+                            <apex:pageBlockButtons location="bottom">
+                                <apex:commandButton value="Confirm" action="{! confirmShippingInfoWfRole }" reRender="main_form"/>
+                                <apex:commandButton value="Cancel" immediate="true" action="{! cancelShippingInfoWfRole }" reRender="main_form"/>
+                            </apex:pageBlockButtons>
+                            <apex:pageBlockSection title="Shipping data" collapsible="false" columns="1">
+                                <apex:repeat value="{! $ObjectType.Product_Sample_Shipping_Info__c.FieldSets.ShippingDataEntry }" var="sField">
+                                    <apex:pageBlockSectionItem >
+                                        <apex:outputLabel value="{! sField.Label }"/>
+                                        <apex:outputText value="{! shippingInfoWfRole[sField] }"/>
+                                    </apex:pageBlockSectionItem>
+                                </apex:repeat>
+                            </apex:pageBlockSection>
+                        </apex:pageBlock>
+                    </apex:outputPanel>
+                </apex:outputPanel>
+            </apex:actionRegion>
+            <apex:detail showChatter="false" subject="{! Case.Id }" relatedList="false" inlineEdit="false">
+            </apex:detail>
+        </apex:pageBlock>
+        <c:CVCaseIssueCommentDisplayComponent pageControllerAttr="{! thisInstance }" reRender="main_form"/>
+    </apex:form>
+    <apex:relatedList list="CombinedAttachments" pageSize="7" />
+</apex:page>

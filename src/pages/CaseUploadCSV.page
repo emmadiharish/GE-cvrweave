@@ -1,0 +1,29 @@
+<apex:page standardController="Case" extensions="CaseCSV_Controller" tabStyle="Case" standardStylesheets="true" showHeader="true">
+    <apex:sectionHeader title="Case Details" subtitle="{!Case.CaseNumber}" />
+    <apex:form >
+    <apex:outputField value="{!Case.Account.id}" />
+    <apex:pageBlock title="Case Edit" mode="edit" tabStyle="Case" >
+
+        <apex:pageBlockButtons >
+            <apex:commandButton value="Confirm Processing" action="{!process}" />  
+            <apex:commandButton value="Cancel Processing" action="{!cancel}" immediate="true" />                   
+        </apex:pageBlockButtons>
+        <apex:pageBlock >
+            <apex:pageBlockTable value="{!csvAttachmentList}" var="csvList">
+                <!--<apex:column value="{!csvList.Id}"/> -->
+                <apex:column width="25px"><apex:inputCheckbox value="{!csvList.checked}"/></apex:column>
+                <apex:column value="{!csvList.obj.Name}"/> 
+                <apex:column value="{!csvList.obj.Description}"/> 
+                <apex:column value="{!csvList.obj.BodyLength}"/> 
+                <apex:column value="{!csvList.obj.CreatedById}"/> 
+                <apex:column value="{!csvList.obj.CreatedDate}"/> 
+                <apex:column value="{!csvList.obj.LastModifiedById}"/> 
+                <apex:column value="{!csvList.obj.LastModifiedDate}"/> 
+                <apex:column value="{!csvList.obj.SystemModstamp}"/> 
+                <apex:column value="{!csvList.obj.OwnerId}"/> 
+                <!--<apex:column value="{!csvList.ParentId}"/> -->
+            </apex:pageBlockTable>             
+        </apex:pageBlock> 
+    </apex:pageBlock>
+    </apex:form>
+</apex:page>

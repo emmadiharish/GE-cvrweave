@@ -1,0 +1,43 @@
+<!--
+*************************************************************************************
+* Name - CaseNewProductFromNPI
+* Description - This visualforce page does the following:
+* - Creates new Ancillary Brand Case
+* Modification Log :
+*************************************************************************************
+* Developer     Date        Description
+*************************************************************************************
+* Zoran Zunko 06/17/2015 Created.
+* *************************************************************************************
+-->
+<apex:page id="CaseNewProductFromNPI"
+           showHeader="true"
+           sidebar="true"
+           standardController="Case"
+           docType="html-5.0"
+           title="New Product From NPI"
+           extensions="CaseNewProductFromNPICtrlExt"
+           action="{! createProduct }"
+           tabStyle="Case">
+
+    <apex:sectionHeader title="{! Case.Subject }"
+                        subtitle="Create product from case"/>
+    <apex:form id="submit_form"
+               enctype="multipart/form-data"
+               html-novalidate="novalidate">
+        <apex:outputPanel layout="block"
+                          id="message_div">
+            <apex:pageMessages />
+        </apex:outputPanel>
+        <apex:pageBlock title="Details"
+                        id="main_block"
+                        mode="maindetail">
+
+
+            <apex:pageBlockButtons location="top">
+                <apex:commandButton value="Back"
+                                    action="{! back }"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

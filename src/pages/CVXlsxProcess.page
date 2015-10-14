@@ -1,0 +1,249 @@
+<!-- 
+/******************************************************************************************************************************
+* Name - CVXlsxProcess
+* Description
+* VF Page to Process the transaltion of XLSX to CSV Files
+* ---------------------------------------------------------------------------
+* Developer Date Description
+* ---------------------------------------------------------------------------
+* Uwe Heim 2015-08-10 Created.
+******************************************************************************************************************************/
+-->
+
+
+<apex:page controller="CVXlsxProcessCtrl" >
+    <script src="/soap/ajax/32.0/connection.js"></script>
+    <script src="/soap/ajax/32.0/apex.js"></script>
+	<apex:includeScript value="{!URLFOR($Resource.CVXlsxJquery_js)}"/>
+	<apex:includeScript value="{!URLFOR($Resource.CVXlsxPolyfill_js)}"/>
+	<apex:includeScript value="{!URLFOR($Resource.CVXlsxJszip_js)}"/>
+	<apex:includeScript value="{!URLFOR($Resource.CVXlsx_core_min_js)}"/>
+	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>	
+	<link  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+	
+	<br/>
+
+	<h2 id="elfCaption" class="pageDescription elfCaption"></h2>
+
+	<br/>
+	<br/>
+
+	<div id="elfProgressBarWrapper" style="border: silver solid 1px; padding: 2px; border-radius:4px; overflow: auto;">
+		<div  id="elfProgressBar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="min-width: 2em; width:0%; ">
+			0%
+		</div>
+	</div>
+
+	<!--<div style="break: both; "></div>-->
+	<br/>
+
+	<div id="elfProgressInfo" style="h_eight: 34px; vertical-align: middle; border: 1px solid silver; border-radius:8px; background:#eee; padding: 4px;  ">
+		<img id="elfProgressIcon" style=" vertical-align: middle; width: 24px;" src="/sfsites/commeditor/assets/loading-gray.gif" />
+		<span id="elfProgressText" style=" vertical-align: middle; ">working...</span>
+	</div>	
+
+	<div id="elfResult" style="vertical-align: middle; border: 1px solid silver; border-radius:8px; background:#eee; padding: 4px; display: none; ">
+		<!--<img id="elfProgressIcon" style=" vertical-align: middle; width: 24px;" src="/sfsites/commeditor/assets/loading-gray.gif" />-->
+		<span id="elfResultText" style=" vertical-align: middle; ">
+			<img id="elfProgressIcon" style=" vertical-align: middle; width: 24px;" src="/sfsites/commeditor/assets/loading-gray.gif" />
+		</span>
+	</div>	
+	
+	<style>
+		.h2, h2, body 		{ font-size: inherit; font-weight: bold; margin-bottom: inherit; margin-top: inherit; }
+		.elfCaption 		{ font-size: 18px; }
+		body 				{ font-size: 12px; font-family: Arial,​Helvetica,​sans-serif; }
+	</style>	
+	
+	
+	<script>
+	
+		// (function() {
+		
+			var utils = {
+			
+				getUriParams: function(paramName) {
+					var params = decodeURIComponent(window.location.search.slice(1))
+					      .split('&')
+					      .reduce(function _reduce (/*Object*/ a, /*String*/ b) {
+					            b = b.split('=');
+					            a[b[0]] = b[1];
+					            return a;
+					      }, {})
+					;
+					if(paramName) return params[paramName]; else return params;
+				},
+				ui: {
+					setProgress : function(selector,value) { 
+						$(selector).html(value+'%');
+						$(selector).css('width', value+'%').attr('aria-valuenow', value); 
+					},
+					setProgressText : function(selector,value) { 
+						$(selector).html(value);
+					},
+					setProgressSlowTo : function(selector,value,throttle) {
+						if(!throttle) throttle = 100;
+						var currentValue = $(selector).attr("aria-valuenow") * 1;
+						console.log('value', currentValue ); 
+
+						if(currentValue < value) {
+							
+							currentValue+=1;
+							console.log('value+', currentValue ); 
+							utils.ui.setProgress(selector,currentValue);
+							setTimeout(function(){ utils.ui.setProgressSlowTo(selector,value,throttle) },throttle);
+						}
+					}
+				},	
+				
+			};	
+		
+	
+		
+		
+			$(document).ready(function(){
+				
+				var caseId 		= utils.getUriParams("id");
+				var action 		= utils.getUriParams("action") || 'convert';
+	
+				function xlsxConvertToCsvItems( getCaseDataResult ) {
+					var csvItems 		= [];
+					var xlsxBody   		= getCaseDataResult.attachmentInputBody;
+					var sheetMappings	= getCaseDataResult.sheetMappings;
+					var	workbook 		= XLSX.read( xlsxBody , {type:"base64"});
+					
+					workbook.SheetNames.forEach(function(sheetName) {
+						if(typeof(sheetMappings[sheetName])!=='undefined') {							
+							var csv = XLSX.utils.sheet_to_csv(workbook.Sheets[sheetName]);
+							// if(csv.length > 0){
+								var csvItem = {
+									sheetName 		: sheetName,
+									parentId 		: caseId,
+									body 			: csv,
+									outputFilename	: sheetMappings[sheetName],
+								}
+								csvItems.push(csvItem);
+							// }
+						}	
+					});
+					return csvItems; //result.join("\n");
+				}		
+		
+				function getCaseData(params) { // callout as promise
+					var d = $.Deferred();
+					CVXlsxProcessCtrl.getCaseData( params, function(result,event) { 
+		                if (event.status) { 
+							d.resolve(result);	
+		                } else {
+							d.reject(event.message);
+		                }
+					});
+					return d.promise();
+				}
+		
+				function addCaseAttachments(params) { // callout as promise
+					var d = $.Deferred();
+					CVXlsxProcessCtrl.addCaseAttachments( params, function(result,event) { 
+		                if (event.status) { 
+							d.resolve(result);	
+		                } else {
+							d.reject(event.message);
+		                }
+					});
+					return d.promise();
+				}
+				
+				function deleteCaseAttachments(params) {
+					var d = $.Deferred();
+					CVXlsxProcessCtrl.deleteCaseAttachments( params, function(result,event) { 
+		                if (event.status) { 
+							d.resolve(result);	
+		                } else {
+							d.reject(event.message);
+		                }
+					});
+					return d.promise();
+					
+				}
+				
+				function actionConvert(params) {
+					utils.ui.setProgressSlowTo('#elfProgressBar',50);
+					getCaseData( {'id' : caseId})
+						.fail(function(result){
+							$("#elfProgressIcon").attr("src","/img/msg_icons/error24.png"); 
+							$("#elfProgressText").html("Error fetching data."); 
+							console.log('some bad shit happend :: ', result ); 
+						})
+						.done(function(data){
+		
+						})
+						.then(function(result){
+							utils.ui.setProgress('#elfProgressBar',50);
+							console.log('promise-result', result );
+							window.data = result;
+							ouputItems = xlsxConvertToCsvItems( result );
+							console.log('output', ouputItems ); 
+		
+							// $("#elfProgressIcon").attr("src","/img/msg_icons/info24.png"); 
+							$("#elfProgressText").html("processing XLSX..."); 
+							utils.ui.setProgressSlowTo('#elfProgressBar',90,200);
+							return addCaseAttachments( ouputItems ); 
+						}) 
+						.then(function(result){
+							utils.ui.setProgress('#elfProgressBar',100);
+							$("#elfProgressText").html("done"); 
+							$("#elfProgressIcon").attr("src","/img/msg_icons/confirm24.png"); 
+							$("#elfResultText").html( result );
+		
+						})
+						.done(function(result){ // re-route back to case
+							setTimeout(function(){
+								window.location.href = '/'+caseId;
+							},1000);
+						})
+					;
+				}
+				
+				function actionDelete(params) {
+					deleteCaseAttachments( {'id' : caseId})
+						.fail(function(result){
+							$("#elfProgressIcon").attr("src","/img/msg_icons/error24.png"); 
+							$("#elfProgressText").html("Error fetching data."); 
+							console.log('some bad shit happend :: ', result ); 
+						})
+						.then(function(result){
+							$("#elfProgressText").html("done"); 
+							$("#elfProgressIcon").attr("src","/img/msg_icons/confirm24.png"); 
+							$("#elfResultText").html( result );				
+							utils.ui.setProgress('#elfProgressBar',100);
+						})
+						.done(function(result){ // re-route back to case
+							setTimeout(function(){
+								window.location.href = '/'+caseId;
+							},1000);
+						})
+					;
+				}
+				
+				console.log('starting... CaseId=',caseId ); 
+				$("#elfProgressText").html("fetching data...");
+				$("#elfCaption").html("XLSX Processing - "+action);
+				
+				window.data = null;
+				
+				{ if(false) { } 
+					else if(action=="convert")	{ actionConvert(); }
+					else if(action=="delete") 	{ actionDelete(); }
+				}
+				
+			});
+	
+		// })();
+		
+		
+	</script>
+
+	
+	
+</apex:page>

@@ -1,0 +1,133 @@
+<!--
+*************************************************************************************
+* Name - CVCaseActionsComponent
+* Description - This visualforce component does the following:
+* - Dispalys the actions for the CV users on the case workflo pages
+* - must be nested within a form tag
+* Modification Log :
+*************************************************************************************
+* Developer     Date        Description
+*************************************************************************************
+* Zoran Zunko   05/25/2015  Created
+*************************************************************************************
+-->
+<apex:component layout="none"
+    allowDML="true"
+    controller="CVCaseActionsComponentController">
+
+    <apex:attribute name="pageControllerAttr"
+      type="CaseWorkflowExtensionControllerBase"
+      assignTo="{!pageController}"
+      required="true"
+      description="The controller for the page." />
+    <apex:attribute name="reRender"
+      type="String"
+      required="true"
+      description="The html id of the area to rerender located on the page which contains the component"/>
+    <style>
+        .btn-orange {
+            font-size: 1.25em;
+            font-weight: 600;
+            border-radius: 8px;
+            border: 1px solid #000000;
+            background-color: #F2D027;
+            margin-left: 10px;
+            padding: 3px 8px;
+            text-decoration: none;
+        }
+
+        .btn-orange:hover {
+            color:#ffffff;
+            background-color:#ff6633;
+            text-decoration: none;
+        }
+        .btn-red {
+            font-size: 1.25em;
+            font-weight: 600;
+            border-radius: 8px;
+            border: 1px solid #000000;
+            background-color: #D93A2B;
+            margin-left: 10px;
+            padding: 3px 8px;
+            text-decoration: none;
+        }
+        .btn-red:hover {
+            color: #ffffff;
+            background-color: #990000;
+            text-decoration: none;
+        }
+        .btn-green {
+            font-size: 1.25em;
+            font-weight: 600;
+            border-radius: 8px;
+            border: 1px solid #000000;
+            background-color: #188C29;
+            margin-left: 10px;
+            margin-right: auto;
+            padding: 3px 8px;
+            text-decoration: none;
+        }
+        .btn-green:hover{
+            color:#ffffff;
+            background-color:#336600;
+            text-decoration: none;
+        }
+        .custPopup {
+            background-color: white;
+            border-width: 2px;
+            border-style: solid;
+            z-index: 99;
+            left: 50%;
+            padding:10px;
+            position: absolute;
+            /* These are the 3 css properties you will need to change so the popup
+            displays in the center of the screen. First set the width. Then set
+            margin-left to negative half of what the width is. You can add
+            the height property for a fixed size pop up if you want.*/
+            width: 500px;
+            margin-left: -250px;
+            margin-top: 60px;
+        }
+        .popupBackground {
+            background-color:black;
+            opacity: 0.20;
+            filter: alpha(opacity = 20);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 98;
+        }
+    </style>
+    <!-- apex:actionFunction name="approve" action="{! pageControllerAttr.approve }"/ -->
+    <apex:outputPanel rendered="{! pageControllerAttr.gecvButtonsVisible }" layout="block">
+        <apex:outputPanel layout="block" style="margin-left: 0px;margin-right: auto;width: 400px;"><!-- TODO Style in css -->
+            <apex:commandLink value="Approve" action="{! pageControllerAttr.approve }" styleClass="btn-green"/>
+            <apex:commandLink value="Request Additional Info" action="{! pageControllerAttr.requestAdditionalInfo }" styleClass="btn-orange"/>
+            <apex:commandLink value="Reject" reRender="tstpopup" action="{! rejectStart }" styleClass="btn-red"/>
+        </apex:outputPanel>
+    </apex:outputPanel>
+    <apex:actionRegion >
+        <apex:outputPanel id="tstpopup" layout="none">
+            <apex:outputPanel styleClass="popupBackground" layout="block" rendered="{! displayPopUp }"/>
+            <apex:outputPanel styleClass="custPopup" layout="block" rendered="{! displayPopUp }">
+                <apex:pageBlock title="Add Rejection Comment" mode="edit">
+                    <apex:pageBlockButtons location="bottom">
+                        <apex:commandButton value="Reject" action="{! reject }"/>
+                        <apex:commandButton value="Cancel" immediate="true" action="{! rejectCancel }" reRender="tstpopup"/>
+                    </apex:pageBlockButtons>
+                    <apex:pageBlockSection title="Enter rejection comment" collapsible="false" columns="1">
+                        <apex:pageBlockSectionItem >
+                                <apex:outputLabel for="reject-comment" value="Comment"/>
+                                <apex:inputTextarea required="true" cols="40" id="reject-comment" value="{! pageControllerAttr.sCVRejectionReason }"/>
+                            </apex:pageBlockSectionItem>
+                    </apex:pageBlockSection>
+                </apex:pageBlock>
+            </apex:outputPanel>
+        </apex:outputPanel>
+    </apex:actionRegion>
+<apex:includeScript value="{!URLFOR($Resource.CVXlsxJquery_js)}"/>
+<apex:stylesheet value="{!URLFOR($Resource.cvBootstrap, 'css/bootstrap-namespaced.min.css')}"/>
+<apex:includeScript value="{!URLFOR($Resource.cvBootstrap, 'js/bootstrap.min.js')}"/>
+</apex:component>

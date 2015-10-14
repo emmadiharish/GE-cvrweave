@@ -1,0 +1,31 @@
+<!--
+*************************************************************************************
+* Name - CaseNewExternalFromInternal
+* Description - This visualforce page does the following:
+* - Creates new External legal Case from Internal Legal Case
+* Modification Log :
+*************************************************************************************
+* Developer     Date        Description
+*************************************************************************************
+* Zoran Zunko 07/01/2015 Created.
+* *************************************************************************************
+-->
+<apex:page showHeader="true"
+    sidebar="true"
+    standardController="Case"
+    title="New External Legal"
+    extensions="CaseNewExternalFromInternalCtrlExt"
+    action="{! createExternalLegalCase }"
+    tabStyle="Case">
+    <apex:sectionHeader title="New External Legal" subtitle="From Internal Legal" />
+    <apex:form id="submit_form" enctype="multipart/form-data" html-novalidate="novalidate">
+        <apex:outputPanel layout="block" id="message_div">
+            <apex:pageMessages />
+        </apex:outputPanel>
+        <apex:pageBlock id="main_block">
+            <apex:pageBlockButtons location="top">
+                <apex:commandButton value="Back" action="{! URLFOR($Action.Case.View, Case.Id) }"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

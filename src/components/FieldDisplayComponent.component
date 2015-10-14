@@ -1,0 +1,250 @@
+<!--
+*************************************************************************************
+* Name - FieldDisplayComponent
+* Description - This visualforce component does the following:
+* - Displays the input fields for a single section on a CV Workflow Case creation pages
+* - must be nested within a form tag
+* Modification Log :
+*************************************************************************************
+* Developer     Date        Description
+*************************************************************************************
+* Zoran Zunko   10/07/2015  Created
+*************************************************************************************
+-->
+<apex:component id="FieldDisplayComponent"
+                layout="none"
+                allowDML="true"
+                controller="FieldDisplayComponentController"
+        >
+    <apex:attribute name="pageControllerAttr"
+                    type="CaseNewWFControllerExtBase"
+                    assignTo="{! pageController }"
+                    required="true"
+                    description="The controller for the page."/>
+    <apex:attribute name="reRender"
+                    type="String"
+                    required="false"
+                    description="The html id of the area to rerender located on the page which contains the component"/>
+    <apex:attribute name="fieldLabel"
+                    type="String"
+                    required="true"
+                    description="The field to be displayed on the page"/>
+    <apex:attribute name="fieldPath"
+                    type="String"
+                    required="true"
+                    assignTo="{! fieldForDisplay }"
+                    description="The field to be displayed on the page"/>
+    <apex:attribute name="fieldRequired"
+                    type="Boolean"
+                    required="true"
+                    description="The field to be displayed on the page"/>
+    <apex:actionFunction name="reload"
+                         status="status-loading"
+                         reRender="main_block"
+                         action="{! pageController.selectSKU }"/>
+    <td class="labelCol">
+        <apex:outputLabel value="{! fieldLabel }"
+                          rendered="{! (fieldPath != 'ContactId') && (fieldPath != 'AccountId') }"/>
+    </td>
+    <apex:outputPanel layout="none"
+                      styleClass="dataCol"
+                      rendered="{! displayRegular }">
+        <td class="dataCol">
+            <apex:inputField value="{! cNewCase[fieldPath] }"
+                             required="false"
+                             styleClass="{! IF(fieldRequired, 'mandatory-input', '' ) }"/>
+        </td>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none"
+                      rendered="{! fieldPath = 'Product_Category__c' }">
+        <td class="dataCol">
+            <apex:selectList value="{! cNewCase[fieldPath] }"
+                             required="false"
+                             styleClass="{! IF(fieldRequired, 'mandatory-input', '' ) }"
+                             multiselect="false"
+                             size="1">
+                <apex:selectOptions value="{! pageController.categoriesOptions }"/>
+                <apex:actionSupport event="onchange"
+                                    reRender="{! reRender }"
+                                    status="status-loading"
+                                    action="{! pageController.categorySelected }"/>
+            </apex:selectList>
+        </td>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none"
+                      rendered="{! fieldPath = 'CV_Product_Sub_Cat_1__c' }">
+        <td class="dataCol">
+            <apex:selectList value="{! cNewCase[fieldPath] }"
+                             required="false"
+                             styleClass="{! IF(fieldRequired, 'mandatory-input', '' ) }"
+                             multiselect="false"
+                             size="1">
+                <apex:selectOptions value="{! pageController.subCat1Options }"/>
+                <apex:actionSupport event="onchange"
+                                    reRender="{! reRender }"
+                                    status="status-loading"/>
+            </apex:selectList>
+        </td>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none"
+                      rendered="{! fieldPath = 'CV_Product_Sub_Cat_2__c' }">
+        <td class="dataCol">
+            <apex:selectList value="{! cNewCase[fieldPath] }"
+                             required="false"
+                             styleClass="{! IF(pageController.subCat2Options.size > 0, 'mandatory-input', '' ) }"
+                             multiselect="false"
+                             size="1">
+                <apex:selectOptions value="{! pageController.subCat2Options }"/>
+            </apex:selectList>
+        </td>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none"
+                      rendered="{! AND(fieldPath = 'CV_Agreement_No_Name__c', NOT(pageController.singleAgreement)) }">
+        <td class="dataCol">
+
+            <apex:selectList value="{! cNewCase[fieldPath] }"
+                             required="false"
+                             styleClass="{! IF(fieldRequired, 'mandatory-input', '' ) }"
+                             multiselect="false"
+                             size="1">
+                <apex:selectOptions value="{! pageController.licenseeContracts }"/>
+            </apex:selectList>
+        </td>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none"
+                      rendered="{! fieldPath = 'SKU_Number__c' }">
+        <td class="dataCol">
+            <apex:outputPanel layout="none">
+                <apex:inputField value="{! cNewCase[fieldPath] }"
+                                 required="false"
+                                 styleClass="{! IF(fieldRequired, 'mandatory-input', '' ) }"/>
+                <apex:commandLink value="Search SKU"
+                                  style="margin-left: 5px;"
+                                  action="{! pageController.selectSKU }"
+                                  reRender="{! reRender }"
+                                  status="status-loading"/>
+            </apex:outputPanel>
+        </td>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none"
+                      rendered="{! fieldPath = 'Change_Type__c' }">
+        <td class="dataCol">
+            <apex:inputField value="{! cNewCase[fieldPath] }"
+                             required="false"
+                             styleClass="{! IF(fieldRequired, 'mandatory-input', '' ) }">
+                <apex:actionSupport event="onchange"
+                                    reRender="{! reRender }"
+                                    status="status-loading"/>
+            </apex:inputField>
+        </td>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none"
+                      rendered="{! fieldPath = 'CV_Product_Categories__c' }">
+        <td class="dataCol">
+            <apex:selectList value="{! cNewCase[fieldPath] }"
+                             required="false"
+                             styleClass="{! IF(fieldRequired, 'mandatory-input', '' ) }"
+                             multiselect="true"
+                             size="5">
+                <apex:selectOptions value="{! pageController.categories }"/>
+            </apex:selectList>
+        </td>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none"
+                      rendered="{! AND(fieldPath = 'CV_Agreement_No_Name__c', pageController.singleAgreement) }">
+        <td class="dataCol">
+            <apex:outputText value="{! pageController.singleAgreementName }"/>
+        </td>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none"
+                      rendered="{! fieldPath = 'Brand_Approval_Type__c' }">
+        <td class="dataCol">
+            <apex:inputField value="{! cNewCase[fieldPath] }"
+                             required="false"
+                             styleClass="{! IF(fieldRequired, 'mandatory-input', '' ) }">
+                <apex:actionSupport event="onchange"
+                                    reRender="{! reRender }"
+                                    status="status-loading"/>
+            </apex:inputField>
+        </td>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none"
+                      rendered="{! fieldPath = 'Request_Type__c' }">
+        <td class="dataCol">
+            <apex:inputField value="{! cNewCase[fieldPath] }"
+                             required="false"
+                             styleClass="{! IF(fieldRequired, 'mandatory-input', '' ) }">
+                <apex:actionSupport event="onchange"
+                                    reRender="{! reRender }"
+                                    status="status-loading"/>
+            </apex:inputField>
+        </td>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none"
+                      rendered="{! fieldPath = 'Amendment_Change_Type__c' }">
+        <td class="dataCol">
+            <apex:inputField value="{! cNewCase[fieldPath] }"
+                             required="false"
+                             styleClass="{! IF(fieldRequired, 'mandatory-input', '' ) }">
+                <apex:actionSupport event="onchange"
+                                    reRender="{! reRender }"
+                                    status="status-loading"/>
+            </apex:inputField>
+        </td>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none"
+                      rendered="{! fieldPath = 'AccountId' }">
+        <apex:outputLabel value="Account"/>
+        <td class="dataCol">
+            <apex:selectList value="{! cNewCase[fieldPath] }"
+                             required="false"
+                             styleClass="{! IF(fieldRequired, 'mandatory-input', '' ) }"
+                             multiselect="false"
+                             size="1"
+                             disabled="{! pageController.licenseeAccounts.size = 0 }">
+                <apex:selectOptions value="{! pageController.licenseeAccounts }"/>
+                <apex:actionSupport event="onchange"
+                                    reRender="{! reRender }"
+                                    status="status-loading"/>
+            </apex:selectList>
+        </td>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none"
+                      rendered="{! fieldPath = 'ContactId' }">
+        <apex:outputLabel value="Contact"/>
+        <td class="dataCol">
+            <apex:selectList value="{! cNewCase[fieldPath] }"
+                             required="false"
+                             styleClass="{! IF(fieldRequired, 'mandatory-input', '' ) }"
+                             multiselect="false"
+                             size="1"
+                             disabled="{! pageController.licenseeAccounts.size = 0 }">
+                <apex:selectOptions value="{! pageController.licenseeContacts }"/>
+            </apex:selectList>
+        </td>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none"
+                      rendered="{! fieldPath = 'CV_Targeted_Retailers__c' }">
+        <td class="dataCol">
+            <apex:inputField value="{! cNewCase[fieldPath] }"
+                             required="false"
+                             styleClass="{! IF(fieldRequired, 'mandatory-input', '' ) }">
+                <apex:actionSupport event="onchange"
+                                    reRender="{! reRender }"
+                                    status="status-loading"/>
+            </apex:inputField>
+        </td>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none"
+                      rendered="{! fieldPath = 'CV_Factory_Location_Country__c'}">
+        <td class="dataCol">
+            <apex:selectList value="{! cNewCase[fieldPath] }"
+                             required="false"
+                             styleClass="{! IF(fieldRequired, 'mandatory-input', '' ) }"
+                             multiselect="false"
+                             size="1">
+                <apex:selectOptions value="{! pageController.countries }"/>
+            </apex:selectList>
+        </td>
+    </apex:outputPanel>
+</apex:component>

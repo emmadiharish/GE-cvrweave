@@ -1,0 +1,12 @@
+<!-- Page: -->
+<apex:page standardController="Document" extensions="UploadCSV_Controller">
+    <apex:messages />
+    <apex:form id="theForm">
+      <apex:pageBlock >
+          <apex:pageBlockSection >
+            <apex:inputFile value="{!document.body}" filename="{!document.name}"/>
+            <apex:commandButton value="Save" action="{!save}"/>
+          </apex:pageBlockSection>
+       </apex:pageBlock>
+    </apex:form>
+</apex:page>

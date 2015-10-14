@@ -1,0 +1,8 @@
+"NAME","ALLOWED_ROLES__C","MANDATORY_ROLES__C"
+"CV_Product_Change","Program, Tech_Safety, Brand, Finance","Program"
+"CV_Royalty_Submission","Program, Finance","Program, Finance"
+"CV_Brand_Change","Program, Tech_Safety, Brand","Program, Tech_Safety, Brand"
+"CV_Ancilary_Brand","Program, PR, Legal, Brand","Program"
+"CV_External_Legal","Program, Finance, Legal, Brand, Tech_Safety, Regional","Program, Legal"
+"CV_Internal_Legal","Program, Finance, Legal, Brand, Tech_Safety, Regional","Program, Legal"
+"CV_New_Product","Program, Finance, Legal, Brand, Tech_Safety, Regional","Program"
