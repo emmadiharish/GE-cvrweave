@@ -156,12 +156,12 @@ public without sharing class CVContractWrapper{
                 || this.c.EndDate != this.cOld.EndDate
                 || this.c.Royalty_Payment_Due_Date_Rule__c != this.cOld.Royalty_Payment_Due_Date_Rule__c))
         {
-            Date startDate = this.c.StartDate;
+            /*Date startDate = this.c.StartDate;
             Date endDate = this.c.EndDate;
             CV_Due_Date_Rule__c ddr = cGW.ddrIdtoddrMap.get(this.c.Royalty_Payment_Due_Date_Rule__c);
 
             if(startDate == null)
-                startDate = Date.today();
+                return res;
             // if endDate is null then consider it as startDate+10 years.                
             if(endDate == null)
                 endDate = startDate.addYears(10);
@@ -180,7 +180,11 @@ public without sharing class CVContractWrapper{
                 periodStartDate = periodEndDate.addDays(1);
 
                 res.add(rpt);
-            }
+            }*/
+
+            CV_Due_Date_Rule__c ddr = cGW.ddrIdtoddrMap.get(this.c.Royalty_Payment_Due_Date_Rule__c);
+            for(sObject obj : generateSchedulesbasedonDuedateRule(ddr, this.c, CV_Royalty_Payment_Tracking__c.sObjectType))
+                res.add((CV_Royalty_Payment_Tracking__c)obj);
         }
         
         System.debug('***LEAVING addtorpttobeinsertedList ' + debug());
@@ -203,12 +207,12 @@ public without sharing class CVContractWrapper{
                 || this.c.EndDate != this.cOld.EndDate
                 || this.c.Sales_Report_Due_Date_Rule__c != this.cOld.Sales_Report_Due_Date_Rule__c))
         {
-            Date startDate = this.c.StartDate;
+            /*Date startDate = this.c.StartDate;
             Date endDate = this.c.EndDate;
             CV_Due_Date_Rule__c ddr = cGW.ddrIdtoddrMap.get(this.c.Sales_Report_Due_Date_Rule__c);
 
             if(startDate == null)
-                startDate = Date.today();
+                return res;
             // if endDate is null then consider it as startDate+10 years.                
             if(endDate == null)
                 endDate = startDate.addYears(10);
@@ -227,20 +231,125 @@ public without sharing class CVContractWrapper{
                 periodStartDate = periodEndDate.addDays(1);
 
                 res.add(rpt);
-            }
+            }*/
+
+            CV_Due_Date_Rule__c ddr = cGW.ddrIdtoddrMap.get(this.c.Sales_Report_Due_Date_Rule__c);
+            for(sObject obj : generateSchedulesbasedonDuedateRule(ddr, this.c, CV_Sales_Report_Tracking__c.sObjectType))    
+                res.add((CV_Sales_Report_Tracking__c)obj);
         }
         
         System.debug('***LEAVING addtosrtobeinsertedList ' + debug());
         return res;
     }
 
-    // Helper method to calculate the due date for the given period based on due date rule.
-    private static Date calculateDuedate(CV_Due_Date_Rule__c ddr, Date periodDate){
+    // Helper method to generate Scheules based on due date rule.
+    private static List<sObject> generateSchedulesbasedonDuedateRule(CV_Due_Date_Rule__c ddr, Contract c, Schema.sObjectType objectType){
         /* if rule is standard then
             - due date will be based on days and period.
+            - if period is monthly then schedules should be created monthly.
+            - else if period is quarterly then schedules should be created quarterly.
            else
             - use comma separated  custom dates.
         */
+        // add -1 days to calculations because salesforce addDays method is weird.
+        List<sObject> res = new List<sObject>();
+
+        Date cStartDate = c.Startdate;
+        Date cEndDate = c.EndDate;
+
+        if(cStartDate == null)
+            return res;
+
+        // if endDate is null then consider it as startDate+10 years.                
+        if(cEndDate == null)
+            cEndDate = cStartDate.addYears(10);
+
+        if(ddr.isStandard__c){
+            String daysstr = ddr.Days__c;
+            String period = ddr.Period__c;
+
+            if(String.isNotBlank(daysstr)
+                && String.isNotBlank(period))
+            {
+                Integer daysint = Integer.valueOf(daysstr.substringBefore(' '));
+                if(CVCONSTANTS.DDR_PERIOD_MONTH_END.equalsIgnoreCase(period)){
+                    Date periodStartDate = cStartDate; 
+                    while(periodStartDate < cEndDate){
+                        // Period End Date should be end of the month.
+                        Date periodEndDate = periodStartDate.addMonths(1).toStartofMonth().addDays(-1);
+                        periodEndDate = periodEndDate > cEndDate ? cEndDate : periodEndDate;
+
+                        Date dueDate = periodEndDate.addDays(daysint-1);
+
+                        sObject obj = objectType.newSObject();
+                        obj.put('Contract__c', c.Id);
+                        obj.put('StartDate__c', periodStartDate);
+                        obj.put('EndDate__c', periodEndDate);
+                        obj.put('DueDate__c', dueDate);
+
+                        // startdate will always be previous endDate + 1.
+                        periodStartDate = periodEndDate.addDays(1);
+
+                        res.add(obj);
+                    }
+                }
+                else{// if quarterly.
+                    Date periodStartDate = cStartDate; 
+                    while(periodStartDate < cEndDate){
+                        // Period End Date should be end of the month.
+                        Date periodEndDate = CVYearQuarterUtils.getProgramQuarterEndDate(periodStartDate);
+                        periodEndDate = periodEndDate > cEndDate ? cEndDate : periodEndDate;
+
+                        Date dueDate = null;
+                        
+                        if(CVCONSTANTS.DDR_PERIOD_QUARTER_START.equalsIgnoreCase(period)){
+                            dueDate = CVYearQuarterUtils.getProgramQuarterStartDate(periodEndDate).addDays(daysint-1);
+                        }
+                        else if(CVCONSTANTS.DDR_PERIOD_QUARTER_END.equalsIgnoreCase(period)){
+                            dueDate = CVYearQuarterUtils.getProgramQuarterEndDate(periodEndDate).addDays(daysint-1);
+                        }
+                        
+                        sObject obj = objectType.newSObject();
+                        obj.put('Contract__c', c.Id);
+                        obj.put('StartDate__c', periodStartDate);
+                        obj.put('EndDate__c', periodEndDate);
+                        obj.put('DueDate__c', dueDate);
+
+                        // startdate will always be previous endDate + 1.
+                        periodStartDate = periodEndDate.addDays(1);
+
+                        res.add(obj);
+                    }
+                }
+            }
+        }
+        else{
+            if(!ddr.CVCustomDueDates__r.isEmpty())
+            {
+                // results are ordered by Period_End_Date__c so no need to sort again.
+                for(CV_Custom_Due_Date__c cdd : ddr.CVCustomDueDates__r)
+                {
+                    sObject obj = objectType.newSObject();
+                    obj.put('Contract__c', c.Id);
+                    obj.put('StartDate__c', cdd.Period_Start_Date__c);
+                    obj.put('EndDate__c', cdd.Period_End_Date__c);
+                    obj.put('DueDate__c', cdd.Due_Date__c);
+
+                    res.add(obj);
+                }
+            }
+        }
+
+        return res;
+    }
+
+    // Helper method to calculate the due date for the given period based on due date rule.
+    /*private static Date calculateDuedate(CV_Due_Date_Rule__c ddr, Date periodDate){
+        // if rule is standard then
+          //  - due date will be based on days and period.
+           //else
+            //- use comma separated  custom dates.
+        //
         // add -1 days to calculations because salesforce addDays method is weird.
         Date res = null;    
         if(ddr.isStandard__c){
@@ -287,5 +396,5 @@ public without sharing class CVContractWrapper{
             }
         }
         return res;
-    }
+    }*/
 }

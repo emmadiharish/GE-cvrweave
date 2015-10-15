@@ -195,7 +195,7 @@
             "annotations": [],
             "location": {
                 "column": 46,
-                "line": 193
+                "line": 197
             },
             "modifiers": [
                 "public"
@@ -218,26 +218,30 @@
         {
             "annotations": [],
             "location": {
-                "column": 25,
-                "line": 238
+                "column": 34,
+                "line": 246
             },
             "modifiers": [
                 "private",
                 "static"
             ],
-            "name": "calculateDuedate",
+            "name": "generateSchedulesbasedonDuedateRule",
             "parameters": [
                 {
                     "name": "ddr",
                     "type": "CV_Due_Date_Rule__c"
                 },
                 {
-                    "name": "periodDate",
-                    "type": "Date"
+                    "name": "c",
+                    "type": "Contract"
+                },
+                {
+                    "name": "objectType",
+                    "type": "SObjectType"
                 }
             ],
             "references": [],
-            "returnType": "Date",
+            "returnType": "LIST",
             "type": null
         }
     ],
@@ -479,30 +483,8 @@
         {
             "annotations": [],
             "location": {
-                "column": 18,
-                "line": 159
-            },
-            "modifiers": [],
-            "name": "startDate",
-            "references": [],
-            "type": "Date"
-        },
-        {
-            "annotations": [],
-            "location": {
-                "column": 18,
-                "line": 160
-            },
-            "modifiers": [],
-            "name": "endDate",
-            "references": [],
-            "type": "Date"
-        },
-        {
-            "annotations": [],
-            "location": {
                 "column": 33,
-                "line": 161
+                "line": 185
             },
             "modifiers": [],
             "name": "ddr",
@@ -512,41 +494,19 @@
         {
             "annotations": [],
             "location": {
-                "column": 18,
-                "line": 169
+                "column": 25,
+                "line": 186
             },
             "modifiers": [],
-            "name": "periodStartDate",
+            "name": "obj",
             "references": [],
-            "type": "Date"
-        },
-        {
-            "annotations": [],
-            "location": {
-                "column": 22,
-                "line": 172
-            },
-            "modifiers": [],
-            "name": "periodEndDate",
-            "references": [],
-            "type": "Date"
-        },
-        {
-            "annotations": [],
-            "location": {
-                "column": 48,
-                "line": 173
-            },
-            "modifiers": [],
-            "name": "rpt",
-            "references": [],
-            "type": "CV_Royalty_Payment_Tracking__c"
+            "type": "SObject"
         },
         {
             "annotations": [],
             "location": {
                 "column": 88,
-                "line": 193
+                "line": 197
             },
             "modifiers": [],
             "name": "cGW",
@@ -557,7 +517,7 @@
             "annotations": [],
             "location": {
                 "column": 127,
-                "line": 193
+                "line": 197
             },
             "modifiers": [],
             "name": "srtobeinsertedListtodate",
@@ -568,7 +528,7 @@
             "annotations": [],
             "location": {
                 "column": 43,
-                "line": 196
+                "line": 200
             },
             "modifiers": [],
             "name": "res",
@@ -578,30 +538,8 @@
         {
             "annotations": [],
             "location": {
-                "column": 18,
-                "line": 206
-            },
-            "modifiers": [],
-            "name": "startDate",
-            "references": [],
-            "type": "Date"
-        },
-        {
-            "annotations": [],
-            "location": {
-                "column": 18,
-                "line": 207
-            },
-            "modifiers": [],
-            "name": "endDate",
-            "references": [],
-            "type": "Date"
-        },
-        {
-            "annotations": [],
-            "location": {
                 "column": 33,
-                "line": 208
+                "line": 236
             },
             "modifiers": [],
             "name": "ddr",
@@ -611,41 +549,19 @@
         {
             "annotations": [],
             "location": {
-                "column": 18,
-                "line": 216
+                "column": 25,
+                "line": 237
             },
             "modifiers": [],
-            "name": "periodStartDate",
+            "name": "obj",
             "references": [],
-            "type": "Date"
+            "type": "SObject"
         },
         {
             "annotations": [],
             "location": {
-                "column": 22,
-                "line": 219
-            },
-            "modifiers": [],
-            "name": "periodEndDate",
-            "references": [],
-            "type": "Date"
-        },
-        {
-            "annotations": [],
-            "location": {
-                "column": 45,
-                "line": 220
-            },
-            "modifiers": [],
-            "name": "rpt",
-            "references": [],
-            "type": "CV_Sales_Report_Tracking__c"
-        },
-        {
-            "annotations": [],
-            "location": {
-                "column": 62,
-                "line": 238
+                "column": 90,
+                "line": 246
             },
             "modifiers": [],
             "name": "ddr",
@@ -655,11 +571,44 @@
         {
             "annotations": [],
             "location": {
-                "column": 72,
-                "line": 238
+                "column": 104,
+                "line": 246
             },
             "modifiers": [],
-            "name": "periodDate",
+            "name": "c",
+            "references": [],
+            "type": "Contract"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 126,
+                "line": 246
+            },
+            "modifiers": [],
+            "name": "objectType",
+            "references": [],
+            "type": "SObjectType"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 23,
+                "line": 255
+            },
+            "modifiers": [],
+            "name": "res",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 14,
+                "line": 257
+            },
+            "modifiers": [],
+            "name": "cStartDate",
             "references": [],
             "type": "Date"
         },
@@ -667,10 +616,10 @@
             "annotations": [],
             "location": {
                 "column": 14,
-                "line": 245
+                "line": 258
             },
             "modifiers": [],
-            "name": "res",
+            "name": "cEndDate",
             "references": [],
             "type": "Date"
         },
@@ -678,7 +627,7 @@
             "annotations": [],
             "location": {
                 "column": 20,
-                "line": 247
+                "line": 268
             },
             "modifiers": [],
             "name": "daysstr",
@@ -689,7 +638,7 @@
             "annotations": [],
             "location": {
                 "column": 20,
-                "line": 248
+                "line": 269
             },
             "modifiers": [],
             "name": "period",
@@ -700,7 +649,7 @@
             "annotations": [],
             "location": {
                 "column": 25,
-                "line": 252
+                "line": 274
             },
             "modifiers": [],
             "name": "daysint",
@@ -710,57 +659,112 @@
         {
             "annotations": [],
             "location": {
+                "column": 26,
+                "line": 276
+            },
+            "modifiers": [],
+            "name": "periodStartDate",
+            "references": [],
+            "type": "Date"
+        },
+        {
+            "annotations": [],
+            "location": {
                 "column": 30,
-                "line": 266
+                "line": 279
             },
             "modifiers": [],
-            "name": "customDatesList",
+            "name": "periodEndDate",
             "references": [],
-            "type": "LIST"
+            "type": "Date"
         },
         {
             "annotations": [],
             "location": {
-                "column": 25,
-                "line": 269
+                "column": 30,
+                "line": 282
             },
             "modifiers": [],
-            "name": "periodDateMonth",
+            "name": "dueDate",
             "references": [],
-            "type": "Integer"
+            "type": "Date"
         },
         {
             "annotations": [],
             "location": {
-                "column": 28,
-                "line": 271
+                "column": 33,
+                "line": 284
             },
             "modifiers": [],
-            "name": "ddate",
+            "name": "obj",
             "references": [],
-            "type": "String"
+            "type": "SObject"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 26,
+                "line": 297
+            },
+            "modifiers": [],
+            "name": "periodStartDate",
+            "references": [],
+            "type": "Date"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 30,
+                "line": 300
+            },
+            "modifiers": [],
+            "name": "periodEndDate",
+            "references": [],
+            "type": "Date"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 30,
+                "line": 303
+            },
+            "modifiers": [],
+            "name": "dueDate",
+            "references": [],
+            "type": "Date"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 33,
+                "line": 312
+            },
+            "modifiers": [],
+            "name": "obj",
+            "references": [],
+            "type": "SObject"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 43,
+                "line": 330
+            },
+            "modifiers": [],
+            "name": "cdd",
+            "references": [],
+            "type": "CV_Custom_Due_Date__c"
         },
         {
             "annotations": [],
             "location": {
                 "column": 29,
-                "line": 273
+                "line": 332
             },
             "modifiers": [],
-            "name": "ddateMonth",
+            "name": "obj",
             "references": [],
-            "type": "Integer"
-        },
-        {
-            "annotations": [],
-            "location": {
-                "column": 32,
-                "line": 277
-            },
-            "modifiers": [],
-            "name": "nextduedate",
-            "references": [],
-            "type": "String"
+            "type": "SObject"
         }
     ]
 }

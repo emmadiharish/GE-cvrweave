@@ -125,9 +125,13 @@ public without sharing class CVContractGateway{
 
         if(!ddrIdSet.isEmpty())
         {
-            res =  new Map<ID, CV_Due_Date_Rule__c>([select Id, isStandard__c, Days__c, Period__c, Custom_Due_Dates__c
-                                                        From CV_Due_Date_Rule__c 
-                                                            Where Id IN :ddrIdSet]);
+            // CVCustomDueDates__r query should be ordered by Period_End_Date__c else order of schedule creation will change.
+            res =  new Map<ID, CV_Due_Date_Rule__c>([select Id, isStandard__c, Days__c, Period__c,
+                                                        (Select Period_Start_Date__c, Period_End_Date__c, Due_Date__c 
+                                                            From CVCustomDueDates__r
+                                                                Order by Period_End_Date__c)
+                                                            From CV_Due_Date_Rule__c 
+                                                                Where Id IN :ddrIdSet]);
         }
 
         System.debug(CVFlowControl.getLogLevel(),'LEAVING buildddrIdtoddrMap res keyset is: '+res.keySet());
