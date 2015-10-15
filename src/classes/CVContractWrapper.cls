@@ -156,32 +156,6 @@ public without sharing class CVContractWrapper{
                 || this.c.EndDate != this.cOld.EndDate
                 || this.c.Royalty_Payment_Due_Date_Rule__c != this.cOld.Royalty_Payment_Due_Date_Rule__c))
         {
-            /*Date startDate = this.c.StartDate;
-            Date endDate = this.c.EndDate;
-            CV_Due_Date_Rule__c ddr = cGW.ddrIdtoddrMap.get(this.c.Royalty_Payment_Due_Date_Rule__c);
-
-            if(startDate == null)
-                return res;
-            // if endDate is null then consider it as startDate+10 years.                
-            if(endDate == null)
-                endDate = startDate.addYears(10);
-
-            Date periodStartDate = startDate; 
-            while(periodStartDate < endDate){
-                // Period End Date should be end of the month.
-                Date periodEndDate = periodStartDate.addMonths(1).toStartofMonth().addDays(-1);
-                CV_Royalty_Payment_Tracking__c rpt = new CV_Royalty_Payment_Tracking__c();
-                rpt.Contract__c = this.c.Id;
-                rpt.StartDate__c = periodStartDate;
-                rpt.EndDate__c = periodEndDate;
-                rpt.DueDate__c = calculateDuedate(ddr, periodEndDate);
-
-                // bring the date to start of the month.
-                periodStartDate = periodEndDate.addDays(1);
-
-                res.add(rpt);
-            }*/
-
             CV_Due_Date_Rule__c ddr = cGW.ddrIdtoddrMap.get(this.c.Royalty_Payment_Due_Date_Rule__c);
             for(sObject obj : generateSchedulesbasedonDuedateRule(ddr, this.c, CV_Royalty_Payment_Tracking__c.sObjectType))
                 res.add((CV_Royalty_Payment_Tracking__c)obj);
@@ -207,32 +181,6 @@ public without sharing class CVContractWrapper{
                 || this.c.EndDate != this.cOld.EndDate
                 || this.c.Sales_Report_Due_Date_Rule__c != this.cOld.Sales_Report_Due_Date_Rule__c))
         {
-            /*Date startDate = this.c.StartDate;
-            Date endDate = this.c.EndDate;
-            CV_Due_Date_Rule__c ddr = cGW.ddrIdtoddrMap.get(this.c.Sales_Report_Due_Date_Rule__c);
-
-            if(startDate == null)
-                return res;
-            // if endDate is null then consider it as startDate+10 years.                
-            if(endDate == null)
-                endDate = startDate.addYears(10);
-
-            Date periodStartDate = startDate; 
-            while(periodStartDate < endDate){
-                // Period End Date should be end of the month.
-                Date periodEndDate = periodStartDate.addMonths(1).toStartofMonth().addDays(-1);
-                CV_Sales_Report_Tracking__c rpt = new CV_Sales_Report_Tracking__c();
-                rpt.Contract__c = this.c.Id;
-                rpt.StartDate__c = periodStartDate;
-                rpt.EndDate__c = periodEndDate;
-                rpt.DueDate__c = calculateDuedate(ddr, periodEndDate);
-
-                // bring the date to start of the month.
-                periodStartDate = periodEndDate.addDays(1);
-
-                res.add(rpt);
-            }*/
-
             CV_Due_Date_Rule__c ddr = cGW.ddrIdtoddrMap.get(this.c.Sales_Report_Due_Date_Rule__c);
             for(sObject obj : generateSchedulesbasedonDuedateRule(ddr, this.c, CV_Sales_Report_Tracking__c.sObjectType))    
                 res.add((CV_Sales_Report_Tracking__c)obj);
@@ -342,59 +290,4 @@ public without sharing class CVContractWrapper{
 
         return res;
     }
-
-    // Helper method to calculate the due date for the given period based on due date rule.
-    /*private static Date calculateDuedate(CV_Due_Date_Rule__c ddr, Date periodDate){
-        // if rule is standard then
-          //  - due date will be based on days and period.
-           //else
-            //- use comma separated  custom dates.
-        //
-        // add -1 days to calculations because salesforce addDays method is weird.
-        Date res = null;    
-        if(ddr.isStandard__c){
-            String daysstr = ddr.Days__c;
-            String period = ddr.Period__c;
-            if(String.isNotBlank(daysstr)
-                && String.isNotBlank(period))
-            {
-                Integer daysint = Integer.valueOf(daysstr.substringBefore(' '));
-                if(CVCONSTANTS.DDR_PERIOD_MONTH_END.equalsIgnoreCase(period)){
-                    res = periodDate.addDays(daysint-1);
-                }
-                else if(CVCONSTANTS.DDR_PERIOD_QUARTER_START.equalsIgnoreCase(period)){
-                    res = CVYearQuarterUtils.getProgramQuarterStartDate(periodDate).addDays(daysint-1);
-                }
-                else if(CVCONSTANTS.DDR_PERIOD_QUARTER_END.equalsIgnoreCase(period)){
-                    res = CVYearQuarterUtils.getProgramQuarterEndDate(periodDate).addDays(daysint-1);
-                }
-            }
-        }
-        else{
-            if(String.isNotBlank(ddr.Custom_Due_Dates__c)){
-                List<String> customDatesList = ddr.Custom_Due_Dates__c.split(',');    
-                customDatesList.sort();// ascending sort the list of due dates so we can can find next due date based on periodDate.
-                
-                Integer periodDateMonth = periodDate.month();
-                // return the date next to periodDate in customDatesList
-                for(String ddate : customDatesList)
-                {
-                    Integer ddateMonth = Integer.valueOf(ddate.substringBefore('/'));
-                    if(ddateMonth > periodDateMonth)
-                    {
-                        // placeholder date.
-                        String nextduedate = '2099-01-01';
-                        if(ddate.countMatches('/') == 2){
-                            nextduedate = ddate.substringBefore('/')+'-'+ddate.substringBetween('/')+'-'+ddate.substringAfterLast('/');
-                        }else if(ddate.countMatches('/') == 1){
-                            nextduedate = String.valueOf(periodDate.year())+'-'+ddate.substringBefore('/')+'-'+ddate.substringAfter('/');
-                        }
-                        res = date.valueOf(nextduedate);
-                        break;
-                    }
-                }
-            }
-        }
-        return res;
-    }*/
 }
