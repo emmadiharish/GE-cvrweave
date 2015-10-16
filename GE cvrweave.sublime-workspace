@@ -4,6 +4,54 @@
 		"selected_items":
 		[
 			[
+				"set",
+				"setNextSalesReport"
+			],
+			[
+				"nex",
+				"nextsrtId"
+			],
+			[
+				"Ne",
+				"Next_Sales_Report__c"
+			],
+			[
+				"con",
+				"contractstobeupdatedMap"
+			],
+			[
+				"upda",
+				"updateContracts"
+			],
+			[
+				"isCon",
+				"PUBLIC isSalesReportScheduleRefreshrequired(Contract c, Contract secondContract) 	Boolean"
+			],
+			[
+				"Contra",
+				"ContractManager	[Custom Apex Class]"
+			],
+			[
+				"CV",
+				"CVRoyaltyPaymentTracking__r"
+			],
+			[
+				"create",
+				"createRevenuePaymentSchedules"
+			],
+			[
+				"Is",
+				"IsUpdate"
+			],
+			[
+				"Sta",
+				"StartDate"
+			],
+			[
+				"Cont",
+				"ContractManager	[Custom Apex Class]"
+			],
+			[
 				"End",
 				"EndDate"
 			],
@@ -156,10 +204,6 @@
 				"fieldName"
 			],
 			[
-				"con",
-				"containsKey"
-			],
-			[
 				"is",
 				"isEmpty"
 			],
@@ -271,10 +315,18 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 101.0,
-		"last_filter": "upgrade",
+		"height": 490.0,
+		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
 			[
 				"upgrade",
 				"Package Control: Upgrade Package"
@@ -400,10 +452,6 @@
 				"MavensMate: Create Resource Bundle..."
 			],
 			[
-				"insta",
-				"Package Control: Install Package"
-			],
-			[
 				"ins",
 				"Package Control: Install Package"
 			],
@@ -436,16 +484,42 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave"
+		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave",
+		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src"
 	],
 	"file_history":
 	[
-		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/CVContractWrapper.cls",
-		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/CVMetaUtils.cls",
+		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/GE_TriggerDispatch.cls",
+		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/TH_Contract_CVManageSchedules.cls",
+		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/ContractManager.cls",
 		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/CVContractGateway.cls",
-		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/CVContractTriggerHandler.cls",
-		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/CVFlowControl.cls",
+		"/C/Users/hemmadi/Google Drive/GE/contractmanageschedulesbackup.cls",
+		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/RoyaltyPaymentManager.cls",
+		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/SalesReportManager.cls",
+		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/DueDateRuleManager.cls",
+		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/triggers/AllContractTriggers.trigger",
+		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/triggers/CVContractTrigger.trigger",
+		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/TH_Contract_CVSetNextDueDateSchedules.cls",
+		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/triggers/AllContractTrigger.trigger",
+		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/CVUtilityFns.cls",
 		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/CVCONSTANTS.cls",
+		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/CaseManager.cls",
+		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/TH_Contract_CVPopulateSchedules.cls",
+		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/ProductManager.cls",
+		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/AccountManager.cls",
+		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/CVContractTriggerHandler.cls",
+		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/TH_Case_StartExternalLegal.cls",
+		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/CVWorkflowManager.cls",
+		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/CaseManagerTest.cls",
+		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/CVContractWrapper.cls",
+		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/triggers/AllCaseTriggers.trigger",
+		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/TH_CVContractTriggerHandler.cls",
+		"/C/Users/hemmadi/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/hemmadi/AppData/Roaming/Sublime Text 3/Packages/MavensMate/mavensmate.sublime-settings",
+		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/CVMetaUtils.cls",
+		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/TH_Case_CVSetDateTrackingFields.cls",
+		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/TH_Case_CVRolesManagement.cls",
+		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/CVFlowControl.cls",
 		"/C/Users/hemmadi/Workspace/GE",
 		"/C/Users/hemmadi/Workspace/GE/src/classes/CVException.cls",
 		"/C/Users/hemmadi/AppData/Roaming/Sublime Text 3/Packages/User/Package Control.sublime-settings",
@@ -542,32 +616,7 @@
 		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/resource-bundles/APTPS_CAPResourceBundle_Flow.resource/ProductAttributes/ProductAttributeConfigDataService.js",
 		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/resource-bundles/APTPS_CAPResourceBundle_Flow.resource/ProductAttributes/BundleAttributesController.js",
 		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/resource-bundles/APTPS_CAPResourceBundle_Flow.resource/ProductAttributes/._BundleAttributesController.js",
-		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/classes/APTPS_ProductAttributeValueSelector.cls",
-		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/classes/APTPS_quoteAPI.cls",
-		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/classes/APTPS_PAVObjConfigController.cls",
-		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/resource-bundles/APTPS_CAPResourceBundle_H.resource/Templates/MessagesView.html",
-		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/resource-bundles/APTPS_CAPResourceBundle_H.resource/Templates/MiniCartView.html",
-		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/resource-bundles/APTPS_CAPResourceBundle_H.resource/Templates/PageHeaderView.html",
-		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/resource-bundles/APTPS_CAPResourceBundle_H.resource/Templates/ProductAttributesView.html",
-		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/classes/APTPS_Attribute_Model.cls",
-		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/classes/APTPS_StringUtils.cls",
-		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/classes/APTPS_ProductSelector.cls",
-		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/resource-bundles/APTPS_CAPResourceBundle_H.resource/CSS/bootstrap.3.1.1.min.css",
-		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/resource-bundles/APTPS_CAPResourceBundle_H.resource/CSS/APTPS_CAPCustomCSS.css",
-		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/resource-bundles/APTPS_CAPResourceBundle_ms_ang.resource/Controllers/baseController.js",
-		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/resource-bundles/APTPS_CAPResourceBundle_ms_ang.resource/Services/pricingMatrixDataService.js",
-		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/resource-bundles/APTPS_CAPResourceBundle_ms_ang.resource/Controllers/pricingMatrixController.js",
-		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/classes/APTPS_CustomAttributePageController_RA.cls",
-		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/staticresources/APTPS_CAPResourceBundle_ms_ang.resource",
-		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/classes/APTPS_OptionGroupSelector.cls",
-		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/classes/APTPS_MiniCartController.cls",
-		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/components/APTPS_MiniCart.component",
-		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/classes/APTPS_ProductAttributeConfigSelector.cls",
-		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/classes/APTPS_PAVObjConfigSelector.cls",
-		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/classes/APTPS_PricingMatrixController.cls",
-		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/components/APTPS_PricingMatrix.component",
-		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/classes/APTPS_MetaUtils.cls",
-		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/classes/APTPS_CustomAttributePageController_RA_D.cls"
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/classes/APTPS_ProductAttributeValueSelector.cls"
 	],
 	"find":
 	{
@@ -594,6 +643,85 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"cId",
+			"agreementsMap",
+			"contractstobeupdatedMap",
+			"updateNextDueDateSchedulesonContract",
+			"nextdueSRT",
+			"agreementIdSet",
+			"contractstobeupdatedList",
+			"getChangedDueDateRuleIds",
+			"Next_Royalty_Payment__c",
+			"Next_Royal_Payment__c",
+			"contractstobeupdated",
+			"updateContracts",
+			"contractstobeupdated",
+			"inProgressEntry",
+			"getAgreements",
+			"setNextRoyaltyPayment",
+			"createRevenuePaymentSchedules",
+			"getChangedDueDateRuleIds",
+			"getSchedulesbasedonDuedateRule",
+			"result",
+			"createSalesReportSchedules",
+			"iscontract",
+			"isContract",
+			"isContractPerio",
+			"getChangedDueDateRuleIds",
+			"deleteRevenuePaymentSchedulesonContractUpdate",
+			"deleteRevenuePaymentSchedules",
+			"C_RT_AGREEMENT",
+			"DDR_PERIOD_MONTH_END",
+			"isSalesReportScheduleRefreshrequired",
+			"isRoyalPaymentScheduleRefreshrequired",
+			"nextduesrt",
+			"salesReports",
+			"isSalesReportScheduleRefreshrequired",
+			"Contract",
+			"TH_Contract_CVPopulateSchedules",
+			"DueDateRuleManager",
+			"getSchedulesbasedonDuedateRule",
+			"DueDateManager",
+			"createRevenuePaymentSchedules",
+			"getDueDateRulewCustomDatesMapbyId",
+			"ddrIdSet",
+			"agreements",
+			"result",
+			"rpttobedeletedListtodate",
+			"srtobeinsertedListtodate",
+			"TH_Contract_CVGenerateSchedules",
+			"TH_Contract_CVManageSchedules",
+			"contractNewList",
+			"createExternalLegalCases",
+			"insert",
+			"getrpttobedeletedList",
+			"agreementIdSet",
+			"select",
+			"getCasesWithRecordTypeForCaseIds",
+			"getAgreementsForLicenseeIds",
+			"Contract",
+			"cAgreementsList",
+			"RT_AGREEMENT",
+			"cAgreementContractList",
+			"TH_Contract_CVGenerateSchedules",
+			"getStatusFieldNameForRole",
+			"getCaseChangedStatusRoles",
+			"getCVCases",
+			"Case",
+			"Contract",
+			"Case",
+			"casemanager.",
+			"entry",
+			"getTriggerContext",
+			"mainEntry",
+			"noTriggers =",
+			"getTriggerContext",
+			"inProgressEntry",
+			"Entry",
+			"return",
+			"CVFlowControl",
+			"	{",
+			"button",
 			"generateSchedulesbasedonDuedateRule",
 			"null",
 			"periodDate",
@@ -642,86 +770,7 @@
 			"selectByServiceLocationwBundle",
 			"productAttributeValues",
 			"messages",
-			"pagemessage",
-			"Apttus_Config2__IconId__c",
-			"baseConfig",
-			"#8ead1a",
-			"background-color",
-			"backgroun-color",
-			"backg",
-			"#8ead1a",
-			"}\n",
-			"#8ead1a",
-			"#00853f",
-			"class=",
-			".navbar {\n            list-style-type: none;\n            margin: 0;\n            padding:",
-			"styleshee",
-			"optionGroupanchortags",
-			"padding-bo",
-			"padding",
-			"Apttus_Config2__Icon__c",
-			"newLocationURL",
-			"bundleProdName",
-			"primary",
-			"location",
-			"service",
-			"primaryLineNumber",
-			"lineNumber",
-			"bundleProdId",
-			"bundleProdName",
-			"approv",
-			"bunleLineNumber",
-			"Apttus_Config2__LineNumber__c",
-			"proposalNotes",
-			"note",
-			"selectOptionProduct",
-			"selectProductrenderoptionproductattributes",
-			"renderoptionproductattributes",
-			"gotosection",
-			"changeQuantity",
-			"imag",
-			"rendercurrentproductoptiongroups",
-			"ProductDataService",
-			"opportunityId",
-			"getbundleServiceLocation",
-			"ng-incl",
-			"ng-controller",
-			"controller",
-			"con",
-			"BundleAttributesController",
-			"bundleattr",
-			"BundleAttributesController",
-			"OptionAttributesController",
-			"OptionGroupHierarchyController",
-			"issele",
-			"bundles",
-			"hideFlowSection",
-			"search",
-			"hideFlowSection",
-			"HasBundleProducts",
-			"bundles =",
-			"bundles",
-			"HasBundleProducts",
-			"retur bundles",
-			"guidedProducts",
-			"boots",
-			"googleap",
-			"fonts.googleap",
-			"fonts.googleapis.co",
-			"cartpageres",
-			"href=",
-			"href",
-			"bundleproducts",
-			"BundleInfo",
-			"isSelected",
-			"BundleInfo",
-			"bundleProducts",
-			"BundleProducts",
-			"bundles",
-			"isSelected",
-			"Anydatatype_msg",
-			"isselec",
-			"BundleProducts"
+			"pagemessage"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -729,6 +778,9 @@
 		"regex": false,
 		"replace_history":
 		[
+			"isequalsSalesReportSchedule",
+			"isequalsRoyalPaymentSchedule",
+			"TH_Contract_CVManageSchedules",
 			"attrCtrl.productAttributeValues",
 			"dimension",
 			": ",
@@ -796,7 +848,7 @@
 	"menu_visible": true,
 	"output.MavensMate-OutputPanel":
 	{
-		"height": 178.0
+		"height": 210.0
 	},
 	"output.find_results":
 	{
@@ -806,7 +858,7 @@
 	"project": "GE cvrweave.sublime-project",
 	"replace":
 	{
-		"height": 68.0
+		"height": 86.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -816,16 +868,116 @@
 		"selected_items":
 		[
 			[
+				"contractmana",
+				"src\\classes\\ContractManager.cls"
+			],
+			[
+				"contra",
+				"src\\classes\\CVContractGateway.cls"
+			],
+			[
+				"ge_triggerdispatch",
+				"src\\classes\\GE_TriggerDispatch.cls"
+			],
+			[
+				"cvcontr",
+				"src\\triggers\\CVContractTrigger.trigger"
+			],
+			[
+				"allcontact",
+				"src\\triggers\\AllContractTriggers.trigger"
+			],
+			[
+				"allcon",
+				"src\\triggers\\AllContractTrigger.trigger"
+			],
+			[
+				"utilityf",
+				"src\\classes\\CVUtilityFns.cls"
+			],
+			[
+				"th_con",
+				"src\\classes\\TH_Contract_CVManageSchedules.cls"
+			],
+			[
+				"cvcon",
+				"src\\classes\\CVCONSTANTS.cls"
+			],
+			[
+				"casemana",
+				"src\\classes\\CaseManager.cls"
+			],
+			[
+				"manager",
+				"src\\classes\\ProductManager.cls"
+			],
+			[
+				"casema",
+				"src\\classes\\CaseManager.cls"
+			],
+			[
+				"cvcontra",
+				"src\\triggers\\CVContractTrigger.trigger"
+			],
+			[
+				"trigger",
+				"src\\triggers\\AllCaseTriggers.trigger"
+			],
+			[
+				"gatewa",
+				"src\\classes\\CVContractGateway.cls"
+			],
+			[
+				"triggerha",
+				"src\\classes\\CVContractTriggerHandler.cls"
+			],
+			[
+				"th",
+				"src\\classes\\TH_Case_StartExternalLegal.cls"
+			],
+			[
+				"th_",
+				"src\\classes\\TH_Case_StartExternalLegal.cls"
+			],
+			[
+				"contractga",
+				"src\\classes\\CVContractGateway.cls"
+			],
+			[
+				"cvworkflowmanager",
+				"src\\classes\\CVWorkflowManager.cls"
+			],
+			[
+				"contractmanager",
+				"src\\classes\\ContractManager.cls"
+			],
+			[
+				"casemanager",
+				"src\\classes\\CaseManager.cls"
+			],
+			[
+				"th_case_cvsetdatetrackingfields",
+				"src\\classes\\TH_Case_CVSetDateTrackingFields.cls"
+			],
+			[
+				"th_case_cvrolesmanagement",
+				"src\\classes\\TH_Case_CVRolesManagement.cls"
+			],
+			[
+				"allcase",
+				"src\\triggers\\AllCaseTriggers.trigger"
+			],
+			[
+				"cvconr",
+				"src\\classes\\CVContractGateway.cls"
+			],
+			[
 				"cvflowcontrol",
 				"src\\classes\\CVFlowControl.cls"
 			],
 			[
 				"cvcontracttr",
 				"src\\classes\\CVContractTriggerHandler.cls"
-			],
-			[
-				"cvcontra",
-				"src\\classes\\CVContractGateway.cls"
 			],
 			[
 				"cvconstants",
@@ -1226,118 +1378,18 @@
 			[
 				"aptps_line",
 				"src\\classes\\APTPS_LineItemSelector.cls"
-			],
-			[
-				"aptps_customattributeutil",
-				"src\\classes\\APTPS_CustomAttributeUtil.cls"
-			],
-			[
-				"aptps_ra.c",
-				"src\\classes\\APTPS_CAP_RA.cls"
-			],
-			[
-				"cap_ms_h",
-				"src\\classes\\APTPS_CAP_MS_H.cls"
-			],
-			[
-				"aptps_cap_ms.cl",
-				"src\\classes\\APTPS_CAP_MS.cls"
-			],
-			[
-				"aptps_cap_fl",
-				"src\\pages\\APTPS_CAP_MS_Flow.page"
-			],
-			[
-				"aptps_attribute_model",
-				"src\\classes\\APTPS_Attribute_Model.cls"
-			],
-			[
-				"aptps_str",
-				"src\\classes\\APTPS_StringUtils.cls"
-			],
-			[
-				"aptps_produc",
-				"src\\classes\\APTPS_ProductSelector.cls"
-			],
-			[
-				"aptps_ra.",
-				"src\\classes\\APTPS_CAP_RA.cls"
-			],
-			[
-				"aptps_cap",
-				"src\\pages\\APTPS_CAP_MS.page"
-			],
-			[
-				"aptps_cap_ra",
-				"src\\classes\\APTPS_CAP_RA.cls"
-			],
-			[
-				"_ra",
-				"src\\classes\\APTPS_CustomAttributePageController_RA.cls"
-			],
-			[
-				"baseco",
-				"resource-bundles\\APTPS_CAPResourceBundle_ms_ang.resource\\Controllers\\baseController.js"
-			],
-			[
-				"aptps_cus",
-				"src\\classes\\APTPS_CustomAttributePageController_RA.cls"
-			],
-			[
-				"aptps_mini",
-				"src\\components\\APTPS_MiniCart.component"
-			],
-			[
-				"aptps_minica",
-				"src\\classes\\APTPS_MiniCartController.cls"
-			],
-			[
-				"aptps_productattributevalueselector",
-				"src\\classes\\APTPS_ProductAttributeValueSelector.cls"
-			],
-			[
-				"aptps_productattributeconfigselector",
-				"src\\classes\\APTPS_ProductAttributeConfigSelector.cls"
-			],
-			[
-				"aptps_pavobjconfigselector",
-				"src\\classes\\APTPS_PAVObjConfigSelector.cls"
-			],
-			[
-				"aptps_optiongroupselector",
-				"src\\classes\\APTPS_OptionGroupSelector.cls"
-			],
-			[
-				"aptps_pricingmatr",
-				"src\\classes\\APTPS_PricingMatrixController.cls"
-			],
-			[
-				"aptps_ra.cl",
-				"src\\classes\\APTPS_CustomAttributePageController_RA.cls"
-			],
-			[
-				"aptps_st",
-				"src\\classes\\APTPS_StringUtils.cls"
-			],
-			[
-				"aptps_me",
-				"src\\classes\\APTPS_MetaUtils.cls"
-			],
-			[
-				"aptps_pricing",
-				"src\\classes\\APTPS_PricingMatrixController.cls"
 			]
 		],
 		"width": 0.0
 	},
 	"select_project":
 	{
-		"height": 0.0,
+		"height": 625.0,
 		"last_filter": "",
 		"selected_items":
 		[
 		],
-		"width": 0.0
+		"width": 475.0
 	},
 	"select_symbol":
 	{
@@ -1356,7 +1408,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 385.0,
+	"side_bar_width": 176.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

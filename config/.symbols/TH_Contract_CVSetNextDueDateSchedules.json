@@ -1,0 +1,653 @@
+{
+    "constructors": [],
+    "externalReferences": [],
+    "id": "01pZ0000000Pyq2IAC",
+    "innerClasses": [],
+    "interfaces": [
+        "ITriggerEntry"
+    ],
+    "key": "01pZ0000000Pyq2IAC",
+    "methods": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 17,
+                "line": 22
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "mainEntry",
+            "parameters": [
+                {
+                    "name": "TriggerObject",
+                    "type": "String"
+                },
+                {
+                    "name": "IsBefore",
+                    "type": "Boolean"
+                },
+                {
+                    "name": "IsDelete",
+                    "type": "Boolean"
+                },
+                {
+                    "name": "IsAfter",
+                    "type": "Boolean"
+                },
+                {
+                    "name": "IsInsert",
+                    "type": "Boolean"
+                },
+                {
+                    "name": "IsUpdate",
+                    "type": "Boolean"
+                },
+                {
+                    "name": "IsExecuting",
+                    "type": "Boolean"
+                },
+                {
+                    "name": "newList",
+                    "type": "LIST"
+                },
+                {
+                    "name": "newMap",
+                    "type": "Map"
+                },
+                {
+                    "name": "oldList",
+                    "type": "LIST"
+                },
+                {
+                    "name": "oldMap",
+                    "type": "Map"
+                }
+            ],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 17,
+                "line": 79
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "inProgressEntry",
+            "parameters": [
+                {
+                    "name": "TriggerObject",
+                    "type": "String"
+                },
+                {
+                    "name": "IsBefore",
+                    "type": "Boolean"
+                },
+                {
+                    "name": "IsDelete",
+                    "type": "Boolean"
+                },
+                {
+                    "name": "IsAfter",
+                    "type": "Boolean"
+                },
+                {
+                    "name": "IsInsert",
+                    "type": "Boolean"
+                },
+                {
+                    "name": "IsUpdate",
+                    "type": "Boolean"
+                },
+                {
+                    "name": "IsExecuting",
+                    "type": "Boolean"
+                },
+                {
+                    "name": "newList",
+                    "type": "LIST"
+                },
+                {
+                    "name": "newMap",
+                    "type": "Map"
+                },
+                {
+                    "name": "oldList",
+                    "type": "LIST"
+                },
+                {
+                    "name": "oldMap",
+                    "type": "Map"
+                }
+            ],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 32,
+                "line": 84
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "getTriggerContext",
+            "parameters": [],
+            "references": [],
+            "returnType": "Map",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 93
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "setNextRoyaltyPayment",
+            "parameters": [
+                {
+                    "name": "cAgreementContractList",
+                    "type": "LIST"
+                },
+                {
+                    "name": "agreementsMap",
+                    "type": "Map"
+                }
+            ],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 113
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "setNextSalesReport",
+            "parameters": [
+                {
+                    "name": "cAgreementContractList",
+                    "type": "LIST"
+                },
+                {
+                    "name": "agreementsMap",
+                    "type": "Map"
+                }
+            ],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        }
+    ],
+    "name": "TH_Contract_CVSetNextDueDateSchedules",
+    "namespace": null,
+    "parentClass": "",
+    "properties": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 14
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "contractNewList",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 15
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "contractOldList",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 23,
+                "line": 16
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "contractNewMap",
+            "references": [],
+            "type": "Map"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 23,
+                "line": 17
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "contractOldMap",
+            "references": [],
+            "type": "Map"
+        }
+    ],
+    "tableDeclaration": {
+        "annotations": [],
+        "location": {
+            "column": 27,
+            "line": 13
+        },
+        "modifiers": [
+            "public",
+            "with sharing"
+        ],
+        "name": "TH_Contract_CVSetNextDueDateSchedules",
+        "references": [],
+        "type": "TH_Contract_CVSetNextDueDateSchedules"
+    },
+    "variables": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 34,
+                "line": 22
+            },
+            "modifiers": [],
+            "name": "TriggerObject",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 57,
+                "line": 22
+            },
+            "modifiers": [],
+            "name": "IsBefore",
+            "references": [],
+            "type": "Boolean"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 75,
+                "line": 22
+            },
+            "modifiers": [],
+            "name": "IsDelete",
+            "references": [],
+            "type": "Boolean"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 93,
+                "line": 22
+            },
+            "modifiers": [],
+            "name": "IsAfter",
+            "references": [],
+            "type": "Boolean"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 110,
+                "line": 22
+            },
+            "modifiers": [],
+            "name": "IsInsert",
+            "references": [],
+            "type": "Boolean"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 128,
+                "line": 22
+            },
+            "modifiers": [],
+            "name": "IsUpdate",
+            "references": [],
+            "type": "Boolean"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 146,
+                "line": 22
+            },
+            "modifiers": [],
+            "name": "IsExecuting",
+            "references": [],
+            "type": "Boolean"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 173,
+                "line": 22
+            },
+            "modifiers": [],
+            "name": "newList",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 199,
+                "line": 22
+            },
+            "modifiers": [],
+            "name": "newMap",
+            "references": [],
+            "type": "Map"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 221,
+                "line": 22
+            },
+            "modifiers": [],
+            "name": "oldList",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 246,
+                "line": 22
+            },
+            "modifiers": [],
+            "name": "oldMap",
+            "references": [],
+            "type": "Map"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 24,
+                "line": 29
+            },
+            "modifiers": [],
+            "name": "cAgreementContractList",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 27,
+                "line": 30
+            },
+            "modifiers": [],
+            "name": "agreementsMap",
+            "references": [],
+            "type": "Map"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 21,
+                "line": 37
+            },
+            "modifiers": [],
+            "name": "agreementIdSet",
+            "references": [],
+            "type": "Set"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 26,
+                "line": 38
+            },
+            "modifiers": [],
+            "name": "c",
+            "references": [],
+            "type": "Contract"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 40,
+                "line": 79
+            },
+            "modifiers": [],
+            "name": "TriggerObject",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 63,
+                "line": 79
+            },
+            "modifiers": [],
+            "name": "IsBefore",
+            "references": [],
+            "type": "Boolean"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 81,
+                "line": 79
+            },
+            "modifiers": [],
+            "name": "IsDelete",
+            "references": [],
+            "type": "Boolean"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 99,
+                "line": 79
+            },
+            "modifiers": [],
+            "name": "IsAfter",
+            "references": [],
+            "type": "Boolean"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 116,
+                "line": 79
+            },
+            "modifiers": [],
+            "name": "IsInsert",
+            "references": [],
+            "type": "Boolean"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 134,
+                "line": 79
+            },
+            "modifiers": [],
+            "name": "IsUpdate",
+            "references": [],
+            "type": "Boolean"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 152,
+                "line": 79
+            },
+            "modifiers": [],
+            "name": "IsExecuting",
+            "references": [],
+            "type": "Boolean"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 179,
+                "line": 79
+            },
+            "modifiers": [],
+            "name": "newList",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 205,
+                "line": 79
+            },
+            "modifiers": [],
+            "name": "newMap",
+            "references": [],
+            "type": "Map"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 227,
+                "line": 79
+            },
+            "modifiers": [],
+            "name": "oldList",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 252,
+                "line": 79
+            },
+            "modifiers": [],
+            "name": "oldMap",
+            "references": [],
+            "type": "Map"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 29,
+                "line": 86
+            },
+            "modifiers": [],
+            "name": "response",
+            "references": [],
+            "type": "Map"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 55,
+                "line": 93
+            },
+            "modifiers": [],
+            "name": "cAgreementContractList",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 97,
+                "line": 93
+            },
+            "modifiers": [],
+            "name": "agreementsMap",
+            "references": [],
+            "type": "Map"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 22,
+                "line": 98
+            },
+            "modifiers": [],
+            "name": "c",
+            "references": [],
+            "type": "Contract"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 48,
+                "line": 103
+            },
+            "modifiers": [],
+            "name": "nextdueRPT",
+            "references": [],
+            "type": "CV_Royalty_Payment_Tracking__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 52,
+                "line": 113
+            },
+            "modifiers": [],
+            "name": "cAgreementContractList",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 94,
+                "line": 113
+            },
+            "modifiers": [],
+            "name": "agreementsMap",
+            "references": [],
+            "type": "Map"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 22,
+                "line": 118
+            },
+            "modifiers": [],
+            "name": "c",
+            "references": [],
+            "type": "Contract"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 45,
+                "line": 123
+            },
+            "modifiers": [],
+            "name": "nextdueSRT",
+            "references": [],
+            "type": "CV_Sales_Report_Tracking__c"
+        }
+    ]
+}

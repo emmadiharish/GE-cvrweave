@@ -1,0 +1,1153 @@
+34.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WORKFLOW,INFO
+01:40:46.484 (1484132186)|EXECUTION_STARTED
+01:40:46.484 (1484193082)|CODE_UNIT_STARTED|[EXTERNAL]|TRIGGERS
+01:40:46.484 (1484240772)|CODE_UNIT_STARTED|[EXTERNAL]|01qZ00000009DjW|AllContractTriggers on Contract trigger event BeforeInsert for [new]
+01:40:46.484 (1484300810)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+01:40:46.484 (1484798816)|HEAP_ALLOCATE|[72]|Bytes:3
+01:40:46.484 (1484865771)|HEAP_ALLOCATE|[77]|Bytes:152
+01:40:46.484 (1484890964)|HEAP_ALLOCATE|[342]|Bytes:408
+01:40:46.484 (1484917107)|HEAP_ALLOCATE|[355]|Bytes:408
+01:40:46.484 (1484946949)|HEAP_ALLOCATE|[467]|Bytes:48
+01:40:46.485 (1485009930)|HEAP_ALLOCATE|[139]|Bytes:6
+01:40:46.485 (1485047979)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+01:40:46.485 (1485073634)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+01:40:46.485 (1485090750)|VARIABLE_SCOPE_BEGIN|[1]|this|AllContractTriggers|true|false
+01:40:46.485 (1485169144)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x64940321
+01:40:46.485 (1485238319)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+01:40:46.485 (1485250151)|VARIABLE_SCOPE_BEGIN|[1]|this|AllContractTriggers|true|false
+01:40:46.485 (1485286399)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x64940321
+01:40:46.485 (1485295927)|STATEMENT_EXECUTE|[1]
+01:40:46.485 (1485299299)|STATEMENT_EXECUTE|[10]
+01:40:46.485 (1485525517)|HEAP_ALLOCATE|[10]|Bytes:27
+01:40:46.485 (1485548563)|HEAP_ALLOCATE|[50]|Bytes:5
+01:40:46.485 (1485566965)|HEAP_ALLOCATE|[56]|Bytes:5
+01:40:46.485 (1485580077)|HEAP_ALLOCATE|[64]|Bytes:7
+01:40:46.485 (1485681488)|USER_DEBUG|[10]|DEBUG|AllContractTriggers - start
+01:40:46.485 (1485696590)|STATEMENT_EXECUTE|[11]
+01:40:46.485 (1485704561)|HEAP_ALLOCATE|[11]|Bytes:16
+01:40:46.485 (1485818365)|HEAP_ALLOCATE|[11]|Bytes:20
+01:40:46.485 (1485843982)|USER_DEBUG|[11]|DEBUG|Trigger.newMap: null
+01:40:46.485 (1485854968)|STATEMENT_EXECUTE|[12]
+01:40:46.485 (1485859287)|HEAP_ALLOCATE|[12]|Bytes:8
+01:40:46.510 (1510201594)|VARIABLE_SCOPE_BEGIN|[14]|GE_TriggerDispatch.activefunction|GE_TriggerDispatch.ITriggerEntry|true|true
+01:40:46.510 (1510225082)|VARIABLE_SCOPE_BEGIN|[17]|GE_TriggerDispatch.noTriggers|Boolean|false|true
+01:40:46.510 (1510294907)|HEAP_ALLOCATE|[12]|Bytes:13
+01:40:46.510 (1510310153)|HEAP_ALLOCATE|[12]|Bytes:5
+01:40:46.510 (1510315681)|HEAP_ALLOCATE|[12]|Bytes:17
+01:40:46.510 (1510352859)|METHOD_ENTRY|[11]|01pZ0000000LPwQ|GE_TriggerDispatch.GE_TriggerDispatch()
+01:40:46.510 (1510361067)|STATEMENT_EXECUTE|[11]
+01:40:46.511 (1511264328)|SYSTEM_MODE_ENTER|false
+01:40:46.511 (1511293462)|HEAP_ALLOCATE|[14]|Bytes:5
+01:40:46.511 (1511302762)|STATEMENT_EXECUTE|[11]
+01:40:46.511 (1511305593)|STATEMENT_EXECUTE|[14]
+01:40:46.511 (1511375525)|VARIABLE_ASSIGNMENT|[14]|GE_TriggerDispatch.activefunction|null|
+01:40:46.511 (1511382884)|STATEMENT_EXECUTE|[17]
+01:40:46.511 (1511393453)|HEAP_ALLOCATE|[17]|Bytes:5
+01:40:46.511 (1511425953)|VARIABLE_ASSIGNMENT|[17]|GE_TriggerDispatch.noTriggers|false
+01:40:46.511 (1511435965)|SYSTEM_MODE_EXIT|false
+01:40:46.511 (1511448822)|METHOD_EXIT|[11]|GE_TriggerDispatch
+01:40:46.511 (1511524749)|METHOD_ENTRY|[12]|01pZ0000000LPwQ|GE_TriggerDispatch.entry(String, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, List<SObject>, Map<Id,SObject>, List<SObject>, Map<Id,SObject>)
+01:40:46.511 (1511612132)|VARIABLE_SCOPE_BEGIN|[26]|TriggerObject|String|false|false
+01:40:46.511 (1511652403)|VARIABLE_ASSIGNMENT|[26]|TriggerObject|"Contract"
+01:40:46.511 (1511661302)|HEAP_ALLOCATE|[27]|Bytes:5
+01:40:46.511 (1511670144)|VARIABLE_SCOPE_BEGIN|[26]|IsBefore|Boolean|false|false
+01:40:46.511 (1511690403)|VARIABLE_ASSIGNMENT|[26]|IsBefore|true
+01:40:46.511 (1511696620)|HEAP_ALLOCATE|[27]|Bytes:5
+01:40:46.511 (1511703611)|VARIABLE_SCOPE_BEGIN|[26]|IsDelete|Boolean|false|false
+01:40:46.511 (1511721643)|VARIABLE_ASSIGNMENT|[26]|IsDelete|false
+01:40:46.511 (1511727870)|HEAP_ALLOCATE|[27]|Bytes:5
+01:40:46.511 (1511734606)|VARIABLE_SCOPE_BEGIN|[26]|IsAfter|Boolean|false|false
+01:40:46.511 (1511752463)|VARIABLE_ASSIGNMENT|[26]|IsAfter|false
+01:40:46.511 (1511758121)|HEAP_ALLOCATE|[27]|Bytes:5
+01:40:46.511 (1511764684)|VARIABLE_SCOPE_BEGIN|[26]|IsInsert|Boolean|false|false
+01:40:46.511 (1511782041)|VARIABLE_ASSIGNMENT|[26]|IsInsert|true
+01:40:46.511 (1511787686)|HEAP_ALLOCATE|[27]|Bytes:5
+01:40:46.511 (1511794202)|VARIABLE_SCOPE_BEGIN|[26]|IsUpdate|Boolean|false|false
+01:40:46.511 (1511811661)|VARIABLE_ASSIGNMENT|[26]|IsUpdate|false
+01:40:46.511 (1511817299)|HEAP_ALLOCATE|[27]|Bytes:5
+01:40:46.511 (1511823829)|VARIABLE_SCOPE_BEGIN|[26]|IsExecuting|Boolean|false|false
+01:40:46.511 (1511841525)|VARIABLE_ASSIGNMENT|[26]|IsExecuting|true
+01:40:46.511 (1511849393)|VARIABLE_SCOPE_BEGIN|[26]|newList|List<SObject>|true|false
+01:40:46.515 (1515668452)|VARIABLE_ASSIGNMENT|[26]|newList|{"s":1,"v":[{"CustomerSignedDate":"2016-10-12T00:00:00.000Z","Description":"Sec 2.01 - License t (841 more) ...","AccountId":"001Z000000uoWXwIAM","Agreement_Type__c":"Trademark","BillingCountryCode":"US","ContractTerm":45,"StatusCode":"Draft","Name":"Siva Test Contract - (11 more) ...","StartDate":"2011-11-12T00:00:00.000Z","Audit_Rights__c":"4.05 - Licensee shal (583 more) ...","Calculate_Next_Royal (13 more) ...":false,"OwnerId":"005Z0000003DoV8IAK","Rights__c":"Sec 2.01 - License t (841 more) ...","As_Of_Date__c":"2015-10-16T00:00:00.000Z","Sales_Report_Due_Dat (9 more) ...":"a2xZ0000002IjLdIAK","RecordTypeId":"012Z00000000rdwIAA","CustomerSignedTitle":"Director","Expiration_Countdown (3 more) ...":-331,"CV_Customer_Signed_B (4 more) ...":"George Tsai","Contract_Terms__c":"4.01 Minimum payment (66 more) ...","Status":"Draft","IsDeleted":false,"Termination_Clause__ (1 more) ...":"Sec. 603 - In the ev (750 more) ...","EndDate":"2014-11-19T00:00:00.000Z","Royalty_Payment_Due_ (12 more) ...":"a2xZ0000002IjLdIAK","ShippingCountryCode":"US","AIF__c":"84.0099","CompanySignedDate":"2015-10-10T00:00:00.000Z","Calculate_Next_Sales (10 more) ...":false}]}|0x790dfbcd
+01:40:46.515 (1515694719)|VARIABLE_SCOPE_BEGIN|[26]|newMap|Map<Id,SObject>|true|false
+01:40:46.515 (1515724197)|VARIABLE_ASSIGNMENT|[26]|newMap|null|
+01:40:46.515 (1515732986)|VARIABLE_SCOPE_BEGIN|[26]|oldList|List<SObject>|true|false
+01:40:46.515 (1515750677)|VARIABLE_ASSIGNMENT|[26]|oldList|null|
+01:40:46.515 (1515757340)|VARIABLE_SCOPE_BEGIN|[26]|oldMap|Map<Id,SObject>|true|false
+01:40:46.515 (1515773605)|VARIABLE_ASSIGNMENT|[26]|oldMap|null|
+01:40:46.515 (1515792493)|SYSTEM_MODE_ENTER|false
+01:40:46.515 (1515799356)|HEAP_ALLOCATE|[27]|Bytes:5
+01:40:46.515 (1515806063)|STATEMENT_EXECUTE|[26]
+01:40:46.515 (1515808984)|STATEMENT_EXECUTE|[27]
+01:40:46.515 (1515819178)|HEAP_ALLOCATE|[27]|Bytes:32
+01:40:46.515 (1515926175)|USER_DEBUG|[27]|DEBUG|GE_TriggerDispatch - entry start
+01:40:46.515 (1515942929)|STATEMENT_EXECUTE|[28]
+01:40:46.515 (1515955845)|HEAP_ALLOCATE|[28]|Bytes:16
+01:40:46.516 (1516042593)|HEAP_ALLOCATE|[28]|Bytes:20
+01:40:46.516 (1516069459)|USER_DEBUG|[28]|DEBUG|activefunction: null
+01:40:46.516 (1516080641)|STATEMENT_EXECUTE|[29]
+01:40:46.516 (1516088304)|HEAP_ALLOCATE|[29]|Bytes:12
+01:40:46.516 (1516135816)|HEAP_ALLOCATE|[29]|Bytes:5
+01:40:46.516 (1516160474)|HEAP_ALLOCATE|[29]|Bytes:17
+01:40:46.516 (1516183085)|USER_DEBUG|[29]|DEBUG|noTriggers: false
+01:40:46.516 (1516200838)|STATEMENT_EXECUTE|[31]
+01:40:46.516 (1516204095)|STATEMENT_EXECUTE|[38]
+01:40:46.516 (1516225590)|METHOD_ENTRY|[38]|01pZ0000000LPwQ|GE_TriggerDispatch.debugContext(String, Boolean, Boolean, Boolean, Boolean, Boolean)
+01:40:46.516 (1516268185)|VARIABLE_SCOPE_BEGIN|[69]|TriggerObject|String|false|false
+01:40:46.516 (1516307790)|VARIABLE_ASSIGNMENT|[69]|TriggerObject|"Contract"
+01:40:46.516 (1516317858)|HEAP_ALLOCATE|[72]|Bytes:5
+01:40:46.516 (1516327052)|VARIABLE_SCOPE_BEGIN|[69]|IsBefore|Boolean|false|false
+01:40:46.516 (1516348782)|VARIABLE_ASSIGNMENT|[69]|IsBefore|true
+01:40:46.516 (1516358185)|HEAP_ALLOCATE|[72]|Bytes:5
+01:40:46.516 (1516371216)|VARIABLE_SCOPE_BEGIN|[69]|IsDelete|Boolean|false|false
+01:40:46.516 (1516437789)|VARIABLE_ASSIGNMENT|[69]|IsDelete|false
+01:40:46.516 (1516446822)|HEAP_ALLOCATE|[72]|Bytes:5
+01:40:46.516 (1516455980)|VARIABLE_SCOPE_BEGIN|[69]|IsAfter|Boolean|false|false
+01:40:46.516 (1516475503)|VARIABLE_ASSIGNMENT|[69]|IsAfter|false
+01:40:46.516 (1516481659)|HEAP_ALLOCATE|[72]|Bytes:5
+01:40:46.516 (1516488291)|VARIABLE_SCOPE_BEGIN|[69]|IsInsert|Boolean|false|false
+01:40:46.516 (1516506098)|VARIABLE_ASSIGNMENT|[69]|IsInsert|true
+01:40:46.516 (1516511718)|HEAP_ALLOCATE|[72]|Bytes:5
+01:40:46.516 (1516518220)|VARIABLE_SCOPE_BEGIN|[69]|IsUpdate|Boolean|false|false
+01:40:46.516 (1516535606)|VARIABLE_ASSIGNMENT|[69]|IsUpdate|false
+01:40:46.516 (1516545745)|HEAP_ALLOCATE|[72]|Bytes:5
+01:40:46.516 (1516551274)|STATEMENT_EXECUTE|[69]
+01:40:46.516 (1516554004)|STATEMENT_EXECUTE|[72]
+01:40:46.516 (1516558366)|HEAP_ALLOCATE|[72]|Bytes:6
+01:40:46.516 (1516565270)|VARIABLE_SCOPE_BEGIN|[72]|beforeAfter|String|false|false
+01:40:46.516 (1516586984)|VARIABLE_ASSIGNMENT|[72]|beforeAfter|"BEFORE"
+01:40:46.516 (1516592387)|STATEMENT_EXECUTE|[73]
+01:40:46.516 (1516596987)|VARIABLE_SCOPE_BEGIN|[73]|dmlOperation|String|false|false
+01:40:46.516 (1516614378)|VARIABLE_ASSIGNMENT|[73]|dmlOperation|null
+01:40:46.516 (1516620401)|STATEMENT_EXECUTE|[77]
+01:40:46.516 (1516623000)|STATEMENT_EXECUTE|[78]
+01:40:46.516 (1516626803)|HEAP_ALLOCATE|[78]|Bytes:6
+01:40:46.516 (1516648388)|VARIABLE_ASSIGNMENT|[78]|dmlOperation|"INSERT"
+01:40:46.516 (1516658319)|STATEMENT_EXECUTE|[88]
+01:40:46.516 (1516661072)|STATEMENT_EXECUTE|[89]
+01:40:46.516 (1516664565)|HEAP_ALLOCATE|[89]|Bytes:13
+01:40:46.516 (1516669550)|HEAP_ALLOCATE|[89]|Bytes:1
+01:40:46.516 (1516673309)|HEAP_ALLOCATE|[89]|Bytes:12
+01:40:46.516 (1516688320)|HEAP_ALLOCATE|[89]|Bytes:46
+01:40:46.516 (1516734851)|USER_DEBUG|[89]|DEBUG|*** TRIGGER: BEFORE INSERT trigger on Contract
+01:40:46.516 (1516767670)|METHOD_EXIT|[38]|01pZ0000000LPwQ|GE_TriggerDispatch.debugContext(String, Boolean, Boolean, Boolean, Boolean, Boolean)
+01:40:46.516 (1516784701)|STATEMENT_EXECUTE|[42]
+01:40:46.516 (1516793259)|HEAP_ALLOCATE|[47]|Bytes:4
+01:40:46.516 (1516829425)|STATEMENT_EXECUTE|[53]
+01:40:46.516 (1516835143)|STATEMENT_EXECUTE|[54]
+01:40:46.529 (1529763155)|HEAP_ALLOCATE|[54]|Bytes:36
+01:40:46.529 (1529782914)|HEAP_ALLOCATE|[54]|Bytes:89
+01:40:46.529 (1529819759)|METHOD_ENTRY|[13]|01pZ0000000Pym5|TH_Contract_CVManageSchedules.TH_Contract_CVManageSchedules()
+01:40:46.529 (1529830612)|STATEMENT_EXECUTE|[13]
+01:40:46.529 (1529844171)|HEAP_ALLOCATE|[54]|Bytes:5
+01:40:46.529 (1529858212)|STATEMENT_EXECUTE|[13]
+01:40:46.529 (1529872886)|METHOD_EXIT|[13]|TH_Contract_CVManageSchedules
+01:40:46.529 (1529950125)|HEAP_ALLOCATE|[54]|Bytes:20
+01:40:46.529 (1529991798)|CONSTRUCTOR_ENTRY|[54]|01pZ0000000Pym5|<init>()
+01:40:46.530 (1530038236)|VARIABLE_SCOPE_BEGIN|[13]|this|TH_Contract_CVManageSchedules|true|false
+01:40:46.530 (1530108800)|VARIABLE_ASSIGNMENT|[13]|this|{}|0x53587928
+01:40:46.530 (1530120709)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:5
+01:40:46.530 (1530140171)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:6
+01:40:46.530 (1530159092)|VARIABLE_SCOPE_BEGIN|[2]|this|System.ApexBaseClass|true|false
+01:40:46.530 (1530201350)|VARIABLE_ASSIGNMENT|[2]|this|{}|0x53587928
+01:40:46.530 (1530221842)|STATEMENT_EXECUTE|[13]
+01:40:46.530 (1530228685)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:5
+01:40:46.530 (1530234451)|STATEMENT_EXECUTE|[14]
+01:40:46.530 (1530236923)|STATEMENT_EXECUTE|[15]
+01:40:46.530 (1530239035)|STATEMENT_EXECUTE|[16]
+01:40:46.530 (1530241904)|STATEMENT_EXECUTE|[17]
+01:40:46.530 (1530266745)|CONSTRUCTOR_EXIT|[54]|01pZ0000000Pym5|<init>()
+01:40:46.530 (1530352561)|VARIABLE_ASSIGNMENT|[54]|GE_TriggerDispatch.activefunction|{}|0x53587928
+01:40:46.530 (1530364437)|STATEMENT_EXECUTE|[55]
+01:40:46.530 (1530425225)|METHOD_ENTRY|[55]|01pZ0000000Pym5|TH_Contract_CVManageSchedules.mainEntry(String, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, List<SObject>, Map<Id,SObject>, List<SObject>, Map<Id,SObject>)
+01:40:46.530 (1530469720)|VARIABLE_SCOPE_BEGIN|[22]|this|TH_Contract_CVManageSchedules|true|false
+01:40:46.530 (1530512030)|VARIABLE_ASSIGNMENT|[22]|this|{}|0x53587928
+01:40:46.530 (1530521338)|VARIABLE_SCOPE_BEGIN|[22]|TriggerObject|String|false|false
+01:40:46.530 (1530544119)|VARIABLE_ASSIGNMENT|[22]|TriggerObject|"Contract"
+01:40:46.530 (1530551692)|HEAP_ALLOCATE|[24]|Bytes:5
+01:40:46.530 (1530559984)|VARIABLE_SCOPE_BEGIN|[22]|IsBefore|Boolean|false|false
+01:40:46.530 (1530579543)|VARIABLE_ASSIGNMENT|[22]|IsBefore|true
+01:40:46.530 (1530585562)|HEAP_ALLOCATE|[24]|Bytes:5
+01:40:46.530 (1530592508)|VARIABLE_SCOPE_BEGIN|[22]|IsDelete|Boolean|false|false
+01:40:46.530 (1530610413)|VARIABLE_ASSIGNMENT|[22]|IsDelete|false
+01:40:46.530 (1530616223)|HEAP_ALLOCATE|[24]|Bytes:5
+01:40:46.530 (1530622729)|VARIABLE_SCOPE_BEGIN|[22]|IsAfter|Boolean|false|false
+01:40:46.530 (1530640341)|VARIABLE_ASSIGNMENT|[22]|IsAfter|false
+01:40:46.530 (1530646090)|HEAP_ALLOCATE|[24]|Bytes:5
+01:40:46.530 (1530652643)|VARIABLE_SCOPE_BEGIN|[22]|IsInsert|Boolean|false|false
+01:40:46.530 (1530670413)|VARIABLE_ASSIGNMENT|[22]|IsInsert|true
+01:40:46.530 (1530676064)|HEAP_ALLOCATE|[24]|Bytes:5
+01:40:46.530 (1530682516)|VARIABLE_SCOPE_BEGIN|[22]|IsUpdate|Boolean|false|false
+01:40:46.530 (1530699987)|VARIABLE_ASSIGNMENT|[22]|IsUpdate|false
+01:40:46.530 (1530707179)|HEAP_ALLOCATE|[24]|Bytes:5
+01:40:46.530 (1530720366)|VARIABLE_SCOPE_BEGIN|[22]|IsExecuting|Boolean|false|false
+01:40:46.530 (1530754631)|VARIABLE_ASSIGNMENT|[22]|IsExecuting|true
+01:40:46.530 (1530768807)|VARIABLE_SCOPE_BEGIN|[22]|newList|List<SObject>|true|false
+01:40:46.532 (1532382537)|VARIABLE_ASSIGNMENT|[22]|newList|{"s":1,"v":[{"CustomerSignedDate":"2016-10-12T00:00:00.000Z","Description":"Sec 2.01 - License t (841 more) ...","AccountId":"001Z000000uoWXwIAM","Agreement_Type__c":"Trademark","BillingCountryCode":"US","ContractTerm":45,"StatusCode":"Draft","Name":"Siva Test Contract - (11 more) ...","StartDate":"2011-11-12T00:00:00.000Z","Audit_Rights__c":"4.05 - Licensee shal (583 more) ...","Calculate_Next_Royal (13 more) ...":false,"OwnerId":"005Z0000003DoV8IAK","Rights__c":"Sec 2.01 - License t (841 more) ...","As_Of_Date__c":"2015-10-16T00:00:00.000Z","Sales_Report_Due_Dat (9 more) ...":"a2xZ0000002IjLdIAK","RecordTypeId":"012Z00000000rdwIAA","CustomerSignedTitle":"Director","Expiration_Countdown (3 more) ...":-331,"CV_Customer_Signed_B (4 more) ...":"George Tsai","Contract_Terms__c":"4.01 Minimum payment (66 more) ...","Status":"Draft","IsDeleted":false,"Termination_Clause__ (1 more) ...":"Sec. 603 - In the ev (750 more) ...","EndDate":"2014-11-19T00:00:00.000Z","Royalty_Payment_Due_ (12 more) ...":"a2xZ0000002IjLdIAK","ShippingCountryCode":"US","AIF__c":"84.0099","CompanySignedDate":"2015-10-10T00:00:00.000Z","Calculate_Next_Sales (10 more) ...":false}]}|0x790dfbcd
+01:40:46.532 (1532402890)|VARIABLE_SCOPE_BEGIN|[22]|newMap|Map<Id,SObject>|true|false
+01:40:46.532 (1532433168)|VARIABLE_ASSIGNMENT|[22]|newMap|null|
+01:40:46.532 (1532446881)|VARIABLE_SCOPE_BEGIN|[22]|oldList|List<SObject>|true|false
+01:40:46.532 (1532481791)|VARIABLE_ASSIGNMENT|[22]|oldList|null|
+01:40:46.532 (1532495817)|VARIABLE_SCOPE_BEGIN|[22]|oldMap|Map<Id,SObject>|true|false
+01:40:46.532 (1532518787)|VARIABLE_ASSIGNMENT|[22]|oldMap|null|
+01:40:46.532 (1532529956)|HEAP_ALLOCATE|[24]|Bytes:5
+01:40:46.532 (1532536698)|STATEMENT_EXECUTE|[22]
+01:40:46.532 (1532539533)|STATEMENT_EXECUTE|[24]
+01:40:46.533 (1533722603)|VARIABLE_ASSIGNMENT|[24]|this.contractNewList|{"s":1,"v":[{"CustomerSignedDate":"2016-10-12T00:00:00.000Z","Description":"Sec 2.01 - License t (841 more) ...","AccountId":"001Z000000uoWXwIAM","Agreement_Type__c":"Trademark","BillingCountryCode":"US","ContractTerm":45,"StatusCode":"Draft","Name":"Siva Test Contract - (11 more) ...","StartDate":"2011-11-12T00:00:00.000Z","Audit_Rights__c":"4.05 - Licensee shal (583 more) ...","Calculate_Next_Royal (13 more) ...":false,"OwnerId":"005Z0000003DoV8IAK","Rights__c":"Sec 2.01 - License t (841 more) ...","As_Of_Date__c":"2015-10-16T00:00:00.000Z","Sales_Report_Due_Dat (9 more) ...":"a2xZ0000002IjLdIAK","RecordTypeId":"012Z00000000rdwIAA","CustomerSignedTitle":"Director","Expiration_Countdown (3 more) ...":-331,"CV_Customer_Signed_B (4 more) ...":"George Tsai","Contract_Terms__c":"4.01 Minimum payment (66 more) ...","Status":"Draft","IsDeleted":false,"Termination_Clause__ (1 more) ...":"Sec. 603 - In the ev (750 more) ...","EndDate":"2014-11-19T00:00:00.000Z","Royalty_Payment_Due_ (12 more) ...":"a2xZ0000002IjLdIAK","ShippingCountryCode":"US","AIF__c":"84.0099","CompanySignedDate":"2015-10-10T00:00:00.000Z","Calculate_Next_Sales (10 more) ...":false}]}|0x53587928
+01:40:46.533 (1533739068)|STATEMENT_EXECUTE|[25]
+01:40:46.533 (1533777444)|VARIABLE_ASSIGNMENT|[25]|this.contractOldList|null|0x53587928
+01:40:46.533 (1533788184)|STATEMENT_EXECUTE|[26]
+01:40:46.533 (1533839403)|VARIABLE_ASSIGNMENT|[26]|this.contractNewMap|null|0x53587928
+01:40:46.533 (1533850671)|STATEMENT_EXECUTE|[27]
+01:40:46.533 (1533896405)|VARIABLE_ASSIGNMENT|[27]|this.contractOldMap|null|0x53587928
+01:40:46.533 (1533904626)|STATEMENT_EXECUTE|[29]
+01:40:46.533 (1533913101)|HEAP_ALLOCATE|[29]|Bytes:4
+01:40:46.534 (1534081009)|VARIABLE_SCOPE_BEGIN|[29]|cAgreementContractList|List<Contract>|true|false
+01:40:46.534 (1534097809)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+01:40:46.534 (1534131699)|VARIABLE_ASSIGNMENT|[29]|cAgreementContractList|{"s":1,"v":[]}|0x5933a954
+01:40:46.534 (1534138788)|STATEMENT_EXECUTE|[30]
+01:40:46.534 (1534148057)|HEAP_ALLOCATE|[30]|Bytes:4
+01:40:46.534 (1534197521)|VARIABLE_SCOPE_BEGIN|[30]|agreementsMap|Map<Id,Contract>|true|false
+01:40:46.534 (1534239196)|VARIABLE_ASSIGNMENT|[30]|agreementsMap|{"s":1,"v":{}}|0x49321a63
+01:40:46.534 (1534245908)|STATEMENT_EXECUTE|[31]
+01:40:46.534 (1534314745)|HEAP_ALLOCATE|[31]|Bytes:4
+01:40:46.534 (1534349927)|VARIABLE_SCOPE_BEGIN|[31]|ddrIdtoddrMap|Map<Id,CV_Due_Date_Rule__c>|true|false
+01:40:46.534 (1534388315)|VARIABLE_ASSIGNMENT|[31]|ddrIdtoddrMap|{"s":1,"v":{}}|0x80ca090
+01:40:46.534 (1534395403)|STATEMENT_EXECUTE|[33]
+01:40:46.534 (1534404348)|HEAP_ALLOCATE|[33]|Bytes:17
+01:40:46.535 (1535857401)|HEAP_ALLOCATE|[33]|Bytes:5541
+01:40:46.535 (1535894836)|HEAP_ALLOCATE|[33]|Bytes:5558
+01:40:46.535 (1535927866)|USER_DEBUG|[33]|DEBUG|contractNewList: (Contract:{Id=null, AccountId=001Z000000uoWXwIAM, OwnerExpirationNotice=null, StartDate=2011-11-12 00:00:00, EndDate=2014-11-19 00:00:00, BillingStreet=null, BillingCity=null, BillingState=null, BillingPostalCode=null, BillingCountry=null, BillingStateCode=null, BillingCountryCode=US, BillingLatitude=null, BillingLongitude=null, BillingGeocodeAccuracy=null, ShippingStreet=null, ShippingCity=null, ShippingState=null, ShippingPostalCode=null, ShippingCountry=null, ShippingStateCode=null, ShippingCountryCode=US, ShippingLatitude=null, ShippingLongitude=null, ShippingGeocodeAccuracy=null, ContractTerm=45, OwnerId=005Z0000003DoV8IAK, Status=Draft, CompanySignedId=null, CompanySignedDate=2015-10-10 00:00:00, CustomerSignedId=null, CustomerSignedTitle=Director, CustomerSignedDate=2016-10-12 00:00:00, SpecialTerms=null, ActivatedById=null, ActivatedDate=null, StatusCode=Draft, Description=Sec 2.01 - License to use the GE Mark upon and in connection with the manufacture, display, sale, marketing, advertising, promotion and distribution of Licensed Products sold by Licensee in the Licensed Channel of Distribution.  Said right to manufacture shall include the right to subcontract with Vendoes to have Licensed Products manufactured for sale to Licensee.  * Appendix B  Holiday Products Include - Holiday string sets, Halloween string sets, Party string sets, Replacement bulbs and fuses, Candle and tree toppers, Pre-lit trees, and Holiday decor.  Holiday Accessories include: green seasonable products such as indoor cords, outdoor cords, speciality cords, cord assortments, cord accessories, electrical taps, electrical adapters, power strips, surge protectors, flood holders, yardstakes,timers, lighting controls, nightlights, and touch lights., RecordTypeId=012Z00000000rdwIAA, Name=Siva Test Contract - Do not use, IsDeleted=false, ContractNumber=null, LastApprovedDate=null, CreatedDate=null, CreatedById=null, LastModifiedDate=null, LastModifiedById=null, SystemModstamp=null, LastActivityDate=null, LastViewedDate=null, LastReferencedDate=null, Audit_Rights__c=4.05 - Licensee shall keep accurate books of account and records coverin all transactions and Licensor or its designee shall have the right at all reasonable business hours upon 48 hours advanced notice to Licensee to make complete verifications, examinations and audits of said books of account and records and all other documents and material in the possession or under the control of Licensee relating to the Agreement and shall have free and full access thereto for said purpose and for the purpose of making extracts therefrom - these audits can be used to resolve claims relating to the agreement., Brand_Usage_Agreement__c=null, Contract_Terms__c=4.01 Minimum payments of $5 million in installments.  4.02 Royalty of 5% of net sales., GE_Business_Unit__c=null, Renewal_Date__c=null, Renewal_Terms__c=null, Rights__c=Sec 2.01 - License to use the GE Mark upon and in connection with the manufacture, display, sale, marketing, advertising, promotion and distribution of Licensed Products sold by Licensee in the Licensed Channel of Distribution.  Said right to manufacture shall include the right to subcontract with Vendoes to have Licensed Products manufactured for sale to Licensee.  * Appendix B  Holiday Products Include - Holiday string sets, Halloween string sets, Party string sets, Replacement bulbs and fuses, Candle and tree toppers, Pre-lit trees, and Holiday decor.  Holiday Accessories include: green seasonable products such as indoor cords, outdoor cords, speciality cords, cord assortments, cord accessories, electrical taps, electrical adapters, power strips, surge protectors, flood holders, yardstakes,timers, lighting controls, nightlights, and touch lights., Termination_Clause__c=Sec. 603 - In the event that a party material breaches an obligation under the Agreement and such breach is not remedied within 30 days after written notice from the other party specifying such breach, such other party shall have the right at any time thereafter to terminate the Agreement by giving written notice of termination to the breaching party. If either party becomes insolvent, executes an assignment for benefit of creditors, ceases operations, dissoles, or becomes subject to bankruptcy or receivership proceedings, the Agreement shall automatically terminate. 6.04  Licensor shall in addition have the right to terminate the Agreement immediately upon giving written notice to Licensee in the event that ay any time a product recall of any Licensed Product, Unique_Contract_Terms__c=null, AIF__c=84.0099, Agreement_Type__c=Trademark, Expiration_Countdown__c=-331, As_Of_Date__c=2015-10-16 00:00:00, Renewal_Countdown__c=null, CV_Company_Signed_By__c=null, CV_Customer_Signed_By__c=George Tsai, Referenced_Agreement__c=null, Royalty_Report_Due_Date__c=null, Payment_Due_Date__c=null, CV_Inception_To_Date__c=null, CV_Planned_Royalty_Revenue__c=null, CV_Previous_YTD_Royalty_Payment__c=null, CV_Previous_Year_To_Date__c=null, CV_Variance_vs_Plan__c=null, CV_YTD_Royalty_Payment__c=null, CV_YTD_Variance__c=null, CV_Year_To_Date__c=null, Royalty_Payment_Due_Date_Rule__c=a2xZ0000002IjLdIAK, Sales_Report_Due_Date_Rule__c=a2xZ0000002IjLdIAK, Next_Royalty_Payment__c=null, Next_Sales_Report__c=null, Calculate_Next_Royalty_Payment__c=false, Calculate_Next_Sales_Report__c=false, Next_Royalty_Payment_Due_Date__c=null, Next_Sales_Report_Due_Date__c=null, Days_Until_Due_of_Next_Royalty_Payment__c=null, Days_Until_Due_of_next_Sales_Report__c=null})
+01:40:46.535 (1535967946)|STATEMENT_EXECUTE|[34]
+01:40:46.535 (1535977364)|HEAP_ALLOCATE|[34]|Bytes:15
+01:40:46.536 (1536031551)|HEAP_ALLOCATE|[34]|Bytes:2
+01:40:46.536 (1536058425)|HEAP_ALLOCATE|[34]|Bytes:17
+01:40:46.536 (1536091955)|USER_DEBUG|[34]|DEBUG|agreementsMap: {}
+01:40:46.536 (1536114163)|STATEMENT_EXECUTE|[35]
+01:40:46.536 (1536128435)|HEAP_ALLOCATE|[35]|Bytes:15
+01:40:46.536 (1536191599)|HEAP_ALLOCATE|[35]|Bytes:2
+01:40:46.536 (1536217523)|HEAP_ALLOCATE|[35]|Bytes:17
+01:40:46.536 (1536241981)|USER_DEBUG|[35]|DEBUG|ddrIdtoddrMap: {}
+01:40:46.536 (1536255269)|STATEMENT_EXECUTE|[37]
+01:40:46.536 (1536258985)|STATEMENT_EXECUTE|[46]
+01:40:46.536 (1536261344)|STATEMENT_EXECUTE|[58]
+01:40:46.537 (1537528239)|HEAP_ALLOCATE|[58]|Bytes:5541
+01:40:46.537 (1537564536)|HEAP_ALLOCATE|[58]|Bytes:5558
+01:40:46.537 (1537592020)|USER_DEBUG|[58]|DEBUG|contractNewList: (Contract:{Id=null, AccountId=001Z000000uoWXwIAM, OwnerExpirationNotice=null, StartDate=2011-11-12 00:00:00, EndDate=2014-11-19 00:00:00, BillingStreet=null, BillingCity=null, BillingState=null, BillingPostalCode=null, BillingCountry=null, BillingStateCode=null, BillingCountryCode=US, BillingLatitude=null, BillingLongitude=null, BillingGeocodeAccuracy=null, ShippingStreet=null, ShippingCity=null, ShippingState=null, ShippingPostalCode=null, ShippingCountry=null, ShippingStateCode=null, ShippingCountryCode=US, ShippingLatitude=null, ShippingLongitude=null, ShippingGeocodeAccuracy=null, ContractTerm=45, OwnerId=005Z0000003DoV8IAK, Status=Draft, CompanySignedId=null, CompanySignedDate=2015-10-10 00:00:00, CustomerSignedId=null, CustomerSignedTitle=Director, CustomerSignedDate=2016-10-12 00:00:00, SpecialTerms=null, ActivatedById=null, ActivatedDate=null, StatusCode=Draft, Description=Sec 2.01 - License to use the GE Mark upon and in connection with the manufacture, display, sale, marketing, advertising, promotion and distribution of Licensed Products sold by Licensee in the Licensed Channel of Distribution.  Said right to manufacture shall include the right to subcontract with Vendoes to have Licensed Products manufactured for sale to Licensee.  * Appendix B  Holiday Products Include - Holiday string sets, Halloween string sets, Party string sets, Replacement bulbs and fuses, Candle and tree toppers, Pre-lit trees, and Holiday decor.  Holiday Accessories include: green seasonable products such as indoor cords, outdoor cords, speciality cords, cord assortments, cord accessories, electrical taps, electrical adapters, power strips, surge protectors, flood holders, yardstakes,timers, lighting controls, nightlights, and touch lights., RecordTypeId=012Z00000000rdwIAA, Name=Siva Test Contract - Do not use, IsDeleted=false, ContractNumber=null, LastApprovedDate=null, CreatedDate=null, CreatedById=null, LastModifiedDate=null, LastModifiedById=null, SystemModstamp=null, LastActivityDate=null, LastViewedDate=null, LastReferencedDate=null, Audit_Rights__c=4.05 - Licensee shall keep accurate books of account and records coverin all transactions and Licensor or its designee shall have the right at all reasonable business hours upon 48 hours advanced notice to Licensee to make complete verifications, examinations and audits of said books of account and records and all other documents and material in the possession or under the control of Licensee relating to the Agreement and shall have free and full access thereto for said purpose and for the purpose of making extracts therefrom - these audits can be used to resolve claims relating to the agreement., Brand_Usage_Agreement__c=null, Contract_Terms__c=4.01 Minimum payments of $5 million in installments.  4.02 Royalty of 5% of net sales., GE_Business_Unit__c=null, Renewal_Date__c=null, Renewal_Terms__c=null, Rights__c=Sec 2.01 - License to use the GE Mark upon and in connection with the manufacture, display, sale, marketing, advertising, promotion and distribution of Licensed Products sold by Licensee in the Licensed Channel of Distribution.  Said right to manufacture shall include the right to subcontract with Vendoes to have Licensed Products manufactured for sale to Licensee.  * Appendix B  Holiday Products Include - Holiday string sets, Halloween string sets, Party string sets, Replacement bulbs and fuses, Candle and tree toppers, Pre-lit trees, and Holiday decor.  Holiday Accessories include: green seasonable products such as indoor cords, outdoor cords, speciality cords, cord assortments, cord accessories, electrical taps, electrical adapters, power strips, surge protectors, flood holders, yardstakes,timers, lighting controls, nightlights, and touch lights., Termination_Clause__c=Sec. 603 - In the event that a party material breaches an obligation under the Agreement and such breach is not remedied within 30 days after written notice from the other party specifying such breach, such other party shall have the right at any time thereafter to terminate the Agreement by giving written notice of termination to the breaching party. If either party becomes insolvent, executes an assignment for benefit of creditors, ceases operations, dissoles, or becomes subject to bankruptcy or receivership proceedings, the Agreement shall automatically terminate. 6.04  Licensor shall in addition have the right to terminate the Agreement immediately upon giving written notice to Licensee in the event that ay any time a product recall of any Licensed Product, Unique_Contract_Terms__c=null, AIF__c=84.0099, Agreement_Type__c=Trademark, Expiration_Countdown__c=-331, As_Of_Date__c=2015-10-16 00:00:00, Renewal_Countdown__c=null, CV_Company_Signed_By__c=null, CV_Customer_Signed_By__c=George Tsai, Referenced_Agreement__c=null, Royalty_Report_Due_Date__c=null, Payment_Due_Date__c=null, CV_Inception_To_Date__c=null, CV_Planned_Royalty_Revenue__c=null, CV_Previous_YTD_Royalty_Payment__c=null, CV_Previous_Year_To_Date__c=null, CV_Variance_vs_Plan__c=null, CV_YTD_Royalty_Payment__c=null, CV_YTD_Variance__c=null, CV_Year_To_Date__c=null, Royalty_Payment_Due_Date_Rule__c=a2xZ0000002IjLdIAK, Sales_Report_Due_Date_Rule__c=a2xZ0000002IjLdIAK, Next_Royalty_Payment__c=null, Next_Sales_Report__c=null, Calculate_Next_Royalty_Payment__c=false, Calculate_Next_Sales_Report__c=false, Next_Royalty_Payment_Due_Date__c=null, Next_Sales_Report_Due_Date__c=null, Days_Until_Due_of_Next_Royalty_Payment__c=null, Days_Until_Due_of_next_Sales_Report__c=null})
+01:40:46.537 (1537626003)|STATEMENT_EXECUTE|[59]
+01:40:46.537 (1537679509)|HEAP_ALLOCATE|[59]|Bytes:2
+01:40:46.537 (1537705177)|HEAP_ALLOCATE|[59]|Bytes:17
+01:40:46.537 (1537728669)|USER_DEBUG|[59]|DEBUG|agreementsMap: {}
+01:40:46.537 (1537740286)|STATEMENT_EXECUTE|[60]
+01:40:46.537 (1537808345)|HEAP_ALLOCATE|[60]|Bytes:2
+01:40:46.537 (1537852545)|HEAP_ALLOCATE|[60]|Bytes:17
+01:40:46.537 (1537888950)|USER_DEBUG|[60]|DEBUG|ddrIdtoddrMap: {}
+01:40:46.537 (1537903635)|STATEMENT_EXECUTE|[62]
+01:40:46.537 (1537908245)|STATEMENT_EXECUTE|[65]
+01:40:46.537 (1537911726)|STATEMENT_EXECUTE|[68]
+01:40:46.537 (1537914451)|STATEMENT_EXECUTE|[73]
+01:40:46.537 (1537917149)|STATEMENT_EXECUTE|[79]
+01:40:46.537 (1537919174)|STATEMENT_EXECUTE|[84]
+01:40:46.539 (1539223655)|USER_DEBUG|[84]|DEBUG|(Contract:{Id=null, AccountId=001Z000000uoWXwIAM, OwnerExpirationNotice=null, StartDate=2011-11-12 00:00:00, EndDate=2014-11-19 00:00:00, BillingStreet=null, BillingCity=null, BillingState=null, BillingPostalCode=null, BillingCountry=null, BillingStateCode=null, BillingCountryCode=US, BillingLatitude=null, BillingLongitude=null, BillingGeocodeAccuracy=null, ShippingStreet=null, ShippingCity=null, ShippingState=null, ShippingPostalCode=null, ShippingCountry=null, ShippingStateCode=null, ShippingCountryCode=US, ShippingLatitude=null, ShippingLongitude=null, ShippingGeocodeAccuracy=null, ContractTerm=45, OwnerId=005Z0000003DoV8IAK, Status=Draft, CompanySignedId=null, CompanySignedDate=2015-10-10 00:00:00, CustomerSignedId=null, CustomerSignedTitle=Director, CustomerSignedDate=2016-10-12 00:00:00, SpecialTerms=null, ActivatedById=null, ActivatedDate=null, StatusCode=Draft, Description=Sec 2.01 - License to use the GE Mark upon and in connection with the manufacture, display, sale, marketing, advertising, promotion and distribution of Licensed Products sold by Licensee in the Licensed Channel of Distribution.  Said right to manufacture shall include the right to subcontract with Vendoes to have Licensed Products manufactured for sale to Licensee.  * Appendix B  Holiday Products Include - Holiday string sets, Halloween string sets, Party string sets, Replacement bulbs and fuses, Candle and tree toppers, Pre-lit trees, and Holiday decor.  Holiday Accessories include: green seasonable products such as indoor cords, outdoor cords, speciality cords, cord assortments, cord accessories, electrical taps, electrical adapters, power strips, surge protectors, flood holders, yardstakes,timers, lighting controls, nightlights, and touch lights., RecordTypeId=012Z00000000rdwIAA, Name=Siva Test Contract - Do not use, IsDeleted=false, ContractNumber=null, LastApprovedDate=null, CreatedDate=null, CreatedById=null, LastModifiedDate=null, LastModifiedById=null, SystemModstamp=null, LastActivityDate=null, LastViewedDate=null, LastReferencedDate=null, Audit_Rights__c=4.05 - Licensee shall keep accurate books of account and records coverin all transactions and Licensor or its designee shall have the right at all reasonable business hours upon 48 hours advanced notice to Licensee to make complete verifications, examinations and audits of said books of account and records and all other documents and material in the possession or under the control of Licensee relating to the Agreement and shall have free and full access thereto for said purpose and for the purpose of making extracts therefrom - these audits can be used to resolve claims relating to the agreement., Brand_Usage_Agreement__c=null, Contract_Terms__c=4.01 Minimum payments of $5 million in installments.  4.02 Royalty of 5% of net sales., GE_Business_Unit__c=null, Renewal_Date__c=null, Renewal_Terms__c=null, Rights__c=Sec 2.01 - License to use the GE Mark upon and in connection with the manufacture, display, sale, marketing, advertising, promotion and distribution of Licensed Products sold by Licensee in the Licensed Channel of Distribution.  Said right to manufacture shall include the right to subcontract with Vendoes to have Licensed Products manufactured for sale to Licensee.  * Appendix B  Holiday Products Include - Holiday string sets, Halloween string sets, Party string sets, Replacement bulbs and fuses, Candle and tree toppers, Pre-lit trees, and Holiday decor.  Holiday Accessories include: green seasonable products such as indoor cords, outdoor cords, speciality cords, cord assortments, cord accessories, electrical taps, electrical adapters, power strips, surge protectors, flood holders, yardstakes,timers, lighting controls, nightlights, and touch lights., Termination_Clause__c=Sec. 603 - In the event that a party material breaches an obligation under the Agreement and such breach is not remedied within 30 days after written notice from the other party specifying such breach, such other party shall have the right at any time thereafter to terminate the Agreement by giving written notice of termination to the breaching party. If either party becomes insolvent, executes an assignment for benefit of creditors, ceases operations, dissoles, or becomes subject to bankruptcy or receivership proceedings, the Agreement shall automatically terminate. 6.04  Licensor shall in addition have the right to terminate the Agreement immediately upon giving written notice to Licensee in the event that ay any time a product recall of any Licensed Product, Unique_Contract_Terms__c=null, AIF__c=84.0099, Agreement_Type__c=Trademark, Expiration_Countdown__c=-331, As_Of_Date__c=2015-10-16 00:00:00, Renewal_Countdown__c=null, CV_Company_Signed_By__c=null, CV_Customer_Signed_By__c=George Tsai, Referenced_Agreement__c=null, Royalty_Report_Due_Date__c=null, Payment_Due_Date__c=null, CV_Inception_To_Date__c=null, CV_Planned_Royalty_Revenue__c=null, CV_Previous_YTD_Royalty_Payment__c=null, CV_Previous_Year_To_Date__c=null, CV_Variance_vs_Plan__c=null, CV_YTD_Royalty_Payment__c=null, CV_YTD_Variance__c=null, CV_Year_To_Date__c=null, Royalty_Payment_Due_Date_Rule__c=a2xZ0000002IjLdIAK, Sales_Report_Due_Date_Rule__c=a2xZ0000002IjLdIAK, Next_Royalty_Payment__c=null, Next_Sales_Report__c=null, Calculate_Next_Royalty_Payment__c=false, Calculate_Next_Sales_Report__c=false, Next_Royalty_Payment_Due_Date__c=null, Next_Sales_Report_Due_Date__c=null, Days_Until_Due_of_Next_Royalty_Payment__c=null, Days_Until_Due_of_next_Sales_Report__c=null})
+01:40:46.539 (1539274391)|METHOD_EXIT|[55]|01pZ0000000Pym5|TH_Contract_CVManageSchedules.mainEntry(String, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, List<SObject>, Map<Id,SObject>, List<SObject>, Map<Id,SObject>)
+01:40:46.539 (1539281418)|STATEMENT_EXECUTE|[56]
+01:40:46.539 (1539318743)|VARIABLE_ASSIGNMENT|[56]|GE_TriggerDispatch.activefunction|null|
+01:40:46.539 (1539325950)|STATEMENT_EXECUTE|[61]
+01:40:46.539 (1539334447)|HEAP_ALLOCATE|[61]|Bytes:30
+01:40:46.539 (1539381879)|USER_DEBUG|[61]|DEBUG|GE_TriggerDispatch - entry end
+01:40:46.539 (1539396629)|SYSTEM_MODE_EXIT|false
+01:40:46.539 (1539410587)|METHOD_EXIT|[12]|01pZ0000000LPwQ|GE_TriggerDispatch.entry(String, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, List<SObject>, Map<Id,SObject>, List<SObject>, Map<Id,SObject>)
+01:40:46.539 (1539416752)|STATEMENT_EXECUTE|[15]
+01:40:46.539 (1539425204)|HEAP_ALLOCATE|[15]|Bytes:25
+01:40:46.539 (1539464222)|USER_DEBUG|[15]|DEBUG|AllContractTriggers - end
+01:40:46.539 (1539499919)|CUMULATIVE_LIMIT_USAGE
+01:40:46.539 (1539499919)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+01:40:46.539 (1539499919)|CUMULATIVE_LIMIT_USAGE_END
+
+01:40:46.539 (1539741525)|CODE_UNIT_FINISHED|AllContractTriggers on Contract trigger event BeforeInsert for [new]
+01:40:47.140 (2140042594)|CODE_UNIT_STARTED|[EXTERNAL]|01qZ00000009DjW|AllContractTriggers on Contract trigger event AfterInsert for [800Z00000003MRd]
+01:40:47.140 (2140081989)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+01:40:47.140 (2140189425)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+01:40:47.140 (2140207842)|VARIABLE_SCOPE_BEGIN|[1]|this|AllContractTriggers|true|false
+01:40:47.140 (2140285979)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x7f863532
+01:40:47.140 (2140325348)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+01:40:47.140 (2140333749)|VARIABLE_SCOPE_BEGIN|[1]|this|AllContractTriggers|true|false
+01:40:47.140 (2140369279)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x7f863532
+01:40:47.140 (2140379365)|STATEMENT_EXECUTE|[1]
+01:40:47.140 (2140382727)|STATEMENT_EXECUTE|[10]
+01:40:47.140 (2140431399)|USER_DEBUG|[10]|DEBUG|AllContractTriggers - start
+01:40:47.140 (2140445557)|STATEMENT_EXECUTE|[11]
+01:40:47.142 (2142114855)|HEAP_ALLOCATE|[11]|Bytes:5672
+01:40:47.142 (2142152011)|HEAP_ALLOCATE|[11]|Bytes:5688
+01:40:47.142 (2142177222)|USER_DEBUG|[11]|DEBUG|Trigger.newMap: {800Z00000003MRdIAM=Contract:{Id=800Z00000003MRdIAM, AccountId=001Z000000uoWXwIAM, OwnerExpirationNotice=null, StartDate=2011-11-12 00:00:00, EndDate=2014-11-19 00:00:00, BillingStreet=null, BillingCity=null, BillingState=null, BillingPostalCode=null, BillingCountry=United States, BillingStateCode=null, BillingCountryCode=US, BillingLatitude=null, BillingLongitude=null, BillingGeocodeAccuracy=null, ShippingStreet=null, ShippingCity=null, ShippingState=null, ShippingPostalCode=null, ShippingCountry=United States, ShippingStateCode=null, ShippingCountryCode=US, ShippingLatitude=null, ShippingLongitude=null, ShippingGeocodeAccuracy=null, ContractTerm=45, OwnerId=005Z0000003DoV8IAK, Status=Draft, CompanySignedId=null, CompanySignedDate=2015-10-10 00:00:00, CustomerSignedId=null, CustomerSignedTitle=Director, CustomerSignedDate=2016-10-12 00:00:00, SpecialTerms=null, ActivatedById=null, ActivatedDate=null, StatusCode=Draft, Description=Sec 2.01 - License to use the GE Mark upon and in connection with the manufacture, display, sale, marketing, advertising, promotion and distribution of Licensed Products sold by Licensee in the Licensed Channel of Distribution.  Said right to manufacture shall include the right to subcontract with Vendoes to have Licensed Products manufactured for sale to Licensee.  * Appendix B  Holiday Products Include - Holiday string sets, Halloween string sets, Party string sets, Replacement bulbs and fuses, Candle and tree toppers, Pre-lit trees, and Holiday decor.  Holiday Accessories include: green seasonable products such as indoor cords, outdoor cords, speciality cords, cord assortments, cord accessories, electrical taps, electrical adapters, power strips, surge protectors, flood holders, yardstakes,timers, lighting controls, nightlights, and touch lights., RecordTypeId=012Z00000000rdwIAA, Name=Siva Test Contract - Do not use, IsDeleted=false, ContractNumber=CN-00000317, LastApprovedDate=null, CreatedDate=2015-10-16 05:40:46, CreatedById=005Z0000003DoV8IAK, LastModifiedDate=2015-10-16 05:40:46, LastModifiedById=005Z0000003DoV8IAK, SystemModstamp=2015-10-16 05:40:46, LastActivityDate=null, LastViewedDate=null, LastReferencedDate=null, Audit_Rights__c=4.05 - Licensee shall keep accurate books of account and records coverin all transactions and Licensor or its designee shall have the right at all reasonable business hours upon 48 hours advanced notice to Licensee to make complete verifications, examinations and audits of said books of account and records and all other documents and material in the possession or under the control of Licensee relating to the Agreement and shall have free and full access thereto for said purpose and for the purpose of making extracts therefrom - these audits can be used to resolve claims relating to the agreement., Brand_Usage_Agreement__c=null, Contract_Terms__c=4.01 Minimum payments of $5 million in installments.  4.02 Royalty of 5% of net sales., GE_Business_Unit__c=null, Renewal_Date__c=null, Renewal_Terms__c=null, Rights__c=Sec 2.01 - License to use the GE Mark upon and in connection with the manufacture, display, sale, marketing, advertising, promotion and distribution of Licensed Products sold by Licensee in the Licensed Channel of Distribution.  Said right to manufacture shall include the right to subcontract with Vendoes to have Licensed Products manufactured for sale to Licensee.  * Appendix B  Holiday Products Include - Holiday string sets, Halloween string sets, Party string sets, Replacement bulbs and fuses, Candle and tree toppers, Pre-lit trees, and Holiday decor.  Holiday Accessories include: green seasonable products such as indoor cords, outdoor cords, speciality cords, cord assortments, cord accessories, electrical taps, electrical adapters, power strips, surge protectors, flood holders, yardstakes,timers, lighting controls, nightlights, and touch lights., Termination_Clause__c=Sec. 603 - In the event that a party material breaches an obligation under the Agreement and such breach is not remedied within 30 days after written notice from the other party specifying such breach, such other party shall have the right at any time thereafter to terminate the Agreement by giving written notice of termination to the breaching party. If either party becomes insolvent, executes an assignment for benefit of creditors, ceases operations, dissoles, or becomes subject to bankruptcy or receivership proceedings, the Agreement shall automatically terminate. 6.04  Licensor shall in addition have the right to terminate the Agreement immediately upon giving written notice to Licensee in the event that ay any time a product recall of any Licensed Product, Unique_Contract_Terms__c=null, AIF__c=84.0099, Agreement_Type__c=Trademark, Expiration_Countdown__c=-331, As_Of_Date__c=2015-10-16 00:00:00, Renewal_Countdown__c=null, CV_Company_Signed_By__c=null, CV_Customer_Signed_By__c=George Tsai, Referenced_Agreement__c=null, Royalty_Report_Due_Date__c=null, Payment_Due_Date__c=null, CV_Inception_To_Date__c=null, CV_Planned_Royalty_Revenue__c=null, CV_Previous_YTD_Royalty_Payment__c=null, CV_Previous_Year_To_Date__c=null, CV_Variance_vs_Plan__c=null, CV_YTD_Royalty_Payment__c=null, CV_YTD_Variance__c=null, CV_Year_To_Date__c=null, Royalty_Payment_Due_Date_Rule__c=a2xZ0000002IjLdIAK, Sales_Report_Due_Date_Rule__c=a2xZ0000002IjLdIAK, Next_Royalty_Payment__c=null, Next_Sales_Report__c=null, Calculate_Next_Royalty_Payment__c=false, Calculate_Next_Sales_Report__c=false, Next_Royalty_Payment_Due_Date__c=null, Next_Sales_Report_Due_Date__c=null, Days_Until_Due_of_Next_Royalty_Payment__c=null, Days_Until_Due_of_next_Sales_Report__c=null}}
+01:40:47.142 (2142212303)|STATEMENT_EXECUTE|[12]
+01:40:47.142 (2142281454)|METHOD_ENTRY|[12]|01pZ0000000LPwQ|GE_TriggerDispatch.entry(String, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, List<SObject>, Map<Id,SObject>, List<SObject>, Map<Id,SObject>)
+01:40:47.142 (2142291532)|VARIABLE_SCOPE_BEGIN|[26]|TriggerObject|String|false|false
+01:40:47.142 (2142325255)|VARIABLE_ASSIGNMENT|[26]|TriggerObject|"Contract"
+01:40:47.142 (2142334001)|HEAP_ALLOCATE|[27]|Bytes:5
+01:40:47.142 (2142340189)|VARIABLE_SCOPE_BEGIN|[26]|IsBefore|Boolean|false|false
+01:40:47.142 (2142360824)|VARIABLE_ASSIGNMENT|[26]|IsBefore|false
+01:40:47.142 (2142366726)|HEAP_ALLOCATE|[27]|Bytes:5
+01:40:47.142 (2142371541)|VARIABLE_SCOPE_BEGIN|[26]|IsDelete|Boolean|false|false
+01:40:47.142 (2142389232)|VARIABLE_ASSIGNMENT|[26]|IsDelete|false
+01:40:47.142 (2142394681)|HEAP_ALLOCATE|[27]|Bytes:5
+01:40:47.142 (2142399424)|VARIABLE_SCOPE_BEGIN|[26]|IsAfter|Boolean|false|false
+01:40:47.142 (2142416647)|VARIABLE_ASSIGNMENT|[26]|IsAfter|true
+01:40:47.142 (2142422211)|HEAP_ALLOCATE|[27]|Bytes:5
+01:40:47.142 (2142426974)|VARIABLE_SCOPE_BEGIN|[26]|IsInsert|Boolean|false|false
+01:40:47.142 (2142444167)|VARIABLE_ASSIGNMENT|[26]|IsInsert|true
+01:40:47.142 (2142449806)|HEAP_ALLOCATE|[27]|Bytes:5
+01:40:47.142 (2142454628)|VARIABLE_SCOPE_BEGIN|[26]|IsUpdate|Boolean|false|false
+01:40:47.142 (2142471581)|VARIABLE_ASSIGNMENT|[26]|IsUpdate|false
+01:40:47.142 (2142476978)|HEAP_ALLOCATE|[27]|Bytes:5
+01:40:47.142 (2142481687)|VARIABLE_SCOPE_BEGIN|[26]|IsExecuting|Boolean|false|false
+01:40:47.142 (2142498925)|VARIABLE_ASSIGNMENT|[26]|IsExecuting|true
+01:40:47.142 (2142504031)|VARIABLE_SCOPE_BEGIN|[26]|newList|List<SObject>|true|false
+01:40:47.143 (2143546551)|VARIABLE_ASSIGNMENT|[26]|newList|{"s":1,"v":[{"CustomerSignedDate":"2016-10-12T00:00:00.000Z","LastModifiedDate":"2015-10-16T05:40:46.000Z","ContractNumber":"CN-00000317","Description":"Sec 2.01 - License t (841 more) ...","AccountId":"001Z000000uoWXwIAM","Agreement_Type__c":"Trademark","BillingCountryCode":"US","ContractTerm":45,"StatusCode":"Draft","Name":"Siva Test Contract - (11 more) ...","StartDate":"2011-11-12T00:00:00.000Z","Audit_Rights__c":"4.05 - Licensee shal (583 more) ...","Calculate_Next_Royal (13 more) ...":false,"OwnerId":"005Z0000003DoV8IAK","CreatedById":"005Z0000003DoV8IAK","Rights__c":"Sec 2.01 - License t (841 more) ...","As_Of_Date__c":"2015-10-16T00:00:00.000Z","Sales_Report_Due_Dat (9 more) ...":"a2xZ0000002IjLdIAK","RecordTypeId":"012Z00000000rdwIAA","ShippingCountry":"United States","CustomerSignedTitle":"Director","Expiration_Countdown (3 more) ...":-331,"CV_Customer_Signed_B (4 more) ...":"George Tsai","Contract_Terms__c":"4.01 Minimum payment (66 more) ...","Status":"Draft","IsDeleted":false,"Termination_Clause__ (1 more) ...":"Sec. 603 - In the ev (750 more) ...","EndDate":"2014-11-19T00:00:00.000Z","SystemModstamp":"2015-10-16T05:40:46.000Z","Royalty_Payment_Due_ (12 more) ...":"a2xZ0000002IjLdIAK","ShippingCountryCode":"US","BillingCountry":"United States","AIF__c":"84.0099","CreatedDate":"2015-10-16T05:40:46.000Z","CompanySignedDate":"2015-10-10T00:00:00.000Z","Id":"800Z00000003MRdIAM","LastModifiedById":"005Z0000003DoV8IAK","Calculate_Next_Sales (10 more) ...":false}]}|0x30963dd4
+01:40:47.143 (2143564439)|VARIABLE_SCOPE_BEGIN|[26]|newMap|Map<Id,SObject>|true|false
+01:40:47.144 (2144547277)|VARIABLE_ASSIGNMENT|[26]|newMap|{"s":1,"v":{"800Z00000003MRdIAM":{"CustomerSignedDate":"2016-10-12T00:00:00.000Z","LastModifiedDate":"2015-10-16T05:40:46.000Z","ContractNumber":"CN-00000317","Description":"Sec 2.01 - License t (841 more) ...","AccountId":"001Z000000uoWXwIAM","Agreement_Type__c":"Trademark","BillingCountryCode":"US","ContractTerm":45,"StatusCode":"Draft","Name":"Siva Test Contract - (11 more) ...","StartDate":"2011-11-12T00:00:00.000Z","Audit_Rights__c":"4.05 - Licensee shal (583 more) ...","Calculate_Next_Royal (13 more) ...":false,"OwnerId":"005Z0000003DoV8IAK","CreatedById":"005Z0000003DoV8IAK","Rights__c":"Sec 2.01 - License t (841 more) ...","As_Of_Date__c":"2015-10-16T00:00:00.000Z","Sales_Report_Due_Dat (9 more) ...":"a2xZ0000002IjLdIAK","RecordTypeId":"012Z00000000rdwIAA","ShippingCountry":"United States","CustomerSignedTitle":"Director","Expiration_Countdown (3 more) ...":-331,"CV_Customer_Signed_B (4 more) ...":"George Tsai","Contract_Terms__c":"4.01 Minimum payment (66 more) ...","Status":"Draft","IsDeleted":false,"Termination_Clause__ (1 more) ...":"Sec. 603 - In the ev (750 more) ...","EndDate":"2014-11-19T00:00:00.000Z","SystemModstamp":"2015-10-16T05:40:46.000Z","Royalty_Payment_Due_ (12 more) ...":"a2xZ0000002IjLdIAK","ShippingCountryCode":"US","BillingCountry":"United States","AIF__c":"84.0099","CreatedDate":"2015-10-16T05:40:46.000Z","CompanySignedDate":"2015-10-10T00:00:00.000Z","Id":"800Z00000003MRdIAM","LastModifiedById":"005Z0000003DoV8IAK","Calculate_Next_Sales (10 more) ...":false}}}|0xb241703
+01:40:47.144 (2144564785)|VARIABLE_SCOPE_BEGIN|[26]|oldList|List<SObject>|true|false
+01:40:47.144 (2144588594)|VARIABLE_ASSIGNMENT|[26]|oldList|null|
+01:40:47.144 (2144593998)|VARIABLE_SCOPE_BEGIN|[26]|oldMap|Map<Id,SObject>|true|false
+01:40:47.144 (2144610506)|VARIABLE_ASSIGNMENT|[26]|oldMap|null|
+01:40:47.144 (2144624629)|SYSTEM_MODE_ENTER|false
+01:40:47.144 (2144631870)|HEAP_ALLOCATE|[27]|Bytes:5
+01:40:47.144 (2144638294)|STATEMENT_EXECUTE|[26]
+01:40:47.144 (2144641045)|STATEMENT_EXECUTE|[27]
+01:40:47.144 (2144665422)|USER_DEBUG|[27]|DEBUG|GE_TriggerDispatch - entry start
+01:40:47.144 (2144677664)|STATEMENT_EXECUTE|[28]
+01:40:47.144 (2144719959)|HEAP_ALLOCATE|[28]|Bytes:20
+01:40:47.144 (2144741472)|USER_DEBUG|[28]|DEBUG|activefunction: null
+01:40:47.144 (2144752498)|STATEMENT_EXECUTE|[29]
+01:40:47.144 (2144777836)|HEAP_ALLOCATE|[29]|Bytes:5
+01:40:47.144 (2144798487)|HEAP_ALLOCATE|[29]|Bytes:17
+01:40:47.144 (2144817437)|USER_DEBUG|[29]|DEBUG|noTriggers: false
+01:40:47.144 (2144831073)|STATEMENT_EXECUTE|[31]
+01:40:47.144 (2144834031)|STATEMENT_EXECUTE|[38]
+01:40:47.144 (2144845927)|METHOD_ENTRY|[38]|01pZ0000000LPwQ|GE_TriggerDispatch.debugContext(String, Boolean, Boolean, Boolean, Boolean, Boolean)
+01:40:47.144 (2144853225)|VARIABLE_SCOPE_BEGIN|[69]|TriggerObject|String|false|false
+01:40:47.144 (2144878566)|VARIABLE_ASSIGNMENT|[69]|TriggerObject|"Contract"
+01:40:47.144 (2144886342)|HEAP_ALLOCATE|[72]|Bytes:5
+01:40:47.144 (2144892304)|VARIABLE_SCOPE_BEGIN|[69]|IsBefore|Boolean|false|false
+01:40:47.144 (2144910716)|VARIABLE_ASSIGNMENT|[69]|IsBefore|false
+01:40:47.144 (2144916821)|HEAP_ALLOCATE|[72]|Bytes:5
+01:40:47.144 (2144921682)|VARIABLE_SCOPE_BEGIN|[69]|IsDelete|Boolean|false|false
+01:40:47.144 (2144938703)|VARIABLE_ASSIGNMENT|[69]|IsDelete|false
+01:40:47.144 (2144944535)|HEAP_ALLOCATE|[72]|Bytes:5
+01:40:47.144 (2144949280)|VARIABLE_SCOPE_BEGIN|[69]|IsAfter|Boolean|false|false
+01:40:47.144 (2144966183)|VARIABLE_ASSIGNMENT|[69]|IsAfter|true
+01:40:47.144 (2144971799)|HEAP_ALLOCATE|[72]|Bytes:5
+01:40:47.144 (2144976510)|VARIABLE_SCOPE_BEGIN|[69]|IsInsert|Boolean|false|false
+01:40:47.144 (2144993269)|VARIABLE_ASSIGNMENT|[69]|IsInsert|true
+01:40:47.144 (2144998868)|HEAP_ALLOCATE|[72]|Bytes:5
+01:40:47.145 (2145003568)|VARIABLE_SCOPE_BEGIN|[69]|IsUpdate|Boolean|false|false
+01:40:47.145 (2145021452)|VARIABLE_ASSIGNMENT|[69]|IsUpdate|false
+01:40:47.145 (2145030879)|HEAP_ALLOCATE|[72]|Bytes:5
+01:40:47.145 (2145036399)|STATEMENT_EXECUTE|[69]
+01:40:47.145 (2145039040)|STATEMENT_EXECUTE|[72]
+01:40:47.145 (2145043645)|HEAP_ALLOCATE|[72]|Bytes:5
+01:40:47.145 (2145050563)|VARIABLE_SCOPE_BEGIN|[72]|beforeAfter|String|false|false
+01:40:47.145 (2145073533)|VARIABLE_ASSIGNMENT|[72]|beforeAfter|"AFTER"
+01:40:47.145 (2145079292)|STATEMENT_EXECUTE|[73]
+01:40:47.145 (2145083806)|VARIABLE_SCOPE_BEGIN|[73]|dmlOperation|String|false|false
+01:40:47.145 (2145102312)|VARIABLE_ASSIGNMENT|[73]|dmlOperation|null
+01:40:47.145 (2145108415)|STATEMENT_EXECUTE|[77]
+01:40:47.145 (2145110992)|STATEMENT_EXECUTE|[78]
+01:40:47.145 (2145130973)|VARIABLE_ASSIGNMENT|[78]|dmlOperation|"INSERT"
+01:40:47.145 (2145138173)|STATEMENT_EXECUTE|[88]
+01:40:47.145 (2145140788)|STATEMENT_EXECUTE|[89]
+01:40:47.145 (2145150995)|HEAP_ALLOCATE|[89]|Bytes:45
+01:40:47.145 (2145171538)|USER_DEBUG|[89]|DEBUG|*** TRIGGER: AFTER INSERT trigger on Contract
+01:40:47.145 (2145192565)|METHOD_EXIT|[38]|01pZ0000000LPwQ|GE_TriggerDispatch.debugContext(String, Boolean, Boolean, Boolean, Boolean, Boolean)
+01:40:47.145 (2145199764)|STATEMENT_EXECUTE|[42]
+01:40:47.145 (2145221771)|STATEMENT_EXECUTE|[53]
+01:40:47.145 (2145224577)|STATEMENT_EXECUTE|[54]
+01:40:47.145 (2145230399)|HEAP_ALLOCATE|[54]|Bytes:20
+01:40:47.145 (2145262452)|CONSTRUCTOR_ENTRY|[54]|01pZ0000000Pym5|<init>()
+01:40:47.145 (2145270738)|VARIABLE_SCOPE_BEGIN|[13]|this|TH_Contract_CVManageSchedules|true|false
+01:40:47.145 (2145317075)|VARIABLE_ASSIGNMENT|[13]|this|{}|0x47045d73
+01:40:47.145 (2145331912)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:5
+01:40:47.145 (2145343971)|VARIABLE_SCOPE_BEGIN|[2]|this|System.ApexBaseClass|true|false
+01:40:47.145 (2145385103)|VARIABLE_ASSIGNMENT|[2]|this|{}|0x47045d73
+01:40:47.145 (2145400353)|STATEMENT_EXECUTE|[13]
+01:40:47.145 (2145406580)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:5
+01:40:47.145 (2145412205)|STATEMENT_EXECUTE|[14]
+01:40:47.145 (2145414567)|STATEMENT_EXECUTE|[15]
+01:40:47.145 (2145416625)|STATEMENT_EXECUTE|[16]
+01:40:47.145 (2145418604)|STATEMENT_EXECUTE|[17]
+01:40:47.145 (2145435570)|CONSTRUCTOR_EXIT|[54]|01pZ0000000Pym5|<init>()
+01:40:47.145 (2145490528)|VARIABLE_ASSIGNMENT|[54]|GE_TriggerDispatch.activefunction|{}|0x47045d73
+01:40:47.145 (2145498368)|STATEMENT_EXECUTE|[55]
+01:40:47.145 (2145516844)|METHOD_ENTRY|[55]|01pZ0000000Pym5|TH_Contract_CVManageSchedules.mainEntry(String, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, List<SObject>, Map<Id,SObject>, List<SObject>, Map<Id,SObject>)
+01:40:47.145 (2145524668)|VARIABLE_SCOPE_BEGIN|[22]|this|TH_Contract_CVManageSchedules|true|false
+01:40:47.145 (2145561069)|VARIABLE_ASSIGNMENT|[22]|this|{}|0x47045d73
+01:40:47.145 (2145568254)|VARIABLE_SCOPE_BEGIN|[22]|TriggerObject|String|false|false
+01:40:47.145 (2145588693)|VARIABLE_ASSIGNMENT|[22]|TriggerObject|"Contract"
+01:40:47.145 (2145596241)|HEAP_ALLOCATE|[24]|Bytes:5
+01:40:47.145 (2145602243)|VARIABLE_SCOPE_BEGIN|[22]|IsBefore|Boolean|false|false
+01:40:47.145 (2145619992)|VARIABLE_ASSIGNMENT|[22]|IsBefore|false
+01:40:47.145 (2145625707)|HEAP_ALLOCATE|[24]|Bytes:5
+01:40:47.145 (2145630743)|VARIABLE_SCOPE_BEGIN|[22]|IsDelete|Boolean|false|false
+01:40:47.145 (2145647453)|VARIABLE_ASSIGNMENT|[22]|IsDelete|false
+01:40:47.145 (2145652902)|HEAP_ALLOCATE|[24]|Bytes:5
+01:40:47.145 (2145657641)|VARIABLE_SCOPE_BEGIN|[22]|IsAfter|Boolean|false|false
+01:40:47.145 (2145674129)|VARIABLE_ASSIGNMENT|[22]|IsAfter|true
+01:40:47.145 (2145679689)|HEAP_ALLOCATE|[24]|Bytes:5
+01:40:47.145 (2145684334)|VARIABLE_SCOPE_BEGIN|[22]|IsInsert|Boolean|false|false
+01:40:47.145 (2145700792)|VARIABLE_ASSIGNMENT|[22]|IsInsert|true
+01:40:47.145 (2145706303)|HEAP_ALLOCATE|[24]|Bytes:5
+01:40:47.145 (2145710989)|VARIABLE_SCOPE_BEGIN|[22]|IsUpdate|Boolean|false|false
+01:40:47.145 (2145727272)|VARIABLE_ASSIGNMENT|[22]|IsUpdate|false
+01:40:47.145 (2145732986)|HEAP_ALLOCATE|[24]|Bytes:5
+01:40:47.145 (2145737762)|VARIABLE_SCOPE_BEGIN|[22]|IsExecuting|Boolean|false|false
+01:40:47.145 (2145754452)|VARIABLE_ASSIGNMENT|[22]|IsExecuting|true
+01:40:47.145 (2145759463)|VARIABLE_SCOPE_BEGIN|[22]|newList|List<SObject>|true|false
+01:40:47.146 (2146770443)|VARIABLE_ASSIGNMENT|[22]|newList|{"s":1,"v":[{"CustomerSignedDate":"2016-10-12T00:00:00.000Z","LastModifiedDate":"2015-10-16T05:40:46.000Z","ContractNumber":"CN-00000317","Description":"Sec 2.01 - License t (841 more) ...","AccountId":"001Z000000uoWXwIAM","Agreement_Type__c":"Trademark","BillingCountryCode":"US","ContractTerm":45,"StatusCode":"Draft","Name":"Siva Test Contract - (11 more) ...","StartDate":"2011-11-12T00:00:00.000Z","Audit_Rights__c":"4.05 - Licensee shal (583 more) ...","Calculate_Next_Royal (13 more) ...":false,"OwnerId":"005Z0000003DoV8IAK","CreatedById":"005Z0000003DoV8IAK","Rights__c":"Sec 2.01 - License t (841 more) ...","As_Of_Date__c":"2015-10-16T00:00:00.000Z","Sales_Report_Due_Dat (9 more) ...":"a2xZ0000002IjLdIAK","RecordTypeId":"012Z00000000rdwIAA","ShippingCountry":"United States","CustomerSignedTitle":"Director","Expiration_Countdown (3 more) ...":-331,"CV_Customer_Signed_B (4 more) ...":"George Tsai","Contract_Terms__c":"4.01 Minimum payment (66 more) ...","Status":"Draft","IsDeleted":false,"Termination_Clause__ (1 more) ...":"Sec. 603 - In the ev (750 more) ...","EndDate":"2014-11-19T00:00:00.000Z","SystemModstamp":"2015-10-16T05:40:46.000Z","Royalty_Payment_Due_ (12 more) ...":"a2xZ0000002IjLdIAK","ShippingCountryCode":"US","BillingCountry":"United States","AIF__c":"84.0099","CreatedDate":"2015-10-16T05:40:46.000Z","CompanySignedDate":"2015-10-10T00:00:00.000Z","Id":"800Z00000003MRdIAM","LastModifiedById":"005Z0000003DoV8IAK","Calculate_Next_Sales (10 more) ...":false}]}|0x30963dd4
+01:40:47.146 (2146788257)|VARIABLE_SCOPE_BEGIN|[22]|newMap|Map<Id,SObject>|true|false
+01:40:47.147 (2147795375)|VARIABLE_ASSIGNMENT|[22]|newMap|{"s":1,"v":{"800Z00000003MRdIAM":{"CustomerSignedDate":"2016-10-12T00:00:00.000Z","LastModifiedDate":"2015-10-16T05:40:46.000Z","ContractNumber":"CN-00000317","Description":"Sec 2.01 - License t (841 more) ...","AccountId":"001Z000000uoWXwIAM","Agreement_Type__c":"Trademark","BillingCountryCode":"US","ContractTerm":45,"StatusCode":"Draft","Name":"Siva Test Contract - (11 more) ...","StartDate":"2011-11-12T00:00:00.000Z","Audit_Rights__c":"4.05 - Licensee shal (583 more) ...","Calculate_Next_Royal (13 more) ...":false,"OwnerId":"005Z0000003DoV8IAK","CreatedById":"005Z0000003DoV8IAK","Rights__c":"Sec 2.01 - License t (841 more) ...","As_Of_Date__c":"2015-10-16T00:00:00.000Z","Sales_Report_Due_Dat (9 more) ...":"a2xZ0000002IjLdIAK","RecordTypeId":"012Z00000000rdwIAA","ShippingCountry":"United States","CustomerSignedTitle":"Director","Expiration_Countdown (3 more) ...":-331,"CV_Customer_Signed_B (4 more) ...":"George Tsai","Contract_Terms__c":"4.01 Minimum payment (66 more) ...","Status":"Draft","IsDeleted":false,"Termination_Clause__ (1 more) ...":"Sec. 603 - In the ev (750 more) ...","EndDate":"2014-11-19T00:00:00.000Z","SystemModstamp":"2015-10-16T05:40:46.000Z","Royalty_Payment_Due_ (12 more) ...":"a2xZ0000002IjLdIAK","ShippingCountryCode":"US","BillingCountry":"United States","AIF__c":"84.0099","CreatedDate":"2015-10-16T05:40:46.000Z","CompanySignedDate":"2015-10-10T00:00:00.000Z","Id":"800Z00000003MRdIAM","LastModifiedById":"005Z0000003DoV8IAK","Calculate_Next_Sales (10 more) ...":false}}}|0xb241703
+01:40:47.147 (2147812897)|VARIABLE_SCOPE_BEGIN|[22]|oldList|List<SObject>|true|false
+01:40:47.147 (2147834878)|VARIABLE_ASSIGNMENT|[22]|oldList|null|
+01:40:47.147 (2147840240)|VARIABLE_SCOPE_BEGIN|[22]|oldMap|Map<Id,SObject>|true|false
+01:40:47.147 (2147856308)|VARIABLE_ASSIGNMENT|[22]|oldMap|null|
+01:40:47.147 (2147866897)|HEAP_ALLOCATE|[24]|Bytes:5
+01:40:47.147 (2147873578)|STATEMENT_EXECUTE|[22]
+01:40:47.147 (2147876401)|STATEMENT_EXECUTE|[24]
+01:40:47.148 (2148882815)|VARIABLE_ASSIGNMENT|[24]|this.contractNewList|{"s":1,"v":[{"CustomerSignedDate":"2016-10-12T00:00:00.000Z","LastModifiedDate":"2015-10-16T05:40:46.000Z","ContractNumber":"CN-00000317","Description":"Sec 2.01 - License t (841 more) ...","AccountId":"001Z000000uoWXwIAM","Agreement_Type__c":"Trademark","BillingCountryCode":"US","ContractTerm":45,"StatusCode":"Draft","Name":"Siva Test Contract - (11 more) ...","StartDate":"2011-11-12T00:00:00.000Z","Audit_Rights__c":"4.05 - Licensee shal (583 more) ...","Calculate_Next_Royal (13 more) ...":false,"OwnerId":"005Z0000003DoV8IAK","CreatedById":"005Z0000003DoV8IAK","Rights__c":"Sec 2.01 - License t (841 more) ...","As_Of_Date__c":"2015-10-16T00:00:00.000Z","Sales_Report_Due_Dat (9 more) ...":"a2xZ0000002IjLdIAK","RecordTypeId":"012Z00000000rdwIAA","ShippingCountry":"United States","CustomerSignedTitle":"Director","Expiration_Countdown (3 more) ...":-331,"CV_Customer_Signed_B (4 more) ...":"George Tsai","Contract_Terms__c":"4.01 Minimum payment (66 more) ...","Status":"Draft","IsDeleted":false,"Termination_Clause__ (1 more) ...":"Sec. 603 - In the ev (750 more) ...","EndDate":"2014-11-19T00:00:00.000Z","SystemModstamp":"2015-10-16T05:40:46.000Z","Royalty_Payment_Due_ (12 more) ...":"a2xZ0000002IjLdIAK","ShippingCountryCode":"US","BillingCountry":"United States","AIF__c":"84.0099","CreatedDate":"2015-10-16T05:40:46.000Z","CompanySignedDate":"2015-10-10T00:00:00.000Z","Id":"800Z00000003MRdIAM","LastModifiedById":"005Z0000003DoV8IAK","Calculate_Next_Sales (10 more) ...":false}]}|0x47045d73
+01:40:47.148 (2148901232)|STATEMENT_EXECUTE|[25]
+01:40:47.148 (2148934057)|VARIABLE_ASSIGNMENT|[25]|this.contractOldList|null|0x47045d73
+01:40:47.148 (2148940410)|STATEMENT_EXECUTE|[26]
+01:40:47.149 (2149939052)|VARIABLE_ASSIGNMENT|[26]|this.contractNewMap|{"s":1,"v":{"800Z00000003MRdIAM":{"CustomerSignedDate":"2016-10-12T00:00:00.000Z","LastModifiedDate":"2015-10-16T05:40:46.000Z","ContractNumber":"CN-00000317","Description":"Sec 2.01 - License t (841 more) ...","AccountId":"001Z000000uoWXwIAM","Agreement_Type__c":"Trademark","BillingCountryCode":"US","ContractTerm":45,"StatusCode":"Draft","Name":"Siva Test Contract - (11 more) ...","StartDate":"2011-11-12T00:00:00.000Z","Audit_Rights__c":"4.05 - Licensee shal (583 more) ...","Calculate_Next_Royal (13 more) ...":false,"OwnerId":"005Z0000003DoV8IAK","CreatedById":"005Z0000003DoV8IAK","Rights__c":"Sec 2.01 - License t (841 more) ...","As_Of_Date__c":"2015-10-16T00:00:00.000Z","Sales_Report_Due_Dat (9 more) ...":"a2xZ0000002IjLdIAK","RecordTypeId":"012Z00000000rdwIAA","ShippingCountry":"United States","CustomerSignedTitle":"Director","Expiration_Countdown (3 more) ...":-331,"CV_Customer_Signed_B (4 more) ...":"George Tsai","Contract_Terms__c":"4.01 Minimum payment (66 more) ...","Status":"Draft","IsDeleted":false,"Termination_Clause__ (1 more) ...":"Sec. 603 - In the ev (750 more) ...","EndDate":"2014-11-19T00:00:00.000Z","SystemModstamp":"2015-10-16T05:40:46.000Z","Royalty_Payment_Due_ (12 more) ...":"a2xZ0000002IjLdIAK","ShippingCountryCode":"US","BillingCountry":"United States","AIF__c":"84.0099","CreatedDate":"2015-10-16T05:40:46.000Z","CompanySignedDate":"2015-10-10T00:00:00.000Z","Id":"800Z00000003MRdIAM","LastModifiedById":"005Z0000003DoV8IAK","Calculate_Next_Sales (10 more) ...":false}}}|0x47045d73
+01:40:47.149 (2149955906)|STATEMENT_EXECUTE|[27]
+01:40:47.149 (2149988443)|VARIABLE_ASSIGNMENT|[27]|this.contractOldMap|null|0x47045d73
+01:40:47.149 (2149994540)|STATEMENT_EXECUTE|[29]
+01:40:47.150 (2150000610)|HEAP_ALLOCATE|[29]|Bytes:4
+01:40:47.150 (2150021857)|VARIABLE_SCOPE_BEGIN|[29]|cAgreementContractList|List<Contract>|true|false
+01:40:47.150 (2150034033)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+01:40:47.150 (2150064927)|VARIABLE_ASSIGNMENT|[29]|cAgreementContractList|{"s":1,"v":[]}|0x9e5df04
+01:40:47.150 (2150071996)|STATEMENT_EXECUTE|[30]
+01:40:47.150 (2150077453)|HEAP_ALLOCATE|[30]|Bytes:4
+01:40:47.150 (2150087152)|VARIABLE_SCOPE_BEGIN|[30]|agreementsMap|Map<Id,Contract>|true|false
+01:40:47.150 (2150120218)|VARIABLE_ASSIGNMENT|[30]|agreementsMap|{"s":1,"v":{}}|0x22d25d34
+01:40:47.150 (2150126770)|STATEMENT_EXECUTE|[31]
+01:40:47.150 (2150131724)|HEAP_ALLOCATE|[31]|Bytes:4
+01:40:47.150 (2150140821)|VARIABLE_SCOPE_BEGIN|[31]|ddrIdtoddrMap|Map<Id,CV_Due_Date_Rule__c>|true|false
+01:40:47.150 (2150172413)|VARIABLE_ASSIGNMENT|[31]|ddrIdtoddrMap|{"s":1,"v":{}}|0x232bbc27
+01:40:47.150 (2150178893)|STATEMENT_EXECUTE|[33]
+01:40:47.151 (2151199797)|HEAP_ALLOCATE|[33]|Bytes:5653
+01:40:47.151 (2151234690)|HEAP_ALLOCATE|[33]|Bytes:5670
+01:40:47.151 (2151265251)|USER_DEBUG|[33]|DEBUG|contractNewList: (Contract:{Id=800Z00000003MRdIAM, AccountId=001Z000000uoWXwIAM, OwnerExpirationNotice=null, StartDate=2011-11-12 00:00:00, EndDate=2014-11-19 00:00:00, BillingStreet=null, BillingCity=null, BillingState=null, BillingPostalCode=null, BillingCountry=United States, BillingStateCode=null, BillingCountryCode=US, BillingLatitude=null, BillingLongitude=null, BillingGeocodeAccuracy=null, ShippingStreet=null, ShippingCity=null, ShippingState=null, ShippingPostalCode=null, ShippingCountry=United States, ShippingStateCode=null, ShippingCountryCode=US, ShippingLatitude=null, ShippingLongitude=null, ShippingGeocodeAccuracy=null, ContractTerm=45, OwnerId=005Z0000003DoV8IAK, Status=Draft, CompanySignedId=null, CompanySignedDate=2015-10-10 00:00:00, CustomerSignedId=null, CustomerSignedTitle=Director, CustomerSignedDate=2016-10-12 00:00:00, SpecialTerms=null, ActivatedById=null, ActivatedDate=null, StatusCode=Draft, Description=Sec 2.01 - License to use the GE Mark upon and in connection with the manufacture, display, sale, marketing, advertising, promotion and distribution of Licensed Products sold by Licensee in the Licensed Channel of Distribution.  Said right to manufacture shall include the right to subcontract with Vendoes to have Licensed Products manufactured for sale to Licensee.  * Appendix B  Holiday Products Include - Holiday string sets, Halloween string sets, Party string sets, Replacement bulbs and fuses, Candle and tree toppers, Pre-lit trees, and Holiday decor.  Holiday Accessories include: green seasonable products such as indoor cords, outdoor cords, speciality cords, cord assortments, cord accessories, electrical taps, electrical adapters, power strips, surge protectors, flood holders, yardstakes,timers, lighting controls, nightlights, and touch lights., RecordTypeId=012Z00000000rdwIAA, Name=Siva Test Contract - Do not use, IsDeleted=false, ContractNumber=CN-00000317, LastApprovedDate=null, CreatedDate=2015-10-16 05:40:46, CreatedById=005Z0000003DoV8IAK, LastModifiedDate=2015-10-16 05:40:46, LastModifiedById=005Z0000003DoV8IAK, SystemModstamp=2015-10-16 05:40:46, LastActivityDate=null, LastViewedDate=null, LastReferencedDate=null, Audit_Rights__c=4.05 - Licensee shall keep accurate books of account and records coverin all transactions and Licensor or its designee shall have the right at all reasonable business hours upon 48 hours advanced notice to Licensee to make complete verifications, examinations and audits of said books of account and records and all other documents and material in the possession or under the control of Licensee relating to the Agreement and shall have free and full access thereto for said purpose and for the purpose of making extracts therefrom - these audits can be used to resolve claims relating to the agreement., Brand_Usage_Agreement__c=null, Contract_Terms__c=4.01 Minimum payments of $5 million in installments.  4.02 Royalty of 5% of net sales., GE_Business_Unit__c=null, Renewal_Date__c=null, Renewal_Terms__c=null, Rights__c=Sec 2.01 - License to use the GE Mark upon and in connection with the manufacture, display, sale, marketing, advertising, promotion and distribution of Licensed Products sold by Licensee in the Licensed Channel of Distribution.  Said right to manufacture shall include the right to subcontract with Vendoes to have Licensed Products manufactured for sale to Licensee.  * Appendix B  Holiday Products Include - Holiday string sets, Halloween string sets, Party string sets, Replacement bulbs and fuses, Candle and tree toppers, Pre-lit trees, and Holiday decor.  Holiday Accessories include: green seasonable products such as indoor cords, outdoor cords, speciality cords, cord assortments, cord accessories, electrical taps, electrical adapters, power strips, surge protectors, flood holders, yardstakes,timers, lighting controls, nightlights, and touch lights., Termination_Clause__c=Sec. 603 - In the event that a party material breaches an obligation under the Agreement and such breach is not remedied within 30 days after written notice from the other party specifying such breach, such other party shall have the right at any time thereafter to terminate the Agreement by giving written notice of termination to the breaching party. If either party becomes insolvent, executes an assignment for benefit of creditors, ceases operations, dissoles, or becomes subject to bankruptcy or receivership proceedings, the Agreement shall automatically terminate. 6.04  Licensor shall in addition have the right to terminate the Agreement immediately upon giving written notice to Licensee in the event that ay any time a product recall of any Licensed Product, Unique_Contract_Terms__c=null, AIF__c=84.0099, Agreement_Type__c=Trademark, Expiration_Countdown__c=-331, As_Of_Date__c=2015-10-16 00:00:00, Renewal_Countdown__c=null, CV_Company_Signed_By__c=null, CV_Customer_Signed_By__c=George Tsai, Referenced_Agreement__c=null, Royalty_Report_Due_Date__c=null, Payment_Due_Date__c=null, CV_Inception_To_Date__c=null, CV_Planned_Royalty_Revenue__c=null, CV_Previous_YTD_Royalty_Payment__c=null, CV_Previous_Year_To_Date__c=null, CV_Variance_vs_Plan__c=null, CV_YTD_Royalty_Payment__c=null, CV_YTD_Variance__c=null, CV_Year_To_Date__c=null, Royalty_Payment_Due_Date_Rule__c=a2xZ0000002IjLdIAK, Sales_Report_Due_Date_Rule__c=a2xZ0000002IjLdIAK, Next_Royalty_Payment__c=null, Next_Sales_Report__c=null, Calculate_Next_Royalty_Payment__c=false, Calculate_Next_Sales_Report__c=false, Next_Royalty_Payment_Due_Date__c=null, Next_Sales_Report_Due_Date__c=null, Days_Until_Due_of_Next_Royalty_Payment__c=null, Days_Until_Due_of_next_Sales_Report__c=null})
+01:40:47.151 (2151300078)|STATEMENT_EXECUTE|[34]
+01:40:47.151 (2151329611)|HEAP_ALLOCATE|[34]|Bytes:2
+01:40:47.151 (2151351960)|HEAP_ALLOCATE|[34]|Bytes:17
+01:40:47.151 (2151372372)|USER_DEBUG|[34]|DEBUG|agreementsMap: {}
+01:40:47.151 (2151382889)|STATEMENT_EXECUTE|[35]
+01:40:47.151 (2151408399)|HEAP_ALLOCATE|[35]|Bytes:2
+01:40:47.151 (2151429242)|HEAP_ALLOCATE|[35]|Bytes:17
+01:40:47.151 (2151452235)|USER_DEBUG|[35]|DEBUG|ddrIdtoddrMap: {}
+01:40:47.151 (2151464450)|STATEMENT_EXECUTE|[37]
+01:40:47.151 (2151469329)|STATEMENT_EXECUTE|[47]
+01:40:47.151 (2151471410)|STATEMENT_EXECUTE|[48]
+01:40:47.164 (2164535328)|VARIABLE_SCOPE_BEGIN|[18]|ContractManager.RT_AGREEMENT|String|false|true
+01:40:47.164 (2164550565)|VARIABLE_SCOPE_BEGIN|[19]|ContractManager.RT_AMENDMENT|String|false|true
+01:40:47.164 (2164567693)|HEAP_ALLOCATE|[48]|Bytes:27
+01:40:47.164 (2164577672)|HEAP_ALLOCATE|[48]|Bytes:67
+01:40:47.164 (2164608183)|METHOD_ENTRY|[13]|01pZ0000000LUX6|ContractManager.ContractManager()
+01:40:47.164 (2164614737)|STATEMENT_EXECUTE|[13]
+01:40:47.164 (2164629564)|SYSTEM_MODE_ENTER|true
+01:40:47.164 (2164637297)|HEAP_ALLOCATE|[18]|Bytes:5
+01:40:47.164 (2164645342)|STATEMENT_EXECUTE|[13]
+01:40:47.164 (2164647923)|STATEMENT_EXECUTE|[18]
+01:40:47.164 (2164651769)|HEAP_ALLOCATE|[18]|Bytes:18
+01:40:47.164 (2164700785)|VARIABLE_ASSIGNMENT|[18]|ContractManager.RT_AGREEMENT|"Contract.Agreement"
+01:40:47.164 (2164708074)|STATEMENT_EXECUTE|[19]
+01:40:47.164 (2164712398)|HEAP_ALLOCATE|[19]|Bytes:18
+01:40:47.164 (2164745083)|VARIABLE_ASSIGNMENT|[19]|ContractManager.RT_AMENDMENT|"Contract.Amendment"
+01:40:47.164 (2164754445)|SYSTEM_MODE_EXIT|true
+01:40:47.164 (2164767673)|METHOD_EXIT|[13]|ContractManager
+01:40:47.164 (2164812243)|METHOD_ENTRY|[48]|01pZ0000000LUX6|ContractManager.getAgreements(List<Contract>)
+01:40:47.164 (2164865989)|VARIABLE_SCOPE_BEGIN|[132]|cList|List<Contract>|true|false
+01:40:47.165 (2165972837)|VARIABLE_ASSIGNMENT|[132]|cList|{"s":1,"v":[{"CustomerSignedDate":"2016-10-12T00:00:00.000Z","LastModifiedDate":"2015-10-16T05:40:46.000Z","ContractNumber":"CN-00000317","Description":"Sec 2.01 - License t (841 more) ...","AccountId":"001Z000000uoWXwIAM","Agreement_Type__c":"Trademark","BillingCountryCode":"US","ContractTerm":45,"StatusCode":"Draft","Name":"Siva Test Contract - (11 more) ...","StartDate":"2011-11-12T00:00:00.000Z","Audit_Rights__c":"4.05 - Licensee shal (583 more) ...","Calculate_Next_Royal (13 more) ...":false,"OwnerId":"005Z0000003DoV8IAK","CreatedById":"005Z0000003DoV8IAK","Rights__c":"Sec 2.01 - License t (841 more) ...","As_Of_Date__c":"2015-10-16T00:00:00.000Z","Sales_Report_Due_Dat (9 more) ...":"a2xZ0000002IjLdIAK","RecordTypeId":"012Z00000000rdwIAA","ShippingCountry":"United States","CustomerSignedTitle":"Director","Expiration_Countdown (3 more) ...":-331,"CV_Customer_Signed_B (4 more) ...":"George Tsai","Contract_Terms__c":"4.01 Minimum payment (66 more) ...","Status":"Draft","IsDeleted":false,"Termination_Clause__ (1 more) ...":"Sec. 603 - In the ev (750 more) ...","EndDate":"2014-11-19T00:00:00.000Z","SystemModstamp":"2015-10-16T05:40:46.000Z","Royalty_Payment_Due_ (12 more) ...":"a2xZ0000002IjLdIAK","ShippingCountryCode":"US","BillingCountry":"United States","AIF__c":"84.0099","CreatedDate":"2015-10-16T05:40:46.000Z","CompanySignedDate":"2015-10-10T00:00:00.000Z","Id":"800Z00000003MRdIAM","LastModifiedById":"005Z0000003DoV8IAK","Calculate_Next_Sales (10 more) ...":false}]}|0x30963dd4
+01:40:47.165 (2165995168)|SYSTEM_MODE_ENTER|true
+01:40:47.166 (2166002224)|HEAP_ALLOCATE|[133]|Bytes:5
+01:40:47.166 (2166009747)|STATEMENT_EXECUTE|[132]
+01:40:47.166 (2166012720)|STATEMENT_EXECUTE|[133]
+01:40:47.166 (2166021757)|HEAP_ALLOCATE|[133]|Bytes:37
+01:40:47.166 (2166124580)|USER_DEBUG|[133]|DEBUG|ContractManager - getAgreements start
+01:40:47.166 (2166139926)|STATEMENT_EXECUTE|[134]
+01:40:47.166 (2166148126)|HEAP_ALLOCATE|[134]|Bytes:7
+01:40:47.167 (2167717810)|HEAP_ALLOCATE|[134]|Bytes:5653
+01:40:47.167 (2167757312)|HEAP_ALLOCATE|[134]|Bytes:5660
+01:40:47.167 (2167784843)|USER_DEBUG|[134]|DEBUG|cList: (Contract:{Id=800Z00000003MRdIAM, AccountId=001Z000000uoWXwIAM, OwnerExpirationNotice=null, StartDate=2011-11-12 00:00:00, EndDate=2014-11-19 00:00:00, BillingStreet=null, BillingCity=null, BillingState=null, BillingPostalCode=null, BillingCountry=United States, BillingStateCode=null, BillingCountryCode=US, BillingLatitude=null, BillingLongitude=null, BillingGeocodeAccuracy=null, ShippingStreet=null, ShippingCity=null, ShippingState=null, ShippingPostalCode=null, ShippingCountry=United States, ShippingStateCode=null, ShippingCountryCode=US, ShippingLatitude=null, ShippingLongitude=null, ShippingGeocodeAccuracy=null, ContractTerm=45, OwnerId=005Z0000003DoV8IAK, Status=Draft, CompanySignedId=null, CompanySignedDate=2015-10-10 00:00:00, CustomerSignedId=null, CustomerSignedTitle=Director, CustomerSignedDate=2016-10-12 00:00:00, SpecialTerms=null, ActivatedById=null, ActivatedDate=null, StatusCode=Draft, Description=Sec 2.01 - License to use the GE Mark upon and in connection with the manufacture, display, sale, marketing, advertising, promotion and distribution of Licensed Products sold by Licensee in the Licensed Channel of Distribution.  Said right to manufacture shall include the right to subcontract with Vendoes to have Licensed Products manufactured for sale to Licensee.  * Appendix B  Holiday Products Include - Holiday string sets, Halloween string sets, Party string sets, Replacement bulbs and fuses, Candle and tree toppers, Pre-lit trees, and Holiday decor.  Holiday Accessories include: green seasonable products such as indoor cords, outdoor cords, speciality cords, cord assortments, cord accessories, electrical taps, electrical adapters, power strips, surge protectors, flood holders, yardstakes,timers, lighting controls, nightlights, and touch lights., RecordTypeId=012Z00000000rdwIAA, Name=Siva Test Contract - Do not use, IsDeleted=false, ContractNumber=CN-00000317, LastApprovedDate=null, CreatedDate=2015-10-16 05:40:46, CreatedById=005Z0000003DoV8IAK, LastModifiedDate=2015-10-16 05:40:46, LastModifiedById=005Z0000003DoV8IAK, SystemModstamp=2015-10-16 05:40:46, LastActivityDate=null, LastViewedDate=null, LastReferencedDate=null, Audit_Rights__c=4.05 - Licensee shall keep accurate books of account and records coverin all transactions and Licensor or its designee shall have the right at all reasonable business hours upon 48 hours advanced notice to Licensee to make complete verifications, examinations and audits of said books of account and records and all other documents and material in the possession or under the control of Licensee relating to the Agreement and shall have free and full access thereto for said purpose and for the purpose of making extracts therefrom - these audits can be used to resolve claims relating to the agreement., Brand_Usage_Agreement__c=null, Contract_Terms__c=4.01 Minimum payments of $5 million in installments.  4.02 Royalty of 5% of net sales., GE_Business_Unit__c=null, Renewal_Date__c=null, Renewal_Terms__c=null, Rights__c=Sec 2.01 - License to use the GE Mark upon and in connection with the manufacture, display, sale, marketing, advertising, promotion and distribution of Licensed Products sold by Licensee in the Licensed Channel of Distribution.  Said right to manufacture shall include the right to subcontract with Vendoes to have Licensed Products manufactured for sale to Licensee.  * Appendix B  Holiday Products Include - Holiday string sets, Halloween string sets, Party string sets, Replacement bulbs and fuses, Candle and tree toppers, Pre-lit trees, and Holiday decor.  Holiday Accessories include: green seasonable products such as indoor cords, outdoor cords, speciality cords, cord assortments, cord accessories, electrical taps, electrical adapters, power strips, surge protectors, flood holders, yardstakes,timers, lighting controls, nightlights, and touch lights., Termination_Clause__c=Sec. 603 - In the event that a party material breaches an obligation under the Agreement and such breach is not remedied within 30 days after written notice from the other party specifying such breach, such other party shall have the right at any time thereafter to terminate the Agreement by giving written notice of termination to the breaching party. If either party becomes insolvent, executes an assignment for benefit of creditors, ceases operations, dissoles, or becomes subject to bankruptcy or receivership proceedings, the Agreement shall automatically terminate. 6.04  Licensor shall in addition have the right to terminate the Agreement immediately upon giving written notice to Licensee in the event that ay any time a product recall of any Licensed Product, Unique_Contract_Terms__c=null, AIF__c=84.0099, Agreement_Type__c=Trademark, Expiration_Countdown__c=-331, As_Of_Date__c=2015-10-16 00:00:00, Renewal_Countdown__c=null, CV_Company_Signed_By__c=null, CV_Customer_Signed_By__c=George Tsai, Referenced_Agreement__c=null, Royalty_Report_Due_Date__c=null, Payment_Due_Date__c=null, CV_Inception_To_Date__c=null, CV_Planned_Royalty_Revenue__c=null, CV_Previous_YTD_Royalty_Payment__c=null, CV_Previous_Year_To_Date__c=null, CV_Variance_vs_Plan__c=null, CV_YTD_Royalty_Payment__c=null, CV_YTD_Variance__c=null, CV_Year_To_Date__c=null, Royalty_Payment_Due_Date_Rule__c=a2xZ0000002IjLdIAK, Sales_Report_Due_Date_Rule__c=a2xZ0000002IjLdIAK, Next_Royalty_Payment__c=null, Next_Sales_Report__c=null, Calculate_Next_Royalty_Payment__c=false, Calculate_Next_Sales_Report__c=false, Next_Royalty_Payment_Due_Date__c=null, Next_Sales_Report_Due_Date__c=null, Days_Until_Due_of_Next_Royalty_Payment__c=null, Days_Until_Due_of_next_Sales_Report__c=null})
+01:40:47.167 (2167819751)|STATEMENT_EXECUTE|[135]
+01:40:47.189 (2189678746)|VARIABLE_SCOPE_BEGIN|[13]|Cache.mRecordTypes|Map<String,String>|true|true
+01:40:47.189 (2189695925)|HEAP_ALLOCATE|[135]|Bytes:2
+01:40:47.189 (2189728925)|METHOD_ENTRY|[12]|01pZ0000000LI6b|Cache.Cache()
+01:40:47.189 (2189735283)|STATEMENT_EXECUTE|[12]
+01:40:47.190 (2190497494)|SYSTEM_MODE_ENTER|false
+01:40:47.190 (2190508242)|HEAP_ALLOCATE|[16]|Bytes:5
+01:40:47.190 (2190516881)|STATEMENT_EXECUTE|[12]
+01:40:47.190 (2190519809)|STATEMENT_EXECUTE|[15]
+01:40:47.190 (2190521827)|STATEMENT_EXECUTE|[16]
+01:40:47.190 (2190528859)|VARIABLE_SCOPE_BEGIN|[16]|Key|String|false|false
+01:40:47.190 (2190563541)|VARIABLE_ASSIGNMENT|[16]|Key|null
+01:40:47.190 (2190569247)|STATEMENT_EXECUTE|[17]
+01:40:47.190 (2190574277)|VARIABLE_SCOPE_BEGIN|[17]|Value|String|false|false
+01:40:47.190 (2190593509)|VARIABLE_ASSIGNMENT|[17]|Value|null
+01:40:47.190 (2190603680)|STATEMENT_EXECUTE|[19]
+01:40:47.190 (2190606483)|STATEMENT_EXECUTE|[20]
+01:40:47.190 (2190610782)|HEAP_ALLOCATE|[20]|Bytes:59
+01:40:47.190 (2190621729)|HEAP_ALLOCATE|[20]|Bytes:4
+01:40:47.190 (2190891015)|SOQL_EXECUTE_BEGIN|[20]|Aggregations:0|SELECT Id, Name, DeveloperName, SObjectType FROM RecordType
+01:40:47.198 (2198363734)|SOQL_EXECUTE_END|[20]|Rows:35
+01:40:47.198 (2198391736)|HEAP_ALLOCATE|[20]|Bytes:144
+01:40:47.198 (2198464127)|HEAP_ALLOCATE|[20]|Bytes:3868
+01:40:47.198 (2198573412)|HEAP_ALLOCATE|[20]|Bytes:144
+01:40:47.198 (2198592768)|VARIABLE_SCOPE_BEGIN|[20]|rtlist|List<RecordType>|true|false
+01:40:47.198 (2198654918)|VARIABLE_ASSIGNMENT|[20]|rtlist|{"s":1,"v":"List of size 35 too large to display"}|0x7e7565f6
+01:40:47.198 (2198663889)|STATEMENT_EXECUTE|[22]
+01:40:47.198 (2198671810)|HEAP_ALLOCATE|[22]|Bytes:4
+01:40:47.198 (2198732822)|VARIABLE_ASSIGNMENT|[22]|Cache.mRecordTypes|{"s":1,"v":{}}|0x51da21cf
+01:40:47.199 (2199078542)|HEAP_ALLOCATE|[24]|Bytes:5
+01:40:47.199 (2199124086)|HEAP_ALLOCATE|[24]|Bytes:20
+01:40:47.199 (2199142179)|VARIABLE_SCOPE_BEGIN|[24]|rt|RecordType|true|false
+01:40:47.199 (2199193505)|VARIABLE_ASSIGNMENT|[24]|rt|{"s":1,"v":{"Id":"012G0000001BJiIIAW","Name":"CCOE End Customer","DeveloperName":"CCOE_End_Customer","SobjectType":"Account"}}|0x5e51cf8e
+01:40:47.199 (2199202507)|STATEMENT_EXECUTE|[24]
+01:40:47.199 (2199205481)|STATEMENT_EXECUTE|[25]
+01:40:47.199 (2199236963)|HEAP_ALLOCATE|[25]|Bytes:1
+01:40:47.199 (2199272957)|HEAP_ALLOCATE|[25]|Bytes:25
+01:40:47.199 (2199305677)|VARIABLE_ASSIGNMENT|[25]|Key|"Account.CCOE_End_Cus (5 more) ..."
+01:40:47.199 (2199312322)|STATEMENT_EXECUTE|[26]
+01:40:47.199 (2199340672)|HEAP_ALLOCATE|[26]|Bytes:18
+01:40:47.199 (2199369149)|VARIABLE_ASSIGNMENT|[26]|Value|"012G0000001BJiIIAW"
+01:40:47.199 (2199375854)|STATEMENT_EXECUTE|[28]
+01:40:47.199 (2199440605)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+01:40:47.199 (2199474067)|HEAP_ALLOCATE|[24]|Bytes:5
+01:40:47.199 (2199501003)|HEAP_ALLOCATE|[24]|Bytes:20
+01:40:47.199 (2199512723)|VARIABLE_SCOPE_BEGIN|[24]|rt|RecordType|true|false
+01:40:47.199 (2199556803)|VARIABLE_ASSIGNMENT|[24]|rt|{"s":1,"v":{"Id":"012G0000001BJiJIAW","Name":"CCOE Internal Custom (2 more) ...","DeveloperName":"CCOE_Internal_Custom (2 more) ...","SobjectType":"Account"}}|0x45cd00f0
+01:40:47.199 (2199565394)|STATEMENT_EXECUTE|[24]
+01:40:47.199 (2199568034)|STATEMENT_EXECUTE|[25]
+01:40:47.199 (2199582971)|HEAP_ALLOCATE|[25]|Bytes:30
+01:40:47.199 (2199611714)|VARIABLE_ASSIGNMENT|[25]|Key|"Account.CCOE_Interna (10 more) ..."
+01:40:47.199 (2199618181)|STATEMENT_EXECUTE|[26]
+01:40:47.199 (2199627913)|HEAP_ALLOCATE|[26]|Bytes:18
+01:40:47.199 (2199651598)|VARIABLE_ASSIGNMENT|[26]|Value|"012G0000001BJiJIAW"
+01:40:47.199 (2199657590)|STATEMENT_EXECUTE|[28]
+01:40:47.199 (2199682102)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+01:40:47.199 (2199709731)|HEAP_ALLOCATE|[24]|Bytes:5
+01:40:47.199 (2199735666)|HEAP_ALLOCATE|[24]|Bytes:20
+01:40:47.199 (2199747199)|VARIABLE_SCOPE_BEGIN|[24]|rt|RecordType|true|false
+01:40:47.199 (2199788136)|VARIABLE_ASSIGNMENT|[24]|rt|{"s":1,"v":{"Id":"012G0000001BJiKIAW","Name":"CCOE Contact","DeveloperName":"CCOE_Contact","SobjectType":"Contact"}}|0x7c166ea
+01:40:47.199 (2199796042)|STATEMENT_EXECUTE|[24]
+01:40:47.199 (2199798544)|STATEMENT_EXECUTE|[25]
+01:40:47.199 (2199812723)|HEAP_ALLOCATE|[25]|Bytes:20
+01:40:47.199 (2199839236)|VARIABLE_ASSIGNMENT|[25]|Key|"Contact.CCOE_Contact"
+01:40:47.199 (2199845596)|STATEMENT_EXECUTE|[26]
+01:40:47.199 (2199855106)|HEAP_ALLOCATE|[26]|Bytes:18
+01:40:47.199 (2199879203)|VARIABLE_ASSIGNMENT|[26]|Value|"012G0000001BJiKIAW"
+01:40:47.199 (2199884913)|STATEMENT_EXECUTE|[28]
+01:40:47.199 (2199908873)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+01:40:47.199 (2199936135)|HEAP_ALLOCATE|[24]|Bytes:5
+01:40:47.199 (2199965299)|HEAP_ALLOCATE|[24]|Bytes:20
+01:40:47.199 (2199977372)|VARIABLE_SCOPE_BEGIN|[24]|rt|RecordType|true|false
+01:40:47.200 (2200018221)|VARIABLE_ASSIGNMENT|[24]|rt|{"s":1,"v":{"Id":"012G0000001BJiLIAW","Name":"CCOE Opportunity","DeveloperName":"CCOE_Opportunity","SobjectType":"Opportunity"}}|0x13c18115
+01:40:47.200 (2200027342)|STATEMENT_EXECUTE|[24]
+01:40:47.200 (2200029960)|STATEMENT_EXECUTE|[25]
+01:40:47.200 (2200044414)|HEAP_ALLOCATE|[25]|Bytes:28
+01:40:47.200 (2200072412)|VARIABLE_ASSIGNMENT|[25]|Key|"Opportunity.CCOE_Opp (8 more) ..."
+01:40:47.200 (2200078490)|STATEMENT_EXECUTE|[26]
+01:40:47.200 (2200088191)|HEAP_ALLOCATE|[26]|Bytes:18
+01:40:47.200 (2200112085)|VARIABLE_ASSIGNMENT|[26]|Value|"012G0000001BJiLIAW"
+01:40:47.200 (2200118293)|STATEMENT_EXECUTE|[28]
+01:40:47.200 (2200142124)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+01:40:47.200 (2200168994)|HEAP_ALLOCATE|[24]|Bytes:5
+01:40:47.200 (2200194414)|HEAP_ALLOCATE|[24]|Bytes:20
+01:40:47.200 (2200205924)|VARIABLE_SCOPE_BEGIN|[24]|rt|RecordType|true|false
+01:40:47.200 (2200250434)|VARIABLE_ASSIGNMENT|[24]|rt|{"s":1,"v":{"Id":"012G0000001BJiMIAW","Name":"CCOE Product","DeveloperName":"CCOE_Product","SobjectType":"Product2"}}|0x433c115c
+01:40:47.200 (2200258595)|STATEMENT_EXECUTE|[24]
+01:40:47.200 (2200261120)|STATEMENT_EXECUTE|[25]
+01:40:47.200 (2200275303)|HEAP_ALLOCATE|[25]|Bytes:21
+01:40:47.200 (2200303263)|VARIABLE_ASSIGNMENT|[25]|Key|"Product2.CCOE_Produc (1 more) ..."
+01:40:47.200 (2200309403)|STATEMENT_EXECUTE|[26]
+01:40:47.200 (2200318846)|HEAP_ALLOCATE|[26]|Bytes:18
+01:40:47.200 (2200342461)|VARIABLE_ASSIGNMENT|[26]|Value|"012G0000001BJiMIAW"
+01:40:47.200 (2200348321)|STATEMENT_EXECUTE|[28]
+01:40:47.200 (2200371923)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+01:40:47.200 (2200398818)|HEAP_ALLOCATE|[24]|Bytes:5
+01:40:47.200 (2200424031)|HEAP_ALLOCATE|[24]|Bytes:20
+01:40:47.200 (2200435601)|VARIABLE_SCOPE_BEGIN|[24]|rt|RecordType|true|false
+01:40:47.200 (2200475455)|VARIABLE_ASSIGNMENT|[24]|rt|{"s":1,"v":{"Id":"012G0000001BK32IAG","Name":"CCOE Task","DeveloperName":"CCOE_Task","SobjectType":"Task"}}|0x6edb434b
+01:40:47.200 (2200483003)|STATEMENT_EXECUTE|[24]
+01:40:47.200 (2200485658)|STATEMENT_EXECUTE|[25]
+01:40:47.200 (2200499282)|HEAP_ALLOCATE|[25]|Bytes:14
+01:40:47.200 (2200525523)|VARIABLE_ASSIGNMENT|[25]|Key|"Task.CCOE_Task"
+01:40:47.200 (2200531723)|STATEMENT_EXECUTE|[26]
+01:40:47.200 (2200540955)|HEAP_ALLOCATE|[26]|Bytes:18
+01:40:47.200 (2200564817)|VARIABLE_ASSIGNMENT|[26]|Value|"012G0000001BK32IAG"
+01:40:47.200 (2200570665)|STATEMENT_EXECUTE|[28]
+01:40:47.200 (2200594190)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+01:40:47.200 (2200620334)|HEAP_ALLOCATE|[24]|Bytes:5
+01:40:47.200 (2200645124)|HEAP_ALLOCATE|[24]|Bytes:20
+01:40:47.200 (2200656534)|VARIABLE_SCOPE_BEGIN|[24]|rt|RecordType|true|false
+01:40:47.200 (2200695965)|VARIABLE_ASSIGNMENT|[24]|rt|{"s":1,"v":{"Id":"012G0000001BK37IAG","Name":"SWCOE Task","DeveloperName":"SWCOE_Task","SobjectType":"Task"}}|0x62a19e4c
+01:40:47.200 (2200704106)|STATEMENT_EXECUTE|[24]
+01:40:47.200 (2200706794)|STATEMENT_EXECUTE|[25]
+01:40:47.200 (2200720579)|HEAP_ALLOCATE|[25]|Bytes:15
+01:40:47.200 (2200746907)|VARIABLE_ASSIGNMENT|[25]|Key|"Task.SWCOE_Task"
+01:40:47.200 (2200753150)|STATEMENT_EXECUTE|[26]
+01:40:47.200 (2200762374)|HEAP_ALLOCATE|[26]|Bytes:18
+01:40:47.200 (2200789785)|VARIABLE_ASSIGNMENT|[26]|Value|"012G0000001BK37IAG"
+01:40:47.200 (2200795680)|STATEMENT_EXECUTE|[28]
+01:40:47.200 (2200819021)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+01:40:47.200 (2200845440)|HEAP_ALLOCATE|[24]|Bytes:5
+01:40:47.200 (2200870255)|HEAP_ALLOCATE|[24]|Bytes:20
+01:40:47.200 (2200881450)|VARIABLE_SCOPE_BEGIN|[24]|rt|RecordType|true|false
+01:40:47.200 (2200920559)|VARIABLE_ASSIGNMENT|[24]|rt|{"s":1,"v":{"Id":"012G0000001BK4UIAW","Name":"CCOE Event","DeveloperName":"CCOE_Event","SobjectType":"Event"}}|0x7d777224
+01:40:47.200 (2200928628)|STATEMENT_EXECUTE|[24]
+01:40:47.200 (2200931346)|STATEMENT_EXECUTE|[25]
+01:40:47.200 (2200945188)|HEAP_ALLOCATE|[25]|Bytes:16
+01:40:47.200 (2200971661)|VARIABLE_ASSIGNMENT|[25]|Key|"Event.CCOE_Event"
+01:40:47.200 (2200977923)|STATEMENT_EXECUTE|[26]
+01:40:47.200 (2200987094)|HEAP_ALLOCATE|[26]|Bytes:18
+01:40:47.201 (2201010828)|VARIABLE_ASSIGNMENT|[26]|Value|"012G0000001BK4UIAW"
+01:40:47.201 (2201017618)|STATEMENT_EXECUTE|[28]
+01:40:47.201 (2201040900)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+01:40:47.201 (2201066817)|HEAP_ALLOCATE|[24]|Bytes:5
+01:40:47.201 (2201091408)|HEAP_ALLOCATE|[24]|Bytes:20
+01:40:47.201 (2201102628)|VARIABLE_SCOPE_BEGIN|[24]|rt|RecordType|true|false
+01:40:47.201 (2201141672)|VARIABLE_ASSIGNMENT|[24]|rt|{"s":1,"v":{"Id":"012G0000001BK4ZIAW","Name":"SWCOE Event","DeveloperName":"SWCOE_Event","SobjectType":"Event"}}|0x5ee23a27
+01:40:47.201 (2201149707)|STATEMENT_EXECUTE|[24]
+01:40:47.201 (2201152549)|STATEMENT_EXECUTE|[25]
+01:40:47.201 (2201166063)|HEAP_ALLOCATE|[25]|Bytes:17
+01:40:47.201 (2201192722)|VARIABLE_ASSIGNMENT|[25]|Key|"Event.SWCOE_Event"
+01:40:47.201 (2201198847)|STATEMENT_EXECUTE|[26]
+01:40:47.201 (2201208042)|HEAP_ALLOCATE|[26]|Bytes:18
+01:40:47.201 (2201231623)|VARIABLE_ASSIGNMENT|[26]|Value|"012G0000001BK4ZIAW"
+01:40:47.201 (2201237324)|STATEMENT_EXECUTE|[28]
+01:40:47.201 (2201264581)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+01:40:47.201 (2201291036)|HEAP_ALLOCATE|[24]|Bytes:5
+01:40:47.201 (2201315623)|HEAP_ALLOCATE|[24]|Bytes:20
+01:40:47.201 (2201327038)|VARIABLE_SCOPE_BEGIN|[24]|rt|RecordType|true|false
+01:40:47.201 (2201366107)|VARIABLE_ASSIGNMENT|[24]|rt|{"s":1,"v":{"Id":"012G0000001BK4tIAG","Name":"Data Requests","DeveloperName":"Data_Requests","SobjectType":"Case"}}|0x6a17ebab
+01:40:47.201 (2201374064)|STATEMENT_EXECUTE|[24]
+01:40:47.201 (2201376764)|STATEMENT_EXECUTE|[25]
+01:40:47.201 (2201390467)|HEAP_ALLOCATE|[25]|Bytes:18
+01:40:47.201 (2201421119)|VARIABLE_ASSIGNMENT|[25]|Key|"Case.Data_Requests"
+01:40:47.201 (2201427591)|STATEMENT_EXECUTE|[26]
+01:40:47.201 (2201437367)|HEAP_ALLOCATE|[26]|Bytes:18
+01:40:47.201 (2201460937)|VARIABLE_ASSIGNMENT|[26]|Value|"012G0000001BK4tIAG"
+01:40:47.201 (2201466892)|STATEMENT_EXECUTE|[28]
+01:40:47.201 (2201490217)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+01:40:47.201 (2201515934)|HEAP_ALLOCATE|[24]|Bytes:5
+01:40:47.201 (2201540526)|HEAP_ALLOCATE|[24]|Bytes:20
+01:40:47.201 (2201551879)|VARIABLE_SCOPE_BEGIN|[24]|rt|RecordType|true|false
+01:40:47.201 (2201592968)|VARIABLE_ASSIGNMENT|[24]|rt|{"s":1,"v":{"Id":"012G0000001BK9ZIAW","Name":"CoE Bug/Enhancement  (7 more) ...","DeveloperName":"CoE_Bug_Enhancement_ (7 more) ...","SobjectType":"Case"}}|0x42a4b5b
+01:40:47.201 (2201601253)|STATEMENT_EXECUTE|[24]
+01:40:47.201 (2201603838)|STATEMENT_EXECUTE|[25]
+01:40:47.201 (2201617854)|HEAP_ALLOCATE|[25]|Bytes:32
+01:40:47.201 (2201645272)|VARIABLE_ASSIGNMENT|[25]|Key|"Case.CoE_Bug_Enhance (12 more) ..."
+01:40:47.201 (2201651615)|STATEMENT_EXECUTE|[26]
+01:40:47.201 (2201661070)|HEAP_ALLOCATE|[26]|Bytes:18
+01:40:47.201 (2201684735)|VARIABLE_ASSIGNMENT|[26]|Value|"012G0000001BK9ZIAW"
+01:40:47.201 (2201690650)|STATEMENT_EXECUTE|[28]
+01:40:47.201 (2201713969)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+01:40:47.201 (2201739978)|HEAP_ALLOCATE|[24]|Bytes:5
+01:40:47.201 (2201764443)|HEAP_ALLOCATE|[24]|Bytes:20
+01:40:47.201 (2201775623)|VARIABLE_SCOPE_BEGIN|[24]|rt|RecordType|true|false
+01:40:47.201 (2201814756)|VARIABLE_ASSIGNMENT|[24]|rt|{"s":1,"v":{"Id":"012G0000001BKQBIA4","Name":"SysAdmin Request","DeveloperName":"SysAdmin_Request","SobjectType":"Task"}}|0x420affa8
+01:40:47.201 (2201822584)|STATEMENT_EXECUTE|[24]
+01:40:47.201 (2201825103)|STATEMENT_EXECUTE|[25]
+01:40:47.201 (2201839078)|HEAP_ALLOCATE|[25]|Bytes:21
+01:40:47.201 (2201866636)|VARIABLE_ASSIGNMENT|[25]|Key|"Task.SysAdmin_Reques (1 more) ..."
+01:40:47.201 (2201872809)|STATEMENT_EXECUTE|[26]
+01:40:47.201 (2201882383)|HEAP_ALLOCATE|[26]|Bytes:18
+01:40:47.201 (2201905825)|VARIABLE_ASSIGNMENT|[26]|Value|"012G0000001BKQBIA4"
+01:40:47.201 (2201912012)|STATEMENT_EXECUTE|[28]
+01:40:47.201 (2201935019)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+01:40:47.201 (2201961266)|HEAP_ALLOCATE|[24]|Bytes:5
+01:40:47.201 (2201989562)|HEAP_ALLOCATE|[24]|Bytes:20
+01:40:47.202 (2202001030)|VARIABLE_SCOPE_BEGIN|[24]|rt|RecordType|true|false
+01:40:47.202 (2202042701)|VARIABLE_ASSIGNMENT|[24]|rt|{"s":1,"v":{"Id":"012G0000001BKRnIAO","Name":"CoE Internal Discuss (3 more) ...","DeveloperName":"CoE_Internal_Discuss (3 more) ...","SobjectType":"Case"}}|0xd76d6cc
+01:40:47.202 (2202050892)|STATEMENT_EXECUTE|[24]
+01:40:47.202 (2202053651)|STATEMENT_EXECUTE|[25]
+01:40:47.202 (2202067525)|HEAP_ALLOCATE|[25]|Bytes:28
+01:40:47.202 (2202095061)|VARIABLE_ASSIGNMENT|[25]|Key|"Case.CoE_Internal_Di (8 more) ..."
+01:40:47.202 (2202101035)|STATEMENT_EXECUTE|[26]
+01:40:47.202 (2202110371)|HEAP_ALLOCATE|[26]|Bytes:18
+01:40:47.202 (2202133835)|VARIABLE_ASSIGNMENT|[26]|Value|"012G0000001BKRnIAO"
+01:40:47.202 (2202139616)|STATEMENT_EXECUTE|[28]
+01:40:47.202 (2202163742)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+01:40:47.202 (2202190335)|HEAP_ALLOCATE|[24]|Bytes:5
+01:40:47.202 (2202214931)|HEAP_ALLOCATE|[24]|Bytes:20
+01:40:47.202 (2202226198)|VARIABLE_SCOPE_BEGIN|[24]|rt|RecordType|true|false
+01:40:47.202 (2202270874)|VARIABLE_ASSIGNMENT|[24]|rt|{"s":1,"v":{"Id":"012G0000001UNkhIAG","Name":"GR-IT Internal GE Cu (6 more) ...","DeveloperName":"GR_IT_Internal_GE_Cu (6 more) ...","SobjectType":"Account"}}|0x58e93e7a
+01:40:47.202 (2202279181)|STATEMENT_EXECUTE|[24]
+01:40:47.202 (2202281850)|STATEMENT_EXECUTE|[25]
+01:40:47.202 (2202295719)|HEAP_ALLOCATE|[25]|Bytes:34
+01:40:47.202 (2202323554)|VARIABLE_ASSIGNMENT|[25]|Key|"Account.GR_IT_Intern (14 more) ..."
+01:40:47.202 (2202329742)|STATEMENT_EXECUTE|[26]
+01:40:47.202 (2202338997)|HEAP_ALLOCATE|[26]|Bytes:18
+01:40:47.202 (2202362636)|VARIABLE_ASSIGNMENT|[26]|Value|"012G0000001UNkhIAG"
+01:40:47.202 (2202368416)|STATEMENT_EXECUTE|[28]
+01:40:47.202 (2202391773)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+01:40:47.202 (2202417778)|HEAP_ALLOCATE|[24]|Bytes:5
+01:40:47.202 (2202443018)|HEAP_ALLOCATE|[24]|Bytes:20
+01:40:47.202 (2202454257)|VARIABLE_SCOPE_BEGIN|[24]|rt|RecordType|true|false
+01:40:47.202 (2202494922)|VARIABLE_ASSIGNMENT|[24]|rt|{"s":1,"v":{"Id":"012G0000001UNkrIAG","Name":"GR-IT Internal GE Co (5 more) ...","DeveloperName":"GR_IT_Internal_GE_Co (5 more) ...","SobjectType":"Contact"}}|0xecfd6af
+01:40:47.202 (2202502933)|STATEMENT_EXECUTE|[24]
+01:40:47.202 (2202505471)|STATEMENT_EXECUTE|[25]
+01:40:47.202 (2202519154)|HEAP_ALLOCATE|[25]|Bytes:33
+01:40:47.202 (2202546107)|VARIABLE_ASSIGNMENT|[25]|Key|"Contact.GR_IT_Intern (13 more) ..."
+01:40:47.202 (2202552194)|STATEMENT_EXECUTE|[26]
+01:40:47.202 (2202561405)|HEAP_ALLOCATE|[26]|Bytes:18
+01:40:47.202 (2202584782)|VARIABLE_ASSIGNMENT|[26]|Value|"012G0000001UNkrIAG"
+01:40:47.202 (2202590590)|STATEMENT_EXECUTE|[28]
+01:40:47.202 (2202613879)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+01:40:47.202 (2202639721)|HEAP_ALLOCATE|[24]|Bytes:5
+01:40:47.202 (2202664247)|HEAP_ALLOCATE|[24]|Bytes:20
+01:40:47.202 (2202675552)|VARIABLE_SCOPE_BEGIN|[24]|rt|RecordType|true|false
+01:40:47.202 (2202716656)|VARIABLE_ASSIGNMENT|[24]|rt|{"s":1,"v":{"Id":"012G0000001UNlQIAW","Name":"GR-IT Request-Under  (13 more) ...","DeveloperName":"GR_IT_Request_Under_ (13 more) ...","SobjectType":"Case"}}|0x1bad9f61
+01:40:47.202 (2202724711)|STATEMENT_EXECUTE|[24]
+01:40:47.202 (2202727408)|STATEMENT_EXECUTE|[25]
+01:40:47.202 (2202741063)|HEAP_ALLOCATE|[25]|Bytes:38
+01:40:47.202 (2202768314)|VARIABLE_ASSIGNMENT|[25]|Key|"Case.GR_IT_Request_U (18 more) ..."
+01:40:47.202 (2202774478)|STATEMENT_EXECUTE|[26]
+01:40:47.202 (2202783620)|HEAP_ALLOCATE|[26]|Bytes:18
+01:40:47.202 (2202807225)|VARIABLE_ASSIGNMENT|[26]|Value|"012G0000001UNlQIAW"
+01:40:47.202 (2202812964)|STATEMENT_EXECUTE|[28]
+01:40:47.202 (2202836325)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+01:40:47.202 (2202862303)|HEAP_ALLOCATE|[24]|Bytes:5
+01:40:47.202 (2202887013)|HEAP_ALLOCATE|[24]|Bytes:20
+01:40:47.202 (2202898173)|VARIABLE_SCOPE_BEGIN|[24]|rt|RecordType|true|false
+01:40:47.202 (2202938199)|VARIABLE_ASSIGNMENT|[24]|rt|{"s":1,"v":{"Id":"012G0000001UNlVIAW","Name":"GR-IT Accepted Servi (2 more) ...","DeveloperName":"GR_IT_Accepted_Servi (2 more) ...","SobjectType":"Case"}}|0x2056fa6e
+01:40:47.202 (2202946748)|STATEMENT_EXECUTE|[24]
+01:40:47.202 (2202949255)|STATEMENT_EXECUTE|[25]
+01:40:47.202 (2202962791)|HEAP_ALLOCATE|[25]|Bytes:27
+01:40:47.202 (2202990119)|VARIABLE_ASSIGNMENT|[25]|Key|"Case.GR_IT_Accepted_ (7 more) ..."
+01:40:47.202 (2202996172)|STATEMENT_EXECUTE|[26]
+01:40:47.203 (2203005358)|HEAP_ALLOCATE|[26]|Bytes:18
+01:40:47.203 (2203029990)|VARIABLE_ASSIGNMENT|[26]|Value|"012G0000001UNlVIAW"
+01:40:47.203 (2203035775)|STATEMENT_EXECUTE|[28]
+01:40:47.203 (2203058859)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+01:40:47.203 (2203084795)|HEAP_ALLOCATE|[24]|Bytes:5
+01:40:47.203 (2203109620)|HEAP_ALLOCATE|[24]|Bytes:20
+01:40:47.203 (2203120768)|VARIABLE_SCOPE_BEGIN|[24]|rt|RecordType|true|false
+01:40:47.203 (2203161494)|VARIABLE_ASSIGNMENT|[24]|rt|{"s":1,"v":{"Id":"012G0000001UNrEIAW","Name":"APM Assessment Oppor (6 more) ...","DeveloperName":"APM_Assessment_Oppor (6 more) ...","SobjectType":"Opportunity"}}|0x315d1af0
+01:40:47.203 (2203169891)|STATEMENT_EXECUTE|[24]
+01:40:47.203 (2203172647)|STATEMENT_EXECUTE|[25]
+01:40:47.203 (2203186470)|HEAP_ALLOCATE|[25]|Bytes:38
+01:40:47.203 (2203213863)|VARIABLE_ASSIGNMENT|[25]|Key|"Opportunity.APM_Asse (18 more) ..."
+01:40:47.203 (2203219940)|STATEMENT_EXECUTE|[26]
+01:40:47.203 (2203229364)|HEAP_ALLOCATE|[26]|Bytes:18
+01:40:47.203 (2203257372)|VARIABLE_ASSIGNMENT|[26]|Value|"012G0000001UNrEIAW"
+01:40:47.203 (2203263492)|STATEMENT_EXECUTE|[28]
+01:40:47.203 (2203286784)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+01:40:47.203 (2203312917)|HEAP_ALLOCATE|[24]|Bytes:5
+01:40:47.203 (2203337520)|HEAP_ALLOCATE|[24]|Bytes:20
+01:40:47.203 (2203348675)|VARIABLE_SCOPE_BEGIN|[24]|rt|RecordType|true|false
+01:40:47.203 (2203390003)|VARIABLE_ASSIGNMENT|[24]|rt|{"s":1,"v":{"Id":"012G0000001UO8aIAG","Name":"Commercial Shared Se (6 more) ...","DeveloperName":"Commercial_Shared_Se (6 more) ...","SobjectType":"Opportunity"}}|0x4157d8da
+01:40:47.203 (2203398061)|STATEMENT_EXECUTE|[24]
+01:40:47.203 (2203400594)|STATEMENT_EXECUTE|[25]
+01:40:47.203 (2203414415)|HEAP_ALLOCATE|[25]|Bytes:38
+01:40:47.203 (2203441599)|VARIABLE_ASSIGNMENT|[25]|Key|"Opportunity.Commerci (18 more) ..."
+01:40:47.203 (2203447564)|STATEMENT_EXECUTE|[26]
+01:40:47.203 (2203456615)|HEAP_ALLOCATE|[26]|Bytes:18
+01:40:47.203 (2203480121)|VARIABLE_ASSIGNMENT|[26]|Value|"012G0000001UO8aIAG"
+01:40:47.203 (2203485817)|STATEMENT_EXECUTE|[28]
+01:40:47.203 (2203512331)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+01:40:47.203 (2203538626)|HEAP_ALLOCATE|[24]|Bytes:5
+01:40:47.203 (2203565882)|HEAP_ALLOCATE|[24]|Bytes:20
+01:40:47.203 (2203576907)|VARIABLE_SCOPE_BEGIN|[24]|rt|RecordType|true|false
+01:40:47.203 (2203617626)|VARIABLE_ASSIGNMENT|[24]|rt|{"s":1,"v":{"Id":"012G0000001UO9JIAW","Name":"Commercial IT COE Pr (6 more) ...","DeveloperName":"Commercial_IT_COE_Pr (6 more) ...","SobjectType":"Opportunity"}}|0x36f60106
+01:40:47.203 (2203625669)|STATEMENT_EXECUTE|[24]
+01:40:47.203 (2203628580)|STATEMENT_EXECUTE|[25]
+01:40:47.203 (2203642335)|HEAP_ALLOCATE|[25]|Bytes:38
+01:40:47.203 (2203669804)|VARIABLE_ASSIGNMENT|[25]|Key|"Opportunity.Commerci (18 more) ..."
+01:40:47.203 (2203675713)|STATEMENT_EXECUTE|[26]
+01:40:47.203 (2203684981)|HEAP_ALLOCATE|[26]|Bytes:18
+01:40:47.203 (2203708458)|VARIABLE_ASSIGNMENT|[26]|Value|"012G0000001UO9JIAW"
+01:40:47.203 (2203714257)|STATEMENT_EXECUTE|[28]
+01:40:47.203 (2203737385)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+01:40:47.203 (2203763282)|HEAP_ALLOCATE|[24]|Bytes:5
+01:40:47.203 (2203787788)|HEAP_ALLOCATE|[24]|Bytes:20
+01:40:47.203 (2203798837)|VARIABLE_SCOPE_BEGIN|[24]|rt|RecordType|true|false
+01:40:47.203 (2203839155)|VARIABLE_ASSIGNMENT|[24]|rt|{"s":1,"v":{"Id":"012Z00000000psfIAA","Name":"CV Royalty Submissio (1 more) ...","DeveloperName":"CV_Royalty_Submissio (1 more) ...","SobjectType":"Case"}}|0x2164083c
+01:40:47.203 (2203847210)|STATEMENT_EXECUTE|[24]
+01:40:47.203 (2203849796)|STATEMENT_EXECUTE|[25]
+01:40:47.203 (2203863716)|HEAP_ALLOCATE|[25]|Bytes:26
+01:40:47.203 (2203891231)|VARIABLE_ASSIGNMENT|[25]|Key|"Case.CV_Royalty_Subm (6 more) ..."
+01:40:47.203 (2203897304)|STATEMENT_EXECUTE|[26]
+01:40:47.203 (2203906716)|HEAP_ALLOCATE|[26]|Bytes:18
+01:40:47.203 (2203930719)|VARIABLE_ASSIGNMENT|[26]|Value|"012Z00000000psfIAA"
+01:40:47.203 (2203936513)|STATEMENT_EXECUTE|[28]
+01:40:47.203 (2203960255)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+01:40:47.203 (2203986343)|HEAP_ALLOCATE|[24]|Bytes:5
+01:40:47.204 (2204011138)|HEAP_ALLOCATE|[24]|Bytes:20
+01:40:47.204 (2204023219)|VARIABLE_SCOPE_BEGIN|[24]|rt|RecordType|true|false
+01:40:47.204 (2204062503)|VARIABLE_ASSIGNMENT|[24]|rt|{"s":1,"v":{"Id":"012Z00000000pv5IAA","Name":"Consumer Ventures","DeveloperName":"Consumer_Ventures","SobjectType":"Product2"}}|0x78b71c7a
+01:40:47.204 (2204070424)|STATEMENT_EXECUTE|[24]
+01:40:47.204 (2204073038)|STATEMENT_EXECUTE|[25]
+01:40:47.204 (2204086922)|HEAP_ALLOCATE|[25]|Bytes:26
+01:40:47.204 (2204114338)|VARIABLE_ASSIGNMENT|[25]|Key|"Product2.Consumer_Ve (6 more) ..."
+01:40:47.204 (2204120588)|STATEMENT_EXECUTE|[26]
+01:40:47.204 (2204129916)|HEAP_ALLOCATE|[26]|Bytes:18
+01:40:47.204 (2204153045)|VARIABLE_ASSIGNMENT|[26]|Value|"012Z00000000pv5IAA"
+01:40:47.204 (2204158924)|STATEMENT_EXECUTE|[28]
+01:40:47.204 (2204181895)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+01:40:47.204 (2204207761)|HEAP_ALLOCATE|[24]|Bytes:5
+01:40:47.204 (2204232312)|HEAP_ALLOCATE|[24]|Bytes:20
+01:40:47.204 (2204246631)|VARIABLE_SCOPE_BEGIN|[24]|rt|RecordType|true|false
+01:40:47.204 (2204287032)|VARIABLE_ASSIGNMENT|[24]|rt|{"s":1,"v":{"Id":"012Z00000000pzlIAA","Name":"Issue","DeveloperName":"Issue","SobjectType":"CV_Case_Issue_Commen (4 more) ..."}}|0x7598abe
+01:40:47.204 (2204294952)|STATEMENT_EXECUTE|[24]
+01:40:47.204 (2204297511)|STATEMENT_EXECUTE|[25]
+01:40:47.204 (2204311425)|HEAP_ALLOCATE|[25]|Bytes:30
+01:40:47.204 (2204338479)|VARIABLE_ASSIGNMENT|[25]|Key|"CV_Case_Issue_Commen (10 more) ..."
+01:40:47.204 (2204344552)|STATEMENT_EXECUTE|[26]
+01:40:47.204 (2204353744)|HEAP_ALLOCATE|[26]|Bytes:18
+01:40:47.204 (2204377384)|VARIABLE_ASSIGNMENT|[26]|Value|"012Z00000000pzlIAA"
+01:40:47.204 (2204383155)|STATEMENT_EXECUTE|[28]
+01:40:47.204 (2204409849)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+01:40:47.204 (2204439281)|HEAP_ALLOCATE|[24]|Bytes:5
+01:40:47.204 (2204464464)|HEAP_ALLOCATE|[24]|Bytes:20
+01:40:47.204 (2204475681)|VARIABLE_SCOPE_BEGIN|[24]|rt|RecordType|true|false
+01:40:47.204 (2204518008)|VARIABLE_ASSIGNMENT|[24]|rt|{"s":1,"v":{"Id":"012Z00000000pzqIAA","Name":"Comment","DeveloperName":"Comment","SobjectType":"CV_Case_Issue_Commen (4 more) ..."}}|0x1214562
+01:40:47.204 (2204526280)|STATEMENT_EXECUTE|[24]
+01:40:47.204 (2204528828)|STATEMENT_EXECUTE|[25]
+01:40:47.204 (2204542599)|HEAP_ALLOCATE|[25]|Bytes:32
+01:40:47.204 (2204570403)|VARIABLE_ASSIGNMENT|[25]|Key|"CV_Case_Issue_Commen (12 more) ..."
+01:40:47.204 (2204576556)|STATEMENT_EXECUTE|[26]
+01:40:47.204 (2204585805)|HEAP_ALLOCATE|[26]|Bytes:18
+01:40:47.204 (2204609613)|VARIABLE_ASSIGNMENT|[26]|Value|"012Z00000000pzqIAA"
+01:40:47.204 (2204615295)|STATEMENT_EXECUTE|[28]
+01:40:47.204 (2204641696)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+01:40:47.204 (2204668238)|HEAP_ALLOCATE|[24]|Bytes:5
+01:40:47.204 (2204693295)|HEAP_ALLOCATE|[24]|Bytes:20
+01:40:47.204 (2204704359)|VARIABLE_SCOPE_BEGIN|[24]|rt|RecordType|true|false
+01:40:47.204 (2204743763)|VARIABLE_ASSIGNMENT|[24]|rt|{"s":1,"v":{"Id":"012Z00000000q7QIAQ","Name":"CV Licensee","DeveloperName":"CV_Licensee","SobjectType":"Account"}}|0x59892
+01:40:47.204 (2204751755)|STATEMENT_EXECUTE|[24]
+01:40:47.204 (2204754367)|STATEMENT_EXECUTE|[25]
+01:40:47.204 (2204768074)|HEAP_ALLOCATE|[25]|Bytes:19
+01:40:47.204 (2204794651)|VARIABLE_ASSIGNMENT|[25]|Key|"Account.CV_Licensee"
+01:40:47.204 (2204800602)|STATEMENT_EXECUTE|[26]
+01:40:47.204 (2204809610)|HEAP_ALLOCATE|[26]|Bytes:18
+01:40:47.204 (2204833239)|VARIABLE_ASSIGNMENT|[26]|Value|"012Z00000000q7QIAQ"
+01:40:47.204 (2204838777)|STATEMENT_EXECUTE|[28]
+01:40:47.204 (2204863299)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+01:40:47.204 (2204889621)|HEAP_ALLOCATE|[24]|Bytes:5
+01:40:47.204 (2204917923)|HEAP_ALLOCATE|[24]|Bytes:20
+01:40:47.204 (2204929798)|VARIABLE_SCOPE_BEGIN|[24]|rt|RecordType|true|false
+01:40:47.204 (2204969320)|VARIABLE_ASSIGNMENT|[24]|rt|{"s":1,"v":{"Id":"012Z00000000qdvIAA","Name":"CV Brand Change","DeveloperName":"CV_Brand_Change","SobjectType":"Case"}}|0x40911024
+01:40:47.204 (2204977545)|STATEMENT_EXECUTE|[24]
+01:40:47.204 (2204980135)|STATEMENT_EXECUTE|[25]
+01:40:47.204 (2204993798)|HEAP_ALLOCATE|[25]|Bytes:20
+01:40:47.205 (2205023477)|VARIABLE_ASSIGNMENT|[25]|Key|"Case.CV_Brand_Change"
+01:40:47.205 (2205030625)|STATEMENT_EXECUTE|[26]
+01:40:47.205 (2205040537)|HEAP_ALLOCATE|[26]|Bytes:18
+01:40:47.205 (2205067227)|VARIABLE_ASSIGNMENT|[26]|Value|"012Z00000000qdvIAA"
+01:40:47.205 (2205073168)|STATEMENT_EXECUTE|[28]
+01:40:47.205 (2205096810)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+01:40:47.205 (2205122740)|HEAP_ALLOCATE|[24]|Bytes:5
+01:40:47.205 (2205147687)|HEAP_ALLOCATE|[24]|Bytes:20
+01:40:47.205 (2205158923)|VARIABLE_SCOPE_BEGIN|[24]|rt|RecordType|true|false
+01:40:47.205 (2205198019)|VARIABLE_ASSIGNMENT|[24]|rt|{"s":1,"v":{"Id":"012Z00000000qvuIAA","Name":"CV Product Change","DeveloperName":"CV_Product_Change","SobjectType":"Case"}}|0xb566ef2
+01:40:47.205 (2205206051)|STATEMENT_EXECUTE|[24]
+01:40:47.205 (2205208576)|STATEMENT_EXECUTE|[25]
+01:40:47.205 (2205225882)|HEAP_ALLOCATE|[25]|Bytes:22
+01:40:47.205 (2205257938)|VARIABLE_ASSIGNMENT|[25]|Key|"Case.CV_Product_Chan (2 more) ..."
+01:40:47.205 (2205264374)|STATEMENT_EXECUTE|[26]
+01:40:47.205 (2205274180)|HEAP_ALLOCATE|[26]|Bytes:18
+01:40:47.205 (2205298326)|VARIABLE_ASSIGNMENT|[26]|Value|"012Z00000000qvuIAA"
+01:40:47.205 (2205306652)|STATEMENT_EXECUTE|[28]
+01:40:47.205 (2205330338)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+01:40:47.205 (2205359205)|HEAP_ALLOCATE|[24]|Bytes:5
+01:40:47.205 (2205384456)|HEAP_ALLOCATE|[24]|Bytes:20
+01:40:47.205 (2205395667)|VARIABLE_SCOPE_BEGIN|[24]|rt|RecordType|true|false
+01:40:47.205 (2205437850)|VARIABLE_ASSIGNMENT|[24]|rt|{"s":1,"v":{"Id":"012Z00000000rNZIAY","Name":"CV Ancilary Brand","DeveloperName":"CV_Ancilary_Brand","SobjectType":"Case"}}|0xd720af
+01:40:47.205 (2205446167)|STATEMENT_EXECUTE|[24]
+01:40:47.205 (2205448797)|STATEMENT_EXECUTE|[25]
+01:40:47.205 (2205462434)|HEAP_ALLOCATE|[25]|Bytes:22
+01:40:47.205 (2205489732)|VARIABLE_ASSIGNMENT|[25]|Key|"Case.CV_Ancilary_Bra (2 more) ..."
+01:40:47.205 (2205495669)|STATEMENT_EXECUTE|[26]
+01:40:47.205 (2205504840)|HEAP_ALLOCATE|[26]|Bytes:18
+01:40:47.205 (2205528047)|VARIABLE_ASSIGNMENT|[26]|Value|"012Z00000000rNZIAY"
+01:40:47.205 (2205533673)|STATEMENT_EXECUTE|[28]
+01:40:47.205 (2205557141)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+01:40:47.205 (2205583195)|HEAP_ALLOCATE|[24]|Bytes:5
+01:40:47.205 (2205607864)|HEAP_ALLOCATE|[24]|Bytes:20
+01:40:47.205 (2205618945)|VARIABLE_SCOPE_BEGIN|[24]|rt|RecordType|true|false
+01:40:47.205 (2205658036)|VARIABLE_ASSIGNMENT|[24]|rt|{"s":1,"v":{"Id":"012Z00000000rdcIAA","Name":"CV External Legal","DeveloperName":"CV_External_Legal","SobjectType":"Case"}}|0x2cbae92f
+01:40:47.205 (2205665851)|STATEMENT_EXECUTE|[24]
+01:40:47.205 (2205668330)|STATEMENT_EXECUTE|[25]
+01:40:47.205 (2205682163)|HEAP_ALLOCATE|[25]|Bytes:22
+01:40:47.205 (2205709322)|VARIABLE_ASSIGNMENT|[25]|Key|"Case.CV_External_Leg (2 more) ..."
+01:40:47.205 (2205715267)|STATEMENT_EXECUTE|[26]
+01:40:47.205 (2205724619)|HEAP_ALLOCATE|[26]|Bytes:18
+01:40:47.205 (2205747919)|VARIABLE_ASSIGNMENT|[26]|Value|"012Z00000000rdcIAA"
+01:40:47.205 (2205753526)|STATEMENT_EXECUTE|[28]
+01:40:47.205 (2205776517)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+01:40:47.205 (2205802446)|HEAP_ALLOCATE|[24]|Bytes:5
+01:40:47.205 (2205826979)|HEAP_ALLOCATE|[24]|Bytes:20
+01:40:47.205 (2205837988)|VARIABLE_SCOPE_BEGIN|[24]|rt|RecordType|true|false
+01:40:47.205 (2205877161)|VARIABLE_ASSIGNMENT|[24]|rt|{"s":1,"v":{"Id":"012Z00000000rdwIAA","Name":"Agreement","DeveloperName":"Agreement","SobjectType":"Contract"}}|0x6462dcac
+01:40:47.205 (2205884824)|STATEMENT_EXECUTE|[24]
+01:40:47.205 (2205887352)|STATEMENT_EXECUTE|[25]
+01:40:47.205 (2205900908)|HEAP_ALLOCATE|[25]|Bytes:18
+01:40:47.205 (2205927318)|VARIABLE_ASSIGNMENT|[25]|Key|"Contract.Agreement"
+01:40:47.205 (2205933530)|STATEMENT_EXECUTE|[26]
+01:40:47.205 (2205942880)|HEAP_ALLOCATE|[26]|Bytes:18
+01:40:47.205 (2205966352)|VARIABLE_ASSIGNMENT|[26]|Value|"012Z00000000rdwIAA"
+01:40:47.205 (2205972060)|STATEMENT_EXECUTE|[28]
+01:40:47.205 (2205998399)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+01:40:47.206 (2206025070)|HEAP_ALLOCATE|[24]|Bytes:5
+01:40:47.206 (2206054119)|HEAP_ALLOCATE|[24]|Bytes:20
+01:40:47.206 (2206065631)|VARIABLE_SCOPE_BEGIN|[24]|rt|RecordType|true|false
+01:40:47.206 (2206104782)|VARIABLE_ASSIGNMENT|[24]|rt|{"s":1,"v":{"Id":"012Z00000000re1IAA","Name":"Amendment","DeveloperName":"Amendment","SobjectType":"Contract"}}|0x5c7b0f2c
+01:40:47.206 (2206112309)|STATEMENT_EXECUTE|[24]
+01:40:47.206 (2206114797)|STATEMENT_EXECUTE|[25]
+01:40:47.206 (2206131167)|HEAP_ALLOCATE|[25]|Bytes:18
+01:40:47.206 (2206157957)|VARIABLE_ASSIGNMENT|[25]|Key|"Contract.Amendment"
+01:40:47.206 (2206163946)|STATEMENT_EXECUTE|[26]
+01:40:47.206 (2206173323)|HEAP_ALLOCATE|[26]|Bytes:18
+01:40:47.206 (2206197032)|VARIABLE_ASSIGNMENT|[26]|Value|"012Z00000000re1IAA"
+01:40:47.206 (2206202917)|STATEMENT_EXECUTE|[28]
+01:40:47.206 (2206226210)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+01:40:47.206 (2206256119)|HEAP_ALLOCATE|[24]|Bytes:5
+01:40:47.206 (2206281197)|HEAP_ALLOCATE|[24]|Bytes:20
+01:40:47.206 (2206292216)|VARIABLE_SCOPE_BEGIN|[24]|rt|RecordType|true|false
+01:40:47.206 (2206331526)|VARIABLE_ASSIGNMENT|[24]|rt|{"s":1,"v":{"Id":"012Z00000000re6IAA","Name":"Standard Contract","DeveloperName":"Standard_Contract","SobjectType":"Contract"}}|0x65108e54
+01:40:47.206 (2206339497)|STATEMENT_EXECUTE|[24]
+01:40:47.206 (2206342051)|STATEMENT_EXECUTE|[25]
+01:40:47.206 (2206359140)|HEAP_ALLOCATE|[25]|Bytes:26
+01:40:47.206 (2206387127)|VARIABLE_ASSIGNMENT|[25]|Key|"Contract.Standard_Co (6 more) ..."
+01:40:47.206 (2206393034)|STATEMENT_EXECUTE|[26]
+01:40:47.206 (2206402498)|HEAP_ALLOCATE|[26]|Bytes:18
+01:40:47.206 (2206425916)|VARIABLE_ASSIGNMENT|[26]|Value|"012Z00000000re6IAA"
+01:40:47.206 (2206431583)|STATEMENT_EXECUTE|[28]
+01:40:47.206 (2206455256)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+01:40:47.206 (2206481403)|HEAP_ALLOCATE|[24]|Bytes:5
+01:40:47.206 (2206509471)|HEAP_ALLOCATE|[24]|Bytes:20
+01:40:47.206 (2206520681)|VARIABLE_SCOPE_BEGIN|[24]|rt|RecordType|true|false
+01:40:47.206 (2206562236)|VARIABLE_ASSIGNMENT|[24]|rt|{"s":1,"v":{"Id":"012Z00000000sTnIAI","Name":"CV Internal Legal","DeveloperName":"CV_Internal_Legal","SobjectType":"Case"}}|0x1e98f048
+01:40:47.206 (2206570199)|STATEMENT_EXECUTE|[24]
+01:40:47.206 (2206572728)|STATEMENT_EXECUTE|[25]
+01:40:47.206 (2206586405)|HEAP_ALLOCATE|[25]|Bytes:22
+01:40:47.206 (2206613642)|VARIABLE_ASSIGNMENT|[25]|Key|"Case.CV_Internal_Leg (2 more) ..."
+01:40:47.206 (2206619660)|STATEMENT_EXECUTE|[26]
+01:40:47.206 (2206628926)|HEAP_ALLOCATE|[26]|Bytes:18
+01:40:47.206 (2206652384)|VARIABLE_ASSIGNMENT|[26]|Value|"012Z00000000sTnIAI"
+01:40:47.206 (2206658088)|STATEMENT_EXECUTE|[28]
+01:40:47.206 (2206681121)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+01:40:47.206 (2206707136)|HEAP_ALLOCATE|[24]|Bytes:5
+01:40:47.206 (2206732329)|HEAP_ALLOCATE|[24]|Bytes:20
+01:40:47.206 (2206743451)|VARIABLE_SCOPE_BEGIN|[24]|rt|RecordType|true|false
+01:40:47.206 (2206782160)|VARIABLE_ASSIGNMENT|[24]|rt|{"s":1,"v":{"Id":"012Z00000000tA3IAI","Name":"CV New Product","DeveloperName":"CV_New_Product","SobjectType":"Case"}}|0x6c6dd88b
+01:40:47.206 (2206789978)|STATEMENT_EXECUTE|[24]
+01:40:47.206 (2206792564)|STATEMENT_EXECUTE|[25]
+01:40:47.206 (2206806283)|HEAP_ALLOCATE|[25]|Bytes:19
+01:40:47.206 (2206832653)|VARIABLE_ASSIGNMENT|[25]|Key|"Case.CV_New_Product"
+01:40:47.206 (2206838599)|STATEMENT_EXECUTE|[26]
+01:40:47.206 (2206847819)|HEAP_ALLOCATE|[26]|Bytes:18
+01:40:47.206 (2206871085)|VARIABLE_ASSIGNMENT|[26]|Value|"012Z00000000tA3IAI"
+01:40:47.206 (2206876896)|STATEMENT_EXECUTE|[28]
+01:40:47.206 (2206900031)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+01:40:47.206 (2206928722)|HEAP_ALLOCATE|[24]|Bytes:5
+01:40:47.206 (2206953562)|HEAP_ALLOCATE|[24]|Bytes:20
+01:40:47.206 (2206964691)|VARIABLE_SCOPE_BEGIN|[24]|rt|RecordType|true|false
+01:40:47.207 (2207007505)|VARIABLE_ASSIGNMENT|[24]|rt|{"s":1,"v":{"Id":"012Z0000000584QIAQ","Name":"Royalty Payment","DeveloperName":"RoyaltyPayment","SobjectType":"CV_Royalty_Payment_T (10 more) ..."}}|0x68eba845
+01:40:47.207 (2207016524)|STATEMENT_EXECUTE|[24]
+01:40:47.207 (2207019117)|STATEMENT_EXECUTE|[25]
+01:40:47.207 (2207032992)|HEAP_ALLOCATE|[25]|Bytes:45
+01:40:47.207 (2207060783)|VARIABLE_ASSIGNMENT|[25]|Key|"CV_Royalty_Payment_T (25 more) ..."
+01:40:47.207 (2207066808)|STATEMENT_EXECUTE|[26]
+01:40:47.207 (2207075887)|HEAP_ALLOCATE|[26]|Bytes:18
+01:40:47.207 (2207099114)|VARIABLE_ASSIGNMENT|[26]|Value|"012Z0000000584QIAQ"
+01:40:47.207 (2207104859)|STATEMENT_EXECUTE|[28]
+01:40:47.207 (2207128409)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+01:40:47.207 (2207158095)|HEAP_ALLOCATE|[24]|Bytes:5
+01:40:47.207 (2207191979)|VARIABLE_ASSIGNMENT|[24]|rt|null|
+01:40:47.207 (2207202653)|SYSTEM_MODE_EXIT|false
+01:40:47.207 (2207219528)|METHOD_EXIT|[12]|Cache
+01:40:47.207 (2207270283)|METHOD_ENTRY|[135]|01pZ0000000LI6b|Cache.RecordTypeId(String)
+01:40:47.207 (2207313385)|VARIABLE_SCOPE_BEGIN|[33]|RecordTypeName|String|false|false
+01:40:47.207 (2207340255)|VARIABLE_ASSIGNMENT|[33]|RecordTypeName|"Contract.Agreement"
+01:40:47.207 (2207357793)|SYSTEM_MODE_ENTER|false
+01:40:47.207 (2207364585)|HEAP_ALLOCATE|[34]|Bytes:5
+01:40:47.207 (2207370572)|STATEMENT_EXECUTE|[33]
+01:40:47.207 (2207376147)|STATEMENT_EXECUTE|[34]
+01:40:47.207 (2207389777)|VARIABLE_SCOPE_BEGIN|[34]|result|String|false|false
+01:40:47.207 (2207413137)|VARIABLE_ASSIGNMENT|[34]|result|""
+01:40:47.207 (2207500467)|STATEMENT_EXECUTE|[36]
+01:40:47.207 (2207504151)|STATEMENT_EXECUTE|[37]
+01:40:47.207 (2207581567)|VARIABLE_ASSIGNMENT|[37]|result|"012Z00000000rdwIAA"
+01:40:47.207 (2207589038)|STATEMENT_EXECUTE|[40]
+01:40:47.207 (2207594564)|SYSTEM_MODE_EXIT|false
+01:40:47.207 (2207605342)|METHOD_EXIT|[135]|01pZ0000000LI6b|Cache.RecordTypeId(String)
+01:40:47.207 (2207624835)|HEAP_ALLOCATE|[135]|Bytes:4
+01:40:47.207 (2207633571)|VARIABLE_SCOPE_BEGIN|[135]|agreementId|Id|false|false
+01:40:47.207 (2207773175)|VARIABLE_ASSIGNMENT|[135]|agreementId|"012Z00000000rdwIAA"
+01:40:47.207 (2207782193)|STATEMENT_EXECUTE|[136]
+01:40:47.207 (2207792124)|HEAP_ALLOCATE|[136]|Bytes:4
+01:40:47.207 (2207840949)|VARIABLE_SCOPE_BEGIN|[136]|cAgreementsList|List<Contract>|true|false
+01:40:47.207 (2207853802)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+01:40:47.207 (2207887748)|VARIABLE_ASSIGNMENT|[136]|cAgreementsList|{"s":1,"v":[]}|0x5f396e2d
+01:40:47.208 (2208036923)|HEAP_ALLOCATE|[137]|Bytes:5
+01:40:47.208 (2208071486)|VARIABLE_SCOPE_BEGIN|[137]|c|Contract|true|false
+01:40:47.209 (2209406881)|VARIABLE_ASSIGNMENT|[137]|c|{"CustomerSignedDate":"2016-10-12T00:00:00.000Z","LastModifiedDate":"2015-10-16T05:40:46.000Z","ContractNumber":"CN-00000317","Description":"Sec 2.01 - License t (841 more) ...","AccountId":"001Z000000uoWXwIAM","Agreement_Type__c":"Trademark","BillingCountryCode":"US","ContractTerm":45,"StatusCode":"Draft","Name":"Siva Test Contract - (11 more) ...","StartDate":"2011-11-12T00:00:00.000Z","Audit_Rights__c":"4.05 - Licensee shal (583 more) ...","Calculate_Next_Royal (13 more) ...":false,"OwnerId":"005Z0000003DoV8IAK","CreatedById":"005Z0000003DoV8IAK","Rights__c":"Sec 2.01 - License t (841 more) ...","As_Of_Date__c":"2015-10-16T00:00:00.000Z","Sales_Report_Due_Dat (9 more) ...":"a2xZ0000002IjLdIAK","RecordTypeId":"012Z00000000rdwIAA","ShippingCountry":"United States","CustomerSignedTitle":"Director","Expiration_Countdown (3 more) ...":-331,"CV_Customer_Signed_B (4 more) ...":"George Tsai","Contract_Terms__c":"4.01 Minimum payment (66 more) ...","Status":"Draft","IsDeleted":false,"Termination_Clause__ (1 more) ...":"Sec. 603 - In the ev (750 more) ...","EndDate":"2014-11-19T00:00:00.000Z","SystemModstamp":"2015-10-16T05:40:46.000Z","Royalty_Payment_Due_ (12 more) ...":"a2xZ0000002IjLdIAK","ShippingCountryCode":"US","BillingCountry":"United States","AIF__c":"84.0099","CreatedDate":"2015-10-16T05:40:46.000Z","CompanySignedDate":"2015-10-10T00:00:00.000Z","Id":"800Z00000003MRdIAM","LastModifiedById":"005Z0000003DoV8IAK","Calculate_Next_Sales (10 more) ...":false}|0x6ab57ebc
+01:40:47.209 (2209424960)|STATEMENT_EXECUTE|[137]
+01:40:47.209 (2209538881)|STATEMENT_EXECUTE|[138]
+01:40:47.209 (2209542883)|STATEMENT_EXECUTE|[139]
+01:40:47.209 (2209591909)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+01:40:47.209 (2209623448)|HEAP_ALLOCATE|[137]|Bytes:5
+01:40:47.209 (2209660559)|VARIABLE_ASSIGNMENT|[137]|c|null|
+01:40:47.209 (2209667077)|STATEMENT_EXECUTE|[142]
+01:40:47.209 (2209678111)|HEAP_ALLOCATE|[142]|Bytes:17
+01:40:47.210 (2210808353)|HEAP_ALLOCATE|[142]|Bytes:5653
+01:40:47.210 (2210843966)|HEAP_ALLOCATE|[142]|Bytes:5670
+01:40:47.210 (2210894010)|USER_DEBUG|[142]|DEBUG|cAgreementsList: (Contract:{Id=800Z00000003MRdIAM, AccountId=001Z000000uoWXwIAM, OwnerExpirationNotice=null, StartDate=2011-11-12 00:00:00, EndDate=2014-11-19 00:00:00, BillingStreet=null, BillingCity=null, BillingState=null, BillingPostalCode=null, BillingCountry=United States, BillingStateCode=null, BillingCountryCode=US, BillingLatitude=null, BillingLongitude=null, BillingGeocodeAccuracy=null, ShippingStreet=null, ShippingCity=null, ShippingState=null, ShippingPostalCode=null, ShippingCountry=United States, ShippingStateCode=null, ShippingCountryCode=US, ShippingLatitude=null, ShippingLongitude=null, ShippingGeocodeAccuracy=null, ContractTerm=45, OwnerId=005Z0000003DoV8IAK, Status=Draft, CompanySignedId=null, CompanySignedDate=2015-10-10 00:00:00, CustomerSignedId=null, CustomerSignedTitle=Director, CustomerSignedDate=2016-10-12 00:00:00, SpecialTerms=null, ActivatedById=null, ActivatedDate=null, StatusCode=Draft, Description=Sec 2.01 - License to use the GE Mark upon and in connection with the manufacture, display, sale, marketing, advertising, promotion and distribution of Licensed Products sold by Licensee in the Licensed Channel of Distribution.  Said right to manufacture shall include the right to subcontract with Vendoes to have Licensed Products manufactured for sale to Licensee.  * Appendix B  Holiday Products Include - Holiday string sets, Halloween string sets, Party string sets, Replacement bulbs and fuses, Candle and tree toppers, Pre-lit trees, and Holiday decor.  Holiday Accessories include: green seasonable products such as indoor cords, outdoor cords, speciality cords, cord assortments, cord accessories, electrical taps, electrical adapters, power strips, surge protectors, flood holders, yardstakes,timers, lighting controls, nightlights, and touch lights., RecordTypeId=012Z00000000rdwIAA, Name=Siva Test Contract - Do not use, IsDeleted=false, ContractNumber=CN-00000317, LastApprovedDate=null, CreatedDate=2015-10-16 05:40:46, CreatedById=005Z0000003DoV8IAK, LastModifiedDate=2015-10-16 05:40:46, LastModifiedById=005Z0000003DoV8IAK, SystemModstamp=2015-10-16 05:40:46, LastActivityDate=null, LastViewedDate=null, LastReferencedDate=null, Audit_Rights__c=4.05 - Licensee shall keep accurate books of account and records coverin all transactions and Licensor or its designee shall have the right at all reasonable business hours upon 48 hours advanced notice to Licensee to make complete verifications, examinations and audits of said books of account and records and all other documents and material in the possession or under the control of Licensee relating to the Agreement and shall have free and full access thereto for said purpose and for the purpose of making extracts therefrom - these audits can be used to resolve claims relating to the agreement., Brand_Usage_Agreement__c=null, Contract_Terms__c=4.01 Minimum payments of $5 million in installments.  4.02 Royalty of 5% of net sales., GE_Business_Unit__c=null, Renewal_Date__c=null, Renewal_Terms__c=null, Rights__c=Sec 2.01 - License to use the GE Mark upon and in connection with the manufacture, display, sale, marketing, advertising, promotion and distribution of Licensed Products sold by Licensee in the Licensed Channel of Distribution.  Said right to manufacture shall include the right to subcontract with Vendoes to have Licensed Products manufactured for sale to Licensee.  * Appendix B  Holiday Products Include - Holiday string sets, Halloween string sets, Party string sets, Replacement bulbs and fuses, Candle and tree toppers, Pre-lit trees, and Holiday decor.  Holiday Accessories include: green seasonable products such as indoor cords, outdoor cords, speciality cords, cord assortments, cord accessories, electrical taps, electrical adapters, power strips, surge protectors, flood holders, yardstakes,timers, lighting controls, nightlights, and touch lights., Termination_Clause__c=Sec. 603 - In the event that a party material breaches an obligation under the Agreement and such breach is not remedied within 30 days after written notice from the other party specifying such breach, such other party shall have the right at any time thereafter to terminate the Agreement by giving written notice of termination to the breaching party. If either party becomes insolvent, executes an assignment for benefit of creditors, ceases operations, dissoles, or becomes subject to bankruptcy or receivership proceedings, the Agreement shall automatically terminate. 6.04  Licensor shall in addition have the right to terminate the Agreement immediately upon giving written notice to Licensee in the event that ay any time a product recall of any Licensed Product, Unique_Contract_Terms__c=null, AIF__c=84.0099, Agreement_Type__c=Trademark, Expiration_Countdown__c=-331, As_Of_Date__c=2015-10-16 00:00:00, Renewal_Countdown__c=null, CV_Company_Signed_By__c=null, CV_Customer_Signed_By__c=George Tsai, Referenced_Agreement__c=null, Royalty_Report_Due_Date__c=null, Payment_Due_Date__c=null, CV_Inception_To_Date__c=null, CV_Planned_Royalty_Revenue__c=null, CV_Previous_YTD_Royalty_Payment__c=null, CV_Previous_Year_To_Date__c=null, CV_Variance_vs_Plan__c=null, CV_YTD_Royalty_Payment__c=null, CV_YTD_Variance__c=null, CV_Year_To_Date__c=null, Royalty_Payment_Due_Date_Rule__c=a2xZ0000002IjLdIAK, Sales_Report_Due_Date_Rule__c=a2xZ0000002IjLdIAK, Next_Royalty_Payment__c=null, Next_Sales_Report__c=null, Calculate_Next_Royalty_Payment__c=false, Calculate_Next_Sales_Report__c=false, Next_Royalty_Payment_Due_Date__c=null, Next_Sales_Report_Due_Date__c=null, Days_Until_Due_of_Next_Royalty_Payment__c=null, Days_Until_Due_of_next_Sales_Report__c=null})
+01:40:47.210 (2210929831)|STATEMENT_EXECUTE|[143]
+01:40:47.210 (2210938973)|HEAP_ALLOCATE|[143]|Bytes:35
+01:40:47.210 (2210984008)|USER_DEBUG|[143]|DEBUG|ContractManager - getAgreements end
+01:40:47.210 (2210996486)|STATEMENT_EXECUTE|[145]
+01:40:47.211 (2211002581)|SYSTEM_MODE_EXIT|true
+01:40:47.211 (2211015786)|METHOD_EXIT|[48]|01pZ0000000LUX6|ContractManager.getAgreements(List<Contract>)
+01:40:47.212 (2212079310)|VARIABLE_ASSIGNMENT|[48]|cAgreementContractList|{"s":1,"v":[{"CustomerSignedDate":"2016-10-12T00:00:00.000Z","LastModifiedDate":"2015-10-16T05:40:46.000Z","ContractNumber":"CN-00000317","Description":"Sec 2.01 - License t (841 more) ...","AccountId":"001Z000000uoWXwIAM","Agreement_Type__c":"Trademark","BillingCountryCode":"US","ContractTerm":45,"StatusCode":"Draft","Name":"Siva Test Contract - (11 more) ...","StartDate":"2011-11-12T00:00:00.000Z","Audit_Rights__c":"4.05 - Licensee shal (583 more) ...","Calculate_Next_Royal (13 more) ...":false,"OwnerId":"005Z0000003DoV8IAK","CreatedById":"005Z0000003DoV8IAK","Rights__c":"Sec 2.01 - License t (841 more) ...","As_Of_Date__c":"2015-10-16T00:00:00.000Z","Sales_Report_Due_Dat (9 more) ...":"a2xZ0000002IjLdIAK","RecordTypeId":"012Z00000000rdwIAA","ShippingCountry":"United States","CustomerSignedTitle":"Director","Expiration_Countdown (3 more) ...":-331,"CV_Customer_Signed_B (4 more) ...":"George Tsai","Contract_Terms__c":"4.01 Minimum payment (66 more) ...","Status":"Draft","IsDeleted":false,"Termination_Clause__ (1 more) ...":"Sec. 603 - In the ev (750 more) ...","EndDate":"2014-11-19T00:00:00.000Z","SystemModstamp":"2015-10-16T05:40:46.000Z","Royalty_Payment_Due_ (12 more) ...":"a2xZ0000002IjLdIAK","ShippingCountryCode":"US","BillingCountry":"United States","AIF__c":"84.0099","CreatedDate":"2015-10-16T05:40:46.000Z","CompanySignedDate":"2015-10-10T00:00:00.000Z","Id":"800Z00000003MRdIAM","LastModifiedById":"005Z0000003DoV8IAK","Calculate_Next_Sales (10 more) ...":false}]}|0x5f396e2d
+01:40:47.212 (2212097591)|STATEMENT_EXECUTE|[49]
+01:40:47.212 (2212115036)|HEAP_ALLOCATE|[49]|Bytes:4
+01:40:47.212 (2212176834)|VARIABLE_SCOPE_BEGIN|[49]|agreementIdSet|Set<Id>|true|false
+01:40:47.212 (2212237805)|VARIABLE_ASSIGNMENT|[49]|agreementIdSet|{"s":1,"v":[]}|0x32627764
+01:40:47.212 (2212308636)|HEAP_ALLOCATE|[50]|Bytes:5
+01:40:47.212 (2212335680)|VARIABLE_SCOPE_BEGIN|[50]|c|Contract|true|false
+01:40:47.213 (2213375966)|VARIABLE_ASSIGNMENT|[50]|c|{"CustomerSignedDate":"2016-10-12T00:00:00.000Z","LastModifiedDate":"2015-10-16T05:40:46.000Z","ContractNumber":"CN-00000317","Description":"Sec 2.01 - License t (841 more) ...","AccountId":"001Z000000uoWXwIAM","Agreement_Type__c":"Trademark","BillingCountryCode":"US","ContractTerm":45,"StatusCode":"Draft","Name":"Siva Test Contract - (11 more) ...","StartDate":"2011-11-12T00:00:00.000Z","Audit_Rights__c":"4.05 - Licensee shal (583 more) ...","Calculate_Next_Royal (13 more) ...":false,"OwnerId":"005Z0000003DoV8IAK","CreatedById":"005Z0000003DoV8IAK","Rights__c":"Sec 2.01 - License t (841 more) ...","As_Of_Date__c":"2015-10-16T00:00:00.000Z","Sales_Report_Due_Dat (9 more) ...":"a2xZ0000002IjLdIAK","RecordTypeId":"012Z00000000rdwIAA","ShippingCountry":"United States","CustomerSignedTitle":"Director","Expiration_Countdown (3 more) ...":-331,"CV_Customer_Signed_B (4 more) ...":"George Tsai","Contract_Terms__c":"4.01 Minimum payment (66 more) ...","Status":"Draft","IsDeleted":false,"Termination_Clause__ (1 more) ...":"Sec. 603 - In the ev (750 more) ...","EndDate":"2014-11-19T00:00:00.000Z","SystemModstamp":"2015-10-16T05:40:46.000Z","Royalty_Payment_Due_ (12 more) ...":"a2xZ0000002IjLdIAK","ShippingCountryCode":"US","BillingCountry":"United States","AIF__c":"84.0099","CreatedDate":"2015-10-16T05:40:46.000Z","CompanySignedDate":"2015-10-10T00:00:00.000Z","Id":"800Z00000003MRdIAM","LastModifiedById":"005Z0000003DoV8IAK","Calculate_Next_Sales (10 more) ...":false}|0x6ab57ebc
+01:40:47.213 (2213394163)|STATEMENT_EXECUTE|[50]
+01:40:47.213 (2213397345)|STATEMENT_EXECUTE|[51]
+01:40:47.213 (2213475610)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+01:40:47.213 (2213514473)|HEAP_ALLOCATE|[50]|Bytes:5
+01:40:47.213 (2213555515)|VARIABLE_ASSIGNMENT|[50]|c|null|
+01:40:47.213 (2213562485)|STATEMENT_EXECUTE|[53]
+01:40:47.213 (2213585594)|METHOD_ENTRY|[53]|01pZ0000000LUX6|ContractManager.getContractswRelListsbycId(Set<Id>)
+01:40:47.213 (2213624896)|VARIABLE_SCOPE_BEGIN|[60]|contractIds|Set<Id>|true|false
+01:40:47.213 (2213661033)|VARIABLE_ASSIGNMENT|[60]|contractIds|{"s":1,"v":["800Z00000003MRdIAM"]}|0x32627764
+01:40:47.213 (2213674233)|SYSTEM_MODE_ENTER|true
+01:40:47.213 (2213680508)|HEAP_ALLOCATE|[62]|Bytes:5
+01:40:47.213 (2213686704)|STATEMENT_EXECUTE|[60]
+01:40:47.213 (2213689431)|STATEMENT_EXECUTE|[62]
+01:40:47.213 (2213697478)|HEAP_ALLOCATE|[62]|Bytes:50
+01:40:47.213 (2213742858)|USER_DEBUG|[62]|DEBUG|ContractManager - getContractswRelListsbycId start
+01:40:47.213 (2213756319)|STATEMENT_EXECUTE|[63]
+01:40:47.213 (2213764385)|HEAP_ALLOCATE|[63]|Bytes:13
+01:40:47.213 (2213819225)|HEAP_ALLOCATE|[63]|Bytes:20
+01:40:47.213 (2213845237)|HEAP_ALLOCATE|[63]|Bytes:33
+01:40:47.213 (2213869453)|USER_DEBUG|[63]|DEBUG|contractIds: {800Z00000003MRdIAM}
+01:40:47.213 (2213880735)|STATEMENT_EXECUTE|[64]
+01:40:47.213 (2213893664)|METHOD_ENTRY|[64]|01pZ0000000LI6b|Cache.RecordTypeId(String)
+01:40:47.213 (2213918265)|VARIABLE_SCOPE_BEGIN|[33]|RecordTypeName|String|false|false
+01:40:47.213 (2213944478)|VARIABLE_ASSIGNMENT|[33]|RecordTypeName|"Contract.Agreement"
+01:40:47.213 (2213960758)|SYSTEM_MODE_ENTER|false
+01:40:47.213 (2213967472)|HEAP_ALLOCATE|[34]|Bytes:5
+01:40:47.213 (2213973550)|STATEMENT_EXECUTE|[33]
+01:40:47.213 (2213976082)|STATEMENT_EXECUTE|[34]
+01:40:47.213 (2213982067)|VARIABLE_SCOPE_BEGIN|[34]|result|String|false|false
+01:40:47.214 (2214005208)|VARIABLE_ASSIGNMENT|[34]|result|""
+01:40:47.214 (2214044979)|STATEMENT_EXECUTE|[36]
+01:40:47.214 (2214048345)|STATEMENT_EXECUTE|[37]
+01:40:47.214 (2214093595)|VARIABLE_ASSIGNMENT|[37]|result|"012Z00000000rdwIAA"
+01:40:47.214 (2214100464)|STATEMENT_EXECUTE|[40]
+01:40:47.214 (2214105821)|SYSTEM_MODE_EXIT|false
+01:40:47.214 (2214115545)|METHOD_EXIT|[64]|01pZ0000000LI6b|Cache.RecordTypeId(String)
+01:40:47.214 (2214126448)|HEAP_ALLOCATE|[64]|Bytes:4
+01:40:47.214 (2214134291)|VARIABLE_SCOPE_BEGIN|[64]|agreementId|Id|false|false
+01:40:47.214 (2214221729)|VARIABLE_ASSIGNMENT|[64]|agreementId|"012Z00000000rdwIAA"
+01:40:47.214 (2214230733)|STATEMENT_EXECUTE|[65]
+01:40:47.214 (2214238988)|HEAP_ALLOCATE|[65]|Bytes:4
+01:40:47.214 (2214250042)|HEAP_ALLOCATE|[65]|Bytes:270
+01:40:47.214 (2214256677)|HEAP_ALLOCATE|[65]|Bytes:4
+01:40:47.214 (2214264363)|HEAP_ALLOCATE|[65]|Bytes:7
+01:40:47.214 (2214961271)|SOQL_EXECUTE_BEGIN|[65]|Aggregations:2|SELECT Id, Name, (SELECT Id, isReceived__c, ActualDate__c FROM CVRoyaltyPaymentTracking__r ORDER BY EndDate__c ASC NULLS FIRST), (SELECT Id, isReceived__c, ActualDate__c FROM CVSalesReportTracking__r ORDER BY EndDate__c ASC NULLS FIRST) FROM Contract WHERE Id = :tmpVar1
+01:40:47.237 (2237468612)|SOQL_EXECUTE_END|[65]|Rows:1
+01:40:47.237 (2237517303)|HEAP_ALLOCATE|[65]|Bytes:8
+01:40:47.237 (2237545994)|HEAP_ALLOCATE|[65]|Bytes:68
+01:40:47.237 (2237598864)|HEAP_ALLOCATE|[65]|Bytes:8
+01:40:47.237 (2237652851)|HEAP_ALLOCATE|[65]|Bytes:12
+01:40:47.237 (2237667539)|HEAP_ALLOCATE|[65]|Bytes:4
+01:40:47.237 (2237684965)|VARIABLE_SCOPE_BEGIN|[65]|response|Map<Id,Contract>|true|false
+01:40:47.237 (2237785891)|VARIABLE_ASSIGNMENT|[65]|response|{"s":1,"v":{"800Z00000003MRdIAM":{"s":2,"v":{"Id":"800Z00000003MRdIAM","Name":"Siva Test Contract - (11 more) ..."}}}}|0x258e430
+01:40:47.237 (2237797717)|STATEMENT_EXECUTE|[72]
+01:40:47.237 (2237813789)|HEAP_ALLOCATE|[72]|Bytes:10
+01:40:47.237 (2237966535)|HEAP_ALLOCATE|[72]|Bytes:91
+01:40:47.238 (2238000924)|HEAP_ALLOCATE|[72]|Bytes:101
+01:40:47.238 (2238049206)|USER_DEBUG|[72]|DEBUG|response: {800Z00000003MRdIAM=Contract:{Id=800Z00000003MRdIAM, Name=Siva Test Contract - Do not use}}
+01:40:47.238 (2238063151)|STATEMENT_EXECUTE|[73]
+01:40:47.238 (2238072180)|HEAP_ALLOCATE|[73]|Bytes:48
+01:40:47.238 (2238116442)|USER_DEBUG|[73]|DEBUG|ContractManager - getContractswRelListsbycId end
+01:40:47.238 (2238128951)|STATEMENT_EXECUTE|[74]
+01:40:47.238 (2238136586)|SYSTEM_MODE_EXIT|true
+01:40:47.238 (2238918906)|METHOD_EXIT|[53]|01pZ0000000LUX6|ContractManager.getContractswRelListsbycId(Set<Id>)
+01:40:47.238 (2238977645)|VARIABLE_ASSIGNMENT|[53]|agreementsMap|{"s":1,"v":{"800Z00000003MRdIAM":{"s":2,"v":{"Id":"800Z00000003MRdIAM","Name":"Siva Test Contract - (11 more) ..."}}}}|0x258e430
+01:40:47.238 (2238986456)|STATEMENT_EXECUTE|[54]
+01:40:47.239 (2239019341)|METHOD_ENTRY|[54]|01pZ0000000Pym5|TH_Contract_CVManageSchedules.getChangedDueDateRuleIds(List<Contract>)
+01:40:47.239 (2239060455)|VARIABLE_SCOPE_BEGIN|[246]|this|TH_Contract_CVManageSchedules|true|false
+01:40:47.239 (2239128368)|VARIABLE_ASSIGNMENT|[246]|this|{"contractNewList":"0x30963dd4","contractNewMap":"0xb241703"}|0x47045d73
+01:40:47.239 (2239138646)|VARIABLE_SCOPE_BEGIN|[246]|cList|List<Contract>|true|false
+01:40:47.240 (2240403717)|VARIABLE_ASSIGNMENT|[246]|cList|{"s":1,"v":[{"CustomerSignedDate":"2016-10-12T00:00:00.000Z","LastModifiedDate":"2015-10-16T05:40:46.000Z","ContractNumber":"CN-00000317","Description":"Sec 2.01 - License t (841 more) ...","AccountId":"001Z000000uoWXwIAM","Agreement_Type__c":"Trademark","BillingCountryCode":"US","ContractTerm":45,"StatusCode":"Draft","Name":"Siva Test Contract - (11 more) ...","StartDate":"2011-11-12T00:00:00.000Z","Audit_Rights__c":"4.05 - Licensee shal (583 more) ...","Calculate_Next_Royal (13 more) ...":false,"OwnerId":"005Z0000003DoV8IAK","CreatedById":"005Z0000003DoV8IAK","Rights__c":"Sec 2.01 - License t (841 more) ...","As_Of_Date__c":"2015-10-16T00:00:00.000Z","Sales_Report_Due_Dat (9 more) ...":"a2xZ0000002IjLdIAK","RecordTypeId":"012Z00000000rdwIAA","ShippingCountry":"United States","CustomerSignedTitle":"Director","Expiration_Countdown (3 more) ...":-331,"CV_Customer_Signed_B (4 more) ...":"George Tsai","Contract_Terms__c":"4.01 Minimum payment (66 more) ...","Status":"Draft","IsDeleted":false,"Termination_Clause__ (1 more) ...":"Sec. 603 - In the ev (750 more) ...","EndDate":"2014-11-19T00:00:00.000Z","SystemModstamp":"2015-10-16T05:40:46.000Z","Royalty_Payment_Due_ (12 more) ...":"a2xZ0000002IjLdIAK","ShippingCountryCode":"US","BillingCountry":"United States","AIF__c":"84.0099","CreatedDate":"2015-10-16T05:40:46.000Z","CompanySignedDate":"2015-10-10T00:00:00.000Z","Id":"800Z00000003MRdIAM","LastModifiedById":"005Z0000003DoV8IAK","Calculate_Next_Sales (10 more) ...":false}]}|0x5f396e2d
+01:40:47.240 (2240433034)|HEAP_ALLOCATE|[247]|Bytes:5
+01:40:47.240 (2240440955)|STATEMENT_EXECUTE|[246]
+01:40:47.240 (2240443928)|STATEMENT_EXECUTE|[247]
+01:40:47.240 (2240452444)|HEAP_ALLOCATE|[247]|Bytes:62
+01:40:47.240 (2240499299)|USER_DEBUG|[247]|DEBUG|TH_Contract_CVManageSchedules - getChangedDueDateRuleIds start
+01:40:47.240 (2240512812)|STATEMENT_EXECUTE|[248]
+01:40:47.240 (2240523813)|HEAP_ALLOCATE|[248]|Bytes:4
+01:40:47.240 (2240581504)|VARIABLE_SCOPE_BEGIN|[248]|ddrIdSet|Set<Id>|true|false
+01:40:47.240 (2240627577)|VARIABLE_ASSIGNMENT|[248]|ddrIdSet|{"s":1,"v":[]}|0x280b7a70
+01:40:47.240 (2240709188)|HEAP_ALLOCATE|[249]|Bytes:5
+01:40:47.240 (2240745692)|VARIABLE_SCOPE_BEGIN|[249]|c|Contract|true|false
+01:40:47.241 (2241801813)|VARIABLE_ASSIGNMENT|[249]|c|{"CustomerSignedDate":"2016-10-12T00:00:00.000Z","LastModifiedDate":"2015-10-16T05:40:46.000Z","ContractNumber":"CN-00000317","Description":"Sec 2.01 - License t (841 more) ...","AccountId":"001Z000000uoWXwIAM","Agreement_Type__c":"Trademark","BillingCountryCode":"US","ContractTerm":45,"StatusCode":"Draft","Name":"Siva Test Contract - (11 more) ...","StartDate":"2011-11-12T00:00:00.000Z","Audit_Rights__c":"4.05 - Licensee shal (583 more) ...","Calculate_Next_Royal (13 more) ...":false,"OwnerId":"005Z0000003DoV8IAK","CreatedById":"005Z0000003DoV8IAK","Rights__c":"Sec 2.01 - License t (841 more) ...","As_Of_Date__c":"2015-10-16T00:00:00.000Z","Sales_Report_Due_Dat (9 more) ...":"a2xZ0000002IjLdIAK","RecordTypeId":"012Z00000000rdwIAA","ShippingCountry":"United States","CustomerSignedTitle":"Director","Expiration_Countdown (3 more) ...":-331,"CV_Customer_Signed_B (4 more) ...":"George Tsai","Contract_Terms__c":"4.01 Minimum payment (66 more) ...","Status":"Draft","IsDeleted":false,"Termination_Clause__ (1 more) ...":"Sec. 603 - In the ev (750 more) ...","EndDate":"2014-11-19T00:00:00.000Z","SystemModstamp":"2015-10-16T05:40:46.000Z","Royalty_Payment_Due_ (12 more) ...":"a2xZ0000002IjLdIAK","ShippingCountryCode":"US","BillingCountry":"United States","AIF__c":"84.0099","CreatedDate":"2015-10-16T05:40:46.000Z","CompanySignedDate":"2015-10-10T00:00:00.000Z","Id":"800Z00000003MRdIAM","LastModifiedById":"005Z0000003DoV8IAK","Calculate_Next_Sales (10 more) ...":false}|0x6ab57ebc
+01:40:47.241 (2241819928)|STATEMENT_EXECUTE|[250]
+01:40:47.241 (2241823340)|STATEMENT_EXECUTE|[251]
+01:40:47.241 (2241936864)|HEAP_ALLOCATE|[251]|Bytes:41
+01:40:47.242 (2242045115)|METHOD_EXIT|[54]|01pZ0000000Pym5|TH_Contract_CVManageSchedules.getChangedDueDateRuleIds(List<Contract>)
+01:40:47.242 (2242069158)|METHOD_EXIT|[55]|01pZ0000000Pym5|TH_Contract_CVManageSchedules.mainEntry(String, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, List<SObject>, Map<Id,SObject>, List<SObject>, Map<Id,SObject>)
+01:40:47.242 (2242077559)|SYSTEM_MODE_EXIT|false
+01:40:47.242 (2242092896)|METHOD_EXIT|[12]|01pZ0000000LPwQ|GE_TriggerDispatch.entry(String, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, List<SObject>, Map<Id,SObject>, List<SObject>, Map<Id,SObject>)
+01:40:47.242 (2242215787)|FATAL_ERROR|System.NullPointerException: Attempt to de-reference a null object
+
+Class.TH_Contract_CVManageSchedules.getChangedDueDateRuleIds: line 251, column 1
+Class.TH_Contract_CVManageSchedules.mainEntry: line 54, column 1
+Class.GE_TriggerDispatch.entry: line 55, column 1
+Trigger.AllContractTriggers: line 12, column 1
+01:40:47.242 (2242233411)|FATAL_ERROR|System.NullPointerException: Attempt to de-reference a null object
+
+Class.TH_Contract_CVManageSchedules.getChangedDueDateRuleIds: line 251, column 1
+Class.TH_Contract_CVManageSchedules.mainEntry: line 54, column 1
+Class.GE_TriggerDispatch.entry: line 55, column 1
+Trigger.AllContractTriggers: line 12, column 1
+01:40:47.242 (2242288245)|CUMULATIVE_LIMIT_USAGE
+01:40:47.242 (2242288245)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 2 out of 100
+  Number of query rows: 36 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 26 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+01:40:47.242 (2242288245)|CUMULATIVE_LIMIT_USAGE_END
+
+01:40:47.242 (2242439898)|CODE_UNIT_FINISHED|AllContractTriggers on Contract trigger event AfterInsert for [800Z00000003MRd]

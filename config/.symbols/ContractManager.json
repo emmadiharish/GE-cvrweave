@@ -1,0 +1,448 @@
+{
+    "constructors": [],
+    "externalReferences": [],
+    "id": "01pZ0000000LUX6IAO",
+    "innerClasses": [],
+    "interfaces": [],
+    "key": "01pZ0000000LUX6IAO",
+    "methods": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 34,
+                "line": 27
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "getAgreementsForLicenseeId",
+            "parameters": [
+                {
+                    "name": "licenseeId",
+                    "type": "Id"
+                }
+            ],
+            "references": [],
+            "returnType": "LIST",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 34,
+                "line": 43
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "getAgreementsForLicenseeIds",
+            "parameters": [
+                {
+                    "name": "licenseeIds",
+                    "type": "LIST"
+                }
+            ],
+            "references": [],
+            "returnType": "LIST",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 37,
+                "line": 60
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "getContractswRelListsbycId",
+            "parameters": [
+                {
+                    "name": "contractIds",
+                    "type": "Set"
+                }
+            ],
+            "references": [],
+            "returnType": "Map",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 27,
+                "line": 82
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "isContractPeriodSame",
+            "parameters": [
+                {
+                    "name": "c",
+                    "type": "Contract"
+                },
+                {
+                    "name": "secondContract",
+                    "type": "Contract"
+                }
+            ],
+            "references": [],
+            "returnType": "Boolean",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 27,
+                "line": 101
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "isequalsRoyalPaymentSchedule",
+            "parameters": [
+                {
+                    "name": "c",
+                    "type": "Contract"
+                },
+                {
+                    "name": "secondContract",
+                    "type": "Contract"
+                }
+            ],
+            "references": [],
+            "returnType": "Boolean",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 27,
+                "line": 116
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "isequalsSalesReportSchedule",
+            "parameters": [
+                {
+                    "name": "c",
+                    "type": "Contract"
+                },
+                {
+                    "name": "secondContract",
+                    "type": "Contract"
+                }
+            ],
+            "references": [],
+            "returnType": "Boolean",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 34,
+                "line": 132
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "getAgreements",
+            "parameters": [
+                {
+                    "name": "cList",
+                    "type": "LIST"
+                }
+            ],
+            "references": [],
+            "returnType": "LIST",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 28,
+                "line": 148
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "createContractFromCase",
+            "parameters": [
+                {
+                    "name": "cLegalCase",
+                    "type": "Case"
+                }
+            ],
+            "references": [],
+            "returnType": "Contract",
+            "type": null
+        }
+    ],
+    "name": "ContractManager",
+    "namespace": null,
+    "parentClass": "",
+    "properties": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 26,
+                "line": 18
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "RT_AGREEMENT",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 26,
+                "line": 19
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "RT_AMENDMENT",
+            "references": [],
+            "type": "String"
+        }
+    ],
+    "tableDeclaration": {
+        "annotations": [],
+        "location": {
+            "column": 30,
+            "line": 13
+        },
+        "modifiers": [
+            "public",
+            "without sharing"
+        ],
+        "name": "ContractManager",
+        "references": [],
+        "type": "ContractManager"
+    },
+    "variables": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 64,
+                "line": 27
+            },
+            "modifiers": [],
+            "name": "licenseeId",
+            "references": [],
+            "type": "Id"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 71,
+                "line": 43
+            },
+            "modifiers": [],
+            "name": "licenseeIds",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 12,
+                "line": 47
+            },
+            "modifiers": [],
+            "name": "agreementId",
+            "references": [],
+            "type": "Id"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 24,
+                "line": 48
+            },
+            "modifiers": [],
+            "name": "response",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 72,
+                "line": 60
+            },
+            "modifiers": [],
+            "name": "contractIds",
+            "references": [],
+            "type": "Set"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 12,
+                "line": 64
+            },
+            "modifiers": [],
+            "name": "agreementId",
+            "references": [],
+            "type": "Id"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 27,
+                "line": 65
+            },
+            "modifiers": [],
+            "name": "response",
+            "references": [],
+            "type": "Map"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 57,
+                "line": 82
+            },
+            "modifiers": [],
+            "name": "c",
+            "references": [],
+            "type": "Contract"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 69,
+                "line": 82
+            },
+            "modifiers": [],
+            "name": "secondContract",
+            "references": [],
+            "type": "Contract"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 65,
+                "line": 101
+            },
+            "modifiers": [],
+            "name": "c",
+            "references": [],
+            "type": "Contract"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 77,
+                "line": 101
+            },
+            "modifiers": [],
+            "name": "secondContract",
+            "references": [],
+            "type": "Contract"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 64,
+                "line": 116
+            },
+            "modifiers": [],
+            "name": "c",
+            "references": [],
+            "type": "Contract"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 76,
+                "line": 116
+            },
+            "modifiers": [],
+            "name": "secondContract",
+            "references": [],
+            "type": "Contract"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 63,
+                "line": 132
+            },
+            "modifiers": [],
+            "name": "cList",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 12,
+                "line": 135
+            },
+            "modifiers": [],
+            "name": "agreementId",
+            "references": [],
+            "type": "Id"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 24,
+                "line": 136
+            },
+            "modifiers": [],
+            "name": "cAgreementsList",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 22,
+                "line": 137
+            },
+            "modifiers": [],
+            "name": "c",
+            "references": [],
+            "type": "Contract"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 56,
+                "line": 148
+            },
+            "modifiers": [],
+            "name": "cLegalCase",
+            "references": [],
+            "type": "Case"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 150
+            },
+            "modifiers": [],
+            "name": "response",
+            "references": [],
+            "type": "Contract"
+        }
+    ]
+}

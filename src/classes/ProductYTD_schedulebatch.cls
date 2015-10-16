@@ -15,7 +15,9 @@ public class ProductYTD_schedulebatch implements Database.Batchable<sObject>, Da
     }
 
     public void finish(Database.BatchableContext bc) {
-
+        ContractYTD_schedulebatch.updateFinancials(); 
+        LicenseeYTD_schedulebatch.updateFinancials();
+        CVProductCategoryYTD_schedulebatch.updateFinancials();
     }
 
 /*

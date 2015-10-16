@@ -29,6 +29,11 @@ public with sharing class CaseProductChangeWorkflowCtrlExt extends CaseWorkflowE
                 (cLicenseeCase.Status == CaseManager.STATUS_SAMPLES_NOT_SHIPPED);
         }
     }
+
+    public override Boolean getAllowsReShippingOfSamples() {
+
+        return cLicenseeCase.Status == CaseManager.STATUS_GE_APPROVAL_PROCESS;
+    }
 //******************************************************************************************************************************
 //******************************************************************************************************************************
 //controller properties
@@ -84,6 +89,57 @@ public with sharing class CaseProductChangeWorkflowCtrlExt extends CaseWorkflowE
         }
         System.debug(LoggingLevel.DEBUG, 'CaseProductChangeWorkflowCtrlExt - init end');
     }
+//******************************************************************************************************************************
+//Method overrides
+//******************************************************************************************************************************
+    /**
+     * override method sets the current case status depending on the current NPI status
+     * @return case dettail page if no exception gets thrown, null otherwise
+     */
+    public override PageReference reSubmit() {
+
+        System.debug(LoggingLevel.DEBUG, 'CaseProductChangeWorkflowCtrlExt - reSubmit start');
+        PageReference prResponse = null;
+        try {
+            if(areAllIssuesResponded()){
+
+                if(areNewSamplesRequired()) {
+
+                    cLicenseeCase.Status = CaseManager.STATUS_SAMPLES_NOT_SHIPPED;
+                }
+                else {
+
+                    cLicenseeCase.Status = CaseManager.STATUS_RE_SUBMITTED_FOR_REVIEW;
+                }
+
+                update cLicenseeCase;
+                ApexPages.addmessage(new ApexPages.message(ApexPages.severity.INFO,'Case was successfuly resubmitted.'));
+                prResponse = new PageReference('/'+cLicenseeCase.Id);
+            } else {
+                ApexPages.addmessage(new ApexPages.message(ApexPages.severity.WARNING,'One or more Issues are pending your comment. Please respond to all the issues and then re-submit.'));
+            }
+        }
+        catch(Exception ex) {
+            System.debug(LoggingLevel.ERROR, ex.getMessage() + '\n' + ex.getStackTraceString());
+            ApexPages.addmessage(new ApexPages.message(ApexPages.severity.ERROR,'There was an error while resubmitting Royalty Submission, please try again later.'));
+        }
+        init();
+        System.debug(LoggingLevel.DEBUG, 'CaseProductChangeWorkflowCtrlExt - reSubmit end');
+        return prResponse;
+    }
+
+    @testVisible private Boolean areNewSamplesRequired() {
+
+        for(CV_Case_Issue_Comment__c cvcicIssue : cvcicIssesList) {
+
+            if(!cvcicIssue.Resolved__c && cvcicIssue.New_Samples_Required__c) {
+
+                return true;
+            }
+        }
+        return false;
+    }
+//******************************************************************************************************************************
 
 //******************************************************************************************************************************
 //Shipping info

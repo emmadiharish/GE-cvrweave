@@ -1,0 +1,73 @@
+{
+    "constructors": [],
+    "externalReferences": [],
+    "id": "01pZ0000000PypxIAC",
+    "innerClasses": [],
+    "interfaces": [],
+    "key": "01pZ0000000PypxIAC",
+    "methods": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 44,
+                "line": 18
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "getnextdueSalesReport",
+            "parameters": [
+                {
+                    "name": "salesReports",
+                    "type": "LIST"
+                }
+            ],
+            "references": [],
+            "returnType": "CV_Sales_Report_Tracking__c",
+            "type": null
+        }
+    ],
+    "name": "SalesReportManager",
+    "namespace": null,
+    "parentClass": "",
+    "properties": [],
+    "tableDeclaration": {
+        "annotations": [],
+        "location": {
+            "column": 27,
+            "line": 12
+        },
+        "modifiers": [
+            "public",
+            "with sharing"
+        ],
+        "name": "SalesReportManager",
+        "references": [],
+        "type": "SalesReportManager"
+    },
+    "variables": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 100,
+                "line": 18
+            },
+            "modifiers": [],
+            "name": "salesReports",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 41,
+                "line": 20
+            },
+            "modifiers": [],
+            "name": "srt",
+            "references": [],
+            "type": "CV_Sales_Report_Tracking__c"
+        }
+    ]
+}

@@ -7,6 +7,7 @@
 * Developer Date Description
 * ---------------------------------------------------------------------------
 * Zoran Zunko 06/09/2015 Created.
+* Siva Gunda 10/15/2015 - Added Contract trigger handlers.
 ******************************************************************************************************************************/
 public with sharing class GE_TriggerDispatch {
 
@@ -44,13 +45,18 @@ public with sharing class GE_TriggerDispatch {
                 return;
             }
 
-            // Otherwise call the triggers we want to execute
             if (TriggerObject == 'Case') {
                 activefunction = new TH_Case_CVRolesManagement();
                 activefunction.MainEntry(TriggerObject, IsBefore, IsDelete, IsAfter, IsInsert, IsUpdate, IsExecuting, newList, newMap, oldList, oldMap);
                 activefunction = new TH_Case_CVSetDateTrackingFields();
                 activefunction.MainEntry(TriggerObject, IsBefore, IsDelete, IsAfter, IsInsert, IsUpdate, IsExecuting, newList, newMap, oldList, oldMap);
                 activefunction = null;
+            }else if (TriggerObject == 'Contract') {
+                activefunction = new TH_Contract_CVManageSchedules();
+                activefunction.MainEntry(TriggerObject, IsBefore, IsDelete, IsAfter, IsInsert, IsUpdate, IsExecuting, newList, newMap, oldList, oldMap);
+                activefunction = null;
+            }else if(TriggerObject == 'Object API'){
+                // Otherwise call the triggers we want to execute
             }
         }
         System.debug(LoggingLevel.DEBUG, 'GE_TriggerDispatch - entry end');

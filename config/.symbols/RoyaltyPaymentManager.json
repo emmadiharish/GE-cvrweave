@@ -1,0 +1,73 @@
+{
+    "constructors": [],
+    "externalReferences": [],
+    "id": "01pZ0000000PypsIAC",
+    "innerClasses": [],
+    "interfaces": [],
+    "key": "01pZ0000000PypsIAC",
+    "methods": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 47,
+                "line": 18
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "getnextdueRoyaltyPayment",
+            "parameters": [
+                {
+                    "name": "royaltypayments",
+                    "type": "LIST"
+                }
+            ],
+            "references": [],
+            "returnType": "CV_Royalty_Payment_Tracking__c",
+            "type": null
+        }
+    ],
+    "name": "RoyaltyPaymentManager",
+    "namespace": null,
+    "parentClass": "",
+    "properties": [],
+    "tableDeclaration": {
+        "annotations": [],
+        "location": {
+            "column": 27,
+            "line": 12
+        },
+        "modifiers": [
+            "public",
+            "with sharing"
+        ],
+        "name": "RoyaltyPaymentManager",
+        "references": [],
+        "type": "RoyaltyPaymentManager"
+    },
+    "variables": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 109,
+                "line": 18
+            },
+            "modifiers": [],
+            "name": "royaltypayments",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 44,
+                "line": 21
+            },
+            "modifiers": [],
+            "name": "rpt",
+            "references": [],
+            "type": "CV_Royalty_Payment_Tracking__c"
+        }
+    ]
+}
