@@ -1,0 +1,35 @@
+Classes:
+	DueDateRuleManager.cls
+	DueDateRuleManagerTest.cls
+	RoyaltyPaymentManager.cls
+	RoyaltyPaymentManagerTest.cls
+	SalesReportManager.cls
+	SalesReportManagerTest.cls
+	TH_Contract_CVManageSchedules.cls
+	TH_Contract_CVManageSchedulesTest.cls
+	ContractManager.cls
+
+triggers:
+	AllContractTriggers.trigger
+
+Objects:
+	CV_Due_Date_Rule__c.obj
+	CV_Custom_Due_Date__c.obj
+	CV_Royalty_Payment_Tracking__c.obj
+	CV_Sales_Report_Tracking__c.obj
+
+Fields:
+	Contract.Next_Royalty_Payment__c
+	Contract.Next_Sales_Report__c
+	Contract.Next_Royalty_Payment_Due_Date__c
+	Contract.Next_Sales_Report_Due_Date__c
+	Contract.Calculate_Next_Royalty_Payment__c
+	Contract.Calculate_Next_Sales_Report__c
+	Contract.Days_Until_Due_of_Next_Royalty_Payment__c
+	Contract.Days_Until_Due_of_next_Sales_Report__c
+	
+Pagelayouts:
+	Contract.Consumer Ventures - Agreement
+	CV_Due_Date_Rule__c.CV Due Date Rule Layout
+	CV_Royalty_Payment_Tracking__c.CV Royalty Payment Tracking Layout
+	CV_Sales_Report_Tracking__c.CV Sales Report Tracking Layout

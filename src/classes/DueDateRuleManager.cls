@@ -28,7 +28,7 @@ public with sharing class DueDateRuleManager {
         System.debug(LoggingLevel.DEBUG, 'DueDateRuleManager - getDueDateRulewCustomDatesMapbyId start');
 
         // CVCustomDueDates__r query should be ordered by Period_End_Date__c else order of schedule creation will change.
-        Map<Id, CV_Due_Date_Rule__c> result =  new Map<ID, CV_Due_Date_Rule__c>([select Id, isStandard__c, Days__c, Period__c,
+        Map<Id, CV_Due_Date_Rule__c> result =  new Map<Id, CV_Due_Date_Rule__c>([select Id, isStandard__c, Days__c, Period__c,
 									                                                    (Select Period_Start_Date__c, Period_End_Date__c, Due_Date__c 
 									                                                        From CVCustomDueDates__r
 									                                                            Order by Period_End_Date__c)

@@ -1,0 +1,335 @@
+{
+    "constructors": [],
+    "externalReferences": [],
+    "id": "01pZ0000000PzhkIAC",
+    "innerClasses": [],
+    "interfaces": [],
+    "key": "01pZ0000000PzhkIAC",
+    "methods": [
+        {
+            "annotations": [
+                {
+                    "name": "TestSetup"
+                }
+            ],
+            "location": {
+                "column": 28,
+                "line": 17
+            },
+            "modifiers": [
+                "private",
+                "static"
+            ],
+            "name": "dataSetup",
+            "parameters": [],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [
+                {
+                    "name": "IsTest"
+                }
+            ],
+            "location": {
+                "column": 22,
+                "line": 31
+            },
+            "modifiers": [
+                "private",
+                "static",
+                "testMethod"
+            ],
+            "name": "test_isContractPeriodSame",
+            "parameters": [],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [
+                {
+                    "name": "IsTest"
+                }
+            ],
+            "location": {
+                "column": 22,
+                "line": 47
+            },
+            "modifiers": [
+                "private",
+                "static",
+                "testMethod"
+            ],
+            "name": "test_isequalsRoyalPaymentSchedule",
+            "parameters": [],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [
+                {
+                    "name": "IsTest"
+                }
+            ],
+            "location": {
+                "column": 22,
+                "line": 64
+            },
+            "modifiers": [
+                "private",
+                "static",
+                "testMethod"
+            ],
+            "name": "test_isequalsSalesReportSchedule",
+            "parameters": [],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [
+                {
+                    "name": "IsTest"
+                }
+            ],
+            "location": {
+                "column": 22,
+                "line": 81
+            },
+            "modifiers": [
+                "private",
+                "static",
+                "testMethod"
+            ],
+            "name": "test_getAgreements",
+            "parameters": [],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [
+                {
+                    "name": "IsTest"
+                }
+            ],
+            "location": {
+                "column": 22,
+                "line": 94
+            },
+            "modifiers": [
+                "private",
+                "static",
+                "testMethod"
+            ],
+            "name": "test_getContractswRelListsbycId",
+            "parameters": [],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        }
+    ],
+    "name": "ContractManagerTest",
+    "namespace": null,
+    "parentClass": "",
+    "properties": [],
+    "tableDeclaration": {
+        "annotations": [
+            {
+                "name": "IsTest"
+            }
+        ],
+        "location": {
+            "column": 15,
+            "line": 12
+        },
+        "modifiers": [
+            "private",
+            "testMethod"
+        ],
+        "name": "ContractManagerTest",
+        "references": [],
+        "type": "ContractManagerTest"
+    },
+    "variables": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 23,
+                "line": 19
+            },
+            "modifiers": [],
+            "name": "accounts",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 24,
+                "line": 23
+            },
+            "modifiers": [],
+            "name": "contracts",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 35,
+                "line": 27
+            },
+            "modifiers": [],
+            "name": "ddrList",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 12,
+                "line": 33
+            },
+            "modifiers": [],
+            "name": "contract",
+            "references": [],
+            "type": "Contract"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 12,
+                "line": 34
+            },
+            "modifiers": [],
+            "name": "secondContract",
+            "references": [],
+            "type": "Contract"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 23,
+                "line": 49
+            },
+            "modifiers": [],
+            "name": "ddr",
+            "references": [],
+            "type": "CV_Due_Date_Rule__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 12,
+                "line": 52
+            },
+            "modifiers": [],
+            "name": "contract",
+            "references": [],
+            "type": "Contract"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 12,
+                "line": 53
+            },
+            "modifiers": [],
+            "name": "secondContract",
+            "references": [],
+            "type": "Contract"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 23,
+                "line": 66
+            },
+            "modifiers": [],
+            "name": "ddr",
+            "references": [],
+            "type": "CV_Due_Date_Rule__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 12,
+                "line": 69
+            },
+            "modifiers": [],
+            "name": "contract",
+            "references": [],
+            "type": "Contract"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 12,
+                "line": 70
+            },
+            "modifiers": [],
+            "name": "secondContract",
+            "references": [],
+            "type": "Contract"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 83
+            },
+            "modifiers": [],
+            "name": "contracts",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 16,
+                "line": 85
+            },
+            "modifiers": [],
+            "name": "c",
+            "references": [],
+            "type": "Contract"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 96
+            },
+            "modifiers": [],
+            "name": "contracts",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 11,
+                "line": 98
+            },
+            "modifiers": [],
+            "name": "contractIds",
+            "references": [],
+            "type": "Set"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 16,
+                "line": 99
+            },
+            "modifiers": [],
+            "name": "c",
+            "references": [],
+            "type": "Contract"
+        }
+    ]
+}

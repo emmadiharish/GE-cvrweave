@@ -1,0 +1,509 @@
+{
+    "constructors": [],
+    "externalReferences": [],
+    "id": "01pZ0000000PzhGIAS",
+    "innerClasses": [],
+    "interfaces": [],
+    "key": "01pZ0000000PzhGIAS",
+    "methods": [
+        {
+            "annotations": [
+                {
+                    "name": "TestSetup"
+                }
+            ],
+            "location": {
+                "column": 28,
+                "line": 17
+            },
+            "modifiers": [
+                "private",
+                "static"
+            ],
+            "name": "dataSetup",
+            "parameters": [],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [
+                {
+                    "name": "IsTest"
+                }
+            ],
+            "location": {
+                "column": 22,
+                "line": 38
+            },
+            "modifiers": [
+                "private",
+                "static",
+                "testMethod"
+            ],
+            "name": "test_getDueDateRulewCustomDatesMapbyId",
+            "parameters": [],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [
+                {
+                    "name": "IsTest"
+                }
+            ],
+            "location": {
+                "column": 22,
+                "line": 51
+            },
+            "modifiers": [
+                "private",
+                "static",
+                "testMethod"
+            ],
+            "name": "test_getSchedulesbasedonDuedateRule_MonthPeriod",
+            "parameters": [],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [
+                {
+                    "name": "IsTest"
+                }
+            ],
+            "location": {
+                "column": 22,
+                "line": 67
+            },
+            "modifiers": [
+                "private",
+                "static",
+                "testMethod"
+            ],
+            "name": "test_getSchedulesbasedonDuedateRule_QuarterEndPeriod",
+            "parameters": [],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [
+                {
+                    "name": "IsTest"
+                }
+            ],
+            "location": {
+                "column": 22,
+                "line": 83
+            },
+            "modifiers": [
+                "private",
+                "static",
+                "testMethod"
+            ],
+            "name": "test_getSchedulesbasedonDuedateRule_QuarterStartPeriod",
+            "parameters": [],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [
+                {
+                    "name": "IsTest"
+                }
+            ],
+            "location": {
+                "column": 22,
+                "line": 99
+            },
+            "modifiers": [
+                "private",
+                "static",
+                "testMethod"
+            ],
+            "name": "test_getSchedulesbasedonDuedateRul_CustomPeriod",
+            "parameters": [],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [
+                {
+                    "name": "IsTest"
+                }
+            ],
+            "location": {
+                "column": 22,
+                "line": 144
+            },
+            "modifiers": [
+                "private",
+                "static",
+                "testMethod"
+            ],
+            "name": "test_getSchedulesbasedonDuedateRule_NoConStartDate",
+            "parameters": [],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [
+                {
+                    "name": "IsTest"
+                }
+            ],
+            "location": {
+                "column": 22,
+                "line": 160
+            },
+            "modifiers": [
+                "private",
+                "static",
+                "testMethod"
+            ],
+            "name": "test_getSchedulesbasedonDuedateRule_NoDueDateRule",
+            "parameters": [],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        }
+    ],
+    "name": "DueDateRuleManagerTest",
+    "namespace": null,
+    "parentClass": "",
+    "properties": [],
+    "tableDeclaration": {
+        "annotations": [
+            {
+                "name": "IsTest"
+            }
+        ],
+        "location": {
+            "column": 15,
+            "line": 12
+        },
+        "modifiers": [
+            "private",
+            "testMethod"
+        ],
+        "name": "DueDateRuleManagerTest",
+        "references": [],
+        "type": "DueDateRuleManagerTest"
+    },
+    "variables": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 19
+            },
+            "modifiers": [],
+            "name": "accounts",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 24,
+                "line": 22
+            },
+            "modifiers": [],
+            "name": "contracts",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 22,
+                "line": 23
+            },
+            "modifiers": [],
+            "name": "c",
+            "references": [],
+            "type": "Contract"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 35,
+                "line": 31
+            },
+            "modifiers": [],
+            "name": "ddrList",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 11,
+                "line": 40
+            },
+            "modifiers": [],
+            "name": "ddrIdSet",
+            "references": [],
+            "type": "Set"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 27,
+                "line": 41
+            },
+            "modifiers": [],
+            "name": "ddr",
+            "references": [],
+            "type": "CV_Due_Date_Rule__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 32,
+                "line": 46
+            },
+            "modifiers": [],
+            "name": "ddrMap_result",
+            "references": [],
+            "type": "Map"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 12,
+                "line": 53
+            },
+            "modifiers": [],
+            "name": "con",
+            "references": [],
+            "type": "Contract"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 23,
+                "line": 57
+            },
+            "modifiers": [],
+            "name": "ddrule",
+            "references": [],
+            "type": "CV_Due_Date_Rule__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 17,
+                "line": 60
+            },
+            "modifiers": [],
+            "name": "objs",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 12,
+                "line": 69
+            },
+            "modifiers": [],
+            "name": "con",
+            "references": [],
+            "type": "Contract"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 23,
+                "line": 73
+            },
+            "modifiers": [],
+            "name": "ddrule",
+            "references": [],
+            "type": "CV_Due_Date_Rule__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 17,
+                "line": 76
+            },
+            "modifiers": [],
+            "name": "objs",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 12,
+                "line": 85
+            },
+            "modifiers": [],
+            "name": "con",
+            "references": [],
+            "type": "Contract"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 23,
+                "line": 89
+            },
+            "modifiers": [],
+            "name": "ddrule",
+            "references": [],
+            "type": "CV_Due_Date_Rule__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 17,
+                "line": 92
+            },
+            "modifiers": [],
+            "name": "objs",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 12,
+                "line": 101
+            },
+            "modifiers": [],
+            "name": "con",
+            "references": [],
+            "type": "Contract"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 23,
+                "line": 105
+            },
+            "modifiers": [],
+            "name": "ddrule",
+            "references": [],
+            "type": "CV_Due_Date_Rule__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 31,
+                "line": 112
+            },
+            "modifiers": [],
+            "name": "cduedatesList",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 8,
+                "line": 113
+            },
+            "modifiers": [],
+            "name": "periodStartDate",
+            "references": [],
+            "type": "Date"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 15,
+                "line": 114
+            },
+            "modifiers": [],
+            "name": "i",
+            "references": [],
+            "type": "Integer"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 26,
+                "line": 116
+            },
+            "modifiers": [],
+            "name": "cdd",
+            "references": [],
+            "type": "CV_Custom_Due_Date__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 17,
+                "line": 136
+            },
+            "modifiers": [],
+            "name": "objs",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 12,
+                "line": 146
+            },
+            "modifiers": [],
+            "name": "con",
+            "references": [],
+            "type": "Contract"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 23,
+                "line": 149
+            },
+            "modifiers": [],
+            "name": "ddrule",
+            "references": [],
+            "type": "CV_Due_Date_Rule__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 17,
+                "line": 152
+            },
+            "modifiers": [],
+            "name": "objs",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 12,
+                "line": 162
+            },
+            "modifiers": [],
+            "name": "con",
+            "references": [],
+            "type": "Contract"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 17,
+                "line": 166
+            },
+            "modifiers": [],
+            "name": "objs",
+            "references": [],
+            "type": "LIST"
+        }
+    ]
+}

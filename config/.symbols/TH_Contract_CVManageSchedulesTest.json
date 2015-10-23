@@ -1,0 +1,421 @@
+{
+    "constructors": [],
+    "externalReferences": [],
+    "id": "01pZ0000000PzgNIAS",
+    "innerClasses": [],
+    "interfaces": [],
+    "key": "01pZ0000000PzgNIAS",
+    "methods": [
+        {
+            "annotations": [
+                {
+                    "name": "TestSetup"
+                }
+            ],
+            "location": {
+                "column": 28,
+                "line": 17
+            },
+            "modifiers": [
+                "private",
+                "static"
+            ],
+            "name": "dataSetup",
+            "parameters": [],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [
+                {
+                    "name": "IsTest"
+                }
+            ],
+            "location": {
+                "column": 22,
+                "line": 36
+            },
+            "modifiers": [
+                "private",
+                "static",
+                "testMethod"
+            ],
+            "name": "test_setNextRoyaltyPayment",
+            "parameters": [],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [
+                {
+                    "name": "IsTest"
+                }
+            ],
+            "location": {
+                "column": 22,
+                "line": 60
+            },
+            "modifiers": [
+                "private",
+                "static",
+                "testMethod"
+            ],
+            "name": "test_setNextSalesReport",
+            "parameters": [],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [
+                {
+                    "name": "IsTest"
+                }
+            ],
+            "location": {
+                "column": 22,
+                "line": 85
+            },
+            "modifiers": [
+                "private",
+                "static",
+                "testMethod"
+            ],
+            "name": "test_deleteRevenuePaymentSchedulesonContractUpdate",
+            "parameters": [],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [
+                {
+                    "name": "IsTest"
+                }
+            ],
+            "location": {
+                "column": 22,
+                "line": 107
+            },
+            "modifiers": [
+                "private",
+                "static",
+                "testMethod"
+            ],
+            "name": "test_deleteSalesReportSchedulesonContractUpdate",
+            "parameters": [],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [
+                {
+                    "name": "IsTest"
+                }
+            ],
+            "location": {
+                "column": 22,
+                "line": 130
+            },
+            "modifiers": [
+                "private",
+                "static",
+                "testMethod"
+            ],
+            "name": "test_createRevenuePaymentSchedules",
+            "parameters": [],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [
+                {
+                    "name": "IsTest"
+                }
+            ],
+            "location": {
+                "column": 22,
+                "line": 149
+            },
+            "modifiers": [
+                "private",
+                "static",
+                "testMethod"
+            ],
+            "name": "test_createSalesReportSchedules",
+            "parameters": [],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [
+                {
+                    "name": "IsTest"
+                }
+            ],
+            "location": {
+                "column": 22,
+                "line": 167
+            },
+            "modifiers": [
+                "private",
+                "static",
+                "testMethod"
+            ],
+            "name": "test_updateNextDueDateSchedulesonContract",
+            "parameters": [],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        }
+    ],
+    "name": "TH_Contract_CVManageSchedulesTest",
+    "namespace": null,
+    "parentClass": "",
+    "properties": [],
+    "tableDeclaration": {
+        "annotations": [
+            {
+                "name": "IsTest"
+            }
+        ],
+        "location": {
+            "column": 15,
+            "line": 12
+        },
+        "modifiers": [
+            "private",
+            "testMethod"
+        ],
+        "name": "TH_Contract_CVManageSchedulesTest",
+        "references": [],
+        "type": "TH_Contract_CVManageSchedulesTest"
+    },
+    "variables": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 23,
+                "line": 19
+            },
+            "modifiers": [],
+            "name": "accounts",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 24,
+                "line": 23
+            },
+            "modifiers": [],
+            "name": "contracts",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 22,
+                "line": 24
+            },
+            "modifiers": [],
+            "name": "c",
+            "references": [],
+            "type": "Contract"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 35,
+                "line": 32
+            },
+            "modifiers": [],
+            "name": "ddrList",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 12,
+                "line": 39
+            },
+            "modifiers": [],
+            "name": "con",
+            "references": [],
+            "type": "Contract"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 40,
+                "line": 42
+            },
+            "modifiers": [],
+            "name": "rpts",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 12,
+                "line": 63
+            },
+            "modifiers": [],
+            "name": "con",
+            "references": [],
+            "type": "Contract"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 37,
+                "line": 66
+            },
+            "modifiers": [],
+            "name": "srts",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 12,
+                "line": 87
+            },
+            "modifiers": [],
+            "name": "con",
+            "references": [],
+            "type": "Contract"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 40,
+                "line": 92
+            },
+            "modifiers": [],
+            "name": "testrpts",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 12,
+                "line": 109
+            },
+            "modifiers": [],
+            "name": "con",
+            "references": [],
+            "type": "Contract"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 37,
+                "line": 114
+            },
+            "modifiers": [],
+            "name": "testsrts",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 23,
+                "line": 132
+            },
+            "modifiers": [],
+            "name": "ddr",
+            "references": [],
+            "type": "CV_Due_Date_Rule__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 12,
+                "line": 136
+            },
+            "modifiers": [],
+            "name": "con",
+            "references": [],
+            "type": "Contract"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 33,
+                "line": 144
+            },
+            "modifiers": [],
+            "name": "mngSchedulesCls",
+            "references": [],
+            "type": "TH_Contract_CVManageSchedules"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 23,
+                "line": 151
+            },
+            "modifiers": [],
+            "name": "ddr",
+            "references": [],
+            "type": "CV_Due_Date_Rule__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 12,
+                "line": 155
+            },
+            "modifiers": [],
+            "name": "con",
+            "references": [],
+            "type": "Contract"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 33,
+                "line": 162
+            },
+            "modifiers": [],
+            "name": "mngSchedulesCls",
+            "references": [],
+            "type": "TH_Contract_CVManageSchedules"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 23,
+                "line": 169
+            },
+            "modifiers": [],
+            "name": "ddr",
+            "references": [],
+            "type": "CV_Due_Date_Rule__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 12,
+                "line": 173
+            },
+            "modifiers": [],
+            "name": "con",
+            "references": [],
+            "type": "Contract"
+        }
+    ]
+}

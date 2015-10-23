@@ -1,0 +1,6 @@
+Created Reports:
+
+	new product YTD sales
+	License YTD Royalties
+
+Check if inception field on contract is being used anywhere 

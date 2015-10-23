@@ -65,9 +65,15 @@ public class CaseCSV_BatchProcess  implements Database.Batchable<String>, Databa
         if(filename.contains('RoyaltyProductData')) {
             System.Debug('>>>> BEFORE addCVRoyaltyData');
             addCVRoyaltyData(csv);                
+        } else if(filename.contains('RoyaltyCreditSummary')) {
+            System.Debug('>>>> BEFORE RoyaltyCreditSummary');
+            addCVCreditSummary(csv);                
+        } else if(filename.contains('RoyaltyCreditAccrued')) {
+            System.Debug('>>>> BEFORE RoyaltyCreditAccrued');
+            addCVCreditAccrued(csv);                
         } else {
-            messages.add('Filename was "' + filename + '," but expected one containing either: "RoyaltyProductData"');
-            System.Debug('>>>> DOES NOT HAVE RoyaltyProductData');
+            messages.add('Filename was "' + filename + '," but expected one containing either: "RoyaltyProductData", "RoyaltyCreditSummary", or "RoyaltyCreditAccrued"');
+            System.Debug('>>>> DOES NOT HAVE RoyaltyProductData, RoyaltyCreditSummary, or RoyaltyCreditAccrued');
         }
         
         System.Debug('>>>> Done with a batch.');
@@ -124,9 +130,157 @@ public class CaseCSV_BatchProcess  implements Database.Batchable<String>, Databa
     private void setFields(List<String> fileHeaders) {
         fields = new List<String>();
         for(String header : fileHeaders) {
-            String field = header.replace(' ', '_') + '__c';
+            String field = header.trim().replace(' ', '_') + '__c';
             fields.add(field);
         }
+    }
+
+
+    public void addCVCreditAccrued(List<List<String>> csvFile) {
+        System.debug('csvFile: ' + csvFile);
+        System.debug('csvFile.size(): ' + csvFile.size());
+        System.debug('addCVCreditSummary fields: ' + fields);
+        
+        Boolean isSuccess = true;
+        List<String> errors = new List<String>{};
+        // Initialize the list of records to insert
+        List<CV_Royalty_Accrued_Credit__c> newRecords = new List<CV_Royalty_Accrued_Credit__c>();
+        
+        CV_Royalty_Accrued_Credit__c newRec;
+        for(Integer row = 0; row < csvFile.size(); row++) {          //For each row
+            errors.add('');
+            newRec = new CV_Royalty_Accrued_Credit__c();
+            System.debug('csvFile['+row+']: ' + csvFile[row]);
+            for(Integer col = 0; col < csvFile[row].size(); col++) {           //For each field
+                System.debug('csvFile['+row+']['+col+']:'+csvFile[row][col]);
+                System.debug('fields[' + col + ']' + fields[col]);
+                
+                String element = csvFile[row][col].trim();
+                if(!String.isEmpty(element)) {
+
+                    if(element.length() > 2 && element.startsWith('"') && element.endsWith('"')) {
+                        element = element.substring(1, element.length()-1);
+                    }
+                    if(element.equals('-')) {
+                        element = '0';
+                    }
+
+                    if(!String.isEmpty(element)) {
+                        if(fields[col].contains('Date')) {
+                            System.debug('(before parse) Some Date: ' + element);
+                            Date someDate = Date.parse(element);    
+                            newRec.put(fields[col], someDate); 
+                            
+                        } else {
+                            try {
+                                Integer intElement = Integer.valueOf(element);
+                                newRec.put(fields[col], intElement);                                                  
+                            } catch (Exception e) {
+                                try {
+                                    newRec.put(fields[col], element);
+                                } catch (Exception e2) {
+                                    System.debug(e2);
+                                    messages.add(e2.getMessage());
+                                    errors.add(errors.size()-1, e2.getMessage());
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            System.debug('Before the lookups');
+            Case aCase = [SELECT id, accountID, CV_Agreement_No_Name__c FROM Case WHERE ID = :caseID];
+
+            System.debug('Before the SOQL');
+            System.debug('caseID: ' + aCase.id);
+            System.debug('caseID: ' + caseID);
+
+            newRec.put('Data_Submission_Case__c', aCase.id); 
+            newRec.put('Licensee__c', aCase.accountID); //Need to lookup
+            newRec.put('Contract_ID__c', aCase.CV_Agreement_No_Name__c); //Need to lookup
+            
+            newRecords.add(newRec);
+            System.debug(' After the lookups');
+        }   
+        System.debug('newRecords \n' + newRecords);   
+        System.debug('newRecords.size \n' + newRecords.size());   
+        System.debug('Before Upsert');
+        Database.UpsertResult[] results = Database.upsert(newRecords, false); //Upsert on UniqueID, partial upsert is okay  
+        System.debug('After Upsert: ' + results.size());
+        updateCSVOfErrors(results, newRecords, errors);
+    }
+
+    public void addCVCreditSummary(List<List<String>> csvFile) {
+        System.debug('csvFile: ' + csvFile);
+        System.debug('csvFile.size(): ' + csvFile.size());
+        System.debug('addCVCreditSummary fields: ' + fields);
+        
+        Boolean isSuccess = true;
+        List<String> errors = new List<String>{};
+        // Initialize the list of records to insert
+        List<CV_Royalty_Credit_Summary__c> newRecords = new List<CV_Royalty_Credit_Summary__c>();
+        
+        CV_Royalty_Credit_Summary__c newRec;
+        for(Integer row = 0; row < csvFile.size(); row++) {          //For each row
+            errors.add('');
+            newRec = new CV_Royalty_Credit_Summary__c();
+            System.debug('csvFile['+row+']: ' + csvFile[row]);
+            for(Integer col = 0; col < csvFile[row].size(); col++) {           //For each field
+                System.debug('csvFile['+row+']['+col+']:'+csvFile[row][col]);
+                System.debug('fields[' + col + ']' + fields[col]);
+                
+                String element = csvFile[row][col].trim();
+                
+                if(element.length() > 2 && element.startsWith('"') && element.endsWith('"')) {
+                    element = element.substring(1, element.length()-1);
+                }
+                if(element.equals('-')) {
+                    element = '0';
+                }
+
+
+                if(fields[col].contains('Date')) {
+                    System.debug('(before parse) Some Date: ' + element);
+                    Date someDate = Date.parse(element);    
+                    newRec.put(fields[col], someDate); 
+                    
+                } else {
+                    try {
+                        Integer intElement = Integer.valueOf(element);
+                        newRec.put(fields[col], intElement);                                                  
+                    } catch (Exception e) {
+                        try {
+                            newRec.put(fields[col], element);
+                        } catch (Exception e2) {
+                            System.debug(e2);
+                            messages.add(e2.getMessage());
+                            errors.add(errors.size()-1, e2.getMessage());
+                        }
+                    }
+                }
+            }
+
+            System.debug('Before the lookups');
+            Case aCase = [SELECT id, accountID, CV_Agreement_No_Name__c FROM Case WHERE ID = :caseID];
+
+            System.debug('Before the SOQL');
+            System.debug('caseID: ' + aCase.id);
+            System.debug('caseID: ' + caseID);
+
+            newRec.put('Data_Submission_Case__c', aCase.id); 
+            newRec.put('Licensee__c', aCase.accountID); //Need to lookup
+            newRec.put('Contract_ID__c', aCase.CV_Agreement_No_Name__c); //Need to lookup
+            
+            newRecords.add(newRec);
+            System.debug(' After the lookups');
+        }   
+        System.debug('newRecords \n' + newRecords);   
+        System.debug('newRecords.size \n' + newRecords.size());   
+        System.debug('Before Upsert');
+        Database.UpsertResult[] results = Database.upsert(newRecords, false); //Upsert on UniqueID, partial upsert is okay  
+        System.debug('After Upsert: ' + results.size());
+        updateCSVOfErrors(results, newRecords, errors);
     }
     
     public void addCVRoyaltyData(List<List<String>> csvFile) {
@@ -285,6 +439,8 @@ public class CaseCSV_BatchProcess  implements Database.Batchable<String>, Databa
     */
     private Messaging.EmailFileAttachment[] makeErrorCSVAttachment() {
         System.debug('csvOfErrors.length(): ' + csvOfErrors.length());
+        System.debug(csvOfErrors);
+
         if(!String.isEmpty(csvOfErrors)) {
             //1) Make the headers
             String csvHeader = 'ID, ';
@@ -308,7 +464,7 @@ public class CaseCSV_BatchProcess  implements Database.Batchable<String>, Databa
             return new Messaging.EmailFileAttachment[]{csvAttach};
                 }
         return new Messaging.EmailFileAttachment[]{};
-	}
+    }
     
     
     
@@ -373,6 +529,6 @@ public class CaseCSV_BatchProcess  implements Database.Batchable<String>, Databa
         }
 
         return cleanFields;
-		        
+                
     }
 }

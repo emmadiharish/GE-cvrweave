@@ -442,4 +442,71 @@
         }
         return results;
     }
+
+    /**
+     * creates Due Date rules for test contexts
+     * @param  rulename         Due Date rule name.
+     * @param  counter          number of rules.
+     * @return non-inserted list of generated Due Date rules
+     */
+    public static List<CV_Due_Date_Rule__c> createDueDateRules(String rulename, String periodType, Integer counter) {
+
+        List<CV_Due_Date_Rule__c> results = new List<CV_Due_Date_Rule__c>();
+        for (Integer x = 0; x < counter; x++) {
+            results.add(
+                new CV_Due_Date_Rule__c(
+                        Name = rulename
+                        , isStandard__c = true
+                        , Period__c = periodType
+                        , Days__c = '30 days after'
+                ));
+        }
+        return results;
+    }
+
+    /**
+     * creates Royal Payment trackings for test contexts
+     * @param  licensees        List of Contracts.
+     * @param  counterPerContract number of RPT's per Contract
+     * @return non-inserted list of generated Royalty Payment Trackings.
+     */
+    public static List<CV_Royalty_Payment_Tracking__c> createRoyaltyPaymentTrackings(List<Contract> cList, Integer counterPerContract) {
+
+        List<CV_Royalty_Payment_Tracking__c> results = new List<CV_Royalty_Payment_Tracking__c>();
+        for (Contract c : cList) {
+
+            for (Integer x = 0; x < counterPerContract; x++) {
+              results.add(
+                    new CV_Royalty_Payment_Tracking__c(
+                             Contract__c = c.Id
+                            , StartDate__c = Date.today().addMonths(x)
+                            , EndDate__c = Date.today().addMonths(x+1)
+                    ));
+            }
+        }
+        return results;
+    }
+
+    /**
+     * creates Sales Report trackings for test contexts
+     * @param  licensees        List of Contracts.
+     * @param  counterPerContract number of SRT's per Contract
+     * @return non-inserted list of generated Sales Report Trackings.
+     */
+    public static List<CV_Sales_Report_Tracking__c> createSalesReportTrackings(List<Contract> cList, Integer counterPerContract) {
+
+        List<CV_Sales_Report_Tracking__c> results = new List<CV_Sales_Report_Tracking__c>();
+        for (Contract c : cList) {
+
+            for (Integer x = 0; x < counterPerContract; x++) {
+              results.add(
+                    new CV_Sales_Report_Tracking__c(
+                             Contract__c = c.Id
+                            , StartDate__c = Date.today().addMonths(x)
+                            , EndDate__c = Date.today().addMonths(x+1)
+                    ));
+            }
+        }
+        return results;
+    }
 }

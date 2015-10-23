@@ -105,7 +105,7 @@ public with sharing class TH_Contract_CVManageSchedules implements GE_TriggerDis
 
     }
 
-    private void setNextRoyaltyPayment(List<Contract> cAgreementContractList, Map<Id, Contract> agreementsMap){
+    @testVisible private void setNextRoyaltyPayment(List<Contract> cAgreementContractList, Map<Id, Contract> agreementsMap){
         // Derivation 2 : populate Next Royalty Payment on Contract based in isReceived__c flag.
         //                Assumption : Royalty payments will be received in order.
         
@@ -125,7 +125,7 @@ public with sharing class TH_Contract_CVManageSchedules implements GE_TriggerDis
         System.debug(LoggingLevel.DEBUG, 'TH_Contract_CVManageSchedules - setNextRoyaltyPayment end');
     }
 
-    private void setNextSalesReport(List<Contract> cAgreementContractList, Map<Id, Contract> agreementsMap){
+    @testVisible private void setNextSalesReport(List<Contract> cAgreementContractList, Map<Id, Contract> agreementsMap){
         // Derivation 2 : populate Next Sales Report on Contract based in isReceived__c flag.
         //                Assumption : sales reports will be received in order.
         
@@ -148,7 +148,7 @@ public with sharing class TH_Contract_CVManageSchedules implements GE_TriggerDis
     //  -----------------------------------------
     //  deleteRevenuePaymentSchedulesonContractUpdate : delete Royalty payment schedules when startdate, enddate, royalty payment rule is changed on contract.
     //  -----------------------------------------
-    private void deleteRevenuePaymentSchedulesonContractUpdate(List<Contract> cAgreementContractList, Map<Id, Contract> agreementsMap){
+    @testVisible private void deleteRevenuePaymentSchedulesonContractUpdate(List<Contract> cAgreementContractList, Map<Id, Contract> agreementsMap){
         System.debug(LoggingLevel.DEBUG, 'TH_Contract_CVManageSchedules - deleteRevenuePaymentSchedulesonContractUpdate start');
         
         List<CV_Royalty_Payment_Tracking__c> rpttobedeletedList = new List<CV_Royalty_Payment_Tracking__c>();
@@ -169,7 +169,7 @@ public with sharing class TH_Contract_CVManageSchedules implements GE_TriggerDis
     //  -----------------------------------------
     //  deleteSalesReportSchedulesonContractUpdate : delete Sales report schedules when startdate, enddate, sales report rule is changed on contract.
     //  -----------------------------------------
-    private void deleteSalesReportSchedulesonContractUpdate(List<Contract> cAgreementContractList, Map<Id, Contract> agreementsMap){
+    @testVisible private void deleteSalesReportSchedulesonContractUpdate(List<Contract> cAgreementContractList, Map<Id, Contract> agreementsMap){
         System.debug(LoggingLevel.DEBUG, 'TH_Contract_CVManageSchedules - deleteSalesReportSchedulesonContractUpdate start');
         
         List<CV_Sales_Report_Tracking__c> srtobedeletedList = new List<CV_Sales_Report_Tracking__c>();
@@ -191,7 +191,7 @@ public with sharing class TH_Contract_CVManageSchedules implements GE_TriggerDis
     //  -----------------------------------------
     //  createRevenuePaymentSchedules : create Royalty payment schedules when new contract is created updated(startDate, endDate or royalty payment rule).
     //  -----------------------------------------
-    private void createRevenuePaymentSchedules(List<Contract> cAgreementContractList, Map<Id, CV_Due_Date_Rule__c> ddrIdtoddrMap){
+    @testVisible private void createRevenuePaymentSchedules(List<Contract> cAgreementContractList, Map<Id, CV_Due_Date_Rule__c> ddrIdtoddrMap){
         System.debug(LoggingLevel.DEBUG, 'TH_Contract_CVManageSchedules - createRevenuePaymentSchedules start');
         
         List<CV_Royalty_Payment_Tracking__c> rpttobeinsertedList = new List<CV_Royalty_Payment_Tracking__c>();
@@ -217,7 +217,7 @@ public with sharing class TH_Contract_CVManageSchedules implements GE_TriggerDis
     //  -----------------------------------------
     //  createSalesReportSchedules : create Sales Report schedules when new contract is created or updated(startDate, endDate or sales report rule).
     //  -----------------------------------------
-    private void createSalesReportSchedules(List<Contract> cAgreementContractList, Map<Id, CV_Due_Date_Rule__c> ddrIdtoddrMap){
+    @testVisible private void createSalesReportSchedules(List<Contract> cAgreementContractList, Map<Id, CV_Due_Date_Rule__c> ddrIdtoddrMap){
         System.debug(LoggingLevel.DEBUG, 'TH_Contract_CVManageSchedules - createSalesReportSchedules start');
         
         List<CV_Sales_Report_Tracking__c> srtobeinsertedList = new List<CV_Sales_Report_Tracking__c>();
@@ -244,7 +244,7 @@ public with sharing class TH_Contract_CVManageSchedules implements GE_TriggerDis
      * @param  none.
      * @return void.
      */
-    private void updateNextDueDateSchedulesonContract(){
+    @testVisible private void updateNextDueDateSchedulesonContract(){
         System.debug(LoggingLevel.DEBUG, 'TH_Contract_CVManageSchedules - updateNextDueDateSchedulesonContract start');
         Map<Id, Contract> agreementsMap = ContractManager.getContractswRelListsbycId(cIdsofwNewSchedules);
         List<Contract> contractstobeupdatedList = new List<Contract>();

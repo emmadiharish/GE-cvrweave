@@ -4,6 +4,90 @@
 		"selected_items":
 		[
 			[
+				"Contr",
+				"ContractManager	[Custom Apex Class]"
+			],
+			[
+				"is",
+				"PUBLIC isequalsRoyalPaymentSchedule(Contract c, Contract secondContract) 	Boolean"
+			],
+			[
+				"add",
+				"addYears"
+			],
+			[
+				"con",
+				"Contract"
+			],
+			[
+				"Con",
+				"ContractManager	[Custom Apex Class]"
+			],
+			[
+				"CV",
+				"CVCustomDueDates__r"
+			],
+			[
+				"si",
+				"PUBLIC size() 	Integer"
+			],
+			[
+				"Per",
+				"Period_End_Date__c"
+			],
+			[
+				"perio",
+				"periodStartDate"
+			],
+			[
+				"CV_D",
+				"CV_Custom_Due_Date__c"
+			],
+			[
+				"DDR",
+				"DDR_PERIOD_QUARTER_START"
+			],
+			[
+				"crea",
+				"PUBLIC createSalesReportTrackings(LIST cList, Integer counterPerContract) 	LIST"
+			],
+			[
+				"Contra",
+				"Contract"
+			],
+			[
+				"ddr",
+				"ddrule"
+			],
+			[
+				"Due",
+				"DueDateRuleManager	[Custom Apex Class]"
+			],
+			[
+				"Next_",
+				"Next_Sales_Report__c"
+			],
+			[
+				"Roya",
+				"Royalty_Payment_Due_Date_Rule__c"
+			],
+			[
+				"Test",
+				"TestDataFactory	[Custom Apex Class]"
+			],
+			[
+				"DueDate",
+				"DueDateRuleManager	[Custom Apex Class]"
+			],
+			[
+				"Cont",
+				"Contract"
+			],
+			[
+				"asser",
+				"assertEquals()"
+			],
+			[
 				"set",
 				"setNextSalesReport"
 			],
@@ -16,24 +100,12 @@
 				"Next_Sales_Report__c"
 			],
 			[
-				"con",
-				"contractstobeupdatedMap"
-			],
-			[
 				"upda",
 				"updateContracts"
 			],
 			[
 				"isCon",
 				"PUBLIC isSalesReportScheduleRefreshrequired(Contract c, Contract secondContract) 	Boolean"
-			],
-			[
-				"Contra",
-				"ContractManager	[Custom Apex Class]"
-			],
-			[
-				"CV",
-				"CVRoyaltyPaymentTracking__r"
 			],
 			[
 				"create",
@@ -46,10 +118,6 @@
 			[
 				"Sta",
 				"StartDate"
-			],
-			[
-				"Cont",
-				"ContractManager	[Custom Apex Class]"
 			],
 			[
 				"End",
@@ -202,10 +270,6 @@
 			[
 				"field",
 				"fieldName"
-			],
-			[
-				"is",
-				"isEmpty"
 			],
 			[
 				"ser",
@@ -489,28 +553,37 @@
 	],
 	"file_history":
 	[
-		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/GE_TriggerDispatch.cls",
-		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/TH_Contract_CVManageSchedules.cls",
+		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/Metadata tracker.textile",
+		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/TH_Contract_CVManageSchedulesTest.cls",
+		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/TestDataFactory.cls",
 		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/ContractManager.cls",
+		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/ContractManagerTest.cls",
+		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/TH_Contract_CVManageSchedules.cls",
+		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/triggers/AllContractTriggers.trigger",
+		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/DueDateRuleManager.cls",
+		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/DueDateRuleManagerTest.cls",
+		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/RoyaltyPaymentManager.cls",
+		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/SalesReportManagerTest.cls",
+		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/SalesReportManager.cls",
+		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/RoyaltyPaymentManagerTest.cls",
+		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/CaseManager.cls",
+		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/CaseManagerTest.cls",
+		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/TH_Case_CVRolesManagement.cls",
+		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/CaseCVWorkflowGatekeeperExtCtrlTest.cls",
+		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/GE_TriggerDispatch.cls",
 		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/CVContractGateway.cls",
 		"/C/Users/hemmadi/Google Drive/GE/contractmanageschedulesbackup.cls",
-		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/RoyaltyPaymentManager.cls",
-		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/SalesReportManager.cls",
-		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/DueDateRuleManager.cls",
-		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/triggers/AllContractTriggers.trigger",
 		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/triggers/CVContractTrigger.trigger",
 		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/TH_Contract_CVSetNextDueDateSchedules.cls",
 		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/triggers/AllContractTrigger.trigger",
 		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/CVUtilityFns.cls",
 		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/CVCONSTANTS.cls",
-		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/CaseManager.cls",
 		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/TH_Contract_CVPopulateSchedules.cls",
 		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/ProductManager.cls",
 		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/AccountManager.cls",
 		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/CVContractTriggerHandler.cls",
 		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/TH_Case_StartExternalLegal.cls",
 		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/CVWorkflowManager.cls",
-		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/CaseManagerTest.cls",
 		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/CVContractWrapper.cls",
 		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/triggers/AllCaseTriggers.trigger",
 		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/TH_CVContractTriggerHandler.cls",
@@ -518,7 +591,6 @@
 		"/C/Users/hemmadi/AppData/Roaming/Sublime Text 3/Packages/MavensMate/mavensmate.sublime-settings",
 		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/CVMetaUtils.cls",
 		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/TH_Case_CVSetDateTrackingFields.cls",
-		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/TH_Case_CVRolesManagement.cls",
 		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/CVFlowControl.cls",
 		"/C/Users/hemmadi/Workspace/GE",
 		"/C/Users/hemmadi/Workspace/GE/src/classes/CVException.cls",
@@ -608,15 +680,7 @@
 		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/pages/APTPS_CAP_MS_Flow.page",
 		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/resource-bundles/APTPS_CAPResourceBundle_Flow.resource/Templates/OptionsGroupView.html",
 		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/resource-bundles/APTPS_CAPResourceBundle_H.resource/Templates/OptionsGroupView.html",
-		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/resource-bundles/APTPS_CAPResourceBundle_Flow.resource/Controllers/BaseController.js",
-		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/resource-bundles/APTPS_CAPResourceBundle_Flow.resource/OptionGroup/OptionGroupDataService.js",
-		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/resource-bundles/APTPS_CAPResourceBundle_Flow.resource/ProductAttributes/ProductAttributeValueDataService.js",
-		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/resource-bundles/APTPS_CAPResourceBundle_Flow.resource/ProductAttributes/ProductAttributeConfigCache.js",
-		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/resource-bundles/APTPS_CAPResourceBundle_Flow.resource/ProductAttributes/ProductAttributeValueCache.js",
-		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/resource-bundles/APTPS_CAPResourceBundle_Flow.resource/ProductAttributes/ProductAttributeConfigDataService.js",
-		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/resource-bundles/APTPS_CAPResourceBundle_Flow.resource/ProductAttributes/BundleAttributesController.js",
-		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/resource-bundles/APTPS_CAPResourceBundle_Flow.resource/ProductAttributes/._BundleAttributesController.js",
-		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/classes/APTPS_ProductAttributeValueSelector.cls"
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/resource-bundles/APTPS_CAPResourceBundle_Flow.resource/Controllers/BaseController.js"
 	],
 	"find":
 	{
@@ -643,6 +707,31 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"RT_agreement",
+			"agreement",
+			"isReceived__c",
+			"CV_Sales_Report_Tracking__c",
+			"DDR_PERIOD_MONTH_END",
+			"createRevenuePaymentSchedules",
+			"StartDate",
+			"createSalesReportSchedules",
+			"createDueDateRules",
+			"setCVRoleStatuses",
+			"caseOldMap",
+			"contractOldMap",
+			"create",
+			"deleteRevenuePaymentSchedulesonContractUpdate",
+			"contractOldMap",
+			"delete",
+			"createRevenuePaymentSchedules",
+			"calculateCVWorkflowStatus",
+			"@testVisible private",
+			"@tes",
+			"insert c",
+			"CaseManager",
+			"accounts",
+			"dataSetup",
+			"ContractManager",
 			"cId",
 			"agreementsMap",
 			"contractstobeupdatedMap",
@@ -745,32 +834,7 @@
 			"allZServiceLocs",
 			"selectedSRId",
 			"getLocationZ",
-			"$scope",
-			"zLoc",
-			"getLocationZ",
-			"depattributes",
-			"$scope",
-			"ProductAttributeConfigDataService",
-			"getLocationsCheck",
-			"getselectedlpa",
-			"getselectedlpaId",
-			"zLoc",
-			"getloc",
-			"getlocIt",
-			"getlocItems",
-			"allZServiceLocs",
-			"LocationDataService",
-			"locItems",
-			"getLocationsCheck",
-			"z",
-			"locatio",
-			"locationz",
-			"z",
-			"getLocationZ",
-			"selectByServiceLocationwBundle",
-			"productAttributeValues",
-			"messages",
-			"pagemessage"
+			"$scope"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -868,6 +932,86 @@
 		"selected_items":
 		[
 			[
+				"th_con",
+				"src\\classes\\TH_Contract_CVManageSchedules.cls"
+			],
+			[
+				"cont",
+				"src\\classes\\ContractManager.cls"
+			],
+			[
+				"test",
+				"src\\classes\\TestDataFactory.cls"
+			],
+			[
+				"th_contra",
+				"src\\classes\\TH_Contract_CVManageSchedules.cls"
+			],
+			[
+				"contracttriggers.",
+				"src\\triggers\\AllContractTriggers.trigger"
+			],
+			[
+				"sales",
+				"src\\classes\\SalesReportManagerTest.cls"
+			],
+			[
+				"royal",
+				"src\\classes\\RoyaltyPaymentManager.cls"
+			],
+			[
+				"due",
+				"src\\classes\\DueDateRuleManager.cls"
+			],
+			[
+				"tes",
+				"src\\classes\\TestDataFactory.cls"
+			],
+			[
+				"royalt",
+				"src\\classes\\RoyaltyPaymentManagerTest.cls"
+			],
+			[
+				"testdata",
+				"src\\classes\\TestDataFactory.cls"
+			],
+			[
+				"salesrepo",
+				"src\\classes\\SalesReportManager.cls"
+			],
+			[
+				"dueda",
+				"src\\classes\\DueDateRuleManager.cls"
+			],
+			[
+				"duedaterulemanager",
+				"src\\classes\\DueDateRuleManager.cls"
+			],
+			[
+				"th_case",
+				"src\\classes\\TH_Case_CVRolesManagement.cls"
+			],
+			[
+				"testdatafactory",
+				"src\\classes\\TestDataFactory.cls"
+			],
+			[
+				"casemana",
+				"src\\classes\\CaseManagerTest.cls"
+			],
+			[
+				"casemanager",
+				"src\\classes\\CaseManagerTest.cls"
+			],
+			[
+				"th_contract",
+				"src\\classes\\TH_Contract_CVManageSchedules.cls"
+			],
+			[
+				"test.cls",
+				"src\\classes\\CaseManagerTest.cls"
+			],
+			[
 				"contractmana",
 				"src\\classes\\ContractManager.cls"
 			],
@@ -896,16 +1040,8 @@
 				"src\\classes\\CVUtilityFns.cls"
 			],
 			[
-				"th_con",
-				"src\\classes\\TH_Contract_CVManageSchedules.cls"
-			],
-			[
 				"cvcon",
 				"src\\classes\\CVCONSTANTS.cls"
-			],
-			[
-				"casemana",
-				"src\\classes\\CaseManager.cls"
 			],
 			[
 				"manager",
@@ -950,10 +1086,6 @@
 			[
 				"contractmanager",
 				"src\\classes\\ContractManager.cls"
-			],
-			[
-				"casemanager",
-				"src\\classes\\CaseManager.cls"
 			],
 			[
 				"th_case_cvsetdatetrackingfields",
@@ -1310,74 +1442,6 @@
 			[
 				"custom",
 				"src\\classes\\APTPS_CustomAttributeUtil.cls"
-			],
-			[
-				"aptps_optiongroupcon",
-				"src\\classes\\APTPS_OptionGroupController.cls"
-			],
-			[
-				"aptps_servicelocationselecotor",
-				"src\\classes\\APTPS_ServiceLocationSelecotor.cls"
-			],
-			[
-				"_ra.cl",
-				"src\\classes\\APTPS_CAP_RA.cls"
-			],
-			[
-				"aptps_location",
-				"src\\classes\\APTPS_LocationAvailabilitySelector.cls"
-			],
-			[
-				"locationcon",
-				"resource-bundles\\APTPS_CAPResourceBundle_Flow.resource\\ServiceLocation\\LocationController.js"
-			],
-			[
-				"aptps_flowre",
-				"src\\staticresources\\APTPS_CAPResourceBundle_Flow.resource"
-			],
-			[
-				"customattributeutil",
-				"src\\classes\\APTPS_CustomAttributeUtil.cls"
-			],
-			[
-				"aptps_cap_ms_h",
-				"src\\classes\\APTPS_CAP_MS_H.cls"
-			],
-			[
-				"customuti",
-				"src\\classes\\APTPS_CustomAttributeUtil.cls"
-			],
-			[
-				"aptps_cust",
-				"src\\classes\\APTPS_CustomAttributeUtil.cls"
-			],
-			[
-				"minica",
-				"resource-bundles\\APTPS_CAPResourceBundle_Flow.resource\\MiniCart\\MiniCartDataService.js"
-			],
-			[
-				"aptps_productatt",
-				"src\\classes\\APTPS_ProductAttributeConfigController.cls"
-			],
-			[
-				"aptps_productattr",
-				"src\\classes\\APTPS_ProductAttributeValueController.cls"
-			],
-			[
-				"aptps_custom",
-				"src\\classes\\APTPS_CustomAttributeUtil.cls"
-			],
-			[
-				"aptps_flow.pa",
-				"src\\pages\\APTPS_CAP_MS_Flow.page"
-			],
-			[
-				"aptps_capres",
-				"src\\staticresources\\APTPS_CAPResourceBundle_Flow.resource"
-			],
-			[
-				"aptps_line",
-				"src\\classes\\APTPS_LineItemSelector.cls"
 			]
 		],
 		"width": 0.0
@@ -1408,7 +1472,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 176.0,
+	"side_bar_width": 350.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

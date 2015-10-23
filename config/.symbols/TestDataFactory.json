@@ -1,0 +1,1648 @@
+{
+    "constructors": [],
+    "externalReferences": [],
+    "id": "01pZ0000000LKpjIAG",
+    "innerClasses": [],
+    "interfaces": [],
+    "key": "01pZ0000000LKpjIAG",
+    "methods": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 27,
+                "line": 25
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "createUsers",
+            "parameters": [
+                {
+                    "name": "basename",
+                    "type": "String"
+                },
+                {
+                    "name": "profileName",
+                    "type": "String"
+                },
+                {
+                    "name": "count",
+                    "type": "Integer"
+                }
+            ],
+            "references": [],
+            "returnType": "LIST",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 30,
+                "line": 55
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "createCommunityUsers",
+            "parameters": [
+                {
+                    "name": "basename",
+                    "type": "String"
+                },
+                {
+                    "name": "profileName",
+                    "type": "String"
+                },
+                {
+                    "name": "cIdsList",
+                    "type": "LIST"
+                }
+            ],
+            "references": [],
+            "returnType": "LIST",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 33,
+                "line": 86
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "createAccounts",
+            "parameters": [
+                {
+                    "name": "basename",
+                    "type": "String"
+                },
+                {
+                    "name": "ownerId",
+                    "type": "String"
+                },
+                {
+                    "name": "count",
+                    "type": "Integer"
+                }
+            ],
+            "references": [],
+            "returnType": "LIST",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 33,
+                "line": 102
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "createContacts",
+            "parameters": [
+                {
+                    "name": "basename",
+                    "type": "String"
+                },
+                {
+                    "name": "ownerId",
+                    "type": "String"
+                },
+                {
+                    "name": "accountId",
+                    "type": "String"
+                },
+                {
+                    "name": "count",
+                    "type": "Integer"
+                }
+            ],
+            "references": [],
+            "returnType": "LIST",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 24,
+                "line": 123
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "createRoyaltySubmissionCase",
+            "parameters": [
+                {
+                    "name": "basename",
+                    "type": "String"
+                },
+                {
+                    "name": "ownerId",
+                    "type": "String"
+                },
+                {
+                    "name": "accountId",
+                    "type": "String"
+                },
+                {
+                    "name": "contactId",
+                    "type": "String"
+                }
+            ],
+            "references": [],
+            "returnType": "Case",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 24,
+                "line": 148
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "createBrandChangeCase",
+            "parameters": [
+                {
+                    "name": "basename",
+                    "type": "String"
+                },
+                {
+                    "name": "ownerId",
+                    "type": "String"
+                },
+                {
+                    "name": "accountId",
+                    "type": "String"
+                },
+                {
+                    "name": "contactId",
+                    "type": "String"
+                }
+            ],
+            "references": [],
+            "returnType": "Case",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 24,
+                "line": 176
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "createProductChangeCase",
+            "parameters": [
+                {
+                    "name": "basename",
+                    "type": "String"
+                },
+                {
+                    "name": "ownerId",
+                    "type": "String"
+                },
+                {
+                    "name": "accountId",
+                    "type": "String"
+                },
+                {
+                    "name": "contactId",
+                    "type": "String"
+                }
+            ],
+            "references": [],
+            "returnType": "Case",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 24,
+                "line": 205
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "createAncillaryBrandChangeCase",
+            "parameters": [
+                {
+                    "name": "basename",
+                    "type": "String"
+                },
+                {
+                    "name": "ownerId",
+                    "type": "String"
+                },
+                {
+                    "name": "accountId",
+                    "type": "String"
+                },
+                {
+                    "name": "contactId",
+                    "type": "String"
+                }
+            ],
+            "references": [],
+            "returnType": "Case",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 24,
+                "line": 239
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "createExternalLegalCase",
+            "parameters": [
+                {
+                    "name": "basename",
+                    "type": "String"
+                },
+                {
+                    "name": "ownerId",
+                    "type": "String"
+                },
+                {
+                    "name": "accountId",
+                    "type": "String"
+                },
+                {
+                    "name": "contactId",
+                    "type": "String"
+                }
+            ],
+            "references": [],
+            "returnType": "Case",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 24,
+                "line": 268
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "createInternalLegalCase",
+            "parameters": [
+                {
+                    "name": "basename",
+                    "type": "String"
+                },
+                {
+                    "name": "ownerId",
+                    "type": "String"
+                },
+                {
+                    "name": "accountId",
+                    "type": "String"
+                },
+                {
+                    "name": "contactId",
+                    "type": "String"
+                }
+            ],
+            "references": [],
+            "returnType": "Case",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 24,
+                "line": 297
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "createNPICase",
+            "parameters": [
+                {
+                    "name": "basename",
+                    "type": "String"
+                },
+                {
+                    "name": "ownerId",
+                    "type": "String"
+                },
+                {
+                    "name": "accountId",
+                    "type": "String"
+                },
+                {
+                    "name": "contactId",
+                    "type": "String"
+                }
+            ],
+            "references": [],
+            "returnType": "Case",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 50,
+                "line": 353
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "createCVCaseIssues",
+            "parameters": [
+                {
+                    "name": "caseId",
+                    "type": "String"
+                },
+                {
+                    "name": "count",
+                    "type": "Integer"
+                }
+            ],
+            "references": [],
+            "returnType": "LIST",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 50,
+                "line": 377
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "createCVCaseIssueComments",
+            "parameters": [
+                {
+                    "name": "caseId",
+                    "type": "String"
+                },
+                {
+                    "name": "relatedIssueId",
+                    "type": "String"
+                },
+                {
+                    "name": "count",
+                    "type": "Integer"
+                }
+            ],
+            "references": [],
+            "returnType": "LIST",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 34,
+                "line": 402
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "createProducts",
+            "parameters": [
+                {
+                    "name": "licensees",
+                    "type": "LIST"
+                },
+                {
+                    "name": "basename",
+                    "type": "String"
+                },
+                {
+                    "name": "countPerLicensee",
+                    "type": "Integer"
+                }
+            ],
+            "references": [],
+            "returnType": "LIST",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 34,
+                "line": 428
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "createContracts",
+            "parameters": [
+                {
+                    "name": "licensees",
+                    "type": "LIST"
+                },
+                {
+                    "name": "basename",
+                    "type": "String"
+                },
+                {
+                    "name": "countPerLicensee",
+                    "type": "Integer"
+                }
+            ],
+            "references": [],
+            "returnType": "LIST",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 45,
+                "line": 452
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "createDueDateRules",
+            "parameters": [
+                {
+                    "name": "rulename",
+                    "type": "String"
+                },
+                {
+                    "name": "periodType",
+                    "type": "String"
+                },
+                {
+                    "name": "counter",
+                    "type": "Integer"
+                }
+            ],
+            "references": [],
+            "returnType": "LIST",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 56,
+                "line": 473
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "createRoyaltyPaymentTrackings",
+            "parameters": [
+                {
+                    "name": "cList",
+                    "type": "LIST"
+                },
+                {
+                    "name": "counterPerContract",
+                    "type": "Integer"
+                }
+            ],
+            "references": [],
+            "returnType": "LIST",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 53,
+                "line": 496
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "createSalesReportTrackings",
+            "parameters": [
+                {
+                    "name": "cList",
+                    "type": "LIST"
+                },
+                {
+                    "name": "counterPerContract",
+                    "type": "Integer"
+                }
+            ],
+            "references": [],
+            "returnType": "LIST",
+            "type": null
+        }
+    ],
+    "name": "TestDataFactory",
+    "namespace": null,
+    "parentClass": "",
+    "properties": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 32,
+                "line": 15
+            },
+            "modifiers": [
+                "static",
+                "public",
+                "final"
+            ],
+            "name": "CV_PARTNER_COMMUNITY_PROFILE_NAME",
+            "references": [],
+            "type": "String"
+        }
+    ],
+    "tableDeclaration": {
+        "annotations": [
+            {
+                "name": "IsTest"
+            }
+        ],
+        "location": {
+            "column": 22,
+            "line": 11
+        },
+        "modifiers": [
+            "public",
+            "testMethod"
+        ],
+        "name": "TestDataFactory",
+        "references": [],
+        "type": "TestDataFactory"
+    },
+    "variables": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 46,
+                "line": 25
+            },
+            "modifiers": [],
+            "name": "basename",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 63,
+                "line": 25
+            },
+            "modifiers": [],
+            "name": "profileName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 84,
+                "line": 25
+            },
+            "modifiers": [],
+            "name": "count",
+            "references": [],
+            "type": "Integer"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 17,
+                "line": 27
+            },
+            "modifiers": [],
+            "name": "p",
+            "references": [],
+            "type": "Profile"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 29
+            },
+            "modifiers": [],
+            "name": "results",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 22,
+                "line": 30
+            },
+            "modifiers": [],
+            "name": "x",
+            "references": [],
+            "type": "Integer"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 58,
+                "line": 55
+            },
+            "modifiers": [],
+            "name": "basename",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 75,
+                "line": 55
+            },
+            "modifiers": [],
+            "name": "profileName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 97,
+                "line": 55
+            },
+            "modifiers": [],
+            "name": "cIdsList",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 17,
+                "line": 57
+            },
+            "modifiers": [],
+            "name": "p",
+            "references": [],
+            "type": "Profile"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 59
+            },
+            "modifiers": [],
+            "name": "results",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 17,
+                "line": 60
+            },
+            "modifiers": [],
+            "name": "cId",
+            "references": [],
+            "type": "Id"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 55,
+                "line": 86
+            },
+            "modifiers": [],
+            "name": "basename",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 72,
+                "line": 86
+            },
+            "modifiers": [],
+            "name": "ownerId",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 89,
+                "line": 86
+            },
+            "modifiers": [],
+            "name": "count",
+            "references": [],
+            "type": "Integer"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 23,
+                "line": 87
+            },
+            "modifiers": [],
+            "name": "results",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 22,
+                "line": 88
+            },
+            "modifiers": [],
+            "name": "x",
+            "references": [],
+            "type": "Integer"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 55,
+                "line": 102
+            },
+            "modifiers": [],
+            "name": "basename",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 72,
+                "line": 102
+            },
+            "modifiers": [],
+            "name": "ownerId",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 88,
+                "line": 102
+            },
+            "modifiers": [],
+            "name": "accountId",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 107,
+                "line": 102
+            },
+            "modifiers": [],
+            "name": "count",
+            "references": [],
+            "type": "Integer"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 23,
+                "line": 103
+            },
+            "modifiers": [],
+            "name": "results",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 22,
+                "line": 104
+            },
+            "modifiers": [],
+            "name": "x",
+            "references": [],
+            "type": "Integer"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 59,
+                "line": 123
+            },
+            "modifiers": [],
+            "name": "basename",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 76,
+                "line": 123
+            },
+            "modifiers": [],
+            "name": "ownerId",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 92,
+                "line": 123
+            },
+            "modifiers": [],
+            "name": "accountId",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 110,
+                "line": 123
+            },
+            "modifiers": [],
+            "name": "contactId",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 14,
+                "line": 124
+            },
+            "modifiers": [],
+            "name": "cLicenseeCase",
+            "references": [],
+            "type": "Case"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 53,
+                "line": 148
+            },
+            "modifiers": [],
+            "name": "basename",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 70,
+                "line": 148
+            },
+            "modifiers": [],
+            "name": "ownerId",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 86,
+                "line": 148
+            },
+            "modifiers": [],
+            "name": "accountId",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 104,
+                "line": 148
+            },
+            "modifiers": [],
+            "name": "contactId",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 14,
+                "line": 149
+            },
+            "modifiers": [],
+            "name": "cLicenseeCase",
+            "references": [],
+            "type": "Case"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 55,
+                "line": 176
+            },
+            "modifiers": [],
+            "name": "basename",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 72,
+                "line": 176
+            },
+            "modifiers": [],
+            "name": "ownerId",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 88,
+                "line": 176
+            },
+            "modifiers": [],
+            "name": "accountId",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 106,
+                "line": 176
+            },
+            "modifiers": [],
+            "name": "contactId",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 14,
+                "line": 177
+            },
+            "modifiers": [],
+            "name": "cLicenseeCase",
+            "references": [],
+            "type": "Case"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 62,
+                "line": 205
+            },
+            "modifiers": [],
+            "name": "basename",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 79,
+                "line": 205
+            },
+            "modifiers": [],
+            "name": "ownerId",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 95,
+                "line": 205
+            },
+            "modifiers": [],
+            "name": "accountId",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 113,
+                "line": 205
+            },
+            "modifiers": [],
+            "name": "contactId",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 14,
+                "line": 206
+            },
+            "modifiers": [],
+            "name": "cLicenseeCase",
+            "references": [],
+            "type": "Case"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 55,
+                "line": 239
+            },
+            "modifiers": [],
+            "name": "basename",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 72,
+                "line": 239
+            },
+            "modifiers": [],
+            "name": "ownerId",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 88,
+                "line": 239
+            },
+            "modifiers": [],
+            "name": "accountId",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 106,
+                "line": 239
+            },
+            "modifiers": [],
+            "name": "contactId",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 14,
+                "line": 240
+            },
+            "modifiers": [],
+            "name": "cLicenseeCase",
+            "references": [],
+            "type": "Case"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 55,
+                "line": 268
+            },
+            "modifiers": [],
+            "name": "basename",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 72,
+                "line": 268
+            },
+            "modifiers": [],
+            "name": "ownerId",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 88,
+                "line": 268
+            },
+            "modifiers": [],
+            "name": "accountId",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 106,
+                "line": 268
+            },
+            "modifiers": [],
+            "name": "contactId",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 14,
+                "line": 269
+            },
+            "modifiers": [],
+            "name": "cLicenseeCase",
+            "references": [],
+            "type": "Case"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 45,
+                "line": 297
+            },
+            "modifiers": [],
+            "name": "basename",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 62,
+                "line": 297
+            },
+            "modifiers": [],
+            "name": "ownerId",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 78,
+                "line": 297
+            },
+            "modifiers": [],
+            "name": "accountId",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 96,
+                "line": 297
+            },
+            "modifiers": [],
+            "name": "contactId",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 14,
+                "line": 298
+            },
+            "modifiers": [],
+            "name": "cLicenseeCase",
+            "references": [],
+            "type": "Case"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 76,
+                "line": 353
+            },
+            "modifiers": [],
+            "name": "caseId",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 92,
+                "line": 353
+            },
+            "modifiers": [],
+            "name": "count",
+            "references": [],
+            "type": "Integer"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 40,
+                "line": 354
+            },
+            "modifiers": [],
+            "name": "results",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 22,
+                "line": 355
+            },
+            "modifiers": [],
+            "name": "x",
+            "references": [],
+            "type": "Integer"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 38,
+                "line": 356
+            },
+            "modifiers": [],
+            "name": "cvcicNewIssue",
+            "references": [],
+            "type": "CV_Case_Issue_Comment__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 83,
+                "line": 377
+            },
+            "modifiers": [],
+            "name": "caseId",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 98,
+                "line": 377
+            },
+            "modifiers": [],
+            "name": "relatedIssueId",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 122,
+                "line": 377
+            },
+            "modifiers": [],
+            "name": "count",
+            "references": [],
+            "type": "Integer"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 40,
+                "line": 378
+            },
+            "modifiers": [],
+            "name": "results",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 22,
+                "line": 379
+            },
+            "modifiers": [],
+            "name": "x",
+            "references": [],
+            "type": "Integer"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 38,
+                "line": 380
+            },
+            "modifiers": [],
+            "name": "cvcicNewIssue",
+            "references": [],
+            "type": "CV_Case_Issue_Comment__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 63,
+                "line": 402
+            },
+            "modifiers": [],
+            "name": "licensees",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 81,
+                "line": 402
+            },
+            "modifiers": [],
+            "name": "basename",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 99,
+                "line": 402
+            },
+            "modifiers": [],
+            "name": "countPerLicensee",
+            "references": [],
+            "type": "Integer"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 24,
+                "line": 404
+            },
+            "modifiers": [],
+            "name": "results",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 22,
+                "line": 405
+            },
+            "modifiers": [],
+            "name": "licensee",
+            "references": [],
+            "type": "Account"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 26,
+                "line": 407
+            },
+            "modifiers": [],
+            "name": "x",
+            "references": [],
+            "type": "Integer"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 64,
+                "line": 428
+            },
+            "modifiers": [],
+            "name": "licensees",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 82,
+                "line": 428
+            },
+            "modifiers": [],
+            "name": "basename",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 100,
+                "line": 428
+            },
+            "modifiers": [],
+            "name": "countPerLicensee",
+            "references": [],
+            "type": "Integer"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 24,
+                "line": 430
+            },
+            "modifiers": [],
+            "name": "results",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 22,
+                "line": 431
+            },
+            "modifiers": [],
+            "name": "licensee",
+            "references": [],
+            "type": "Account"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 26,
+                "line": 433
+            },
+            "modifiers": [],
+            "name": "x",
+            "references": [],
+            "type": "Integer"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 71,
+                "line": 452
+            },
+            "modifiers": [],
+            "name": "rulename",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 88,
+                "line": 452
+            },
+            "modifiers": [],
+            "name": "periodType",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 108,
+                "line": 452
+            },
+            "modifiers": [],
+            "name": "counter",
+            "references": [],
+            "type": "Integer"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 35,
+                "line": 454
+            },
+            "modifiers": [],
+            "name": "results",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 22,
+                "line": 455
+            },
+            "modifiers": [],
+            "name": "x",
+            "references": [],
+            "type": "Integer"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 101,
+                "line": 473
+            },
+            "modifiers": [],
+            "name": "cList",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 116,
+                "line": 473
+            },
+            "modifiers": [],
+            "name": "counterPerContract",
+            "references": [],
+            "type": "Integer"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 46,
+                "line": 475
+            },
+            "modifiers": [],
+            "name": "results",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 23,
+                "line": 476
+            },
+            "modifiers": [],
+            "name": "c",
+            "references": [],
+            "type": "Contract"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 26,
+                "line": 478
+            },
+            "modifiers": [],
+            "name": "x",
+            "references": [],
+            "type": "Integer"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 95,
+                "line": 496
+            },
+            "modifiers": [],
+            "name": "cList",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 110,
+                "line": 496
+            },
+            "modifiers": [],
+            "name": "counterPerContract",
+            "references": [],
+            "type": "Integer"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 43,
+                "line": 498
+            },
+            "modifiers": [],
+            "name": "results",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 23,
+                "line": 499
+            },
+            "modifiers": [],
+            "name": "c",
+            "references": [],
+            "type": "Contract"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 26,
+                "line": 501
+            },
+            "modifiers": [],
+            "name": "x",
+            "references": [],
+            "type": "Integer"
+        }
+    ]
+}

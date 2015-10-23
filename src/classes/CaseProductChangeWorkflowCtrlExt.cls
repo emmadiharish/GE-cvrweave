@@ -15,7 +15,7 @@ public with sharing class CaseProductChangeWorkflowCtrlExt extends CaseWorkflowE
 //base property method overrides
 //******************************************************************************************************************************
     public override String getCurrentUserWorkflowRole() {
-        if(this.currentUserWorkflowRole == null) {
+        if (this.currentUserWorkflowRole == null) {
             this.currentUserWorkflowRole = CVWorkflowSettingsManager.getProductChangeWorkflowRoleForUser(UserInfo.getUserId());
         }
         return this.currentUserWorkflowRole;
@@ -24,9 +24,9 @@ public with sharing class CaseProductChangeWorkflowCtrlExt extends CaseWorkflowE
     public Boolean shippingButtonsVisible {
         get {
             return
-                (getCurrentUserWorkflowRole() == roleLicensee)
-                &&
-                (cLicenseeCase.Status == CaseManager.STATUS_SAMPLES_NOT_SHIPPED);
+                    ( getCurrentUserWorkflowRole() == roleLicensee )
+                            &&
+                            ( cLicenseeCase.Status == CaseManager.STATUS_SAMPLES_NOT_SHIPPED );
         }
     }
 
@@ -58,34 +58,50 @@ public with sharing class CaseProductChangeWorkflowCtrlExt extends CaseWorkflowE
 
         System.debug(LoggingLevel.DEBUG, 'CaseProductChangeWorkflowCtrlExt - init start');
         try {
-            if(roleLicensee != getCurrentUserWorkflowRole() && !gecvButtonsVisible) {
-                ApexPages.addmessage(new ApexPages.message(ApexPages.severity.INFO,'No action is required from your side at this time.'));
+            if (roleLicensee != getCurrentUserWorkflowRole() && !gecvButtonsVisible) {
+                ApexPages.addmessage(new ApexPages.message(ApexPages.severity.INFO, 'No action is required from your side at this time.'));
                 return;
-            } else if(roleLicensee == getCurrentUserWorkflowRole() && !getLicenseeButtonsVisible() && areAllIssuesResponded() && !shippingButtonsVisible) {
-                ApexPages.addmessage(new ApexPages.message(ApexPages.severity.INFO,'No action is required from your side at this time.'));
-            } else if(roleLicensee == getCurrentUserWorkflowRole() && shippingButtonsVisible) {
-                ApexPages.addmessage(new ApexPages.message(ApexPages.severity.INFO,'Please add shipping information'));
+            }
+            else if (roleLicensee == getCurrentUserWorkflowRole() && !getLicenseeButtonsVisible() && areAllIssuesResponded() && !shippingButtonsVisible) {
+                ApexPages.addmessage(new ApexPages.message(ApexPages.severity.INFO, 'No action is required from your side at this time.'));
+            }
+            else if (roleLicensee == getCurrentUserWorkflowRole() && shippingButtonsVisible) {
+                ApexPages.addmessage(new ApexPages.message(ApexPages.severity.INFO, 'Please add shipping information'));
             }
 
             if (roleLicensee == getCurrentUserWorkflowRole() && !areAllIssuesResponded()) {
-                ApexPages.addmessage(new ApexPages.message(ApexPages.severity.WARNING,'One or more Issues are pending your comment. Please respond to all the issues and then re-submit.'));
+                ApexPages.addmessage(new ApexPages.message(ApexPages.severity.WARNING, 'One or more Issues are pending your comment. Please respond to all the issues and then re-submit.'));
             }
             System.debug('currentUserWorkflowRole:' + currentUserWorkflowRole);
-            if(roleLicensee != getCurrentUserWorkflowRole()) {
-                shippingInfoWfRole = ProductSampleShippingInfoManager.getShippingInfosForCaseId(cLicenseeCase.Id)[0];
-                for(Product_Sample_Ship_Info_Confirmation__c pssic : shippingInfoWfRole.Confirmations__r) {
-                    if(pssic.Role__c == currentUserWorkflowRole) {
-                        productSampleShipInfoConfirmationCurrentRole = pssic;
-                        System.debug('shippingInfoWfRole' + shippingInfoWfRole);
+            if (roleLicensee != getCurrentUserWorkflowRole()) {
+
+                List<Product_Sample_Shipping_Info__c> shippingInfos = ProductSampleShippingInfoManager.getShippingInfosForCaseIdAndCaseStatus(cLicenseeCase.Id, cLicenseeCase.Status);
+
+                for (Product_Sample_Shipping_Info__c shippingInfo : shippingInfos) {
+
+                    if (!shippingInfo.Confirmed__c) {
+
+                        shippingInfoWfRole = shippingInfo;
+
+                        for (Product_Sample_Ship_Info_Confirmation__c pssic : shippingInfoWfRole.Confirmations__r) {
+
+                            if (pssic.Role__c == currentUserWorkflowRole) {
+
+                                productSampleShipInfoConfirmationCurrentRole = pssic;
+                                System.debug('shippingInfoWfRole' + shippingInfoWfRole);
+                                break;
+                            }
+                        }
+
                         break;
                     }
                 }
             }
 
         }
-        catch(Exception ex) {
+        catch (Exception ex) {
             System.debug(LoggingLevel.ERROR, ex.getMessage() + '\n' + ex.getStackTraceString());
-            ApexPages.addmessage(new ApexPages.message(ApexPages.severity.ERROR,'There was an error while loading the page please try again later.'));
+            ApexPages.addmessage(new ApexPages.message(ApexPages.severity.ERROR, 'There was an error while loading the page please try again later.'));
         }
         System.debug(LoggingLevel.DEBUG, 'CaseProductChangeWorkflowCtrlExt - init end');
     }
@@ -101,9 +117,9 @@ public with sharing class CaseProductChangeWorkflowCtrlExt extends CaseWorkflowE
         System.debug(LoggingLevel.DEBUG, 'CaseProductChangeWorkflowCtrlExt - reSubmit start');
         PageReference prResponse = null;
         try {
-            if(areAllIssuesResponded()){
+            if (areAllIssuesResponded()) {
 
-                if(areNewSamplesRequired()) {
+                if (areNewSamplesRequired()) {
 
                     cLicenseeCase.Status = CaseManager.STATUS_SAMPLES_NOT_SHIPPED;
                 }
@@ -113,15 +129,16 @@ public with sharing class CaseProductChangeWorkflowCtrlExt extends CaseWorkflowE
                 }
 
                 update cLicenseeCase;
-                ApexPages.addmessage(new ApexPages.message(ApexPages.severity.INFO,'Case was successfuly resubmitted.'));
-                prResponse = new PageReference('/'+cLicenseeCase.Id);
-            } else {
-                ApexPages.addmessage(new ApexPages.message(ApexPages.severity.WARNING,'One or more Issues are pending your comment. Please respond to all the issues and then re-submit.'));
+                ApexPages.addmessage(new ApexPages.message(ApexPages.severity.INFO, 'Case was successfuly resubmitted.'));
+                //prResponse = new PageReference('/' + cLicenseeCase.Id);
+            }
+            else {
+                ApexPages.addmessage(new ApexPages.message(ApexPages.severity.WARNING, 'One or more Issues are pending your comment. Please respond to all the issues and then re-submit.'));
             }
         }
-        catch(Exception ex) {
+        catch (Exception ex) {
             System.debug(LoggingLevel.ERROR, ex.getMessage() + '\n' + ex.getStackTraceString());
-            ApexPages.addmessage(new ApexPages.message(ApexPages.severity.ERROR,'There was an error while resubmitting Royalty Submission, please try again later.'));
+            ApexPages.addmessage(new ApexPages.message(ApexPages.severity.ERROR, 'There was an error while resubmitting Royalty Submission, please try again later.'));
         }
         init();
         System.debug(LoggingLevel.DEBUG, 'CaseProductChangeWorkflowCtrlExt - reSubmit end');
@@ -130,9 +147,9 @@ public with sharing class CaseProductChangeWorkflowCtrlExt extends CaseWorkflowE
 
     @testVisible private Boolean areNewSamplesRequired() {
 
-        for(CV_Case_Issue_Comment__c cvcicIssue : cvcicIssesList) {
+        for (CV_Case_Issue_Comment__c cvcicIssue : cvcicIssesList) {
 
-            if(!cvcicIssue.Resolved__c && cvcicIssue.New_Samples_Required__c) {
+            if (!cvcicIssue.Resolved__c && cvcicIssue.New_Samples_Required__c) {
 
                 return true;
             }
@@ -144,17 +161,22 @@ public with sharing class CaseProductChangeWorkflowCtrlExt extends CaseWorkflowE
 //******************************************************************************************************************************
 //Shipping info
 //******************************************************************************************************************************
-    public Boolean showShippingPopoupLicensee {get; set;}
+    public Boolean showShippingPopoupLicensee { get; set; }
     {
         showShippingPopoupLicensee = false;
     }
 
-    public Product_Sample_Shipping_Info__c shippingInfoLicensee {get; private set;}
+    public Product_Sample_Shipping_Info__c shippingInfoLicensee { get; private set; }
 
     public PageReference addShippingInfoLicensee() {
+
         System.debug(LoggingLevel.DEBUG, 'CaseProductChangeWorkflowCtrlExt - addshippingInfoLicensee start');
+
         showShippingPopoupLicensee = true;
+
         shippingInfoLicensee = ProductSampleshippingInfoManager.createShipmentInforForCaseId(cLicenseeCase.Id);
+        shippingInfoLicensee.Shipping_Info_Case_Status__c = CaseManager.STATUS_GE_APPROVAL_PROCESS;
+
         System.debug(LoggingLevel.DEBUG, 'CaseProductChangeWorkflowCtrlExt - addshippingInfoLicensee end');
         return null;
     }
@@ -169,11 +191,11 @@ public with sharing class CaseProductChangeWorkflowCtrlExt extends CaseWorkflowE
             cLicenseeCase.Status = CaseManager.STATUS_SAMPLES_SHIPPED;
             update cLicenseeCase;
             init();
-            ApexPages.addmessage(new ApexPages.message(ApexPages.severity.INFO,'Shipping info was successfully added.'));
+            ApexPages.addmessage(new ApexPages.message(ApexPages.severity.INFO, 'Shipping info was successfully added.'));
         }
-        catch(Exception ex) {
+        catch (Exception ex) {
             System.debug(LoggingLevel.ERROR, ex.getMessage() + '\n' + ex.getStackTraceString());
-            ApexPages.addmessage(new ApexPages.message(ApexPages.severity.ERROR,'There was an error while creating Shipping info, please try again later.'));
+            ApexPages.addmessage(new ApexPages.message(ApexPages.severity.ERROR, 'There was an error while creating Shipping info, please try again later.'));
         }
         System.debug(LoggingLevel.DEBUG, 'CaseProductChangeWorkflowCtrlExt - saveshippingInfoLicensee end');
 
@@ -185,31 +207,48 @@ public with sharing class CaseProductChangeWorkflowCtrlExt extends CaseWorkflowE
         return null;
     }
 
-    public Product_Sample_Shipping_Info__c shippingInfoWfRole {get; private set;}
-    public Product_Sample_Ship_Info_Confirmation__c productSampleShipInfoConfirmationCurrentRole {get; private set;}
+    public Product_Sample_Shipping_Info__c shippingInfoWfRole { get; private set; }
+    public Product_Sample_Ship_Info_Confirmation__c productSampleShipInfoConfirmationCurrentRole { get; private set; }
     private Boolean showShippingPopoupWfRole;
     public Boolean getShowShippingPopoupWfRole() {
-        if(roleLicensee == currentUserWorkflowRole) {
+        if (roleLicensee == currentUserWorkflowRole) {
             return false;
-        } else {
+        }
+        else {
             showShippingPopoupWfRole = productSampleShipInfoConfirmationCurrentRole != null ? !productSampleShipInfoConfirmationCurrentRole.Reception_Confirmed__c : false;
         }
         return showShippingPopoupWfRole;
 
     }
 
-
     public PageReference confirmShippingInfoWfRole() {
+
         System.debug(LoggingLevel.DEBUG, 'CaseProductChangeWorkflowCtrlExt - confirmShippingInfoWfRole start');
         try {
+
             productSampleShipInfoConfirmationCurrentRole.Reception_Confirmed__c = true;
+            Boolean shippingInfoConfirmed = true;
             update productSampleShipInfoConfirmationCurrentRole;
+
+            Product_Sample_Shipping_Info__c shippingInfo = ProductSampleShippingInfoManager.getShippingInfoId(shippingInfoWfRole.Id);
+
+            for (Product_Sample_Ship_Info_Confirmation__c pssic : shippingInfoWfRole.Confirmations__r) {
+
+                shippingInfoConfirmed &= pssic.Reception_Confirmed__c;
+            }
+
+            if (shippingInfoConfirmed != shippingInfo.Confirmed__c) {
+
+                shippingInfo.Confirmed__c = shippingInfoConfirmed;
+                update shippingInfo;
+            }
+
             showShippingPopoupWfRole = false;
-            ApexPages.addmessage(new ApexPages.message(ApexPages.severity.INFO,'Sample reception confirmed.'));
+            ApexPages.addmessage(new ApexPages.message(ApexPages.severity.INFO, 'Sample reception confirmed.'));
         }
-        catch(Exception ex) {
+        catch (Exception ex) {
             System.debug(LoggingLevel.ERROR, ex.getMessage() + '\n' + ex.getStackTraceString());
-            ApexPages.addmessage(new ApexPages.message(ApexPages.severity.ERROR,'There was an error while creating Shipping info, please try again later.'));
+            ApexPages.addmessage(new ApexPages.message(ApexPages.severity.ERROR, 'There was an error while creating Shipping info, please try again later.'));
         }
         System.debug(LoggingLevel.DEBUG, 'CaseProductChangeWorkflowCtrlExt - confirmShippingInfoWfRole end');
         init();
@@ -218,17 +257,14 @@ public with sharing class CaseProductChangeWorkflowCtrlExt extends CaseWorkflowE
 
     public PageReference cancelShippingInfoWfRole() {
         System.debug('shippingInfoWfRole' + shippingInfoWfRole);
-        return new PageReference('/'+cLicenseeCase.Id);
+        return new PageReference('/' + cLicenseeCase.Id);
     }
-
-
-
 
 //******************************************************************************************************************************
 
 //******************************************************************************************************************************
 //method overrides
 //******************************************************************************************************************************
-   
+
 //******************************************************************************************************************************
 }
