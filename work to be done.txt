@@ -1,6 +1,6 @@
 Created Reports:
 
-	new product YTD sales
-	License YTD Royalties
+	new product YTD sales - Done
+	License YTD Royalties - Done
 
-Check if inception field on contract is being used anywhere 
+Check if inception field on contract is being used anywhere - It’s not being used anywhere.

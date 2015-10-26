@@ -27,9 +27,29 @@ Fields:
 	Contract.Calculate_Next_Sales_Report__c
 	Contract.Days_Until_Due_of_Next_Royalty_Payment__c
 	Contract.Days_Until_Due_of_next_Sales_Report__c
+	Contract.Royalty_Variance__c
+	Contract.Royalty_Variance_percent__c
+	Contract.Variance_vs_Plan__c
+	Contract.CV_Variance_vs_Plan_Percent__c
 	
 Pagelayouts:
 	Contract.Consumer Ventures - Agreement
 	CV_Due_Date_Rule__c.CV Due Date Rule Layout
 	CV_Royalty_Payment_Tracking__c.CV Royalty Payment Tracking Layout
 	CV_Sales_Report_Tracking__c.CV Sales Report Tracking Layout
+	
+Reports:
+	Licensee_YTD_Royalties_V_Prior_YTD
+	New_Product_YTD_Sales
+	
+Workflow Rules:
+	Contract.Alert on overdue
+	
+Email Notifications:
+	Contract_Sales_Report_Overdue
+	Contract_Royal_Payment_Overdue
+	
+Email notifications:
+	Alert_on_Sales_report_overdue
+	Alert_on_Royal_Payment_overdue
+	
