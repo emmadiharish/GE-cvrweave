@@ -37,6 +37,7 @@ Pagelayouts:
 	CV_Due_Date_Rule__c.CV Due Date Rule Layout
 	CV_Royalty_Payment_Tracking__c.CV Royalty Payment Tracking Layout
 	CV_Sales_Report_Tracking__c.CV Sales Report Tracking Layout
+	Account.Consumer Ventures
 	
 Reports:
 	Licensee_YTD_Royalties_V_Prior_YTD

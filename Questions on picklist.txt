@@ -1,0 +1,19 @@
+
+YTD vs. Prior YTD Sales Variance is a number but current formula would return a number. - #66 - Done
+
+
+require mockup of Financials, Renewal sections for contracts - #30, #37, #57 - Done
+
+require mockup of Account Layout with financials section - #35
+
+CV financials mockup on product cat - #41
+
+is the looku filter same as GE Business Unit ? - #59
+
+Sales Variance Vs. Prior, Sales Variance % vs. Prior on prod cat does not exists. were the fields re-captioned? - #41
+
+Consumer Ventures record type already exists so should this be modified or new one should be created? - #51
+
+Lookup filter on which object?(contact selection on agreement) - #36
+
+Renewal & report dates section with new fields Ive created and 2 countdown fields. - Done

@@ -1,0 +1,26 @@
+Update:
+
+#69, #60, #61, #58, #56, #59, #41, #28
+PageLayouts:
+	Contract.Consumer Ventures - Agreements
+	Contract.Consumer Ventures - Amendments
+	Contract.Contract Layout
+	Account.Consumer Ventures
+
+	CV_Product_Category__c.CV Product Category Layout
+
+Listview:
+	Contract.CV_Agreements
+
+Delete:
+
+Objects:
+	CV_Royalty_Report_Tracking__c
+
+#59, #36, 
+Add:
+Fields:
+	Contract.GE_Business_Unit_2__c
+
+Record Type:
+	Contact.CV_Contact	
