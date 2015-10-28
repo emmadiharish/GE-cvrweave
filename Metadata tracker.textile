@@ -59,8 +59,12 @@ Pagelayouts:
 	CV_Royalty_Payment_Tracking__c.CV Royalty Payment Tracking Layout
 	CV_Sales_Report_Tracking__c.CV Sales Report Tracking Layout
 	Account.Consumer Ventures
+<<<<<<< HEAD
 	CV_Product_Category__c.CV Product Category Layout
 
+=======
+	
+>>>>>>> origin/master
 Reports:
 	Licensee_YTD_Royalties_V_Prior_YTD
 	New_Product_YTD_Sales
