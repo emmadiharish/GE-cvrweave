@@ -4,3 +4,13 @@ Created Reports:
 	License YTD Royalties - Done
 
 Check if inception field on contract is being used anywhere - It’s not being used anywhere.
+
+#91: 
+	set the status to active on product.
+	Update the approved date(new field to be created) on product based on case closed date.
+
+#89:	
+	CV product - filter the status for record type.
+
+Questions:
+	whats the class name for #91.

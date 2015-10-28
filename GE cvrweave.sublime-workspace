@@ -553,11 +553,16 @@
 	],
 	"file_history":
 	[
+		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/work to be done.txt",
 		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/Metadata tracker.textile",
+		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/debug/logs/2015-10-16 00-20-21.log",
+		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/LicenseeYTD_schedulebatch.cls",
+		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/ContractYTD_schedulebatch.cls",
+		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/ContractManagerTest.cls",
+		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/work to be done",
 		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/TH_Contract_CVManageSchedulesTest.cls",
 		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/TestDataFactory.cls",
 		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/ContractManager.cls",
-		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/ContractManagerTest.cls",
 		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/TH_Contract_CVManageSchedules.cls",
 		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/triggers/AllContractTriggers.trigger",
 		"/C/Users/hemmadi/Workspace/GitHub/GE cvrweave/src/classes/DueDateRuleManager.cls",
@@ -675,12 +680,7 @@
 		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/classes/APTPS_ServiceLocationTriggerHandler.cls",
 		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/classes/APTPS_ProductAttributeConfigController.cls",
 		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/resource-bundles/APTPS_CAPResourceBundle_Flow.resource/MiniCart/MiniCartDataService.js",
-		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/classes/APTPS_ProductAttributeValueController.cls",
-		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/pages/APTPS_CAP_MS.page",
-		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/pages/APTPS_CAP_MS_Flow.page",
-		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/resource-bundles/APTPS_CAPResourceBundle_Flow.resource/Templates/OptionsGroupView.html",
-		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/resource-bundles/APTPS_CAPResourceBundle_H.resource/Templates/OptionsGroupView.html",
-		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/resource-bundles/APTPS_CAPResourceBundle_Flow.resource/Controllers/BaseController.js"
+		"/C/Users/hemmadi/Workspace/CenturyLink INT2 3.0/src/classes/APTPS_ProductAttributeValueController.cls"
 	],
 	"find":
 	{
@@ -707,6 +707,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"CV_YTD_Royalty_Payment__c =",
+			"CV_YTD_Royalty_Payment__c",
+			"CV_YTD_Variance",
+			"CV_Year_To_Date__c",
+			"CV_Previous_Year_To_Date__c",
 			"RT_agreement",
 			"agreement",
 			"isReceived__c",
@@ -829,12 +834,7 @@
 			"alllocations",
 			"eLinePAVAttributes",
 			"getLocationZ",
-			"allZServiceLocs",
-			"getlocItems",
-			"allZServiceLocs",
-			"selectedSRId",
-			"getLocationZ",
-			"$scope"
+			"allZServiceLocs"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -931,6 +931,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"contractmanagerte",
+				"src\\classes\\ContractManagerTest.cls"
+			],
 			[
 				"th_con",
 				"src\\classes\\TH_Contract_CVManageSchedules.cls"
@@ -1438,10 +1442,6 @@
 			[
 				"_flowres",
 				"src\\staticresources\\APTPS_CAPResourceBundle_Flow.resource"
-			],
-			[
-				"custom",
-				"src\\classes\\APTPS_CustomAttributeUtil.cls"
 			]
 		],
 		"width": 0.0

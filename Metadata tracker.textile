@@ -8,6 +8,7 @@ Classes:
 	TH_Contract_CVManageSchedules.cls
 	TH_Contract_CVManageSchedulesTest.cls
 	ContractManager.cls
+	ContractManagerTest.cls
 
 triggers:
 	AllContractTriggers.trigger
@@ -31,13 +32,35 @@ Fields:
 	Contract.Royalty_Variance_percent__c
 	Contract.Variance_vs_Plan__c
 	Contract.CV_Variance_vs_Plan_Percent__c
+	Account.CV_Planned_Royalty_Revenue__c
+	Account.CV_Previous_Year_To_Date__c
+	Account.Prior_YTD_Royalty_Accrued_Credit__c
+	Account.Prior_YTD_Royalty_Credit_Summary__c
+	Account.CV_Previous_YTD_Royalty_Payment__c
+	Account.CV_Year_To_Date__c
+	Account.YTD_Royalty_Accrued_Credit__c
+	Account.YTD_Royalty_Credit_Summary__c
+	Account.CV_YTD_Royalty_Payment__c
+	Account.CV_Plan_YTD_Royalty_Variance__c
+	Account.CV_Plan_YTD_Royalty_Variance_percent__c
+	Account.CV_YTD_Royalty_Variance__c
+	Account.CV_YTD_Royalty_Variance_percent__c
+	Account.CV_YTD_Sales_Variance__c
+	Account.CV_YTD_Sales_Variance_percent__c
+	Account.GE_Branded_Website__c
+	CV_Product_Category__c.CV_Year_To_Date__c
+	CV_Product_Category__c.CV_Previous_Year_To_Date__c
+	CV_Product_Category__c.CV_YTD_Sales_Variance__c
+	CV_Product_Category__c.CV_YTD_Sales_Variance_percent__c
 	
 Pagelayouts:
 	Contract.Consumer Ventures - Agreement
 	CV_Due_Date_Rule__c.CV Due Date Rule Layout
 	CV_Royalty_Payment_Tracking__c.CV Royalty Payment Tracking Layout
 	CV_Sales_Report_Tracking__c.CV Sales Report Tracking Layout
-	
+	Account.Consumer Ventures
+	CV_Product_Category__c.CV Product Category Layout
+
 Reports:
 	Licensee_YTD_Royalties_V_Prior_YTD
 	New_Product_YTD_Sales
@@ -52,4 +75,11 @@ Email Notifications:
 Email notifications:
 	Alert_on_Sales_report_overdue
 	Alert_on_Royal_Payment_overdue
-	
+
+
+Destructive:(check with matt)
+	Account.CV_Variance_vs_Plan__c
+	Account.CV_YTD_Variance__c
+
+List views:
+	Contact.CV_Contacts
