@@ -2,6 +2,8 @@ Classes:
 	CaseCSV_BatchProcess.cls
 Workflow Rules:
 	Contract.Alert on overdue
+	CV_Royalty_Payment_Tracking__c
+	CV_Sales_Report_Tracking__c
 	
 Email Notifications:
 	Contract_Sales_Report_Overdue
