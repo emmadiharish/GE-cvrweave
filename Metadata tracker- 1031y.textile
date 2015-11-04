@@ -1,0 +1,15 @@
+Classes:
+	CaseCSV_BatchProcess.cls
+Workflow Rules:
+	Contract.Alert on overdue
+	
+Email Notifications:
+	Contract_Sales_Report_Overdue
+	Contract_Royal_Payment_Overdue
+	
+Email notifications:
+	Alert_on_Sales_report_overdue
+	Alert_on_Royal_Payment_overdue
+
+Letterhead:
+	GE_Corporate
