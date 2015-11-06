@@ -1,5 +1,8 @@
 Classes:
 	CaseCSV_BatchProcess.cls
+	ContractYTD_schedulebatch.cls
+	LicenseeYTD_schedulebatch.cls
+
 Workflow Rules:
 	Contract.Alert on overdue
 	CV_Royalty_Payment_Tracking__c
@@ -15,3 +18,7 @@ Email notifications:
 
 Letterhead:
 	GE_Corporate
+
+Fields:
+	Contract.YTD_Plan_Royalty__c
+	Contract.Prior_YTD_Plan_Royalty__c
