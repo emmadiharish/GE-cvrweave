@@ -2,6 +2,10 @@ Classes:
 	CaseCSV_BatchProcess.cls
 	ContractYTD_schedulebatch.cls
 	LicenseeYTD_schedulebatch.cls
+	DueDateRuleManager.cls - #102
+
+PageLayouts:
+	Contract.Consumer Ventures - Amendments - #99
 
 Workflow Rules:
 	Contract.Alert on overdue
