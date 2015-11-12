@@ -14,3 +14,15 @@ Check if inception field on contract is being used anywhere - It’s not being u
 
 Questions:
 	whats the class name for #91.
+	
+11/12/2015	
+1. BI/Reportint Manifest
+
+	- make sure all 32 fields are added.
+	- two reports 35, 38 rows.
+
+2. Royalty Actual/Plan import
+	- associate the actual and plan with case
+	- add 'License Name' to plan and actual.
+
+3. Matt - Merge process, summary classes.
