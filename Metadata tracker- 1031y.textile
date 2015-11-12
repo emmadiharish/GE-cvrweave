@@ -2,10 +2,13 @@ Classes:
 	CaseCSV_BatchProcess.cls
 	ContractYTD_schedulebatch.cls
 	LicenseeYTD_schedulebatch.cls
+	TestContractYTD_schedulebatch.cls
 	DueDateRuleManager.cls - #102
 
 PageLayouts:
 	Contract.Consumer Ventures - Amendments - #99
+	Contract.Consumer Ventures - Agreements
+	CV_Due_Date_Rule__c.CV Due Date Rule Layout
 
 Workflow Rules:
 	Contract.Alert on overdue
