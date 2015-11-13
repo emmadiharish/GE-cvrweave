@@ -35,17 +35,19 @@ Letterhead:
 Fields:
 	Contract.YTD_Plan_Royalty__c
 	Contract.Prior_YTD_Plan_Royalty__c
-	Contract.CV_Planned_Royalty_Revenue__c
-	Account.CV_Planned_Royalty_Revenue__c
 	Account.Prior_YTD_Plan_Royalty__c
 	Account.YTD_Plan_Royalty__c
+
+	Contract.CV_Planned_Royalty_Revenue__c
+	Account.CV_Planned_Royalty_Revenue__c
+	
 	CV_Custom_Due_Date__c.Payment_Amount__c
 	CV_Royalty_Payment_Tracking__c.Amount__c
 	CV_Sales_Report_Tracking__c.Amount__c
-	CV_Royalty_Plan__c.Data_Submission_Case__c
-	CV_Royalty_Actual__c.Data_Submission_Case__c
-	CV_Royalty_Plan__c.License_Name__c
-	CV_Royalty_Actual__c.License_Name__c
+
+	CV_Royalty_Plan__c
+	CV_Royalty_Actual__c
+
 Report Types:
 	Cases_with_Contracts
 Reports
