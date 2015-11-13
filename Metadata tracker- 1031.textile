@@ -5,12 +5,16 @@ Classes:
 	ContractYTD_schedulebatch.cls
 	TestContractYTD_schedulebatch.cls
 	DueDateRuleManager.cls - #102
+	ContractYTD_scheduler.cls
+	ContractYTD_schedulerTest.cls
 
 PageLayouts:
 	Contract.Consumer Ventures - Amendments - #99
 	Contract.Consumer Ventures - Agreements
 	CV_Due_Date_Rule__c.CV Due Date Rule Layout
 	Account.Consumer Ventures
+	CV_Royalty_Plan__c
+	CV_Royalty_Actual__c
 
 Workflow Rules:
 	Contract.Alert on overdue
@@ -38,3 +42,17 @@ Fields:
 	CV_Custom_Due_Date__c.Payment_Amount__c
 	CV_Royalty_Payment_Tracking__c.Amount__c
 	CV_Sales_Report_Tracking__c.Amount__c
+	CV_Royalty_Plan__c.Data_Submission_Case__c
+	CV_Royalty_Actual__c.Data_Submission_Case__c
+	CV_Royalty_Plan__c.License_Name__c
+	CV_Royalty_Actual__c.License_Name__c
+Report Types:
+	Cases_with_Contracts
+Reports
+	CV_Brand_Both_Closed_Item_Tracker
+	CV_Brand_Both_Open_Item_Tracker3
+	CV_Contract_Closed_Item_Tracker
+	CV_Contract_Open_Item_Tracker
+	CV_Product_Change_Closed_Item_Tracker
+	CV_Product_Change_Open_Item_Tracker
+	CV_Royalty_Open_Item_Tracker
