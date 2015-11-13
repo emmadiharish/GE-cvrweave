@@ -26,3 +26,5 @@ Questions:
 	- add 'License Name' to plan and actual.
 
 3. Matt - Merge process, summary classes.
+
+4. create a scheduler for contract batch.
